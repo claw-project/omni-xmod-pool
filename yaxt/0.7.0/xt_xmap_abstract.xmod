@@ -1,0 +1,913 @@
+<OmniFortranModule version="1.0">
+  <name>xt_xmap_abstract</name>
+  <depends>
+    <name>iso_c_binding</name>
+    <name>xt_core</name>
+    <name>xt_idxlist_abstract</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I55d01bf93200" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01bf91e60" is_parameter="true" ref="I55d01bf93200"/>
+    <FstructType type="S55d01bf92090" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55d01bf93600">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d01bfa6650" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01bfa6c80" is_parameter="true" ref="I55d01bfa6650"/>
+    <FbasicType type="I55d01bf93600" ref="Fint">
+      <kind>
+        <Var type="I55d01bfa6c80" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55d01bf93740" imported_id="S555a51947b00" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01bf92320" imported_id="S555a51947d30" is_parameter="true" ref="S55d01bf93740"/>
+    <FfunctionType type="F55d01bf928f0" return_type="FnumericAll"/>
+    <FfunctionType type="F55d01bfdbde0" return_type="L55d01bfb43b0">
+      <params>
+        <name type="S55d01bfb38c0" imported_id="S555a51971d90">c_ptr_1</name>
+        <name type="S55d01bfb3e40" imported_id="S555a51972510">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L55d01bfb43b0" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55d01bfaf9d0" imported_id="S555a51946610" is_internal_private="true">
+      <symbols>
+        <id type="I55d01bfb0150">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d01bfb0150" ref="Fint">
+      <kind>
+        <Var type="I55d01bfa6c80" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55d01bfb49d0" imported_id="S555a51971c50" ref="S55d01bfaf9d0"/>
+    <FbasicType type="S55d01bfb38c0" imported_id="S555a51971d90" ref="S55d01bfb49d0"/>
+    <FbasicType type="S55d01bfb4b80" imported_id="S555a519723d0" ref="S55d01bfaf9d0"/>
+    <FbasicType type="S55d01bfb3e40" imported_id="S555a51972510" is_optional="true" ref="S55d01bfb4b80"/>
+    <FfunctionType type="F55d01bfdc5f0" return_type="L55d01bfb2890">
+      <params>
+        <name type="S55d01bfb1f00" imported_id="S555a5196eaf0">c_ptr_1</name>
+        <name type="S55d01bfb2300" imported_id="S555a5196f270">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L55d01bfb2890" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55d01bfaeb60" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55d01bfaf4e0">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d01bfaf4e0" ref="Fint">
+      <kind>
+        <Var type="I55d01bfa6c80" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55d01bfb3090" imported_id="S555a5196e9b0" ref="S55d01bfaeb60"/>
+    <FbasicType type="S55d01bfb1f00" imported_id="S555a5196eaf0" ref="S55d01bfb3090"/>
+    <FbasicType type="S55d01bfb3240" imported_id="S555a5196f130" ref="S55d01bfaeb60"/>
+    <FbasicType type="S55d01bfb2300" imported_id="S555a5196f270" is_optional="true" ref="S55d01bfb3240"/>
+    <FfunctionType type="F55d01bf93060" return_type="Fvoid"/>
+    <FfunctionType type="F55d01bfdb6c0" return_type="Fvoid">
+      <params>
+        <name type="I55d01bfb5280">cptr</name>
+        <name type="I55d01bfb5680">fptr</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55d01bfb5a60" is_pointer="true" ref="Fint"/>
+    <FbasicType type="I55d01bfb5280" intent="in" is_pointer="true" ref="I55d01bfb5a60"/>
+    <FbasicType type="I55d01bfb6060" is_pointer="true" ref="Fint"/>
+    <FbasicType type="I55d01bfb5680" intent="out" is_pointer="true" ref="I55d01bfb6060"/>
+    <FbasicType type="I55d01bf93ae0" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55d01bff6fe0" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01bff7820" is_parameter="true" ref="I55d01bff6fe0"/>
+    <FstructType type="S55d01bf93d70" imported_id="S55e8270536d0">
+      <symbols>
+        <id type="I55d01bf94280">
+          <name>start</name>
+        </id>
+        <id type="I55d01bf94280">
+          <name>size</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d01bff2e30" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01bff32a0" is_parameter="true" ref="I55d01bff2e30"/>
+    <FbasicType type="I55d01bf94280" ref="Fint">
+      <kind>
+        <Var type="I55d01bff32a0" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55d01c036f50" imported_id="S55e7b1bd98b0" is_internal_private="true">
+      <symbols>
+        <id type="S55d01c037180">
+          <name>cptr</name>
+          <value>
+            <Var type="S55d01c04afe0" imported_id="S555a51947d30" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FstructType type="S55d01c037400" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55d01c037770">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d01c049f80" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c04a5f0" is_parameter="true" ref="I55d01c049f80"/>
+    <FbasicType type="I55d01c037770" ref="Fint">
+      <kind>
+        <Var type="I55d01c04a5f0" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55d01c0372c0" imported_id="S55e7b1bda040" ref="S55d01c037400"/>
+    <FbasicType type="S55d01c037180" imported_id="S55e7b1bda270" ref="S55d01c0372c0"/>
+    <FstructType type="S55d01c049980" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55d01c04a910">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d01c04a910" ref="Fint">
+      <kind>
+        <Var type="I55d01c04a5f0" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55d01c04ac50" imported_id="S555a51947b00" ref="S55d01c049980"/>
+    <FbasicType type="S55d01c04afe0" imported_id="S555a51947d30" is_parameter="true" ref="S55d01c04ac50"/>
+    <FfunctionType type="F55d01c1288e0" result_name="p" return_type="S55d01c129dc0" is_public="true">
+      <params>
+        <name type="S55d01c129640">xmap</name>
+      </params>
+    </FfunctionType>
+    <FstructType type="S55d01bfedec0" is_public="true" is_internal_private="true" bind="C">
+      <symbols>
+        <id type="S55d01bfee880">
+          <name>cptr</name>
+          <value>
+            <Var type="S55d01bf92320" imported_id="S555a51947d30" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="S55d01bfee650" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01bfee880" ref="S55d01bfee650"/>
+    <FbasicType type="S55d01c129b90" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c129dc0" ref="S55d01c129b90"/>
+    <FbasicType type="S55d01c129500" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c129640" intent="in" ref="S55d01c129500"/>
+    <FbasicType type="S55d01c12a5e0" ref="S55d01bfee880"/>
+    <FfunctionType type="F55d01c12dd20" result_name="res_ptr" return_type="S55d01c12e130" is_private="true" bind="C" bind_name="xt_xmap_copy">
+      <params>
+        <name type="S55d01c12f6a0">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c12ea40" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c12fbf0" ref="S55d01c12ea40"/>
+    <FbasicType type="S55d01c12e130" ref="S55d01c12fbf0"/>
+    <FbasicType type="S55d01c12f560" ref="S55d01c12ea40"/>
+    <FbasicType type="S55d01c12f6a0" intent="in" is_value="true" ref="S55d01c12f560"/>
+    <FbasicType type="S55d01c12fe20" ref="S55d01c12fbf0"/>
+    <FfunctionType type="F55d01c12b4a0" result_name="xmap_copy" return_type="S55d01c12c980" is_public="true">
+      <params>
+        <name type="S55d01c12c200">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c12c750" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c12c980" ref="S55d01c12c750"/>
+    <FbasicType type="S55d01c12c0c0" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c12c200" intent="in" ref="S55d01c12c0c0"/>
+    <FbasicType type="S55d01c1314e0" ref="S55d01bfee880"/>
+    <FbasicType type="S55d01c1318c0" ref="S55d01bfee880"/>
+    <FfunctionType type="F55d01c132770" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="S55d01c1334d0">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c133390" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c1334d0" intent="inout" ref="S55d01c133390"/>
+    <FfunctionType type="F55d01bf8fd60" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_xmap_delete">
+      <params>
+        <name type="S55d01bf912e0">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01bf90680" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01bf911a0" ref="S55d01bf90680"/>
+    <FbasicType type="S55d01bf912e0" intent="in" is_value="true" ref="S55d01bf911a0"/>
+    <FbasicType type="S55d01bf8d690" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01bf8e9e0" ref="S55d01bf8d690"/>
+    <FbasicType type="S55d01bf8cfb0" ref="S55d01bf8e9e0"/>
+    <FfunctionType type="F55d01bf8cba0" result_name="p" return_type="S55d01bf8cfb0" is_public="true" bind="C" bind_name="xt_xmap_f2c">
+      <params>
+        <name type="S55d01bf8e490">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01bf8d8c0" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01bf8e350" ref="S55d01bf8d8c0"/>
+    <FbasicType type="S55d01bf8e490" intent="in" ref="S55d01bf8e350"/>
+    <FbasicType type="S55d01c1347e0" ref="S55d01bfee880"/>
+    <FfunctionType type="F55d01c135800" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="A55d01c1367f0">xmaps</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c136570" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c1366b0" intent="inout" ref="S55d01c136570"/>
+    <FbasicType type="A55d01c1367f0" intent="inout" ref="S55d01c1366b0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55d01c138170" return_type="Fint"/>
+    <FbasicType type="S55d01c13ab90" ref="S55d01bfee880"/>
+    <FfunctionType type="F55d01c140230" result_name="xmap_ptr" return_type="S55d01c140a00" is_private="true" bind="C" bind_name="xt_xmap_all2all_new_f">
+      <params>
+        <name type="S55d01c1427a0">src_idxlist</name>
+        <name type="S55d01c1428e0">dst_idxlist</name>
+        <name type="I55d01c143360">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c1419f0" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c1438b0" ref="S55d01c1419f0"/>
+    <FbasicType type="S55d01c140a00" ref="S55d01c1438b0"/>
+    <FbasicType type="S55d01c1414a0" ref="S55d01c036f50"/>
+    <FbasicType type="S55d01c142660" ref="S55d01c1414a0"/>
+    <FbasicType type="S55d01c1427a0" intent="in" ref="S55d01c142660"/>
+    <FbasicType type="S55d01c1428e0" intent="in" ref="S55d01c142660"/>
+    <FbasicType type="I55d01c143220" ref="Fint">
+      <kind>
+        <Var type="I55d01bf93ae0" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c143360" intent="in" is_value="true" ref="I55d01c143220"/>
+    <FbasicType type="S55d01c143ae0" ref="S55d01c1438b0"/>
+    <FfunctionType type="F55d01c13be60" result_name="xmap" return_type="S55d01c13ed50" is_public="true">
+      <params>
+        <name type="S55d01c13d4c0">src_idxlist</name>
+        <name type="S55d01c13dcd0">dst_idxlist</name>
+        <name type="I55d01c13e5d0">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c13eb20" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c13ed50" ref="S55d01c13eb20"/>
+    <FbasicType type="S55d01c13d380" ref="S55d01c036f50"/>
+    <FbasicType type="S55d01c13d4c0" intent="in" ref="S55d01c13d380"/>
+    <FbasicType type="S55d01c13db90" ref="S55d01c036f50"/>
+    <FbasicType type="S55d01c13dcd0" intent="in" ref="S55d01c13db90"/>
+    <FbasicType type="I55d01c13e5d0" intent="in" is_value="true" ref="Fint"/>
+    <FfunctionType type="F55d01c14b0a0" result_name="xmap_ptr" return_type="S55d01c14b870" is_private="true" bind="C" bind_name="xt_xmap_dist_dir_new_f">
+      <params>
+        <name type="S55d01c14d610">src_idxlist</name>
+        <name type="S55d01c14d750">dst_idxlist</name>
+        <name type="I55d01c14e1d0">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c14c860" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c14e720" ref="S55d01c14c860"/>
+    <FbasicType type="S55d01c14b870" ref="S55d01c14e720"/>
+    <FbasicType type="S55d01c14c310" ref="S55d01c036f50"/>
+    <FbasicType type="S55d01c14d4d0" ref="S55d01c14c310"/>
+    <FbasicType type="S55d01c14d610" intent="in" ref="S55d01c14d4d0"/>
+    <FbasicType type="S55d01c14d750" intent="in" ref="S55d01c14d4d0"/>
+    <FbasicType type="I55d01c14e090" ref="Fint">
+      <kind>
+        <Var type="I55d01bf93ae0" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c14e1d0" intent="in" is_value="true" ref="I55d01c14e090"/>
+    <FbasicType type="S55d01c14e950" ref="S55d01c14e720"/>
+    <FfunctionType type="F55d01c146d10" result_name="xmap" return_type="S55d01c149c00" is_public="true">
+      <params>
+        <name type="S55d01c148370">src_idxlist</name>
+        <name type="S55d01c148b80">dst_idxlist</name>
+        <name type="I55d01c149480">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c1499d0" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c149c00" ref="S55d01c1499d0"/>
+    <FbasicType type="S55d01c148230" ref="S55d01c036f50"/>
+    <FbasicType type="S55d01c148370" intent="in" ref="S55d01c148230"/>
+    <FbasicType type="S55d01c148a40" ref="S55d01c036f50"/>
+    <FbasicType type="S55d01c148b80" intent="in" ref="S55d01c148a40"/>
+    <FbasicType type="I55d01c149480" intent="in" is_value="true" ref="Fint"/>
+    <FfunctionType type="F55d01c1566c0" result_name="xmap_ptr" return_type="S55d01c157070" is_private="true" bind="C" bind_name="xt_xmap_dist_dir_intercomm_new_f">
+      <params>
+        <name type="S55d01c158f60">src_idxlist</name>
+        <name type="S55d01c1590a0">dst_idxlist</name>
+        <name type="I55d01c159d00">inter_comm</name>
+        <name type="I55d01c159e40">intra_comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c1581b0" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c15a390" ref="S55d01c1581b0"/>
+    <FbasicType type="S55d01c157070" ref="S55d01c15a390"/>
+    <FbasicType type="S55d01c157c60" ref="S55d01c036f50"/>
+    <FbasicType type="S55d01c158e20" ref="S55d01c157c60"/>
+    <FbasicType type="S55d01c158f60" intent="in" ref="S55d01c158e20"/>
+    <FbasicType type="S55d01c1590a0" intent="in" ref="S55d01c158e20"/>
+    <FbasicType type="I55d01c159bc0" ref="Fint">
+      <kind>
+        <Var type="I55d01bf93ae0" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c159d00" intent="in" is_value="true" ref="I55d01c159bc0"/>
+    <FbasicType type="I55d01c159e40" intent="in" is_value="true" ref="I55d01c159bc0"/>
+    <FbasicType type="S55d01c15a5c0" ref="S55d01c15a390"/>
+    <FfunctionType type="F55d01c151c30" result_name="xmap" return_type="S55d01c155170" is_public="true">
+      <params>
+        <name type="S55d01c1535c0">src_idxlist</name>
+        <name type="S55d01c153dd0">dst_idxlist</name>
+        <name type="I55d01c1548b0">inter_comm</name>
+        <name type="I55d01c1549f0">intra_comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c154f40" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c155170" ref="S55d01c154f40"/>
+    <FbasicType type="S55d01c153480" ref="S55d01c036f50"/>
+    <FbasicType type="S55d01c1535c0" intent="in" ref="S55d01c153480"/>
+    <FbasicType type="S55d01c153c90" ref="S55d01c036f50"/>
+    <FbasicType type="S55d01c153dd0" intent="in" ref="S55d01c153c90"/>
+    <FbasicType type="I55d01c1548b0" intent="in" is_value="true" ref="Fint"/>
+    <FbasicType type="I55d01c1549f0" intent="in" is_value="true" ref="Fint"/>
+    <FfunctionType type="F55d01c160410" result_name="num" return_type="I55d01c160820" is_private="true" bind="C" bind_name="xt_xmap_get_num_destinations">
+      <params>
+        <name type="S55d01c161c50">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55d01c162380" ref="Fint">
+      <kind>
+        <Var type="I55d01bf91e60" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c160820" ref="I55d01c162380"/>
+    <FbasicType type="S55d01c160f00" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c161b10" ref="S55d01c160f00"/>
+    <FbasicType type="S55d01c161c50" intent="in" is_value="true" ref="S55d01c161b10"/>
+    <FbasicType type="I55d01c1625b0" ref="I55d01c162380"/>
+    <FfunctionType type="F55d01c15db50" result_name="num" return_type="Fint" is_public="true">
+      <params>
+        <name type="S55d01c15e8b0">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c15e770" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c15e8b0" intent="in" ref="S55d01c15e770"/>
+    <FfunctionType type="F55d01c164660" return_type="Fint"/>
+    <FbasicType type="S55d01c163fd0" ref="S55d01bfee880"/>
+    <FfunctionType type="F55d01c167da0" result_name="num" return_type="I55d01c1681b0" is_private="true" bind="C" bind_name="xt_xmap_get_num_sources">
+      <params>
+        <name type="S55d01c1695e0">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55d01c169d10" ref="Fint">
+      <kind>
+        <Var type="I55d01bf91e60" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c1681b0" ref="I55d01c169d10"/>
+    <FbasicType type="S55d01c168890" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c1694a0" ref="S55d01c168890"/>
+    <FbasicType type="S55d01c1695e0" intent="in" is_value="true" ref="S55d01c1694a0"/>
+    <FbasicType type="I55d01c169f40" ref="I55d01c169d10"/>
+    <FfunctionType type="F55d01c1654f0" result_name="num" return_type="Fint" is_public="true">
+      <params>
+        <name type="S55d01c166250">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c166110" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c166250" intent="in" ref="S55d01c166110"/>
+    <FfunctionType type="F55d01c16bff0" return_type="Fint"/>
+    <FbasicType type="S55d01c16b960" ref="S55d01bfee880"/>
+    <FfunctionType type="F55d01c16ff30" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_xmap_get_destination_ranks">
+      <params>
+        <name type="S55d01c171960">xmap</name>
+        <name type="A55d01c172520">ranks</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c170c10" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c171820" ref="S55d01c170c10"/>
+    <FbasicType type="S55d01c171960" intent="in" is_value="true" ref="S55d01c171820"/>
+    <FbasicType type="I55d01c1722a0" ref="Fint">
+      <kind>
+        <Var type="I55d01bf91e60" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c1723e0" intent="out" ref="I55d01c1722a0"/>
+    <FbasicType type="A55d01c172520" intent="out" ref="I55d01c1723e0">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55d01c16cee0" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S55d01c16df70">xmap</name>
+        <name type="A55d01c16eb90">ranks</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c16de30" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c16df70" intent="in" ref="S55d01c16de30"/>
+    <FbasicType type="I55d01c16e910" ref="Fint">
+      <kind>
+        <Var type="I55d01bf91e60" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c16ea50" intent="out" ref="I55d01c16e910"/>
+    <FbasicType type="A55d01c16eb90" intent="out" ref="I55d01c16ea50">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S55d01c173cd0" ref="S55d01bfee880"/>
+    <FfunctionType type="F55d01c177e80" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_xmap_get_source_ranks">
+      <params>
+        <name type="S55d01c1798b0">xmap</name>
+        <name type="A55d01c17a470">ranks</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c178b60" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c179770" ref="S55d01c178b60"/>
+    <FbasicType type="S55d01c1798b0" intent="in" is_value="true" ref="S55d01c179770"/>
+    <FbasicType type="I55d01c17a1f0" ref="Fint">
+      <kind>
+        <Var type="I55d01bf91e60" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c17a330" intent="out" ref="I55d01c17a1f0"/>
+    <FbasicType type="A55d01c17a470" intent="out" ref="I55d01c17a330">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55d01c174e00" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S55d01c175e90">xmap</name>
+        <name type="A55d01c176a50">ranks</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c175d50" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c175e90" intent="in" ref="S55d01c175d50"/>
+    <FbasicType type="I55d01c1767d0" ref="Fint">
+      <kind>
+        <Var type="I55d01bf91e60" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c176910" intent="out" ref="I55d01c1767d0"/>
+    <FbasicType type="A55d01c176a50" intent="out" ref="I55d01c176910">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S55d01c17bc20" ref="S55d01bfee880"/>
+    <FfunctionType type="F55d01c17f590" result_name="cptr" return_type="S55d01c17f9a0" is_private="true" bind="C" bind_name="xt_xmap_get_out_iterator">
+      <params>
+        <name type="S55d01c1809b0">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c17fff0" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c180f00" ref="S55d01c17fff0"/>
+    <FbasicType type="S55d01c17f9a0" ref="S55d01c180f00"/>
+    <FbasicType type="S55d01c180870" ref="S55d01c17fff0"/>
+    <FbasicType type="S55d01c1809b0" intent="in" is_value="true" ref="S55d01c180870"/>
+    <FbasicType type="S55d01c181130" ref="S55d01c180f00"/>
+    <FfunctionType type="F55d01c17cd30" result_name="iter" return_type="S55d01c17e210" is_public="true">
+      <params>
+        <name type="S55d01c17da90">xmap</name>
+      </params>
+    </FfunctionType>
+    <FstructType type="S55d01bfef0c0" is_public="true" is_internal_private="true" bind="C">
+      <symbols>
+        <id type="S55d01bfefa80">
+          <name>cptr</name>
+          <value>
+            <Var type="S55d01bf92320" imported_id="S555a51947d30" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="S55d01bfef850" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01bfefa80" ref="S55d01bfef850"/>
+    <FbasicType type="S55d01c17dfe0" ref="S55d01bfef0c0"/>
+    <FbasicType type="S55d01c17e210" ref="S55d01c17dfe0"/>
+    <FbasicType type="S55d01c17d950" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c17da90" intent="in" ref="S55d01c17d950"/>
+    <FbasicType type="S55d01c1827f0" ref="S55d01bfefa80"/>
+    <FbasicType type="S55d01c182bd0" ref="S55d01bfee880"/>
+    <FfunctionType type="F55d01c186360" result_name="cptr" return_type="S55d01c186770" is_private="true" bind="C" bind_name="xt_xmap_get_in_iterator">
+      <params>
+        <name type="S55d01c187780">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c186dc0" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c187cd0" ref="S55d01c186dc0"/>
+    <FbasicType type="S55d01c186770" ref="S55d01c187cd0"/>
+    <FbasicType type="S55d01c187640" ref="S55d01c186dc0"/>
+    <FbasicType type="S55d01c187780" intent="in" is_value="true" ref="S55d01c187640"/>
+    <FbasicType type="S55d01c187f00" ref="S55d01c187cd0"/>
+    <FfunctionType type="F55d01c183b10" result_name="iter" return_type="S55d01c184ff0" is_public="true">
+      <params>
+        <name type="S55d01c184870">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c184dc0" ref="S55d01bfef0c0"/>
+    <FbasicType type="S55d01c184ff0" ref="S55d01c184dc0"/>
+    <FbasicType type="S55d01c184730" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c184870" intent="in" ref="S55d01c184730"/>
+    <FbasicType type="S55d01c1895c0" ref="S55d01bfefa80"/>
+    <FbasicType type="S55d01c1899a0" ref="S55d01bfee880"/>
+    <FfunctionType type="F55d01c18a8e0" result_name="p" return_type="Flogical" is_private="true">
+      <params>
+        <name type="S55d01c18b640">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c18b500" ref="S55d01bfef0c0"/>
+    <FbasicType type="S55d01c18b640" intent="in" ref="S55d01c18b500"/>
+    <FbasicType type="S55d01c18c9a0" ref="S55d01bfefa80"/>
+    <FfunctionType type="F55d01c190480" result_name="avail" return_type="I55d01c190890" is_private="true" bind="C" bind_name="xt_xmap_iterator_next">
+      <params>
+        <name type="S55d01c191a20">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55d01c1920f0" ref="Fint">
+      <kind>
+        <Var type="I55d01bf91e60" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c190890" ref="I55d01c1920f0"/>
+    <FbasicType type="S55d01c190f70" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c1918e0" ref="S55d01c190f70"/>
+    <FbasicType type="S55d01c191a20" intent="in" is_value="true" ref="S55d01c1918e0"/>
+    <FbasicType type="I55d01c192320" ref="I55d01c1920f0"/>
+    <FfunctionType type="F55d01c18dbe0" result_name="avail" return_type="Flogical" is_public="true">
+      <params>
+        <name type="S55d01c18e940">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c18e800" ref="S55d01bfef0c0"/>
+    <FbasicType type="S55d01c18e940" intent="inout" ref="S55d01c18e800"/>
+    <FbasicType type="S55d01c193b00" ref="S55d01bfefa80"/>
+    <FfunctionType type="F55d01c1976a0" result_name="rank" return_type="I55d01c197ab0" is_private="true" bind="C" bind_name="xt_xmap_iterator_get_rank">
+      <params>
+        <name type="S55d01c198c40">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55d01c199310" ref="Fint">
+      <kind>
+        <Var type="I55d01bf91e60" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c197ab0" ref="I55d01c199310"/>
+    <FbasicType type="S55d01c198190" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c198b00" ref="S55d01c198190"/>
+    <FbasicType type="S55d01c198c40" intent="in" is_value="true" ref="S55d01c198b00"/>
+    <FbasicType type="I55d01c199540" ref="I55d01c199310"/>
+    <FfunctionType type="F55d01c194de0" result_name="rank" return_type="Fint" is_public="true">
+      <params>
+        <name type="S55d01c195b40">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c195a00" ref="S55d01bfef0c0"/>
+    <FbasicType type="S55d01c195b40" intent="in" ref="S55d01c195a00"/>
+    <FfunctionType type="F55d01c19b5f0" return_type="Fint"/>
+    <FbasicType type="S55d01c19af60" ref="S55d01bfefa80"/>
+    <FfunctionType type="F55d01c19f240" result_name="transfer_pos" return_type="S55d01c19f650" is_private="true" bind="C" bind_name="xt_xmap_iterator_get_transfer_pos">
+      <params>
+        <name type="S55d01c1a0660">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c19fca0" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c1a0bb0" ref="S55d01c19fca0"/>
+    <FbasicType type="S55d01c19f650" ref="S55d01c1a0bb0"/>
+    <FbasicType type="S55d01c1a0520" ref="S55d01c19fca0"/>
+    <FbasicType type="S55d01c1a0660" intent="in" is_value="true" ref="S55d01c1a0520"/>
+    <FbasicType type="S55d01c1a0de0" ref="S55d01c1a0bb0"/>
+    <FfunctionType type="F55d01c19c4c0" result_name="transfer_pos" return_type="A55d01c19dea0" is_public="true">
+      <params>
+        <name type="S55d01c19d220">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55d01c19db30" is_pointer="true" ref="Fint">
+      <kind>
+        <Var type="I55d01bf91e60" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c19dd60" is_pointer="true" ref="I55d01c19db30"/>
+    <FbasicType type="A55d01c19dea0" is_pointer="true" ref="I55d01c19dd60">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S55d01c19d0e0" ref="S55d01bfef0c0"/>
+    <FbasicType type="S55d01c19d220" intent="in" ref="S55d01c19d0e0"/>
+    <FbasicType type="A55d01c1a23c0" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S55d01c1a2af0" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c1a2d20" ref="S55d01c1a2af0"/>
+    <FfunctionType type="F55d01c1a5830" return_type="Fint"/>
+    <FbasicType type="I55d01c1207e0" ref="Fint">
+      <kind>
+        <Var type="I55d01bf91e60" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c11ef20" ref="I55d01c1207e0"/>
+    <FfunctionType type="F55d01c11eb10" result_name="num" return_type="I55d01c11ef20" is_private="true" bind="C" bind_name="xt_xmap_iterator_get_num_transfer_pos">
+      <params>
+        <name type="S55d01c1200b0">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c11f6f0" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c11ff70" ref="S55d01c11f6f0"/>
+    <FbasicType type="S55d01c1200b0" intent="in" is_value="true" ref="S55d01c11ff70"/>
+    <FbasicType type="S55d01c1a51a0" ref="S55d01bfefa80"/>
+    <FbasicType type="S55d01c1a62a0" ref="S55d01bfefa80"/>
+    <FfunctionType type="F55d01c1a7b20" result_name="num" return_type="Fint" is_public="true">
+      <params>
+        <name type="S55d01c1a8880">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c1a8740" ref="S55d01bfef0c0"/>
+    <FbasicType type="S55d01c1a8880" intent="in" ref="S55d01c1a8740"/>
+    <FfunctionType type="F55d01c1aa540" return_type="Fint"/>
+    <FbasicType type="S55d01c1a9eb0" ref="S55d01bfefa80"/>
+    <FfunctionType type="F55d01c1ae010" result_name="transfer_pos_ext" return_type="S55d01c1ae420" is_private="true" bind="C" bind_name="xt_xmap_iterator_get_transfer_pos_ext">
+      <params>
+        <name type="S55d01c1af430">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c1aea70" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c1af980" ref="S55d01c1aea70"/>
+    <FbasicType type="S55d01c1ae420" ref="S55d01c1af980"/>
+    <FbasicType type="S55d01c1af2f0" ref="S55d01c1aea70"/>
+    <FbasicType type="S55d01c1af430" intent="in" is_value="true" ref="S55d01c1af2f0"/>
+    <FbasicType type="S55d01c1afbb0" ref="S55d01c1af980"/>
+    <FfunctionType type="F55d01c1ab410" result_name="transfer_pos_ext" return_type="A55d01c1acc70" is_public="true">
+      <params>
+        <name type="S55d01c1ac170">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c1ac900" is_pointer="true" ref="S55d01bf93d70"/>
+    <FbasicType type="S55d01c1acb30" is_pointer="true" ref="S55d01c1ac900"/>
+    <FbasicType type="A55d01c1acc70" is_pointer="true" ref="S55d01c1acb30">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S55d01c1ac030" ref="S55d01bfef0c0"/>
+    <FbasicType type="S55d01c1ac170" intent="in" ref="S55d01c1ac030"/>
+    <FbasicType type="A55d01c1b1190" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S55d01c1b18c0" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c1b1af0" ref="S55d01c1b18c0"/>
+    <FfunctionType type="F55d01c1b4600" return_type="Fint"/>
+    <FbasicType type="I55d01c123990" ref="Fint">
+      <kind>
+        <Var type="I55d01bf91e60" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d01c1220d0" ref="I55d01c123990"/>
+    <FfunctionType type="F55d01c121cc0" result_name="num" return_type="I55d01c1220d0" is_private="true" bind="C" bind_name="xt_xmap_iterator_get_num_transfer_pos_ext">
+      <params>
+        <name type="S55d01c123260">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c1228a0" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c123120" ref="S55d01c1228a0"/>
+    <FbasicType type="S55d01c123260" intent="in" is_value="true" ref="S55d01c123120"/>
+    <FbasicType type="S55d01c1b3f70" ref="S55d01bfefa80"/>
+    <FbasicType type="S55d01c1b5070" ref="S55d01bfefa80"/>
+    <FfunctionType type="F55d01c1b68f0" result_name="num" return_type="Fint" is_public="true">
+      <params>
+        <name type="S55d01c1b7650">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c1b7510" ref="S55d01bfef0c0"/>
+    <FbasicType type="S55d01c1b7650" intent="in" ref="S55d01c1b7510"/>
+    <FfunctionType type="F55d01c1b9310" return_type="Fint"/>
+    <FbasicType type="S55d01c1b8c80" ref="S55d01bfefa80"/>
+    <FfunctionType type="F55d01c1bc190" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_xmap_iterator_delete">
+      <params>
+        <name type="S55d01c1bd470">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c1bcab0" ref="S55d01bf92090"/>
+    <FbasicType type="S55d01c1bd330" ref="S55d01c1bcab0"/>
+    <FbasicType type="S55d01c1bd470" intent="in" is_value="true" ref="S55d01c1bd330"/>
+    <FfunctionType type="F55d01c1ba130" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S55d01c1bae90">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c1bad50" ref="S55d01bfef0c0"/>
+    <FbasicType type="S55d01c1bae90" intent="inout" ref="S55d01c1bad50"/>
+    <FbasicType type="S55d01c1be890" ref="S55d01bfefa80"/>
+    <FbasicType type="S55d01c1bf100" ref="S55d01bfefa80"/>
+    <FbasicType type="S55d01bf8ec10" ref="S55d01bf8e9e0"/>
+    <FfunctionType type="F55d01c11d6f0" return_type="V55d01c11d5b0" is_public="true"/>
+    <FbasicType type="V55d01c11d5b0" ref="FnumericAll"/>
+    <FfunctionType type="F55d01c125600" result_name="p" return_type="Flogical" is_private="true">
+      <params>
+        <name type="S55d01c126360">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d01c126220" ref="S55d01bfedec0"/>
+    <FbasicType type="S55d01c126360" intent="in" ref="S55d01c126220"/>
+    <FbasicType type="I55d01c120a10" ref="I55d01c1207e0"/>
+    <FbasicType type="I55d01c123bc0" ref="I55d01c123990"/>
+    <FfunctionType type="F55d01c11bfe0" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F55d01c127dc0" result_name="p" return_type="Flogical">
+      <params>
+        <name type="S55d01c126360">xmap</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55d01c18d0a0" result_name="p" return_type="Flogical">
+      <params>
+        <name type="S55d01c18b640">iter</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55d01c13b1c0" return_type="Fvoid">
+      <params>
+        <name type="A55d01c1367f0">xmaps</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55d01c134d30" return_type="Fvoid">
+      <params>
+        <name type="S55d01c1334d0">xmap</name>
+      </params>
+    </FfunctionType>
+  </typeTable>
+  <identifiers>
+    <id type="I55d01bf91e60" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="S55d01bf92090" imported_id="S555a51945380" sclass="ftype_name" original_name="c_ptr" declared_in="iso_c_binding">
+      <name>c_ptr</name>
+    </id>
+    <id type="S55d01bf92320" imported_id="S555a51947d30" sclass="flocal" original_name="c_null_ptr" declared_in="iso_c_binding">
+      <name>c_null_ptr</name>
+    </id>
+    <id type="F55d01bf928f0" sclass="ffunc" original_name="c_associated" declared_in="iso_c_binding">
+      <name>c_associated</name>
+    </id>
+    <id type="F55d01bf93060" sclass="ffunc" original_name="c_f_pointer" declared_in="iso_c_binding">
+      <name>c_f_pointer</name>
+    </id>
+    <id type="I55d01bf93ae0" sclass="flocal" original_name="xt_mpi_fint_kind" declared_in="xt_mpi">
+      <name>xt_mpi_fint_kind</name>
+    </id>
+    <id type="S55d01bf93d70" imported_id="S55e8270536d0" sclass="ftype_name" original_name="xt_pos_ext" declared_in="xt_core">
+      <name>xt_pos_ext</name>
+    </id>
+    <id type="S55d01c036f50" imported_id="S55e7b1bd98b0" sclass="ftype_name" original_name="xt_idxlist" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist</name>
+    </id>
+    <id type="F55d01c1288e0" sclass="ffunc" original_name="xt_xmap_c2f" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_c2f</name>
+    </id>
+    <id type="F55d01bf8cba0" sclass="ffunc" original_name="xt_xmap_f2c" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_f2c</name>
+    </id>
+    <id type="F55d01c11d6f0" sclass="ffunc" original_name="xt_is_null" declared_in="xt_xmap_abstract">
+      <name>xt_is_null</name>
+    </id>
+    <id type="F55d01c12b4a0" sclass="ffunc" original_name="xt_xmap_copy" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_copy</name>
+    </id>
+    <id type="F55d01c11bfe0" sclass="ffunc" original_name="xt_xmap_delete" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_delete</name>
+    </id>
+    <id type="F55d01c15db50" sclass="ffunc" original_name="xt_xmap_get_num_destinations" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_num_destinations</name>
+    </id>
+    <id type="F55d01c1654f0" sclass="ffunc" original_name="xt_xmap_get_num_sources" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_num_sources</name>
+    </id>
+    <id type="F55d01c16cee0" sclass="ffunc" original_name="xt_xmap_get_destination_ranks" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_destination_ranks</name>
+    </id>
+    <id type="F55d01c174e00" sclass="ffunc" original_name="xt_xmap_get_source_ranks" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_source_ranks</name>
+    </id>
+    <id type="F55d01c13be60" sclass="ffunc" original_name="xt_xmap_all2all_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_all2all_new</name>
+    </id>
+    <id type="F55d01c146d10" sclass="ffunc" original_name="xt_xmap_dist_dir_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_dist_dir_new</name>
+    </id>
+    <id type="F55d01c151c30" sclass="ffunc" original_name="xt_xmap_dist_dir_intercomm_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_dist_dir_intercomm_new</name>
+    </id>
+    <id type="F55d01c183b10" sclass="ffunc" original_name="xt_xmap_get_in_iterator" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_in_iterator</name>
+    </id>
+    <id type="F55d01c17cd30" sclass="ffunc" original_name="xt_xmap_get_out_iterator" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_out_iterator</name>
+    </id>
+    <id type="F55d01c18dbe0" sclass="ffunc" original_name="xt_xmap_iterator_next" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_next</name>
+    </id>
+    <id type="F55d01c194de0" sclass="ffunc" original_name="xt_xmap_iterator_get_rank" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_get_rank</name>
+    </id>
+    <id type="F55d01c19c4c0" sclass="ffunc" original_name="xt_xmap_iterator_get_transfer_pos" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_get_transfer_pos</name>
+    </id>
+    <id type="F55d01c1ab410" sclass="ffunc" original_name="xt_xmap_iterator_get_transfer_pos_ext" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_get_transfer_pos_ext</name>
+    </id>
+    <id type="F55d01c1a7b20" sclass="ffunc" original_name="xt_xmap_iterator_get_num_transfer_pos" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_get_num_transfer_pos</name>
+    </id>
+    <id type="F55d01c1b68f0" sclass="ffunc" original_name="xt_xmap_iterator_get_num_transfer_pos_ext" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_get_num_transfer_pos_ext</name>
+    </id>
+    <id type="F55d01c1ba130" sclass="ffunc" original_name="xt_xmap_iterator_delete" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_delete</name>
+    </id>
+    <id type="S55d01bfedec0" sclass="ftype_name" original_name="xt_xmap" declared_in="xt_xmap_abstract">
+      <name>xt_xmap</name>
+    </id>
+    <id type="S55d01bfef0c0" sclass="ftype_name" original_name="xt_xmap_iter" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iter</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I55d01bf91e60">c_int</name>
+    </varDecl>
+    <varDecl>
+      <name type="S55d01bf92320" imported_id="S555a51947d30">c_null_ptr</name>
+    </varDecl>
+    <varDecl>
+      <name type="I55d01bf93ae0">xt_mpi_fint_kind</name>
+      <value>
+        <Var type="I55d01bff7820" scope="local">c_int</Var>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="xt_is_null" lineno="110" file="xt_xmap_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="111" file="xt_xmap_f.f90">
+        <name type="F55d01c127dc0">xt_xmap_is_null</name>
+        <name type="F55d01c18d0a0">xt_xmap_iterator_is_null</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="112" file="xt_xmap_f.f90">
+        <name type="F55d01c127dc0">xt_xmap_is_null</name>
+        <name type="F55d01c18d0a0">xt_xmap_iterator_is_null</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_xmap_delete" lineno="105" file="xt_xmap_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="106" file="xt_xmap_f.f90">
+        <name type="F55d01c13b1c0">xt_xmap_delete_a1d</name>
+        <name type="F55d01c134d30">xt_xmap_delete_1</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="107" file="xt_xmap_f.f90">
+        <name type="F55d01c13b1c0">xt_xmap_delete_a1d</name>
+        <name type="F55d01c134d30">xt_xmap_delete_1</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

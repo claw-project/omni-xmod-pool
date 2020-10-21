@@ -1,0 +1,4436 @@
+<OmniFortranModule version="1.0">
+  <name>xt_idxstripes</name>
+  <depends>
+    <name>xt_core</name>
+    <name>xt_idxlist_abstract</name>
+    <name>iso_c_binding</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I55c9fc4f7090" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55c9fc4f7320" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55c9fc4f75b0" is_parameter="true" ref="Fint"/>
+    <FfunctionType type="F55c9fc4f7b80" return_type="Fvoid"/>
+    <FfunctionType type="F55c9fc530010" return_type="Fvoid">
+      <params>
+        <name type="C55c9fc50ae80">msg</name>
+        <name type="C55c9fc50b240">source</name>
+        <name type="I55c9fc50b600">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C55c9fc50b9c0" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55c9fc50ae80" intent="in" ref="C55c9fc50b9c0"/>
+    <FbasicType type="C55c9fc50c0a0" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55c9fc50b240" intent="in" ref="C55c9fc50c0a0"/>
+    <FbasicType type="I55c9fc50b600" intent="in" ref="Fint"/>
+    <FfunctionType type="F55c9fc530960" return_type="Fvoid">
+      <params>
+        <name type="I55c9fc507530">comm</name>
+        <name type="C55c9fc507930">msg</name>
+        <name type="C55c9fc507d10">source</name>
+        <name type="I55c9fc508110">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55c9fc507530" intent="in" ref="Fint"/>
+    <FbasicType type="C55c9fc5087d0" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55c9fc507930" intent="in" ref="C55c9fc5087d0"/>
+    <FbasicType type="C55c9fc508f10" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55c9fc507d10" intent="in" ref="C55c9fc508f10"/>
+    <FbasicType type="I55c9fc508110" intent="in" ref="Fint"/>
+    <FfunctionType type="F55c9fc4f7ee0" return_type="I55c9fc4f8970">
+      <params>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55c9fc5027f0" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55c9fc4f8970" ref="Fint">
+      <kind>
+        <Var type="I55c9fc5027f0" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55c9fc4f8170" imported_id="S55e82704fe80">
+      <symbols>
+        <id type="I55c9fc4eeb30">
+          <name>start</name>
+        </id>
+        <id type="I55c9fc4eeec0">
+          <name>stride</name>
+        </id>
+        <id type="I55c9fc4ef270">
+          <name>nstrides</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55c9fc4fed10" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc4ff180" is_parameter="true" ref="I55c9fc4fed10"/>
+    <FbasicType type="I55c9fc4eeb30" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4ff180" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc4eeec0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4ff180" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc4ef270" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4ff180" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55c9fc4f8d10" imported_id="S55e7b1bd98b0" is_internal_private="true">
+      <symbols>
+        <id type="S55c9fc4f9530">
+          <name>cptr</name>
+          <value>
+            <Var type="S55c9fc559120" imported_id="S555a51947d30" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FstructType type="S55c9fc4f97b0" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55c9fc4f9c40">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55c9fc5580a0" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc558710" is_parameter="true" ref="I55c9fc5580a0"/>
+    <FbasicType type="I55c9fc4f9c40" ref="Fint">
+      <kind>
+        <Var type="I55c9fc558710" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55c9fc4f9670" imported_id="S55e7b1bda040" ref="S55c9fc4f97b0"/>
+    <FbasicType type="S55c9fc4f9530" imported_id="S55e7b1bda270" ref="S55c9fc4f9670"/>
+    <FstructType type="S55c9fc557a60" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55c9fc558a30">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55c9fc558a30" ref="Fint">
+      <kind>
+        <Var type="I55c9fc558710" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55c9fc558d90" imported_id="S555a51947b00" ref="S55c9fc557a60"/>
+    <FbasicType type="S55c9fc559120" imported_id="S555a51947d30" is_parameter="true" ref="S55c9fc558d90"/>
+    <FfunctionType type="F55c9fc4f8f40" return_type="S55c9fc4f9e70">
+      <params>
+        <name type="S55c9fc4fa410" imported_id="S55e7b1c29470">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc4fa0f0" imported_id="S55e7b1bdc380" ref="S55c9fc4f97b0"/>
+    <FbasicType type="S55c9fc4f9fb0" imported_id="S55e7b1c299c0" ref="S55c9fc4fa0f0"/>
+    <FbasicType type="S55c9fc4f9e70" imported_id="S55e7b1bdbca0" ref="S55c9fc4f9fb0"/>
+    <FbasicType type="S55c9fc4fa910" imported_id="S55e7b1c288a0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc4fa570" imported_id="S55e7b1c29330" ref="S55c9fc4fa910"/>
+    <FbasicType type="S55c9fc4fa410" imported_id="S55e7b1c29470" intent="in" ref="S55c9fc4fa570"/>
+    <FstructType type="S55c9fc5470a0" imported_id="S55e7b1bd98b0" is_internal_private="true">
+      <symbols>
+        <id type="S55c9fc547220">
+          <name>cptr</name>
+          <value>
+            <Var type="S55c9fc559120" imported_id="S555a51947d30" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="S55c9fc547630" imported_id="S55e7b1bda040" ref="S55c9fc557a60"/>
+    <FbasicType type="S55c9fc547220" imported_id="S55e7b1bda270" ref="S55c9fc547630"/>
+    <FbasicType type="S55c9fc566300" imported_id="S55e7b1c288a0" ref="S55c9fc5470a0"/>
+    <FbasicType type="S55c9fc5664d0" imported_id="S55e7b1c29330" ref="S55c9fc566300"/>
+    <FbasicType type="S55c9fc565b20" imported_id="S55e7b1c29470" intent="in" ref="S55c9fc5664d0"/>
+    <FfunctionType type="F55c9fc4f92a0" return_type="S55c9fc4fab40">
+      <params>
+        <name type="S55c9fc5433c0" imported_id="S55e7b1d76800">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc543080" imported_id="S55e7b1d76d50" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc4fab40" imported_id="S55e7b1d76f80" ref="S55c9fc543080"/>
+    <FbasicType type="S55c9fc543520" imported_id="S55e7b1d766c0" ref="S55c9fc4f97b0"/>
+    <FbasicType type="S55c9fc5433c0" imported_id="S55e7b1d76800" intent="in" ref="S55c9fc543520"/>
+    <FbasicType type="S55c9fc5b2440" imported_id="S55e7b1d766c0" ref="S55c9fc557a60"/>
+    <FbasicType type="S55c9fc5b1d10" imported_id="S55e7b1d76800" intent="in" ref="S55c9fc5b2440"/>
+    <FbasicType type="I55c9fc543d20" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc543950" is_parameter="true" ref="I55c9fc543d20"/>
+    <FstructType type="S55c9fc543b80" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55c9fc544090">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55c9fc63c110" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc63c740" is_parameter="true" ref="I55c9fc63c110"/>
+    <FbasicType type="I55c9fc544090" ref="Fint">
+      <kind>
+        <Var type="I55c9fc63c740" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc4f5950" return_type="V55c9fc4f5810" is_public="true"/>
+    <FbasicType type="V55c9fc4f5810" ref="FnumericAll"/>
+    <FfunctionType type="F55c9fc686f20" result_name="res" return_type="S55c9fc688400" is_private="true">
+      <params>
+        <name type="S55c9fc687c80">stripe</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6881d0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc688400" ref="S55c9fc6881d0"/>
+    <FbasicType type="S55c9fc687b40" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc687c80" intent="in" ref="S55c9fc687b40"/>
+    <FfunctionType type="F55c9fc68b170" result_name="res" return_type="S55c9fc68c8e0" is_private="true">
+      <params>
+        <name type="A55c9fc68c160">stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc68c6b0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc68c8e0" ref="S55c9fc68c6b0"/>
+    <FbasicType type="S55c9fc68bee0" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc68c020" intent="in" ref="S55c9fc68bee0"/>
+    <FbasicType type="A55c9fc68c160" intent="in" ref="S55c9fc68c020">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc68d010" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc68d240" ref="I55c9fc68d010"/>
+    <FfunctionType type="F55c9fc68e860" return_type="Fint"/>
+    <FfunctionType type="F55c9fc690c80" return_type="Fint"/>
+    <FfunctionType type="F55c9fc68ef10" return_type="I55c9fc68edd0"/>
+    <FbasicType type="I55c9fc68edd0" ref="I55c9fc68d010"/>
+    <FfunctionType type="F55c9fc6912f0" return_type="I55c9fc6911b0"/>
+    <FbasicType type="I55c9fc6911b0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc693090" result_name="res" return_type="S55c9fc695550" is_private="true">
+      <params>
+        <name type="A55c9fc694350">stripes</name>
+        <name type="I55c9fc694dd0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc695320" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc695550" ref="S55c9fc695320"/>
+    <FbasicType type="S55c9fc6940d0" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc694210" intent="in" ref="S55c9fc6940d0"/>
+    <FbasicType type="A55c9fc694350" intent="in" ref="S55c9fc694210">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc694c90" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7090" scope="local">i2</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc694dd0" intent="in" is_value="true" ref="I55c9fc694c90"/>
+    <FfunctionType type="F55c9fc696c10" return_type="I55c9fc696ad0"/>
+    <FbasicType type="I55c9fc696ad0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc698060" result_name="res" return_type="S55c9fc69a520" is_private="true">
+      <params>
+        <name type="A55c9fc699320">stripes</name>
+        <name type="I55c9fc699da0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc69a2f0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc69a520" ref="S55c9fc69a2f0"/>
+    <FbasicType type="S55c9fc6990a0" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6991e0" intent="in" ref="S55c9fc6990a0"/>
+    <FbasicType type="A55c9fc699320" intent="in" ref="S55c9fc6991e0">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc699c60" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7320" scope="local">i4</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc699da0" intent="in" is_value="true" ref="I55c9fc699c60"/>
+    <FbasicType type="I55c9fc69ac10" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc69ae40" ref="I55c9fc69ac10"/>
+    <FfunctionType type="F55c9fc69c320" return_type="I55c9fc69c1e0"/>
+    <FbasicType type="I55c9fc69c1e0" ref="I55c9fc69ac10"/>
+    <FfunctionType type="F55c9fc69deb0" return_type="I55c9fc69dd70"/>
+    <FbasicType type="I55c9fc69dd70" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc69fd10" result_name="res" return_type="S55c9fc6a21d0" is_private="true">
+      <params>
+        <name type="A55c9fc6a0fd0">stripes</name>
+        <name type="I55c9fc6a1a50">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6a1fa0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6a21d0" ref="S55c9fc6a1fa0"/>
+    <FbasicType type="S55c9fc6a0d50" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6a0e90" intent="in" ref="S55c9fc6a0d50"/>
+    <FbasicType type="A55c9fc6a0fd0" intent="in" ref="S55c9fc6a0e90">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6a1910" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f75b0" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6a1a50" intent="in" is_value="true" ref="I55c9fc6a1910"/>
+    <FbasicType type="I55c9fc6a28c0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6a2af0" ref="I55c9fc6a28c0"/>
+    <FfunctionType type="F55c9fc6a3fd0" return_type="I55c9fc6a3e90"/>
+    <FbasicType type="I55c9fc6a3e90" ref="I55c9fc6a28c0"/>
+    <FfunctionType type="F55c9fc6a5b60" return_type="I55c9fc6a5a20"/>
+    <FbasicType type="I55c9fc6a5a20" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc6a7930" result_name="res" return_type="S55c9fc6a92d0" is_private="true">
+      <params>
+        <name type="A55c9fc6a8b50">stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6a90a0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6a92d0" ref="S55c9fc6a90a0"/>
+    <FbasicType type="S55c9fc6a8790" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6a88d0" intent="in" ref="S55c9fc6a8790"/>
+    <FbasicType type="A55c9fc6a8a10" intent="in" ref="S55c9fc6a88d0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6a8b50" intent="in" ref="S55c9fc6a88d0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6a99c0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6a9bf0" ref="I55c9fc6a99c0"/>
+    <FfunctionType type="F55c9fc6ab210" return_type="Fint"/>
+    <FfunctionType type="F55c9fc6ad630" return_type="Fint"/>
+    <FfunctionType type="F55c9fc6ab8c0" return_type="I55c9fc6ab780"/>
+    <FbasicType type="I55c9fc6ab780" ref="I55c9fc6a99c0"/>
+    <FfunctionType type="F55c9fc6adca0" return_type="I55c9fc6adb60"/>
+    <FbasicType type="I55c9fc6adb60" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc6afa40" result_name="res" return_type="S55c9fc6b2270" is_private="true">
+      <params>
+        <name type="A55c9fc6b10d0">stripes</name>
+        <name type="I55c9fc6b1af0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6b2040" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6b2270" ref="S55c9fc6b2040"/>
+    <FbasicType type="S55c9fc6b0b70" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6b0cb0" intent="in" ref="S55c9fc6b0b70"/>
+    <FbasicType type="A55c9fc6b0df0" intent="in" ref="S55c9fc6b0cb0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6b10d0" intent="in" ref="S55c9fc6b0cb0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6b19b0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7090" scope="local">i2</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6b1af0" intent="in" is_value="true" ref="I55c9fc6b19b0"/>
+    <FfunctionType type="F55c9fc6b3b30" return_type="I55c9fc6b39f0"/>
+    <FbasicType type="I55c9fc6b39f0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc6b4f80" result_name="res" return_type="S55c9fc6b77b0" is_private="true">
+      <params>
+        <name type="A55c9fc6b6610">stripes</name>
+        <name type="I55c9fc6b7030">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6b7580" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6b77b0" ref="S55c9fc6b7580"/>
+    <FbasicType type="S55c9fc6b60b0" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6b61f0" intent="in" ref="S55c9fc6b60b0"/>
+    <FbasicType type="A55c9fc6b6330" intent="in" ref="S55c9fc6b61f0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6b6610" intent="in" ref="S55c9fc6b61f0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6b6ef0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7320" scope="local">i4</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6b7030" intent="in" is_value="true" ref="I55c9fc6b6ef0"/>
+    <FbasicType type="I55c9fc6b7e80" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6b80b0" ref="I55c9fc6b7e80"/>
+    <FfunctionType type="F55c9fc6b9790" return_type="I55c9fc6b9650"/>
+    <FbasicType type="I55c9fc6b9650" ref="I55c9fc6b7e80"/>
+    <FfunctionType type="F55c9fc6bb320" return_type="I55c9fc6bb1e0"/>
+    <FbasicType type="I55c9fc6bb1e0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc6bd180" result_name="res" return_type="S55c9fc6bf9b0" is_private="true">
+      <params>
+        <name type="A55c9fc6be810">stripes</name>
+        <name type="I55c9fc6bf230">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6bf780" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6bf9b0" ref="S55c9fc6bf780"/>
+    <FbasicType type="S55c9fc6be2b0" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6be3f0" intent="in" ref="S55c9fc6be2b0"/>
+    <FbasicType type="A55c9fc6be530" intent="in" ref="S55c9fc6be3f0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6be810" intent="in" ref="S55c9fc6be3f0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6bf0f0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f75b0" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6bf230" intent="in" is_value="true" ref="I55c9fc6bf0f0"/>
+    <FbasicType type="I55c9fc6c00a0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6c02d0" ref="I55c9fc6c00a0"/>
+    <FfunctionType type="F55c9fc6c19b0" return_type="I55c9fc6c1870"/>
+    <FbasicType type="I55c9fc6c1870" ref="I55c9fc6c00a0"/>
+    <FfunctionType type="F55c9fc6c3540" return_type="I55c9fc6c3400"/>
+    <FbasicType type="I55c9fc6c3400" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc6c5310" result_name="res" return_type="S55c9fc6c6ee0" is_private="true">
+      <params>
+        <name type="A55c9fc6c6760">stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6c6cb0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6c6ee0" ref="S55c9fc6c6cb0"/>
+    <FbasicType type="S55c9fc6c6260" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6c63a0" intent="in" ref="S55c9fc6c6260"/>
+    <FbasicType type="A55c9fc6c64e0" intent="in" ref="S55c9fc6c63a0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6c6620" intent="in" ref="S55c9fc6c63a0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6c6760" intent="in" ref="S55c9fc6c63a0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6c75d0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6c7800" ref="I55c9fc6c75d0"/>
+    <FfunctionType type="F55c9fc6c8e20" return_type="Fint"/>
+    <FfunctionType type="F55c9fc6cb240" return_type="Fint"/>
+    <FfunctionType type="F55c9fc6c94d0" return_type="I55c9fc6c9390"/>
+    <FbasicType type="I55c9fc6c9390" ref="I55c9fc6c75d0"/>
+    <FfunctionType type="F55c9fc6cb8b0" return_type="I55c9fc6cb770"/>
+    <FbasicType type="I55c9fc6cb770" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc6cd650" result_name="res" return_type="S55c9fc6d01f0" is_private="true">
+      <params>
+        <name type="A55c9fc6cf050">stripes</name>
+        <name type="I55c9fc6cfa70">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6cffc0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6d01f0" ref="S55c9fc6cffc0"/>
+    <FbasicType type="S55c9fc6ce810" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6ce950" intent="in" ref="S55c9fc6ce810"/>
+    <FbasicType type="A55c9fc6cea90" intent="in" ref="S55c9fc6ce950">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6ced70" intent="in" ref="S55c9fc6ce950">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6cf050" intent="in" ref="S55c9fc6ce950">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6cf930" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7090" scope="local">i2</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6cfa70" intent="in" is_value="true" ref="I55c9fc6cf930"/>
+    <FfunctionType type="F55c9fc6d1cb0" return_type="I55c9fc6d1b70"/>
+    <FbasicType type="I55c9fc6d1b70" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc6d3100" result_name="res" return_type="S55c9fc6d5ca0" is_private="true">
+      <params>
+        <name type="A55c9fc6d4b00">stripes</name>
+        <name type="I55c9fc6d5520">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6d5a70" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6d5ca0" ref="S55c9fc6d5a70"/>
+    <FbasicType type="S55c9fc6d42c0" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6d4400" intent="in" ref="S55c9fc6d42c0"/>
+    <FbasicType type="A55c9fc6d4540" intent="in" ref="S55c9fc6d4400">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6d4820" intent="in" ref="S55c9fc6d4400">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6d4b00" intent="in" ref="S55c9fc6d4400">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6d53e0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7320" scope="local">i4</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6d5520" intent="in" is_value="true" ref="I55c9fc6d53e0"/>
+    <FbasicType type="I55c9fc6d6390" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6d65c0" ref="I55c9fc6d6390"/>
+    <FfunctionType type="F55c9fc6d7ea0" return_type="I55c9fc6d7d60"/>
+    <FbasicType type="I55c9fc6d7d60" ref="I55c9fc6d6390"/>
+    <FfunctionType type="F55c9fc6d9a30" return_type="I55c9fc6d98f0"/>
+    <FbasicType type="I55c9fc6d98f0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc6db890" result_name="res" return_type="S55c9fc6de430" is_private="true">
+      <params>
+        <name type="A55c9fc6dd290">stripes</name>
+        <name type="I55c9fc6ddcb0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6de200" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6de430" ref="S55c9fc6de200"/>
+    <FbasicType type="S55c9fc6dca50" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6dcb90" intent="in" ref="S55c9fc6dca50"/>
+    <FbasicType type="A55c9fc6dccd0" intent="in" ref="S55c9fc6dcb90">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6dcfb0" intent="in" ref="S55c9fc6dcb90">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6dd290" intent="in" ref="S55c9fc6dcb90">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6ddb70" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f75b0" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6ddcb0" intent="in" is_value="true" ref="I55c9fc6ddb70"/>
+    <FbasicType type="I55c9fc6deb20" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6ded50" ref="I55c9fc6deb20"/>
+    <FfunctionType type="F55c9fc6e0630" return_type="I55c9fc6e04f0"/>
+    <FbasicType type="I55c9fc6e04f0" ref="I55c9fc6deb20"/>
+    <FfunctionType type="F55c9fc6e21c0" return_type="I55c9fc6e2080"/>
+    <FbasicType type="I55c9fc6e2080" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc6e3f90" result_name="res" return_type="S55c9fc6e5d90" is_private="true">
+      <params>
+        <name type="A55c9fc6e5610">stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6e5b60" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6e5d90" ref="S55c9fc6e5b60"/>
+    <FbasicType type="S55c9fc6e4fd0" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6e5110" intent="in" ref="S55c9fc6e4fd0"/>
+    <FbasicType type="A55c9fc6e5250" intent="in" ref="S55c9fc6e5110">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6e5390" intent="in" ref="S55c9fc6e5110">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6e54d0" intent="in" ref="S55c9fc6e5110">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6e5610" intent="in" ref="S55c9fc6e5110">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6e6480" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6e66b0" ref="I55c9fc6e6480"/>
+    <FfunctionType type="F55c9fc6e7cd0" return_type="Fint"/>
+    <FfunctionType type="F55c9fc6ea0f0" return_type="Fint"/>
+    <FfunctionType type="F55c9fc6e8380" return_type="I55c9fc6e8240"/>
+    <FbasicType type="I55c9fc6e8240" ref="I55c9fc6e6480"/>
+    <FfunctionType type="F55c9fc6ea760" return_type="I55c9fc6ea620"/>
+    <FbasicType type="I55c9fc6ea620" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc6ec500" result_name="res" return_type="S55c9fc6ef410" is_private="true">
+      <params>
+        <name type="A55c9fc6ee270">stripes</name>
+        <name type="I55c9fc6eec90">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6ef1e0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6ef410" ref="S55c9fc6ef1e0"/>
+    <FbasicType type="S55c9fc6ed750" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6ed890" intent="in" ref="S55c9fc6ed750"/>
+    <FbasicType type="A55c9fc6ed9d0" intent="in" ref="S55c9fc6ed890">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6edcb0" intent="in" ref="S55c9fc6ed890">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6edf90" intent="in" ref="S55c9fc6ed890">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6ee270" intent="in" ref="S55c9fc6ed890">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6eeb50" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7090" scope="local">i2</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6eec90" intent="in" is_value="true" ref="I55c9fc6eeb50"/>
+    <FfunctionType type="F55c9fc6f10d0" return_type="I55c9fc6f0f90"/>
+    <FbasicType type="I55c9fc6f0f90" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc6f2520" result_name="res" return_type="S55c9fc6f5430" is_private="true">
+      <params>
+        <name type="A55c9fc6f4290">stripes</name>
+        <name type="I55c9fc6f4cb0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6f5200" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6f5430" ref="S55c9fc6f5200"/>
+    <FbasicType type="S55c9fc6f3770" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6f38b0" intent="in" ref="S55c9fc6f3770"/>
+    <FbasicType type="A55c9fc6f39f0" intent="in" ref="S55c9fc6f38b0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6f3cd0" intent="in" ref="S55c9fc6f38b0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6f3fb0" intent="in" ref="S55c9fc6f38b0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6f4290" intent="in" ref="S55c9fc6f38b0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6f4b70" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7320" scope="local">i4</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6f4cb0" intent="in" is_value="true" ref="I55c9fc6f4b70"/>
+    <FbasicType type="I55c9fc6f5b20" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6f5d50" ref="I55c9fc6f5b20"/>
+    <FfunctionType type="F55c9fc6f7830" return_type="I55c9fc6f76f0"/>
+    <FbasicType type="I55c9fc6f76f0" ref="I55c9fc6f5b20"/>
+    <FfunctionType type="F55c9fc6f93c0" return_type="I55c9fc6f9280"/>
+    <FbasicType type="I55c9fc6f9280" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc6fb220" result_name="res" return_type="S55c9fc6fe130" is_private="true">
+      <params>
+        <name type="A55c9fc6fcf90">stripes</name>
+        <name type="I55c9fc6fd9b0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc6fdf00" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc6fe130" ref="S55c9fc6fdf00"/>
+    <FbasicType type="S55c9fc6fc470" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc6fc5b0" intent="in" ref="S55c9fc6fc470"/>
+    <FbasicType type="A55c9fc6fc6f0" intent="in" ref="S55c9fc6fc5b0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6fc9d0" intent="in" ref="S55c9fc6fc5b0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6fccb0" intent="in" ref="S55c9fc6fc5b0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc6fcf90" intent="in" ref="S55c9fc6fc5b0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6fd870" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f75b0" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6fd9b0" intent="in" is_value="true" ref="I55c9fc6fd870"/>
+    <FbasicType type="I55c9fc6fe820" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc6fea50" ref="I55c9fc6fe820"/>
+    <FfunctionType type="F55c9fc700530" return_type="I55c9fc7003f0"/>
+    <FbasicType type="I55c9fc7003f0" ref="I55c9fc6fe820"/>
+    <FfunctionType type="F55c9fc7020c0" return_type="I55c9fc701f80"/>
+    <FbasicType type="I55c9fc701f80" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc703e90" result_name="res" return_type="S55c9fc705ec0" is_private="true">
+      <params>
+        <name type="A55c9fc705740">stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc705c90" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc705ec0" ref="S55c9fc705c90"/>
+    <FbasicType type="S55c9fc704fc0" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc705100" intent="in" ref="S55c9fc704fc0"/>
+    <FbasicType type="A55c9fc705240" intent="in" ref="S55c9fc705100">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc705380" intent="in" ref="S55c9fc705100">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc7054c0" intent="in" ref="S55c9fc705100">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc705600" intent="in" ref="S55c9fc705100">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc705740" intent="in" ref="S55c9fc705100">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc7065b0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc7067e0" ref="I55c9fc7065b0"/>
+    <FfunctionType type="F55c9fc707e00" return_type="Fint"/>
+    <FfunctionType type="F55c9fc70a220" return_type="Fint"/>
+    <FfunctionType type="F55c9fc7084b0" return_type="I55c9fc708370"/>
+    <FbasicType type="I55c9fc708370" ref="I55c9fc7065b0"/>
+    <FfunctionType type="F55c9fc70a890" return_type="I55c9fc70a750"/>
+    <FbasicType type="I55c9fc70a750" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc70c630" result_name="res" return_type="S55c9fc70f8b0" is_private="true">
+      <params>
+        <name type="A55c9fc70e710">stripes</name>
+        <name type="I55c9fc70f130">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc70f680" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc70f8b0" ref="S55c9fc70f680"/>
+    <FbasicType type="S55c9fc70d910" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc70da50" intent="in" ref="S55c9fc70d910"/>
+    <FbasicType type="A55c9fc70db90" intent="in" ref="S55c9fc70da50">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc70de70" intent="in" ref="S55c9fc70da50">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc70e150" intent="in" ref="S55c9fc70da50">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc70e430" intent="in" ref="S55c9fc70da50">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc70e710" intent="in" ref="S55c9fc70da50">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc70eff0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7090" scope="local">i2</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc70f130" intent="in" is_value="true" ref="I55c9fc70eff0"/>
+    <FfunctionType type="F55c9fc711770" return_type="I55c9fc711630"/>
+    <FbasicType type="I55c9fc711630" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc712bc0" result_name="res" return_type="S55c9fc715e40" is_private="true">
+      <params>
+        <name type="A55c9fc714ca0">stripes</name>
+        <name type="I55c9fc7156c0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc715c10" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc715e40" ref="S55c9fc715c10"/>
+    <FbasicType type="S55c9fc713ea0" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc713fe0" intent="in" ref="S55c9fc713ea0"/>
+    <FbasicType type="A55c9fc714120" intent="in" ref="S55c9fc713fe0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc714400" intent="in" ref="S55c9fc713fe0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc7146e0" intent="in" ref="S55c9fc713fe0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc7149c0" intent="in" ref="S55c9fc713fe0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc714ca0" intent="in" ref="S55c9fc713fe0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc715580" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7320" scope="local">i4</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc7156c0" intent="in" is_value="true" ref="I55c9fc715580"/>
+    <FbasicType type="I55c9fc716530" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc716760" ref="I55c9fc716530"/>
+    <FfunctionType type="F55c9fc718440" return_type="I55c9fc718300"/>
+    <FbasicType type="I55c9fc718300" ref="I55c9fc716530"/>
+    <FfunctionType type="F55c9fc719fd0" return_type="I55c9fc719e90"/>
+    <FbasicType type="I55c9fc719e90" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc71be30" result_name="res" return_type="S55c9fc71f0b0" is_private="true">
+      <params>
+        <name type="A55c9fc71df10">stripes</name>
+        <name type="I55c9fc71e930">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc71ee80" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc71f0b0" ref="S55c9fc71ee80"/>
+    <FbasicType type="S55c9fc71d110" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc71d250" intent="in" ref="S55c9fc71d110"/>
+    <FbasicType type="A55c9fc71d390" intent="in" ref="S55c9fc71d250">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc71d670" intent="in" ref="S55c9fc71d250">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc71d950" intent="in" ref="S55c9fc71d250">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc71dc30" intent="in" ref="S55c9fc71d250">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc71df10" intent="in" ref="S55c9fc71d250">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc71e7f0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f75b0" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc71e930" intent="in" is_value="true" ref="I55c9fc71e7f0"/>
+    <FbasicType type="I55c9fc71f7a0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc71f9d0" ref="I55c9fc71f7a0"/>
+    <FfunctionType type="F55c9fc7216b0" return_type="I55c9fc721570"/>
+    <FbasicType type="I55c9fc721570" ref="I55c9fc71f7a0"/>
+    <FfunctionType type="F55c9fc723240" return_type="I55c9fc723100"/>
+    <FbasicType type="I55c9fc723100" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc725010" result_name="res" return_type="S55c9fc727270" is_private="true">
+      <params>
+        <name type="A55c9fc726af0">stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc727040" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc727270" ref="S55c9fc727040"/>
+    <FbasicType type="S55c9fc726230" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc726370" intent="in" ref="S55c9fc726230"/>
+    <FbasicType type="A55c9fc7264b0" intent="in" ref="S55c9fc726370">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc7265f0" intent="in" ref="S55c9fc726370">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc726730" intent="in" ref="S55c9fc726370">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc726870" intent="in" ref="S55c9fc726370">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc7269b0" intent="in" ref="S55c9fc726370">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc726af0" intent="in" ref="S55c9fc726370">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc727960" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc727b90" ref="I55c9fc727960"/>
+    <FfunctionType type="F55c9fc7291b0" return_type="Fint"/>
+    <FfunctionType type="F55c9fc72b5d0" return_type="Fint"/>
+    <FfunctionType type="F55c9fc729860" return_type="I55c9fc729720"/>
+    <FbasicType type="I55c9fc729720" ref="I55c9fc727960"/>
+    <FfunctionType type="F55c9fc72bc40" return_type="I55c9fc72bb00"/>
+    <FbasicType type="I55c9fc72bb00" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc72d9e0" result_name="res" return_type="S55c9fc730fd0" is_private="true">
+      <params>
+        <name type="A55c9fc72fe30">stripes</name>
+        <name type="I55c9fc730850">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc730da0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc730fd0" ref="S55c9fc730da0"/>
+    <FbasicType type="S55c9fc72ed50" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc72ee90" intent="in" ref="S55c9fc72ed50"/>
+    <FbasicType type="A55c9fc72efd0" intent="in" ref="S55c9fc72ee90">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc72f2b0" intent="in" ref="S55c9fc72ee90">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc72f590" intent="in" ref="S55c9fc72ee90">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc72f870" intent="in" ref="S55c9fc72ee90">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc72fb50" intent="in" ref="S55c9fc72ee90">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc72fe30" intent="in" ref="S55c9fc72ee90">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc730710" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7090" scope="local">i2</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc730850" intent="in" is_value="true" ref="I55c9fc730710"/>
+    <FfunctionType type="F55c9fc733090" return_type="I55c9fc732f50"/>
+    <FbasicType type="I55c9fc732f50" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc7344e0" result_name="res" return_type="S55c9fc737ad0" is_private="true">
+      <params>
+        <name type="A55c9fc736930">stripes</name>
+        <name type="I55c9fc737350">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc7378a0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc737ad0" ref="S55c9fc7378a0"/>
+    <FbasicType type="S55c9fc735850" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc735990" intent="in" ref="S55c9fc735850"/>
+    <FbasicType type="A55c9fc735ad0" intent="in" ref="S55c9fc735990">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc735db0" intent="in" ref="S55c9fc735990">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc736090" intent="in" ref="S55c9fc735990">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc736370" intent="in" ref="S55c9fc735990">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc736650" intent="in" ref="S55c9fc735990">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc736930" intent="in" ref="S55c9fc735990">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc737210" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7320" scope="local">i4</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc737350" intent="in" is_value="true" ref="I55c9fc737210"/>
+    <FbasicType type="I55c9fc7381c0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc7383f0" ref="I55c9fc7381c0"/>
+    <FfunctionType type="F55c9fc73a2d0" return_type="I55c9fc73a190"/>
+    <FbasicType type="I55c9fc73a190" ref="I55c9fc7381c0"/>
+    <FfunctionType type="F55c9fc73be60" return_type="I55c9fc73bd20"/>
+    <FbasicType type="I55c9fc73bd20" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc73dcc0" result_name="res" return_type="S55c9fc7412b0" is_private="true">
+      <params>
+        <name type="A55c9fc740110">stripes</name>
+        <name type="I55c9fc740b30">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc741080" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc7412b0" ref="S55c9fc741080"/>
+    <FbasicType type="S55c9fc73f030" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc73f170" intent="in" ref="S55c9fc73f030"/>
+    <FbasicType type="A55c9fc73f2b0" intent="in" ref="S55c9fc73f170">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc73f590" intent="in" ref="S55c9fc73f170">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc73f870" intent="in" ref="S55c9fc73f170">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc73fb50" intent="in" ref="S55c9fc73f170">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc73fe30" intent="in" ref="S55c9fc73f170">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc740110" intent="in" ref="S55c9fc73f170">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc7409f0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f75b0" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc740b30" intent="in" is_value="true" ref="I55c9fc7409f0"/>
+    <FbasicType type="I55c9fc7419a0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc741bd0" ref="I55c9fc7419a0"/>
+    <FfunctionType type="F55c9fc743ab0" return_type="I55c9fc743970"/>
+    <FbasicType type="I55c9fc743970" ref="I55c9fc7419a0"/>
+    <FfunctionType type="F55c9fc745640" return_type="I55c9fc745500"/>
+    <FbasicType type="I55c9fc745500" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc747410" result_name="res" return_type="S55c9fc7498a0" is_private="true">
+      <params>
+        <name type="A55c9fc749120">stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc749670" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc7498a0" ref="S55c9fc749670"/>
+    <FbasicType type="S55c9fc748720" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc748860" intent="in" ref="S55c9fc748720"/>
+    <FbasicType type="A55c9fc7489a0" intent="in" ref="S55c9fc748860">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc748ae0" intent="in" ref="S55c9fc748860">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc748c20" intent="in" ref="S55c9fc748860">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc748d60" intent="in" ref="S55c9fc748860">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc748ea0" intent="in" ref="S55c9fc748860">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc748fe0" intent="in" ref="S55c9fc748860">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc749120" intent="in" ref="S55c9fc748860">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc749f90" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc74a1c0" ref="I55c9fc749f90"/>
+    <FfunctionType type="F55c9fc74b7e0" return_type="Fint"/>
+    <FfunctionType type="F55c9fc74dc00" return_type="Fint"/>
+    <FfunctionType type="F55c9fc74be90" return_type="I55c9fc74bd50"/>
+    <FbasicType type="I55c9fc74bd50" ref="I55c9fc749f90"/>
+    <FfunctionType type="F55c9fc74e270" return_type="I55c9fc74e130"/>
+    <FbasicType type="I55c9fc74e130" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc750010" result_name="res" return_type="S55c9fc753970" is_private="true">
+      <params>
+        <name type="A55c9fc7527d0">stripes</name>
+        <name type="I55c9fc7531f0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc753740" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc753970" ref="S55c9fc753740"/>
+    <FbasicType type="S55c9fc751410" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc751550" intent="in" ref="S55c9fc751410"/>
+    <FbasicType type="A55c9fc751690" intent="in" ref="S55c9fc751550">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc751970" intent="in" ref="S55c9fc751550">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc751c50" intent="in" ref="S55c9fc751550">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc751f30" intent="in" ref="S55c9fc751550">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc752210" intent="in" ref="S55c9fc751550">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc7524f0" intent="in" ref="S55c9fc751550">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc7527d0" intent="in" ref="S55c9fc751550">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc7530b0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7090" scope="local">i2</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc7531f0" intent="in" is_value="true" ref="I55c9fc7530b0"/>
+    <FfunctionType type="F55c9fc755c30" return_type="I55c9fc755af0"/>
+    <FbasicType type="I55c9fc755af0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc757080" result_name="res" return_type="S55c9fc75a9e0" is_private="true">
+      <params>
+        <name type="A55c9fc759840">stripes</name>
+        <name type="I55c9fc75a260">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc75a7b0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc75a9e0" ref="S55c9fc75a7b0"/>
+    <FbasicType type="S55c9fc758480" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc7585c0" intent="in" ref="S55c9fc758480"/>
+    <FbasicType type="A55c9fc758700" intent="in" ref="S55c9fc7585c0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc7589e0" intent="in" ref="S55c9fc7585c0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc758cc0" intent="in" ref="S55c9fc7585c0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc758fa0" intent="in" ref="S55c9fc7585c0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc759280" intent="in" ref="S55c9fc7585c0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc759560" intent="in" ref="S55c9fc7585c0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc759840" intent="in" ref="S55c9fc7585c0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc75a120" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f7320" scope="local">i4</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc75a260" intent="in" is_value="true" ref="I55c9fc75a120"/>
+    <FbasicType type="I55c9fc75b0d0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc75b300" ref="I55c9fc75b0d0"/>
+    <FfunctionType type="F55c9fc75d3e0" return_type="I55c9fc75d2a0"/>
+    <FbasicType type="I55c9fc75d2a0" ref="I55c9fc75b0d0"/>
+    <FfunctionType type="F55c9fc75ef70" return_type="I55c9fc75ee30"/>
+    <FbasicType type="I55c9fc75ee30" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc760dd0" result_name="res" return_type="S55c9fc764730" is_private="true">
+      <params>
+        <name type="A55c9fc763590">stripes</name>
+        <name type="I55c9fc763fb0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc764500" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc764730" ref="S55c9fc764500"/>
+    <FbasicType type="S55c9fc7621d0" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc762310" intent="in" ref="S55c9fc7621d0"/>
+    <FbasicType type="A55c9fc762450" intent="in" ref="S55c9fc762310">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc762730" intent="in" ref="S55c9fc762310">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc762a10" intent="in" ref="S55c9fc762310">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc762cf0" intent="in" ref="S55c9fc762310">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc762fd0" intent="in" ref="S55c9fc762310">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc7632b0" intent="in" ref="S55c9fc762310">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55c9fc763590" intent="in" ref="S55c9fc762310">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc763e70" ref="Fint">
+      <kind>
+        <Var type="I55c9fc4f75b0" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc763fb0" intent="in" is_value="true" ref="I55c9fc763e70"/>
+    <FbasicType type="I55c9fc764e20" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc765050" ref="I55c9fc764e20"/>
+    <FfunctionType type="F55c9fc767130" return_type="I55c9fc766ff0"/>
+    <FbasicType type="I55c9fc766ff0" ref="I55c9fc764e20"/>
+    <FfunctionType type="F55c9fc768cc0" return_type="I55c9fc768b80"/>
+    <FbasicType type="I55c9fc768b80" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55c9fc4f6de0" result_name="res_ptr" return_type="S55c9fc682180" is_private="true" bind="C" bind_name="xt_idxstripes_new">
+      <params>
+        <name type="A55c9fc683d90">stripes</name>
+        <name type="I55c9fc684810">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc682f00" ref="S55c9fc543b80"/>
+    <FbasicType type="S55c9fc684d60" ref="S55c9fc682f00"/>
+    <FbasicType type="S55c9fc682180" ref="S55c9fc684d60"/>
+    <FbasicType type="S55c9fc682cd0" ref="S55c9fc4f8170"/>
+    <FbasicType type="S55c9fc683b10" ref="S55c9fc682cd0"/>
+    <FbasicType type="S55c9fc683c50" intent="in" ref="S55c9fc683b10"/>
+    <FbasicType type="A55c9fc683d90" intent="in" ref="S55c9fc683c50">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55c9fc6846d0" ref="Fint">
+      <kind>
+        <Var type="I55c9fc543950" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55c9fc684810" intent="in" is_value="true" ref="I55c9fc6846d0"/>
+    <FbasicType type="S55c9fc684f90" ref="S55c9fc684d60"/>
+    <FfunctionType type="F55c9fc76aad0" result_name="idxstripes" return_type="S55c9fc76bfb0" is_public="true">
+      <params>
+        <name type="S55c9fc76b830">idxlist_src</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc76bd80" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc76bfb0" ref="S55c9fc76bd80"/>
+    <FbasicType type="S55c9fc76b6f0" ref="S55c9fc4f8d10"/>
+    <FbasicType type="S55c9fc76b830" intent="in" ref="S55c9fc76b6f0"/>
+    <FfunctionType type="F55c9fc76d330" result_name="idxstripes" return_type="S55c9fc76d740" is_private="true" bind="C" bind_name="xt_idxstripes_from_idxlist_new">
+      <params>
+        <name type="S55c9fc76e750">idxlist_src</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55c9fc76dd90" ref="S55c9fc543b80"/>
+    <FbasicType type="S55c9fc76eca0" ref="S55c9fc76dd90"/>
+    <FbasicType type="S55c9fc76d740" ref="S55c9fc76eca0"/>
+    <FbasicType type="S55c9fc76e610" ref="S55c9fc76dd90"/>
+    <FbasicType type="S55c9fc76e750" intent="in" is_value="true" ref="S55c9fc76e610"/>
+    <FbasicType type="S55c9fc76eed0" ref="S55c9fc76eca0"/>
+    <FfunctionType type="F55c9fc692500" result_name="res" return_type="S55c9fc68c8e0">
+      <params>
+        <name type="A55c9fc68c160">stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6974d0" result_name="res" return_type="S55c9fc695550">
+      <params>
+        <name type="A55c9fc694350">stripes</name>
+        <name type="I55c9fc694dd0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6ccac0" result_name="res" return_type="S55c9fc6c6ee0">
+      <params>
+        <name type="A55c9fc6c6760">stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6b43f0" result_name="res" return_type="S55c9fc6b2270">
+      <params>
+        <name type="A55c9fc6b10d0">stripes</name>
+        <name type="I55c9fc6b1af0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc70baa0" result_name="res" return_type="S55c9fc705ec0">
+      <params>
+        <name type="A55c9fc705740">stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc69f180" result_name="res" return_type="S55c9fc69a520">
+      <params>
+        <name type="A55c9fc699320">stripes</name>
+        <name type="I55c9fc699da0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6d2570" result_name="res" return_type="S55c9fc6d01f0">
+      <params>
+        <name type="A55c9fc6cf050">stripes</name>
+        <name type="I55c9fc6cfa70">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6f1990" result_name="res" return_type="S55c9fc6ef410">
+      <params>
+        <name type="A55c9fc6ee270">stripes</name>
+        <name type="I55c9fc6eec90">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc68a670" result_name="res" return_type="S55c9fc688400">
+      <params>
+        <name type="S55c9fc687c80">stripe</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6bc5f0" result_name="res" return_type="S55c9fc6b77b0">
+      <params>
+        <name type="A55c9fc6b6610">stripes</name>
+        <name type="I55c9fc6b7030">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc74f480" result_name="res" return_type="S55c9fc7498a0">
+      <params>
+        <name type="A55c9fc749120">stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc712030" result_name="res" return_type="S55c9fc70f8b0">
+      <params>
+        <name type="A55c9fc70e710">stripes</name>
+        <name type="I55c9fc70f130">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6dad00" result_name="res" return_type="S55c9fc6d5ca0">
+      <params>
+        <name type="A55c9fc6d4b00">stripes</name>
+        <name type="I55c9fc6d5520">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc733950" result_name="res" return_type="S55c9fc730fd0">
+      <params>
+        <name type="A55c9fc72fe30">stripes</name>
+        <name type="I55c9fc730850">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6fa690" result_name="res" return_type="S55c9fc6f5430">
+      <params>
+        <name type="A55c9fc6f4290">stripes</name>
+        <name type="I55c9fc6f4cb0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc7564f0" result_name="res" return_type="S55c9fc753970">
+      <params>
+        <name type="A55c9fc7527d0">stripes</name>
+        <name type="I55c9fc7531f0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc71b2a0" result_name="res" return_type="S55c9fc715e40">
+      <params>
+        <name type="A55c9fc714ca0">stripes</name>
+        <name type="I55c9fc7156c0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6a6e30" result_name="res" return_type="S55c9fc6a21d0">
+      <params>
+        <name type="A55c9fc6a0fd0">stripes</name>
+        <name type="I55c9fc6a1a50">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc73d130" result_name="res" return_type="S55c9fc737ad0">
+      <params>
+        <name type="A55c9fc736930">stripes</name>
+        <name type="I55c9fc737350">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6aeeb0" result_name="res" return_type="S55c9fc6a92d0">
+      <params>
+        <name type="A55c9fc6a8b50">stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6c4810" result_name="res" return_type="S55c9fc6bf9b0">
+      <params>
+        <name type="A55c9fc6be810">stripes</name>
+        <name type="I55c9fc6bf230">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc760240" result_name="res" return_type="S55c9fc75a9e0">
+      <params>
+        <name type="A55c9fc759840">stripes</name>
+        <name type="I55c9fc75a260">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6e3490" result_name="res" return_type="S55c9fc6de430">
+      <params>
+        <name type="A55c9fc6dd290">stripes</name>
+        <name type="I55c9fc6ddcb0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc703390" result_name="res" return_type="S55c9fc6fe130">
+      <params>
+        <name type="A55c9fc6fcf90">stripes</name>
+        <name type="I55c9fc6fd9b0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc6eb970" result_name="res" return_type="S55c9fc6e5d90">
+      <params>
+        <name type="A55c9fc6e5610">stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc724510" result_name="res" return_type="S55c9fc71f0b0">
+      <params>
+        <name type="A55c9fc71df10">stripes</name>
+        <name type="I55c9fc71e930">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc746910" result_name="res" return_type="S55c9fc7412b0">
+      <params>
+        <name type="A55c9fc740110">stripes</name>
+        <name type="I55c9fc740b30">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc72ce50" result_name="res" return_type="S55c9fc727270">
+      <params>
+        <name type="A55c9fc726af0">stripes</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55c9fc769f90" result_name="res" return_type="S55c9fc764730">
+      <params>
+        <name type="A55c9fc763590">stripes</name>
+        <name type="I55c9fc763fb0">num_stripes</name>
+      </params>
+    </FfunctionType>
+  </typeTable>
+  <identifiers>
+    <id type="I55c9fc4f7090" sclass="flocal" original_name="i2" declared_in="xt_core">
+      <name>i2</name>
+    </id>
+    <id type="I55c9fc4f7320" sclass="flocal" original_name="i4" declared_in="xt_core">
+      <name>i4</name>
+    </id>
+    <id type="I55c9fc4f75b0" sclass="flocal" original_name="i8" declared_in="xt_core">
+      <name>i8</name>
+    </id>
+    <id type="F55c9fc4f7b80" sclass="ffunc" original_name="xt_abort" declared_in="xt_core">
+      <name>xt_abort</name>
+    </id>
+    <id type="F55c9fc4f7ee0" sclass="ffunc" original_name="xt_get_default_comm" declared_in="xt_core">
+      <name>xt_get_default_comm</name>
+    </id>
+    <id type="S55c9fc4f8170" imported_id="S55e82704fe80" sclass="ftype_name" original_name="xt_stripe" declared_in="xt_core">
+      <name>xt_stripe</name>
+    </id>
+    <id type="S55c9fc4f8d10" imported_id="S55e7b1bd98b0" sclass="ftype_name" original_name="xt_idxlist" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist</name>
+    </id>
+    <id type="F55c9fc4f8f40" sclass="ffunc" original_name="xt_idxlist_f2c" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_f2c</name>
+    </id>
+    <id type="F55c9fc4f92a0" sclass="ffunc" original_name="xt_idxlist_c2f" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_c2f</name>
+    </id>
+    <id type="I55c9fc543950" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="S55c9fc543b80" imported_id="S555a51945380" sclass="ftype_name" original_name="c_ptr" declared_in="iso_c_binding">
+      <name>c_ptr</name>
+    </id>
+    <id type="F55c9fc4f5950" sclass="ffunc" original_name="xt_idxstripes_new" declared_in="xt_idxstripes">
+      <name>xt_idxstripes_new</name>
+    </id>
+    <id type="F55c9fc76aad0" sclass="ffunc" original_name="xt_idxstripes_from_idxlist_new" declared_in="xt_idxstripes">
+      <name>xt_idxstripes_from_idxlist_new</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I55c9fc4f7090">i2</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>selected_int_kind</name>
+          <arguments>
+            <FintConstant type="Fint">4</FintConstant>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I55c9fc4f7320">i4</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>selected_int_kind</name>
+          <arguments>
+            <FintConstant type="Fint">9</FintConstant>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I55c9fc4f75b0">i8</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>selected_int_kind</name>
+          <arguments>
+            <FintConstant type="Fint">14</FintConstant>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I55c9fc543950">c_int</name>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="xt_idxstripes_new" lineno="60" file="xt_idxstripes_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="61" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="62" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="63" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="64" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="65" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="66" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="67" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="68" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="69" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="70" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="71" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="72" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="73" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="74" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="75" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="76" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="77" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="78" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="79" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="80" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="81" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="82" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="83" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="84" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="85" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="86" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="87" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="88" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="89" file="xt_idxstripes_f.f90">
+        <name type="F55c9fc692500">xt_idxstripes_new_a1d</name>
+        <name type="F55c9fc6974d0">xt_idxstripes_new_a1d_i2</name>
+        <name type="F55c9fc6ccac0">xt_idxstripes_new_a3d</name>
+        <name type="F55c9fc6b43f0">xt_idxstripes_new_a2d_i2</name>
+        <name type="F55c9fc70baa0">xt_idxstripes_new_a5d</name>
+        <name type="F55c9fc69f180">xt_idxstripes_new_a1d_i4</name>
+        <name type="F55c9fc6d2570">xt_idxstripes_new_a3d_i2</name>
+        <name type="F55c9fc6f1990">xt_idxstripes_new_a4d_i2</name>
+        <name type="F55c9fc68a670">xt_idxstripes_new_s</name>
+        <name type="F55c9fc6bc5f0">xt_idxstripes_new_a2d_i4</name>
+        <name type="F55c9fc74f480">xt_idxstripes_new_a7d</name>
+        <name type="F55c9fc712030">xt_idxstripes_new_a5d_i2</name>
+        <name type="F55c9fc6dad00">xt_idxstripes_new_a3d_i4</name>
+        <name type="F55c9fc733950">xt_idxstripes_new_a6d_i2</name>
+        <name type="F55c9fc6fa690">xt_idxstripes_new_a4d_i4</name>
+        <name type="F55c9fc7564f0">xt_idxstripes_new_a7d_i2</name>
+        <name type="F55c9fc71b2a0">xt_idxstripes_new_a5d_i4</name>
+        <name type="F55c9fc6a6e30">xt_idxstripes_new_a1d_i8</name>
+        <name type="F55c9fc73d130">xt_idxstripes_new_a6d_i4</name>
+        <name type="F55c9fc6aeeb0">xt_idxstripes_new_a2d</name>
+        <name type="F55c9fc6c4810">xt_idxstripes_new_a2d_i8</name>
+        <name type="F55c9fc760240">xt_idxstripes_new_a7d_i4</name>
+        <name type="F55c9fc6e3490">xt_idxstripes_new_a3d_i8</name>
+        <name type="F55c9fc703390">xt_idxstripes_new_a4d_i8</name>
+        <name type="F55c9fc6eb970">xt_idxstripes_new_a4d</name>
+        <name type="F55c9fc724510">xt_idxstripes_new_a5d_i8</name>
+        <name type="F55c9fc746910">xt_idxstripes_new_a6d_i8</name>
+        <name type="F55c9fc72ce50">xt_idxstripes_new_a6d</name>
+        <name type="F55c9fc769f90">xt_idxstripes_new_a7d_i8</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

@@ -1,0 +1,2651 @@
+<OmniFortranModule version="1.0">
+  <name>xt_idxlist_abstract</name>
+  <depends>
+    <name>xt_core</name>
+    <name>iso_c_binding</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I55e7b1bdcaf0" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55e7b1be8920" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1be9160" is_parameter="true" ref="I55e7b1be8920"/>
+    <FbasicType type="I55e7b1bdcd80" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55e7b1be4770" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1be4be0" is_parameter="true" ref="I55e7b1be4770"/>
+    <FbasicType type="I55e7b1bdd010" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55e7b1bdd2a0" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55e7b1bdd530" is_parameter="true" ref="Fint"/>
+    <FfunctionType type="F55e7b1bddb00" return_type="Fvoid"/>
+    <FfunctionType type="F55e7b1c158e0" return_type="Fvoid">
+      <params>
+        <name type="C55e7b1bf08a0">msg</name>
+        <name type="C55e7b1bf0c60">source</name>
+        <name type="I55e7b1bf1020">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C55e7b1bf13e0" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1bf08a0" intent="in" ref="C55e7b1bf13e0"/>
+    <FbasicType type="C55e7b1bf1ac0" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1bf0c60" intent="in" ref="C55e7b1bf1ac0"/>
+    <FbasicType type="I55e7b1bf1020" intent="in" ref="Fint"/>
+    <FfunctionType type="F55e7b1c16230" return_type="Fvoid">
+      <params>
+        <name type="I55e7b1becf50">comm</name>
+        <name type="C55e7b1bed350">msg</name>
+        <name type="C55e7b1bed730">source</name>
+        <name type="I55e7b1bedb30">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55e7b1becf50" intent="in" ref="Fint"/>
+    <FbasicType type="C55e7b1bee1f0" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1bed350" intent="in" ref="C55e7b1bee1f0"/>
+    <FbasicType type="C55e7b1bee930" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1bed730" intent="in" ref="C55e7b1bee930"/>
+    <FbasicType type="I55e7b1bedb30" intent="in" ref="Fint"/>
+    <FfunctionType type="F55e7b1bdde60" return_type="I55e7b1bd52f0">
+      <params>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55e7b1be8250" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55e7b1bd52f0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1be8250" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55e7b1bde290" return_type="FnumericAll"/>
+    <FfunctionType type="F55e7b1c14a60" return_type="Flogical">
+      <params>
+        <name type="S55e7b1c05cc0" imported_id="S55e827086340">a</name>
+        <name type="S55e7b1c060c0" imported_id="S55e827086480">b</name>
+      </params>
+    </FfunctionType>
+    <FstructType type="S55e7b1c06640" imported_id="S55e8270536d0">
+      <symbols>
+        <id type="I55e7b1c06ee0">
+          <name>start</name>
+        </id>
+        <id type="I55e7b1c06ee0">
+          <name>size</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55e7b1c06ee0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1be4be0" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55e7b1c075e0" imported_id="S55e827086200" ref="S55e7b1c06640"/>
+    <FbasicType type="S55e7b1c05cc0" imported_id="S55e827086340" intent="in" ref="S55e7b1c075e0"/>
+    <FbasicType type="S55e7b1c060c0" imported_id="S55e827086480" intent="in" ref="S55e7b1c075e0"/>
+    <FstructType type="S55e7b1bde520" imported_id="S55e82704fe80">
+      <symbols>
+        <id type="I55e7b1bd5960">
+          <name>start</name>
+        </id>
+        <id type="I55e7b1bd5d10">
+          <name>stride</name>
+        </id>
+        <id type="I55e7b1bd4a10">
+          <name>nstrides</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55e7b1bd5960" ref="Fint">
+      <kind>
+        <Var type="I55e7b1be4be0" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1bd5d10" ref="Fint">
+      <kind>
+        <Var type="I55e7b1be4be0" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1bd4a10" ref="Fint">
+      <kind>
+        <Var type="I55e7b1be4be0" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55e7b1bd42e0" imported_id="S55e8270521b0">
+      <symbols>
+        <id type="I55e7b1bdee80">
+          <name>start</name>
+        </id>
+        <id type="I55e7b1bdee80">
+          <name>size</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55e7b1bdee80" ref="Fint">
+      <kind>
+        <Var type="I55e7b1be4be0" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55e7b1bd4570" imported_id="S55e8270536d0">
+      <symbols>
+        <id type="I55e7b1bdf480">
+          <name>start</name>
+        </id>
+        <id type="I55e7b1bdf480">
+          <name>size</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55e7b1bdf480" ref="Fint">
+      <kind>
+        <Var type="I55e7b1be4be0" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1bd8090" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1bd6990" is_parameter="true" ref="I55e7b1bd8090"/>
+    <FstructType type="S55e7b1bd6bc0" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55e7b1bd8520">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55e7b1c3ec60" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1c3f290" is_parameter="true" ref="I55e7b1c3ec60"/>
+    <FbasicType type="I55e7b1bd8520" ref="Fint">
+      <kind>
+        <Var type="I55e7b1c3f290" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55e7b1bd8660" imported_id="S555a51947b00" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1bd6e50" imported_id="S555a51947d30" is_parameter="true" ref="S55e7b1bd8660"/>
+    <FfunctionType type="F55e7b1bd7420" return_type="FnumericAll"/>
+    <FfunctionType type="F55e7b1c743f0" return_type="L55e7b1c4c9c0">
+      <params>
+        <name type="S55e7b1c4bed0" imported_id="S555a51971d90">c_ptr_1</name>
+        <name type="S55e7b1c4c450" imported_id="S555a51972510">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L55e7b1c4c9c0" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55e7b1c47fe0" imported_id="S555a51946610" is_internal_private="true">
+      <symbols>
+        <id type="I55e7b1c48760">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55e7b1c48760" ref="Fint">
+      <kind>
+        <Var type="I55e7b1c3f290" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55e7b1c4cfe0" imported_id="S555a51971c50" ref="S55e7b1c47fe0"/>
+    <FbasicType type="S55e7b1c4bed0" imported_id="S555a51971d90" ref="S55e7b1c4cfe0"/>
+    <FbasicType type="S55e7b1c4d190" imported_id="S555a519723d0" ref="S55e7b1c47fe0"/>
+    <FbasicType type="S55e7b1c4c450" imported_id="S555a51972510" is_optional="true" ref="S55e7b1c4d190"/>
+    <FfunctionType type="F55e7b1c74bd0" return_type="L55e7b1c4aea0">
+      <params>
+        <name type="S55e7b1c4a510" imported_id="S555a5196eaf0">c_ptr_1</name>
+        <name type="S55e7b1c4a910" imported_id="S555a5196f270">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L55e7b1c4aea0" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55e7b1c47170" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55e7b1c47af0">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55e7b1c47af0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1c3f290" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55e7b1c4b6a0" imported_id="S555a5196e9b0" ref="S55e7b1c47170"/>
+    <FbasicType type="S55e7b1c4a510" imported_id="S555a5196eaf0" ref="S55e7b1c4b6a0"/>
+    <FbasicType type="S55e7b1c4b850" imported_id="S555a5196f130" ref="S55e7b1c47170"/>
+    <FbasicType type="S55e7b1c4a910" imported_id="S555a5196f270" is_optional="true" ref="S55e7b1c4b850"/>
+    <FfunctionType type="F55e7b1bd7b90" return_type="Fvoid"/>
+    <FfunctionType type="F55e7b1c73cd0" return_type="Fvoid">
+      <params>
+        <name type="I55e7b1c4d890">cptr</name>
+        <name type="I55e7b1c4dc90">fptr</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55e7b1c4e070" is_pointer="true" ref="Fint"/>
+    <FbasicType type="I55e7b1c4d890" intent="in" is_pointer="true" ref="I55e7b1c4e070"/>
+    <FbasicType type="I55e7b1c4e670" is_pointer="true" ref="Fint"/>
+    <FbasicType type="I55e7b1c4dc90" intent="out" is_pointer="true" ref="I55e7b1c4e670"/>
+    <FfunctionType type="F55e7b1bd7ef0" return_type="S55e7b1bd8ed0">
+      <params>
+        <name type="Fint">x</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1bd9010" imported_id="S555a5198b690" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1bd8ed0" imported_id="S555a5198b7d0" ref="S55e7b1bd9010"/>
+    <FstructType type="S55e7b1bd98b0" is_public="true" is_internal_private="true" bind="C">
+      <symbols>
+        <id type="S55e7b1bda270">
+          <name>cptr</name>
+          <value>
+            <Var type="S55e7b1bd6e50" imported_id="S555a51947d30" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="S55e7b1bda040" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1bda270" ref="S55e7b1bda040"/>
+    <FfunctionType type="F55e7b1bdb890" result_name="p" return_type="S55e7b1bdbca0" is_public="true" bind="C" bind_name="xt_idxlist_f2c">
+      <params>
+        <name type="S55e7b1c29470">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1bdc380" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1c299c0" ref="S55e7b1bdc380"/>
+    <FbasicType type="S55e7b1bdbca0" ref="S55e7b1c299c0"/>
+    <FbasicType type="S55e7b1c288a0" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1c29330" ref="S55e7b1c288a0"/>
+    <FbasicType type="S55e7b1c29470" intent="in" ref="S55e7b1c29330"/>
+    <FbasicType type="S55e7b1c29bf0" ref="S55e7b1c299c0"/>
+    <FfunctionType type="F55e7b1c2af90" result_name="pack_size" return_type="I55e7b1c2b580" is_public="true" bind="C" bind_name="xt_idxlist_get_pack_size_f2c">
+      <params>
+        <name type="S55e7b1c2ca70">idxlist</name>
+        <name type="I55e7b1c2d4f0">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55e7b1c2dbc0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcaf0" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1c2b580" ref="I55e7b1c2dbc0"/>
+    <FbasicType type="S55e7b1c2bdb0" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1c2c930" ref="S55e7b1c2bdb0"/>
+    <FbasicType type="S55e7b1c2ca70" intent="in" ref="S55e7b1c2c930"/>
+    <FbasicType type="I55e7b1c2d3b0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcaf0" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1c2d4f0" intent="in" is_value="true" ref="I55e7b1c2d3b0"/>
+    <FbasicType type="I55e7b1c2ddf0" ref="I55e7b1c2dbc0"/>
+    <FfunctionType type="F55e7b1c9a830" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F55e7b1cb2b50" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="S55e7b1cb38b0">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1cb3770" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1cb38b0" intent="inout" ref="S55e7b1cb3770"/>
+    <FfunctionType type="F55e7b1cb5be0" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="A55e7b1cb6bd0">idxlists</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1cb6950" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1cb6a90" intent="inout" ref="S55e7b1cb6950"/>
+    <FbasicType type="A55e7b1cb6bd0" intent="inout" ref="S55e7b1cb6a90">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1cb8550" return_type="Fint"/>
+    <FfunctionType type="F55e7b1cbc030" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="A55e7b1cbd250">idxlists</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1cbce90" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1cbcfd0" intent="inout" ref="S55e7b1cbce90"/>
+    <FbasicType type="A55e7b1cbd110" intent="inout" ref="S55e7b1cbcfd0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1cbd250" intent="inout" ref="S55e7b1cbcfd0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1cbf650" return_type="Fint"/>
+    <FfunctionType type="F55e7b1cc0450" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d7fd50" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="S55e7b1d80de0">idxlist</name>
+        <name type="A55e7b1d81a00">indices</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d80ca0" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d80de0" intent="in" ref="S55e7b1d80ca0"/>
+    <FbasicType type="I55e7b1d81780" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d818c0" intent="out" ref="I55e7b1d81780"/>
+    <FbasicType type="A55e7b1d81a00" intent="out" ref="I55e7b1d818c0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1d820d0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d82300" ref="I55e7b1d820d0"/>
+    <FfunctionType type="F55e7b1d83f30" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d86fb0" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="S55e7b1d88040">idxlist</name>
+        <name type="A55e7b1d88e90">indices</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d87f00" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d88040" intent="in" ref="S55e7b1d87f00"/>
+    <FbasicType type="I55e7b1d88ad0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d88c10" intent="out" ref="I55e7b1d88ad0"/>
+    <FbasicType type="A55e7b1d88d50" intent="out" ref="I55e7b1d88c10">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d88e90" intent="out" ref="I55e7b1d88c10">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1d89560" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d89790" ref="I55e7b1d89560"/>
+    <FfunctionType type="F55e7b1d8b3c0" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d8e3e0" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="S55e7b1d8f470">idxlist</name>
+        <name type="A55e7b1d904f0">indices</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d8f330" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d8f470" intent="in" ref="S55e7b1d8f330"/>
+    <FbasicType type="I55e7b1d8fff0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d90130" intent="out" ref="I55e7b1d8fff0"/>
+    <FbasicType type="A55e7b1d90270" intent="out" ref="I55e7b1d90130">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d903b0" intent="out" ref="I55e7b1d90130">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d904f0" intent="out" ref="I55e7b1d90130">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1d90bc0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d90df0" ref="I55e7b1d90bc0"/>
+    <FfunctionType type="F55e7b1d92a20" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d95a40" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="S55e7b1d96ad0">idxlist</name>
+        <name type="A55e7b1d97d80">indices</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d96990" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d96ad0" intent="in" ref="S55e7b1d96990"/>
+    <FbasicType type="I55e7b1d97740" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d97880" intent="out" ref="I55e7b1d97740"/>
+    <FbasicType type="A55e7b1d979c0" intent="out" ref="I55e7b1d97880">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d97b00" intent="out" ref="I55e7b1d97880">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d97c40" intent="out" ref="I55e7b1d97880">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d97d80" intent="out" ref="I55e7b1d97880">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1d98450" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d98680" ref="I55e7b1d98450"/>
+    <FfunctionType type="F55e7b1d9a2b0" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d9d2d0" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="S55e7b1d9e360">idxlist</name>
+        <name type="A55e7b1d9f840">indices</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d9e220" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d9e360" intent="in" ref="S55e7b1d9e220"/>
+    <FbasicType type="I55e7b1d9f0c0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d9f200" intent="out" ref="I55e7b1d9f0c0"/>
+    <FbasicType type="A55e7b1d9f340" intent="out" ref="I55e7b1d9f200">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d9f480" intent="out" ref="I55e7b1d9f200">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d9f5c0" intent="out" ref="I55e7b1d9f200">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d9f700" intent="out" ref="I55e7b1d9f200">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d9f840" intent="out" ref="I55e7b1d9f200">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1d9ff10" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1da0140" ref="I55e7b1d9ff10"/>
+    <FfunctionType type="F55e7b1da1d70" return_type="Fint"/>
+    <FfunctionType type="F55e7b1da4d90" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="S55e7b1da5e20">idxlist</name>
+        <name type="A55e7b1da7530">indices</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1da5ce0" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1da5e20" intent="in" ref="S55e7b1da5ce0"/>
+    <FbasicType type="I55e7b1da6c70" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1da6db0" intent="out" ref="I55e7b1da6c70"/>
+    <FbasicType type="A55e7b1da6ef0" intent="out" ref="I55e7b1da6db0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1da7030" intent="out" ref="I55e7b1da6db0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1da7170" intent="out" ref="I55e7b1da6db0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1da72b0" intent="out" ref="I55e7b1da6db0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1da73f0" intent="out" ref="I55e7b1da6db0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1da7530" intent="out" ref="I55e7b1da6db0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1da7c00" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1da7e30" ref="I55e7b1da7c00"/>
+    <FfunctionType type="F55e7b1da9a60" return_type="Fint"/>
+    <FfunctionType type="F55e7b1daca80" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="S55e7b1dadb10">idxlist</name>
+        <name type="A55e7b1daf450">indices</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1dad9d0" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1dadb10" intent="in" ref="S55e7b1dad9d0"/>
+    <FbasicType type="I55e7b1daea50" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1daeb90" intent="out" ref="I55e7b1daea50"/>
+    <FbasicType type="A55e7b1daecd0" intent="out" ref="I55e7b1daeb90">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1daee10" intent="out" ref="I55e7b1daeb90">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1daef50" intent="out" ref="I55e7b1daeb90">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1daf090" intent="out" ref="I55e7b1daeb90">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1daf1d0" intent="out" ref="I55e7b1daeb90">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1daf310" intent="out" ref="I55e7b1daeb90">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1daf450" intent="out" ref="I55e7b1daeb90">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1dafb20" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1dafd50" ref="I55e7b1dafb20"/>
+    <FfunctionType type="F55e7b1db1980" return_type="Fint"/>
+    <FfunctionType type="F55e7b1c9d860" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F55e7b1caf900" result_name="p" return_type="Flogical" is_private="true">
+      <params>
+        <name type="S55e7b1cb0660">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1cb0520" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1cb0660" intent="in" ref="S55e7b1cb0520"/>
+    <FfunctionType type="F55e7b1c9eca0" return_type="V55e7b1c9eb60" is_public="true"/>
+    <FbasicType type="V55e7b1c9eb60" ref="FnumericAll"/>
+    <FfunctionType type="F55e7b1cd21c0" result_name="num_subst" return_type="Fint" is_private="true">
+      <params>
+        <name type="S55e7b1cd3b50">idxlist</name>
+        <name type="A55e7b1cd4650">positions</name>
+        <name type="A55e7b1cd5270">indices</name>
+        <name type="I55e7b1cd5c00">undef_idx</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1cd3a10" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1cd3b50" intent="in" ref="S55e7b1cd3a10"/>
+    <FbasicType type="I55e7b1cd4510" intent="in" ref="Fint"/>
+    <FbasicType type="A55e7b1cd4650" intent="in" ref="I55e7b1cd4510">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1cd4ff0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cd5130" intent="out" ref="I55e7b1cd4ff0"/>
+    <FbasicType type="A55e7b1cd5270" intent="out" ref="I55e7b1cd5130">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1cd5ac0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cd5c00" intent="in" ref="I55e7b1cd5ac0"/>
+    <FbasicType type="I55e7b1cd6f00" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cd7130" ref="I55e7b1cd6f00"/>
+    <FfunctionType type="F55e7b1cd82b0" return_type="Fint"/>
+    <FfunctionType type="F55e7b1cd9780" return_type="I55e7b1cda120"/>
+    <FbasicType type="I55e7b1cda120" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55e7b1cda260" return_type="I55e7b1cda120"/>
+    <FfunctionType type="F55e7b1cdb0c0" return_type="A55e7b1cdc7d0"/>
+    <FbasicType type="I55e7b1cdc4f0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="A55e7b1cdc7d0" ref="I55e7b1cdc4f0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1cdc910" return_type="A55e7b1cdc7d0"/>
+    <FfunctionType type="F55e7b1cde0c0" result_name="num_subst" return_type="Fint" is_private="true">
+      <params>
+        <name type="S55e7b1cdfd80">idxlist</name>
+        <name type="A55e7b1ce0820">positions</name>
+        <name type="I55e7b1ce2760">num_pos</name>
+        <name type="A55e7b1ce13e0">indices</name>
+        <name type="I55e7b1ce1d70">undef_idx</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1cdfc40" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1cdfd80" intent="in" ref="S55e7b1cdfc40"/>
+    <FbasicType type="I55e7b1ce06e0" intent="in" ref="Fint"/>
+    <FbasicType type="A55e7b1ce0820" intent="in" ref="I55e7b1ce06e0">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1ce2620" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdd010" scope="local">i2</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1ce2760" intent="in" ref="I55e7b1ce2620"/>
+    <FbasicType type="I55e7b1ce1160" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1ce12a0" intent="out" ref="I55e7b1ce1160"/>
+    <FbasicType type="A55e7b1ce13e0" intent="out" ref="I55e7b1ce12a0">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1ce1c30" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1ce1d70" intent="in" ref="I55e7b1ce1c30"/>
+    <FbasicType type="I55e7b1ce3650" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1ce3880" ref="I55e7b1ce3650"/>
+    <FfunctionType type="F55e7b1ce4c70" return_type="A55e7b1ce8120"/>
+    <FbasicType type="I55e7b1ce7a60" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="A55e7b1ce8120" ref="I55e7b1ce7a60">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1ce2760" scope="local">num_pos</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1ce8260" return_type="A55e7b1ce8120"/>
+    <FfunctionType type="F55e7b1ce9a70" result_name="num_subst" return_type="Fint" is_private="true">
+      <params>
+        <name type="S55e7b1ceb730">idxlist</name>
+        <name type="A55e7b1cec1d0">positions</name>
+        <name type="I55e7b1cee110">num_pos</name>
+        <name type="A55e7b1cecd90">indices</name>
+        <name type="I55e7b1ced720">undef_idx</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1ceb5f0" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1ceb730" intent="in" ref="S55e7b1ceb5f0"/>
+    <FbasicType type="I55e7b1cec090" intent="in" ref="Fint"/>
+    <FbasicType type="A55e7b1cec1d0" intent="in" ref="I55e7b1cec090">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1cedfd0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdd2a0" scope="local">i4</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cee110" intent="in" ref="I55e7b1cedfd0"/>
+    <FbasicType type="I55e7b1cecb10" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cecc50" intent="out" ref="I55e7b1cecb10"/>
+    <FbasicType type="A55e7b1cecd90" intent="out" ref="I55e7b1cecc50">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1ced5e0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1ced720" intent="in" ref="I55e7b1ced5e0"/>
+    <FbasicType type="I55e7b1ceefc0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cef1f0" ref="I55e7b1ceefc0"/>
+    <FfunctionType type="F55e7b1cf0f60" return_type="I55e7b1cf0e20"/>
+    <FbasicType type="I55e7b1cf0e20" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55e7b1cf32b0" return_type="A55e7b1cf6760"/>
+    <FbasicType type="I55e7b1cf60a0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="A55e7b1cf6760" ref="I55e7b1cf60a0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1cee110" scope="local">num_pos</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1cf68a0" return_type="A55e7b1cf6760"/>
+    <FfunctionType type="F55e7b1cf80b0" result_name="num_subst" return_type="Fint" is_private="true">
+      <params>
+        <name type="S55e7b1cf9d70">idxlist</name>
+        <name type="A55e7b1cfa810">positions</name>
+        <name type="I55e7b1cfc750">num_pos</name>
+        <name type="A55e7b1cfb3d0">indices</name>
+        <name type="I55e7b1cfbd60">undef_idx</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1cf9c30" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1cf9d70" intent="in" ref="S55e7b1cf9c30"/>
+    <FbasicType type="I55e7b1cfa6d0" intent="in" ref="Fint"/>
+    <FbasicType type="A55e7b1cfa810" intent="in" ref="I55e7b1cfa6d0">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1cfc610" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdd530" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cfc750" intent="in" ref="I55e7b1cfc610"/>
+    <FbasicType type="I55e7b1cfb150" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cfb290" intent="out" ref="I55e7b1cfb150"/>
+    <FbasicType type="A55e7b1cfb3d0" intent="out" ref="I55e7b1cfb290">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1cfbc20" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cfbd60" intent="in" ref="I55e7b1cfbc20"/>
+    <FbasicType type="I55e7b1cfd600" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cfd830" ref="I55e7b1cfd600"/>
+    <FfunctionType type="F55e7b1cff5a0" return_type="I55e7b1cff460"/>
+    <FbasicType type="I55e7b1cff460" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55e7b1d018f0" return_type="A55e7b1d04da0"/>
+    <FbasicType type="I55e7b1d046e0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="A55e7b1d04da0" ref="I55e7b1d046e0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1cfc750" scope="local">num_pos</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1d04ee0" return_type="A55e7b1d04da0"/>
+    <FfunctionType type="F55e7b1ca1090" return_type="V55e7b1ca0f50" is_public="true"/>
+    <FbasicType type="V55e7b1ca0f50" ref="FnumericAll"/>
+    <FfunctionType type="F55e7b1ca2840" result_name="num_unmatched" return_type="I55e7b1ca35b0" is_private="true" bind="C" bind_name="xt_idxlist_get_pos_exts_of_index_stripes">
+      <params>
+        <name type="S55e7b1ca4dd0">idxlist</name>
+        <name type="I55e7b1ca5850">num_stripes</name>
+        <name type="S55e7b1ca60f0">stripes</name>
+        <name type="I55e7b1ca6a80">num_ext</name>
+        <name type="S55e7b1ca7290">pos_ext</name>
+        <name type="I55e7b1ca7cb0">single_match_only</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55e7b1ca8380" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1ca35b0" ref="I55e7b1ca8380"/>
+    <FbasicType type="S55e7b1ca4320" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1ca4c90" ref="S55e7b1ca4320"/>
+    <FbasicType type="S55e7b1ca4dd0" intent="in" is_value="true" ref="S55e7b1ca4c90"/>
+    <FbasicType type="I55e7b1ca5710" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1ca5850" intent="in" is_value="true" ref="I55e7b1ca5710"/>
+    <FbasicType type="S55e7b1ca5fb0" ref="S55e7b1ca4320"/>
+    <FbasicType type="S55e7b1ca60f0" intent="in" is_value="true" ref="S55e7b1ca5fb0"/>
+    <FbasicType type="I55e7b1ca6940" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1ca6a80" intent="out" ref="I55e7b1ca6940"/>
+    <FbasicType type="S55e7b1ca7150" ref="S55e7b1ca4320"/>
+    <FbasicType type="S55e7b1ca7290" intent="out" ref="S55e7b1ca7150"/>
+    <FbasicType type="I55e7b1ca7b70" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1ca7cb0" intent="in" is_value="true" ref="I55e7b1ca7b70"/>
+    <FbasicType type="I55e7b1ca85b0" ref="I55e7b1ca8380"/>
+    <FfunctionType type="F55e7b1caa020" return_type="Fvoid" is_private="true" bind="C" bind_name="free">
+      <params>
+        <name type="S55e7b1cab300">p</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1caa940" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1cab1c0" ref="S55e7b1caa940"/>
+    <FbasicType type="S55e7b1cab300" intent="in" is_value="true" ref="S55e7b1cab1c0"/>
+    <FfunctionType type="F55e7b1dc8100" result_name="num_unmatched" return_type="Fint" is_private="true">
+      <params>
+        <name type="S55e7b1dc9e50">idxlist</name>
+        <name type="I55e7b1dca7e0">num_stripes</name>
+        <name type="A55e7b1dcb310">stripes</name>
+        <name type="I55e7b1dcbc40">num_ext</name>
+        <name type="A55e7b1dcc770">pos_ext</name>
+        <name type="L55e7b1dccfe0">single_match_only</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1dc9d10" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1dc9e50" intent="in" ref="S55e7b1dc9d10"/>
+    <FbasicType type="I55e7b1dca6a0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdd2a0" scope="local">i4</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1dca7e0" intent="in" ref="I55e7b1dca6a0"/>
+    <FbasicType type="S55e7b1dcb090" is_target="true" ref="S55e7b1bde520"/>
+    <FbasicType type="S55e7b1dcb1d0" intent="in" is_target="true" ref="S55e7b1dcb090"/>
+    <FbasicType type="A55e7b1dcb310" intent="in" is_target="true" ref="S55e7b1dcb1d0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1dca7e0" scope="local">num_stripes</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1dcbc40" intent="out" ref="Fint"/>
+    <FbasicType type="S55e7b1dcc4f0" is_allocatable="true" ref="S55e7b1bd4570"/>
+    <FbasicType type="S55e7b1dcc630" intent="out" is_allocatable="true" ref="S55e7b1dcc4f0"/>
+    <FbasicType type="A55e7b1dcc770" intent="out" is_allocatable="true" ref="S55e7b1dcc630">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="L55e7b1dccfe0" intent="in" ref="Flogical"/>
+    <FbasicType type="I55e7b1dce330" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1dce560" ref="I55e7b1dce330"/>
+    <FbasicType type="I55e7b1dce790" ref="I55e7b1dce330"/>
+    <FbasicType type="I55e7b1dce9c0" ref="I55e7b1dce330"/>
+    <FbasicType type="S55e7b1dcf170" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1dcf3a0" ref="S55e7b1dcf170"/>
+    <FbasicType type="S55e7b1dcf5d0" ref="S55e7b1dcf170"/>
+    <FbasicType type="S55e7b1dcfda0" is_pointer="true" ref="S55e7b1bd4570"/>
+    <FbasicType type="S55e7b1dcffd0" is_pointer="true" ref="S55e7b1dcfda0"/>
+    <FbasicType type="A55e7b1dd0110" is_pointer="true" ref="S55e7b1dcffd0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1dd0bc0" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1dd3000" return_type="Fint"/>
+    <FfunctionType type="F55e7b1ddaa90" return_type="Fint"/>
+    <FfunctionType type="F55e7b1dd5b50" return_type="Fint"/>
+    <FfunctionType type="F55e7b1ddda90" return_type="Fint"/>
+    <FfunctionType type="F55e7b1dd7d60" return_type="I55e7b1dd7c20"/>
+    <FbasicType type="I55e7b1dd7c20" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55e7b1de3740" result_name="num_unmatched" return_type="Fint" is_private="true">
+      <params>
+        <name type="S55e7b1de4e30">idxlist</name>
+        <name type="A55e7b1de58d0">stripes</name>
+        <name type="A55e7b1de6400">pos_ext</name>
+        <name type="L55e7b1de6c70">single_match_only</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1de4cf0" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1de4e30" intent="in" ref="S55e7b1de4cf0"/>
+    <FbasicType type="S55e7b1de5650" ref="S55e7b1bde520"/>
+    <FbasicType type="S55e7b1de5790" intent="in" ref="S55e7b1de5650"/>
+    <FbasicType type="A55e7b1de58d0" intent="in" ref="S55e7b1de5790">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S55e7b1de6180" is_allocatable="true" ref="S55e7b1bd4570"/>
+    <FbasicType type="S55e7b1de62c0" intent="out" is_allocatable="true" ref="S55e7b1de6180"/>
+    <FbasicType type="A55e7b1de6400" intent="out" is_allocatable="true" ref="S55e7b1de62c0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="L55e7b1de6c70" intent="in" ref="Flogical"/>
+    <FbasicType type="I55e7b1de8320" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdd2a0" scope="local">i4</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1de8550" ref="I55e7b1de8320"/>
+    <FfunctionType type="F55e7b1de96d0" return_type="Fint"/>
+    <FfunctionType type="F55e7b1cad6f0" return_type="V55e7b1cad5b0" is_public="true"/>
+    <FbasicType type="V55e7b1cad5b0" ref="FnumericAll"/>
+    <FfunctionType type="F55e7b1d75aa0" result_name="p" return_type="S55e7b1d76f80" is_public="true">
+      <params>
+        <name type="S55e7b1d76800">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d76d50" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d76f80" ref="S55e7b1d76d50"/>
+    <FbasicType type="S55e7b1d766c0" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1d76800" intent="in" ref="S55e7b1d766c0"/>
+    <FbasicType type="S55e7b1d777a0" ref="S55e7b1bda270"/>
+    <FfunctionType type="F55e7b1d78620" result_name="num_indices" return_type="Fint" is_public="true">
+      <params>
+        <name type="S55e7b1d79380">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d79240" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d79380" intent="in" ref="S55e7b1d79240"/>
+    <FbasicType type="I55e7b1d7a230" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d7a460" ref="I55e7b1d7a230"/>
+    <FfunctionType type="F55e7b1d7c8a0" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d7d060" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d7eea0" return_type="Fint"/>
+    <FbasicType type="I55e7b1c8a5e0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1c88a80" ref="I55e7b1c8a5e0"/>
+    <FfunctionType type="F55e7b1c88670" result_name="num_indices" return_type="I55e7b1c88a80" is_private="true" bind="C" bind_name="xt_idxlist_get_num_indices">
+      <params>
+        <name type="S55e7b1c89eb0">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1c89250" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1c89d70" ref="S55e7b1c89250"/>
+    <FbasicType type="S55e7b1c89eb0" intent="in" is_value="true" ref="S55e7b1c89d70"/>
+    <FbasicType type="C55e7b1d7dd20" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">25</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1d7df20" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1d84d60" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">23</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1d84f50" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FfunctionType type="F55e7b1c8baf0" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_idxlist_get_indices">
+      <params>
+        <name type="S55e7b1c8d520">idxlist</name>
+        <name type="A55e7b1c8e140">indices</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1c8c7d0" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1c8d3e0" ref="S55e7b1c8c7d0"/>
+    <FbasicType type="S55e7b1c8d520" intent="in" is_value="true" ref="S55e7b1c8d3e0"/>
+    <FbasicType type="I55e7b1c8dec0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1c8e000" intent="out" ref="I55e7b1c8dec0"/>
+    <FbasicType type="A55e7b1c8e140" intent="out" ref="I55e7b1c8e000">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55e7b1d8c1f0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">23</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1d8c3e0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1d93850" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">23</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1d93a40" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1d9b0e0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">23</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1d9b2d0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1da2ba0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">23</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1da2d90" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1daa890" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">23</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1daaa80" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1db27b0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">23</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1db29a0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FfunctionType type="F55e7b1dbae60" result_name="indices" return_type="S55e7b1dbb270" is_private="true" bind="C" bind_name="xt_idxlist_get_indices_const">
+      <params>
+        <name type="S55e7b1dbc520">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1dbb8c0" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1dbca70" ref="S55e7b1dbb8c0"/>
+    <FbasicType type="S55e7b1dbb270" ref="S55e7b1dbca70"/>
+    <FbasicType type="S55e7b1dbc3e0" ref="S55e7b1dbb8c0"/>
+    <FbasicType type="S55e7b1dbc520" intent="in" is_value="true" ref="S55e7b1dbc3e0"/>
+    <FbasicType type="S55e7b1dbcca0" ref="S55e7b1dbca70"/>
+    <FfunctionType type="F55e7b1db4980" result_name="indices" return_type="A55e7b1db6360" is_public="true">
+      <params>
+        <name type="S55e7b1db56e0">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55e7b1db5ff0" is_pointer="true" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1db6220" is_pointer="true" ref="I55e7b1db5ff0"/>
+    <FbasicType type="A55e7b1db6360" is_pointer="true" ref="I55e7b1db6220">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S55e7b1db55a0" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1db56e0" intent="in" ref="S55e7b1db55a0"/>
+    <FbasicType type="I55e7b1db6a30" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1db6c60" ref="I55e7b1db6a30"/>
+    <FbasicType type="S55e7b1db71f0" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1db7420" ref="S55e7b1db71f0"/>
+    <FbasicType type="I55e7b1db8100" is_target="true" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1db8330" is_target="true" is_save="true" ref="I55e7b1db8100"/>
+    <FbasicType type="A55e7b1db8470" is_target="true" is_save="true" ref="I55e7b1db8330">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1db8c70" return_type="Fint"/>
+    <FfunctionType type="F55e7b1dc0650" return_type="Fint"/>
+    <FbasicType type="A55e7b1db9940" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1dc31b0" return_type="Fint"/>
+    <FbasicType type="I55e7b1dbf140" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C55e7b1dc0f40" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">41</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1dc1150" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="A55e7b1dc67c0" is_target="true" is_save="true" ref="I55e7b1db8330">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">0</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1dc5480" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">0</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1dd2ec0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1dd2c30" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C55e7b1dd4030" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">28</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1dd4230" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="I55e7b1dd5a10" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1dd7670" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1dd78a0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C55e7b1ddbe00" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">27</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1ddc000" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="A55e7b1ddf2d0" intent="out" is_allocatable="true" ref="S55e7b1dcc630">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1dcbc40" scope="local">num_ext</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1d6eba0" result_name="copy" return_type="S55e7b1d70080" is_public="true">
+      <params>
+        <name type="S55e7b1d6f900">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d6fe50" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d70080" ref="S55e7b1d6fe50"/>
+    <FbasicType type="S55e7b1d6f7c0" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d6f900" intent="in" ref="S55e7b1d6f7c0"/>
+    <FfunctionType type="F55e7b1d71400" result_name="copy" return_type="S55e7b1d71810" is_private="true" bind="C" bind_name="xt_idxlist_copy">
+      <params>
+        <name type="S55e7b1d72820">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d71e60" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1d72d70" ref="S55e7b1d71e60"/>
+    <FbasicType type="S55e7b1d71810" ref="S55e7b1d72d70"/>
+    <FbasicType type="S55e7b1d726e0" ref="S55e7b1d71e60"/>
+    <FbasicType type="S55e7b1d72820" intent="in" is_value="true" ref="S55e7b1d726e0"/>
+    <FbasicType type="S55e7b1d72fa0" ref="S55e7b1d72d70"/>
+    <FbasicType type="S55e7b1d6d230" ref="S55e7b1d76d50"/>
+    <FfunctionType type="F55e7b1cc5390" result_name="res" return_type="Flogical" is_public="true">
+      <params>
+        <name type="S55e7b1cc69f0">idxlist</name>
+        <name type="I55e7b1cc72f0">position</name>
+        <name type="I55e7b1cc7ce0">idx</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1cc68b0" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1cc69f0" intent="in" ref="S55e7b1cc68b0"/>
+    <FbasicType type="I55e7b1cc72f0" intent="in" is_value="true" ref="Fint"/>
+    <FbasicType type="I55e7b1cc7ba0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cc7ce0" intent="out" ref="I55e7b1cc7ba0"/>
+    <FfunctionType type="F55e7b1cca320" result_name="res" return_type="I55e7b1ccaaf0" is_private="true" bind="C" bind_name="xt_idxlist_get_index_at_position">
+      <params>
+        <name type="S55e7b1ccc0a0">idxlist</name>
+        <name type="I55e7b1cccac0">position</name>
+        <name type="I55e7b1ccd450">idx</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55e7b1ccdb20" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1ccaaf0" ref="I55e7b1ccdb20"/>
+    <FbasicType type="S55e7b1ccb500" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1ccbf60" ref="S55e7b1ccb500"/>
+    <FbasicType type="S55e7b1ccc0a0" intent="in" is_value="true" ref="S55e7b1ccbf60"/>
+    <FbasicType type="I55e7b1ccc980" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cccac0" intent="in" is_value="true" ref="I55e7b1ccc980"/>
+    <FbasicType type="I55e7b1ccd310" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1ccd450" intent="out" ref="I55e7b1ccd310"/>
+    <FbasicType type="I55e7b1ccdd50" ref="I55e7b1ccdb20"/>
+    <FbasicType type="I55e7b1cc8c30" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cc8e60" ref="I55e7b1cc8c30"/>
+    <FfunctionType type="F55e7b1ccfd70" return_type="I55e7b1ccfc30"/>
+    <FbasicType type="I55e7b1ccfc30" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cd9640" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cd93b0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cd9e90" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1cdaf80" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1c975f0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1c92a50" ref="I55e7b1c975f0"/>
+    <FfunctionType type="F55e7b1c91ec0" result_name="num_subst" return_type="I55e7b1c92a50" is_private="true" bind="C" bind_name="xt_idxlist_get_indices_at_positions">
+      <params>
+        <name type="S55e7b1c942a0">idxlist</name>
+        <name type="A55e7b1c94ec0">positions</name>
+        <name type="I55e7b1c958e0">num_pos</name>
+        <name type="A55e7b1c96f20">indices</name>
+        <name type="I55e7b1c96360">undef_idx</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1c93700" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1c94160" ref="S55e7b1c93700"/>
+    <FbasicType type="S55e7b1c942a0" intent="in" is_value="true" ref="S55e7b1c94160"/>
+    <FbasicType type="I55e7b1c94c40" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1c94d80" intent="in" ref="I55e7b1c94c40"/>
+    <FbasicType type="A55e7b1c94ec0" intent="in" ref="I55e7b1c94d80">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1c957a0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1c958e0" intent="in" is_value="true" ref="I55e7b1c957a0"/>
+    <FbasicType type="I55e7b1c96ca0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1c96de0" intent="out" ref="I55e7b1c96ca0"/>
+    <FbasicType type="A55e7b1c96f20" intent="out" ref="I55e7b1c96de0">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1c96220" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1c96360" intent="in" is_value="true" ref="I55e7b1c96220"/>
+    <FbasicType type="I55e7b1ce4b30" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="A55e7b1ce71c0" intent="in" ref="I55e7b1ce06e0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1ce2760" scope="local">num_pos</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1ce66c0" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1ce2760" scope="local">num_pos</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1cf0b90" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C55e7b1cf1f90" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">27</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1cf2190" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="I55e7b1cf3170" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="A55e7b1cf5800" intent="in" ref="I55e7b1cec090">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1cee110" scope="local">num_pos</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1cf4d00" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1cee110" scope="local">num_pos</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1cff1d0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C55e7b1d005d0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">27</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1d007d0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="I55e7b1d017b0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="A55e7b1d03e40" intent="in" ref="I55e7b1cfa6d0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1cfc750" scope="local">num_pos</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d03340" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1cfc750" scope="local">num_pos</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1d0b4a0" result_name="res" return_type="I55e7b1d0bc70" is_private="true" bind="C" bind_name="xt_idxlist_get_position_of_index">
+      <params>
+        <name type="S55e7b1d0d4e0">idxlist</name>
+        <name type="I55e7b1d0df00">idx</name>
+        <name type="I55e7b1d0e890">position</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55e7b1d0ef60" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d0bc70" ref="I55e7b1d0ef60"/>
+    <FbasicType type="S55e7b1d0cb20" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1d0d3a0" ref="S55e7b1d0cb20"/>
+    <FbasicType type="S55e7b1d0d4e0" intent="in" is_value="true" ref="S55e7b1d0d3a0"/>
+    <FbasicType type="I55e7b1d0ddc0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d0df00" intent="in" is_value="true" ref="I55e7b1d0ddc0"/>
+    <FbasicType type="I55e7b1d0e750" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d0e890" intent="out" ref="I55e7b1d0e750"/>
+    <FbasicType type="I55e7b1d0f190" ref="I55e7b1d0ef60"/>
+    <FfunctionType type="F55e7b1d06610" result_name="notfound" return_type="Flogical" is_public="true">
+      <params>
+        <name type="S55e7b1d07c70">idxlist</name>
+        <name type="I55e7b1d08690">idx</name>
+        <name type="I55e7b1d08f00">position</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d07b30" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d07c70" intent="in" ref="S55e7b1d07b30"/>
+    <FbasicType type="I55e7b1d08550" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d08690" intent="in" is_value="true" ref="I55e7b1d08550"/>
+    <FbasicType type="I55e7b1d08f00" intent="out" ref="Fint"/>
+    <FbasicType type="I55e7b1d09db0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d09fe0" ref="I55e7b1d09db0"/>
+    <FfunctionType type="F55e7b1d12500" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d19450" result_name="res" return_type="I55e7b1d19e00" is_private="true" bind="C" bind_name="xt_idxlist_get_position_of_index_off">
+      <params>
+        <name type="S55e7b1d1b7c0">idxlist</name>
+        <name type="I55e7b1d1c1e0">idx</name>
+        <name type="I55e7b1d1cb70">position</name>
+        <name type="I55e7b1d1d590">offset</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55e7b1d1dc60" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d19e00" ref="I55e7b1d1dc60"/>
+    <FbasicType type="S55e7b1d1ae00" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1d1b680" ref="S55e7b1d1ae00"/>
+    <FbasicType type="S55e7b1d1b7c0" intent="in" is_value="true" ref="S55e7b1d1b680"/>
+    <FbasicType type="I55e7b1d1c0a0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d1c1e0" intent="in" is_value="true" ref="I55e7b1d1c0a0"/>
+    <FbasicType type="I55e7b1d1ca30" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d1cb70" intent="out" ref="I55e7b1d1ca30"/>
+    <FbasicType type="I55e7b1d1d450" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d1d590" intent="in" is_value="true" ref="I55e7b1d1d450"/>
+    <FbasicType type="I55e7b1d1de90" ref="I55e7b1d1dc60"/>
+    <FfunctionType type="F55e7b1d13540" result_name="notfound" return_type="Flogical" is_public="true">
+      <params>
+        <name type="S55e7b1d14ed0">idxlist</name>
+        <name type="I55e7b1d158f0">idx</name>
+        <name type="I55e7b1d16160">position</name>
+        <name type="I55e7b1d169d0">offset</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d14d90" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d14ed0" intent="in" ref="S55e7b1d14d90"/>
+    <FbasicType type="I55e7b1d157b0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d158f0" intent="in" is_value="true" ref="I55e7b1d157b0"/>
+    <FbasicType type="I55e7b1d16160" intent="out" ref="Fint"/>
+    <FbasicType type="I55e7b1d169d0" intent="in" ref="Fint"/>
+    <FbasicType type="I55e7b1d17aa0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d17cd0" ref="I55e7b1d17aa0"/>
+    <FbasicType type="I55e7b1d17f00" ref="I55e7b1d17aa0"/>
+    <FfunctionType type="F55e7b1d201b0" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d22340" return_type="Fint"/>
+    <FbasicType type="I55e7b1d20070" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55e7b1d2a0e0" result_name="num_missing" return_type="I55e7b1d2ac70" is_private="true" bind="C" bind_name="xt_idxlist_get_positions_of_indices">
+      <params>
+        <name type="S55e7b1d2c780">idxlist</name>
+        <name type="A55e7b1d2d340">indices</name>
+        <name type="I55e7b1d2dd60">num_indices</name>
+        <name type="A55e7b1d2e920">positions</name>
+        <name type="I55e7b1d2f340">single_match_only</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55e7b1d2fa10" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d2ac70" ref="I55e7b1d2fa10"/>
+    <FbasicType type="S55e7b1d2bdc0" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1d2c640" ref="S55e7b1d2bdc0"/>
+    <FbasicType type="S55e7b1d2c780" intent="in" is_value="true" ref="S55e7b1d2c640"/>
+    <FbasicType type="I55e7b1d2d0c0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d2d200" intent="in" ref="I55e7b1d2d0c0"/>
+    <FbasicType type="A55e7b1d2d340" intent="in" ref="I55e7b1d2d200">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1d2dc20" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d2dd60" intent="in" is_value="true" ref="I55e7b1d2dc20"/>
+    <FbasicType type="I55e7b1d2e6a0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d2e7e0" intent="out" ref="I55e7b1d2e6a0"/>
+    <FbasicType type="A55e7b1d2e920" intent="out" ref="I55e7b1d2e7e0">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1d2f200" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d2f340" intent="in" is_value="true" ref="I55e7b1d2f200"/>
+    <FbasicType type="I55e7b1d2fc40" ref="I55e7b1d2fa10"/>
+    <FfunctionType type="F55e7b1d233c0" result_name="num_missing" return_type="Fint" is_public="true">
+      <params>
+        <name type="S55e7b1d24d50">idxlist</name>
+        <name type="A55e7b1d25970">indices</name>
+        <name type="A55e7b1d26470">positions</name>
+        <name type="L55e7b1d26ce0">single_match_only</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d24c10" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d24d50" intent="in" ref="S55e7b1d24c10"/>
+    <FbasicType type="I55e7b1d256f0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d25830" intent="in" ref="I55e7b1d256f0"/>
+    <FbasicType type="A55e7b1d25970" intent="in" ref="I55e7b1d25830">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1d26330" intent="out" ref="Fint"/>
+    <FbasicType type="A55e7b1d26470" intent="out" ref="I55e7b1d26330">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="L55e7b1d26ce0" intent="in" ref="Flogical"/>
+    <FbasicType type="I55e7b1d28610" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d28840" ref="I55e7b1d28610"/>
+    <FbasicType type="I55e7b1d28a70" ref="I55e7b1d28610"/>
+    <FfunctionType type="F55e7b1d31ff0" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d32d70" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d35e70" return_type="I55e7b1d35d30"/>
+    <FbasicType type="I55e7b1d35d30" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55e7b1d376d0" return_type="I55e7b1d3d760"/>
+    <FbasicType type="I55e7b1d3d760" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55e7b1d3d8a0" return_type="I55e7b1d3d760"/>
+    <FfunctionType type="F55e7b1d3b900" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d41ba0" return_type="Fint"/>
+    <FbasicType type="C55e7b1d33c10" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">25</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1d33e10" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="I55e7b1d35780" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d359b0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d37590" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d37300" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="A55e7b1d39fa0" intent="in" ref="I55e7b1d25830">
+      <indexRange is_assumed_shape="true">
+        <lowerBound>
+          <Var type="Fint" scope="local">ofs</Var>
+        </lowerBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d39a20" ref="Fint">
+      <indexRange is_assumed_shape="true">
+        <lowerBound>
+          <Var type="Fint" scope="local">ofs</Var>
+        </lowerBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1d3a520" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d3a290" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="A55e7b1d3b180" intent="out" ref="I55e7b1d26330">
+      <indexRange is_assumed_shape="true">
+        <lowerBound>
+          <Var type="Fint" scope="local">ofs</Var>
+        </lowerBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d3ac00" ref="Fint">
+      <indexRange is_assumed_shape="true">
+        <lowerBound>
+          <Var type="Fint" scope="local">ofs</Var>
+        </lowerBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1d3c720" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d3cbf0" ref="I55e7b1d3c720"/>
+    <FbasicType type="I55e7b1d3c490" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d3dc30" ref="I55e7b1d3d760"/>
+    <FbasicType type="I55e7b1d3d4d0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d3e6a0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="A55e7b1d408e0" intent="in" ref="I55e7b1d25830">
+      <indexRange is_assumed_shape="true">
+        <lowerBound>
+          <Var type="Fint" scope="local">ofs</Var>
+        </lowerBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d40360" ref="Fint">
+      <indexRange is_assumed_shape="true">
+        <lowerBound>
+          <Var type="Fint" scope="local">ofs</Var>
+        </lowerBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d41420" intent="out" ref="I55e7b1d26330">
+      <indexRange is_assumed_shape="true">
+        <lowerBound>
+          <Var type="Fint" scope="local">ofs</Var>
+        </lowerBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d40ea0" ref="Fint">
+      <indexRange is_assumed_shape="true">
+        <lowerBound>
+          <Var type="Fint" scope="local">ofs</Var>
+        </lowerBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1d46140" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_idxlist_get_index_stripes">
+      <params>
+        <name type="S55e7b1d47c00">idxlist</name>
+        <name type="S55e7b1d48410">stripes</name>
+        <name type="I55e7b1d48da0">num_stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d47150" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1d47ac0" ref="S55e7b1d47150"/>
+    <FbasicType type="S55e7b1d47c00" intent="in" is_value="true" ref="S55e7b1d47ac0"/>
+    <FbasicType type="S55e7b1d482d0" ref="S55e7b1d47150"/>
+    <FbasicType type="S55e7b1d48410" intent="out" ref="S55e7b1d482d0"/>
+    <FbasicType type="I55e7b1d48c60" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d48da0" intent="out" ref="I55e7b1d48c60"/>
+    <FfunctionType type="F55e7b1d43130" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S55e7b1d441c0">idxlist</name>
+        <name type="A55e7b1d44cf0">stripes</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d44080" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d441c0" intent="in" ref="S55e7b1d44080"/>
+    <FbasicType type="S55e7b1d44a70" is_allocatable="true" ref="S55e7b1bde520"/>
+    <FbasicType type="S55e7b1d44bb0" intent="out" is_allocatable="true" ref="S55e7b1d44a70"/>
+    <FbasicType type="A55e7b1d44cf0" intent="out" is_allocatable="true" ref="S55e7b1d44bb0">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S55e7b1d4a140" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1d4a370" ref="S55e7b1d4a140"/>
+    <FbasicType type="I55e7b1d4aa40" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d4ac70" ref="I55e7b1d4aa40"/>
+    <FbasicType type="S55e7b1d4b440" is_pointer="true" ref="S55e7b1bde520"/>
+    <FbasicType type="S55e7b1d4b670" is_pointer="true" ref="S55e7b1d4b440"/>
+    <FbasicType type="A55e7b1d4b7b0" is_pointer="true" ref="S55e7b1d4b670">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d4c260" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1d4ea50" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d51540" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d52da0" return_type="Fint"/>
+    <FbasicType type="C55e7b1d4f340" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">27</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55e7b1d4f540" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="A55e7b1d535d0" intent="out" is_allocatable="true" ref="S55e7b1d44bb0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <functionCall type="Fint" is_intrinsic="true">
+            <name>int</name>
+            <arguments>
+              <Var type="I55e7b1d4ac70" scope="local">num_stripes</Var>
+            </arguments>
+          </functionCall>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1d5b9a0" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_idxlist_get_bounding_box">
+      <params>
+        <name type="S55e7b1d5df00">idxlist</name>
+        <name type="I55e7b1d5e800">ndim</name>
+        <name type="A55e7b1d5f420">global_size</name>
+        <name type="I55e7b1d5ff00">global_start_index</name>
+        <name type="A55e7b1d609a0">bounds</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d5d220" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1d5ddc0" ref="S55e7b1d5d220"/>
+    <FbasicType type="S55e7b1d5df00" intent="in" is_value="true" ref="S55e7b1d5ddc0"/>
+    <FbasicType type="I55e7b1d5e6c0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d5e800" is_value="true" ref="I55e7b1d5e6c0"/>
+    <FbasicType type="I55e7b1d5f1a0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d5f2e0" intent="in" ref="I55e7b1d5f1a0"/>
+    <FbasicType type="A55e7b1d5f420" intent="in" ref="I55e7b1d5f2e0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1d5e800" scope="local">ndim</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I55e7b1d5fdc0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d5ff00" intent="in" is_value="true" ref="I55e7b1d5fdc0"/>
+    <FbasicType type="S55e7b1d5d540" ref="S55e7b1bd42e0"/>
+    <FbasicType type="S55e7b1d60720" ref="S55e7b1d5d540"/>
+    <FbasicType type="S55e7b1d60860" intent="out" ref="S55e7b1d60720"/>
+    <FbasicType type="A55e7b1d609a0" intent="out" ref="S55e7b1d60860">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I55e7b1d5e800" scope="local">ndim</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55e7b1d56470" result_name="bounds" return_type="A55e7b1d59a00" is_public="true">
+      <params>
+        <name type="S55e7b1d57830">idxlist</name>
+        <name type="A55e7b1d58450">global_size</name>
+        <name type="I55e7b1d58de0">global_start_index</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d59690" ref="S55e7b1bd42e0"/>
+    <FbasicType type="S55e7b1d598c0" ref="S55e7b1d59690"/>
+    <FbasicType type="I55e7b1d581d0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d58310" intent="in" ref="I55e7b1d581d0"/>
+    <FbasicType type="A55e7b1d58450" intent="in" ref="I55e7b1d58310">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55e7b1d59a00" ref="S55e7b1d598c0">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <functionCall type="Fint" is_intrinsic="true">
+            <name>size</name>
+            <arguments>
+              <Var type="A55e7b1d58450" scope="local">global_size</Var>
+            </arguments>
+          </functionCall>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S55e7b1d576f0" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d57830" intent="in" ref="S55e7b1d576f0"/>
+    <FbasicType type="I55e7b1d58ca0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bdcd80" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d58de0" intent="in" ref="I55e7b1d58ca0"/>
+    <FfunctionType type="F55e7b1d63020" return_type="Fint"/>
+    <FfunctionType type="F55e7b1d63ba0" return_type="Fint"/>
+    <FbasicType type="I55e7b1d5a200" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55e7b1d5a430" ref="I55e7b1d5a200"/>
+    <FfunctionType type="F55e7b1d64210" return_type="I55e7b1d640d0"/>
+    <FbasicType type="I55e7b1d640d0" ref="Fint">
+      <kind>
+        <Var type="I55e7b1bd6990" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55e7b1d692a0" result_name="intersection" return_type="S55e7b1d69890" is_private="true" bind="C" bind_name="xt_idxlist_get_intersection">
+      <params>
+        <name type="S55e7b1d6abd0">idxlist_src</name>
+        <name type="S55e7b1d6ad10">idxlist_dst</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d6a030" ref="S55e7b1bd6bc0"/>
+    <FbasicType type="S55e7b1d6b260" ref="S55e7b1d6a030"/>
+    <FbasicType type="S55e7b1d69890" ref="S55e7b1d6b260"/>
+    <FbasicType type="S55e7b1d6aa90" ref="S55e7b1d6a030"/>
+    <FbasicType type="S55e7b1d6abd0" intent="in" is_value="true" ref="S55e7b1d6aa90"/>
+    <FbasicType type="S55e7b1d6ad10" intent="in" is_value="true" ref="S55e7b1d6aa90"/>
+    <FbasicType type="S55e7b1d6b490" ref="S55e7b1d6b260"/>
+    <FfunctionType type="F55e7b1d66340" result_name="intersection" return_type="S55e7b1d67e70" is_public="true">
+      <params>
+        <name type="S55e7b1d675b0">idxlist_src</name>
+        <name type="S55e7b1d676f0">idxlist_dst</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55e7b1d67c40" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d67e70" ref="S55e7b1d67c40"/>
+    <FbasicType type="S55e7b1d67470" ref="S55e7b1bd98b0"/>
+    <FbasicType type="S55e7b1d675b0" intent="in" ref="S55e7b1d67470"/>
+    <FbasicType type="S55e7b1d676f0" intent="in" ref="S55e7b1d67470"/>
+    <FfunctionType type="F55e7b1d9c7b0" return_type="Fvoid">
+      <params>
+        <name type="S55e7b1d96ad0">idxlist</name>
+        <name type="A55e7b1d97d80">indices</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1da4270" return_type="Fvoid">
+      <params>
+        <name type="S55e7b1d9e360">idxlist</name>
+        <name type="A55e7b1d9f840">indices</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1d86490" return_type="Fvoid">
+      <params>
+        <name type="S55e7b1d80de0">idxlist</name>
+        <name type="A55e7b1d81a00">indices</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1dabf60" return_type="Fvoid">
+      <params>
+        <name type="S55e7b1da5e20">idxlist</name>
+        <name type="A55e7b1da7530">indices</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1d8d8c0" return_type="Fvoid">
+      <params>
+        <name type="S55e7b1d88040">idxlist</name>
+        <name type="A55e7b1d88e90">indices</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1db3e80" return_type="Fvoid">
+      <params>
+        <name type="S55e7b1dadb10">idxlist</name>
+        <name type="A55e7b1daf450">indices</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1d94f20" return_type="Fvoid">
+      <params>
+        <name type="S55e7b1d8f470">idxlist</name>
+        <name type="A55e7b1d904f0">indices</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1cb20c0" result_name="p" return_type="Flogical">
+      <params>
+        <name type="S55e7b1cb0660">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1debc50" result_name="num_unmatched" return_type="Fint">
+      <params>
+        <name type="S55e7b1de4e30">idxlist</name>
+        <name type="A55e7b1de58d0">stripes</name>
+        <name type="A55e7b1de6400">pos_ext</name>
+        <name type="L55e7b1de6c70">single_match_only</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1de2a90" result_name="num_unmatched" return_type="Fint">
+      <params>
+        <name type="S55e7b1dc9e50">idxlist</name>
+        <name type="I55e7b1dca7e0">num_stripes</name>
+        <name type="A55e7b1dcb310">stripes</name>
+        <name type="I55e7b1dcbc40">num_ext</name>
+        <name type="A55e7b1dcc770">pos_ext</name>
+        <name type="L55e7b1dccfe0">single_match_only</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1d059b0" result_name="num_subst" return_type="Fint">
+      <params>
+        <name type="S55e7b1cf9d70">idxlist</name>
+        <name type="A55e7b1cfa810">positions</name>
+        <name type="I55e7b1cfc750">num_pos</name>
+        <name type="A55e7b1cfb3d0">indices</name>
+        <name type="I55e7b1cfbd60">undef_idx</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1cf7370" result_name="num_subst" return_type="Fint">
+      <params>
+        <name type="S55e7b1ceb730">idxlist</name>
+        <name type="A55e7b1cec1d0">positions</name>
+        <name type="I55e7b1cee110">num_pos</name>
+        <name type="A55e7b1cecd90">indices</name>
+        <name type="I55e7b1ced720">undef_idx</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1cdd380" result_name="num_subst" return_type="Fint">
+      <params>
+        <name type="S55e7b1cd3b50">idxlist</name>
+        <name type="A55e7b1cd4650">positions</name>
+        <name type="A55e7b1cd5270">indices</name>
+        <name type="I55e7b1cd5c00">undef_idx</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1ce8d30" result_name="num_subst" return_type="Fint">
+      <params>
+        <name type="S55e7b1cdfd80">idxlist</name>
+        <name type="A55e7b1ce0820">positions</name>
+        <name type="I55e7b1ce2760">num_pos</name>
+        <name type="A55e7b1ce13e0">indices</name>
+        <name type="I55e7b1ce1d70">undef_idx</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1cc46b0" return_type="Fvoid">
+      <params>
+        <name type="A55e7b1cbd250">idxlists</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1cb5110" return_type="Fvoid">
+      <params>
+        <name type="S55e7b1cb38b0">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1cbb5a0" return_type="Fvoid">
+      <params>
+        <name type="A55e7b1cb6bd0">idxlists</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55e7b1cadf70" return_type="FnumericAll" is_external="true"/>
+    <FbasicType type="F55e7b1cae0b0" is_public="true" ref="F55e7b1cadf70"/>
+    <FfunctionType type="F55e7b1cae830" return_type="FnumericAll" is_external="true"/>
+    <FbasicType type="F55e7b1cae970" is_public="true" ref="F55e7b1cae830"/>
+  </typeTable>
+  <identifiers>
+    <id type="I55e7b1bdcaf0" sclass="flocal" original_name="xt_mpi_fint_kind" declared_in="xt_mpi">
+      <name>xt_mpi_fint_kind</name>
+    </id>
+    <id type="I55e7b1bdcd80" sclass="flocal" original_name="xt_int_kind" declared_in="xt_core">
+      <name>xt_int_kind</name>
+    </id>
+    <id type="I55e7b1bdd010" sclass="flocal" original_name="i2" declared_in="xt_core">
+      <name>i2</name>
+    </id>
+    <id type="I55e7b1bdd2a0" sclass="flocal" original_name="i4" declared_in="xt_core">
+      <name>i4</name>
+    </id>
+    <id type="I55e7b1bdd530" sclass="flocal" original_name="i8" declared_in="xt_core">
+      <name>i8</name>
+    </id>
+    <id type="F55e7b1bddb00" sclass="ffunc" original_name="xt_abort" declared_in="xt_core">
+      <name>xt_abort</name>
+    </id>
+    <id type="F55e7b1bdde60" sclass="ffunc" original_name="xt_get_default_comm" declared_in="xt_core">
+      <name>xt_get_default_comm</name>
+    </id>
+    <id type="F55e7b1bde290" sclass="ffunc" original_name="==" declared_in="xt_core">
+      <name>==</name>
+    </id>
+    <id type="S55e7b1bde520" imported_id="S55e82704fe80" sclass="ftype_name" original_name="xt_stripe" declared_in="xt_core">
+      <name>xt_stripe</name>
+    </id>
+    <id type="S55e7b1bd42e0" imported_id="S55e8270521b0" sclass="ftype_name" original_name="xt_bounds" declared_in="xt_core">
+      <name>xt_bounds</name>
+    </id>
+    <id type="S55e7b1bd4570" imported_id="S55e8270536d0" sclass="ftype_name" original_name="xt_pos_ext" declared_in="xt_core">
+      <name>xt_pos_ext</name>
+    </id>
+    <id type="I55e7b1bd6990" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="S55e7b1bd6bc0" imported_id="S555a51945380" sclass="ftype_name" original_name="c_ptr" declared_in="iso_c_binding">
+      <name>c_ptr</name>
+    </id>
+    <id type="S55e7b1bd6e50" imported_id="S555a51947d30" sclass="flocal" original_name="c_null_ptr" declared_in="iso_c_binding">
+      <name>c_null_ptr</name>
+    </id>
+    <id type="F55e7b1bd7420" sclass="ffunc" original_name="c_associated" declared_in="iso_c_binding">
+      <name>c_associated</name>
+    </id>
+    <id type="F55e7b1bd7b90" sclass="ffunc" original_name="c_f_pointer" declared_in="iso_c_binding">
+      <name>c_f_pointer</name>
+    </id>
+    <id type="F55e7b1bd7ef0" sclass="ffunc" original_name="c_loc" declared_in="iso_c_binding">
+      <name>c_loc</name>
+    </id>
+    <id type="S55e7b1bd98b0" sclass="ftype_name" original_name="xt_idxlist" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist</name>
+    </id>
+    <id type="F55e7b1bdb890" sclass="ffunc" original_name="xt_idxlist_f2c" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_f2c</name>
+    </id>
+    <id type="F55e7b1c2af90" sclass="ffunc" original_name="xt_idxlist_get_pack_size" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_pack_size</name>
+    </id>
+    <id type="F55e7b1cae0b0" sclass="ffunc" original_name="xt_idxlist_pack_f" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_pack_f</name>
+    </id>
+    <id type="F55e7b1cae970" sclass="ffunc" original_name="xt_idxlist_unpack_f" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_unpack_f</name>
+    </id>
+    <id type="F55e7b1c9a830" sclass="ffunc" original_name="xt_idxlist_delete" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_delete</name>
+    </id>
+    <id type="F55e7b1d75aa0" sclass="ffunc" original_name="xt_idxlist_c2f" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_c2f</name>
+    </id>
+    <id type="F55e7b1c9eca0" sclass="ffunc" original_name="xt_is_null" declared_in="xt_idxlist_abstract">
+      <name>xt_is_null</name>
+    </id>
+    <id type="F55e7b1d6eba0" sclass="ffunc" original_name="xt_idxlist_copy" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_copy</name>
+    </id>
+    <id type="F55e7b1cc5390" sclass="ffunc" original_name="xt_idxlist_get_index_at_position" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_index_at_position</name>
+    </id>
+    <id type="F55e7b1ca1090" sclass="ffunc" original_name="xt_idxlist_get_indices_at_positions" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_indices_at_positions</name>
+    </id>
+    <id type="F55e7b1d06610" sclass="ffunc" original_name="xt_idxlist_get_position_of_index" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_position_of_index</name>
+    </id>
+    <id type="F55e7b1d13540" sclass="ffunc" original_name="xt_idxlist_get_position_of_index_off" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_position_of_index_off</name>
+    </id>
+    <id type="F55e7b1d233c0" sclass="ffunc" original_name="xt_idxlist_get_positions_of_indices" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_positions_of_indices</name>
+    </id>
+    <id type="F55e7b1d43130" sclass="ffunc" original_name="xt_idxlist_get_index_stripes" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_index_stripes</name>
+    </id>
+    <id type="F55e7b1d78620" sclass="ffunc" original_name="xt_idxlist_get_num_indices" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_num_indices</name>
+    </id>
+    <id type="F55e7b1c9d860" sclass="ffunc" original_name="xt_idxlist_get_indices" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_indices</name>
+    </id>
+    <id type="F55e7b1db4980" sclass="ffunc" original_name="xt_idxlist_get_indices_const" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_indices_const</name>
+    </id>
+    <id type="F55e7b1d56470" sclass="ffunc" original_name="xt_idxlist_get_bounding_box" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_bounding_box</name>
+    </id>
+    <id type="F55e7b1d66340" sclass="ffunc" original_name="xt_idxlist_get_intersection" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_intersection</name>
+    </id>
+    <id type="F55e7b1cad6f0" sclass="ffunc" original_name="xt_idxlist_get_pos_exts_of_index_stripes" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_get_pos_exts_of_index_stripes</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I55e7b1bdcaf0">xt_mpi_fint_kind</name>
+      <value>
+        <Var type="I55e7b1be9160" scope="local">c_int</Var>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I55e7b1bdcd80">xt_int_kind</name>
+      <value>
+        <Var type="I55e7b1be4be0" scope="local">c_int</Var>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I55e7b1bdd010">i2</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>selected_int_kind</name>
+          <arguments>
+            <FintConstant type="Fint">4</FintConstant>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I55e7b1bdd2a0">i4</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>selected_int_kind</name>
+          <arguments>
+            <FintConstant type="Fint">9</FintConstant>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I55e7b1bdd530">i8</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>selected_int_kind</name>
+          <arguments>
+            <FintConstant type="Fint">14</FintConstant>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I55e7b1bd6990">c_int</name>
+    </varDecl>
+    <varDecl>
+      <name type="S55e7b1bd6e50" imported_id="S555a51947d30">c_null_ptr</name>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="xt_idxlist_delete" lineno="150" file="xt_idxlist_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="151" file="xt_idxlist_f.f90">
+        <name type="F55e7b1cc46b0">xt_idxlist_delete_a2d</name>
+        <name type="F55e7b1cb5110">xt_idxlist_delete_1</name>
+        <name type="F55e7b1cbb5a0">xt_idxlist_delete_a1d</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="152" file="xt_idxlist_f.f90">
+        <name type="F55e7b1cc46b0">xt_idxlist_delete_a2d</name>
+        <name type="F55e7b1cb5110">xt_idxlist_delete_1</name>
+        <name type="F55e7b1cbb5a0">xt_idxlist_delete_a1d</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="153" file="xt_idxlist_f.f90">
+        <name type="F55e7b1cc46b0">xt_idxlist_delete_a2d</name>
+        <name type="F55e7b1cb5110">xt_idxlist_delete_1</name>
+        <name type="F55e7b1cbb5a0">xt_idxlist_delete_a1d</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_is_null" lineno="166" file="xt_idxlist_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="167" file="xt_idxlist_f.f90">
+        <name type="F55e7b1cb20c0">xt_idxlist_is_null</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_idxlist_get_indices_at_positions" lineno="170" file="xt_idxlist_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="171" file="xt_idxlist_f.f90">
+        <name type="F55e7b1d059b0">xt_idxlist_get_indices_at_positions_a1d_i8</name>
+        <name type="F55e7b1cf7370">xt_idxlist_get_indices_at_positions_a1d_i4</name>
+        <name type="F55e7b1cdd380">xt_idxlist_get_indices_at_positions_a1d</name>
+        <name type="F55e7b1ce8d30">xt_idxlist_get_indices_at_positions_a1d_i2</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="172" file="xt_idxlist_f.f90">
+        <name type="F55e7b1d059b0">xt_idxlist_get_indices_at_positions_a1d_i8</name>
+        <name type="F55e7b1cf7370">xt_idxlist_get_indices_at_positions_a1d_i4</name>
+        <name type="F55e7b1cdd380">xt_idxlist_get_indices_at_positions_a1d</name>
+        <name type="F55e7b1ce8d30">xt_idxlist_get_indices_at_positions_a1d_i2</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="173" file="xt_idxlist_f.f90">
+        <name type="F55e7b1d059b0">xt_idxlist_get_indices_at_positions_a1d_i8</name>
+        <name type="F55e7b1cf7370">xt_idxlist_get_indices_at_positions_a1d_i4</name>
+        <name type="F55e7b1cdd380">xt_idxlist_get_indices_at_positions_a1d</name>
+        <name type="F55e7b1ce8d30">xt_idxlist_get_indices_at_positions_a1d_i2</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="174" file="xt_idxlist_f.f90">
+        <name type="F55e7b1d059b0">xt_idxlist_get_indices_at_positions_a1d_i8</name>
+        <name type="F55e7b1cf7370">xt_idxlist_get_indices_at_positions_a1d_i4</name>
+        <name type="F55e7b1cdd380">xt_idxlist_get_indices_at_positions_a1d</name>
+        <name type="F55e7b1ce8d30">xt_idxlist_get_indices_at_positions_a1d_i2</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_idxlist_get_indices" lineno="156" file="xt_idxlist_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="157" file="xt_idxlist_f.f90">
+        <name type="F55e7b1d9c7b0">xt_idxlist_get_indices_4d</name>
+        <name type="F55e7b1da4270">xt_idxlist_get_indices_5d</name>
+        <name type="F55e7b1d86490">xt_idxlist_get_indices_1d</name>
+        <name type="F55e7b1dabf60">xt_idxlist_get_indices_6d</name>
+        <name type="F55e7b1d8d8c0">xt_idxlist_get_indices_2d</name>
+        <name type="F55e7b1db3e80">xt_idxlist_get_indices_7d</name>
+        <name type="F55e7b1d94f20">xt_idxlist_get_indices_3d</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="158" file="xt_idxlist_f.f90">
+        <name type="F55e7b1d9c7b0">xt_idxlist_get_indices_4d</name>
+        <name type="F55e7b1da4270">xt_idxlist_get_indices_5d</name>
+        <name type="F55e7b1d86490">xt_idxlist_get_indices_1d</name>
+        <name type="F55e7b1dabf60">xt_idxlist_get_indices_6d</name>
+        <name type="F55e7b1d8d8c0">xt_idxlist_get_indices_2d</name>
+        <name type="F55e7b1db3e80">xt_idxlist_get_indices_7d</name>
+        <name type="F55e7b1d94f20">xt_idxlist_get_indices_3d</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="159" file="xt_idxlist_f.f90">
+        <name type="F55e7b1d9c7b0">xt_idxlist_get_indices_4d</name>
+        <name type="F55e7b1da4270">xt_idxlist_get_indices_5d</name>
+        <name type="F55e7b1d86490">xt_idxlist_get_indices_1d</name>
+        <name type="F55e7b1dabf60">xt_idxlist_get_indices_6d</name>
+        <name type="F55e7b1d8d8c0">xt_idxlist_get_indices_2d</name>
+        <name type="F55e7b1db3e80">xt_idxlist_get_indices_7d</name>
+        <name type="F55e7b1d94f20">xt_idxlist_get_indices_3d</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="160" file="xt_idxlist_f.f90">
+        <name type="F55e7b1d9c7b0">xt_idxlist_get_indices_4d</name>
+        <name type="F55e7b1da4270">xt_idxlist_get_indices_5d</name>
+        <name type="F55e7b1d86490">xt_idxlist_get_indices_1d</name>
+        <name type="F55e7b1dabf60">xt_idxlist_get_indices_6d</name>
+        <name type="F55e7b1d8d8c0">xt_idxlist_get_indices_2d</name>
+        <name type="F55e7b1db3e80">xt_idxlist_get_indices_7d</name>
+        <name type="F55e7b1d94f20">xt_idxlist_get_indices_3d</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="161" file="xt_idxlist_f.f90">
+        <name type="F55e7b1d9c7b0">xt_idxlist_get_indices_4d</name>
+        <name type="F55e7b1da4270">xt_idxlist_get_indices_5d</name>
+        <name type="F55e7b1d86490">xt_idxlist_get_indices_1d</name>
+        <name type="F55e7b1dabf60">xt_idxlist_get_indices_6d</name>
+        <name type="F55e7b1d8d8c0">xt_idxlist_get_indices_2d</name>
+        <name type="F55e7b1db3e80">xt_idxlist_get_indices_7d</name>
+        <name type="F55e7b1d94f20">xt_idxlist_get_indices_3d</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="162" file="xt_idxlist_f.f90">
+        <name type="F55e7b1d9c7b0">xt_idxlist_get_indices_4d</name>
+        <name type="F55e7b1da4270">xt_idxlist_get_indices_5d</name>
+        <name type="F55e7b1d86490">xt_idxlist_get_indices_1d</name>
+        <name type="F55e7b1dabf60">xt_idxlist_get_indices_6d</name>
+        <name type="F55e7b1d8d8c0">xt_idxlist_get_indices_2d</name>
+        <name type="F55e7b1db3e80">xt_idxlist_get_indices_7d</name>
+        <name type="F55e7b1d94f20">xt_idxlist_get_indices_3d</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="163" file="xt_idxlist_f.f90">
+        <name type="F55e7b1d9c7b0">xt_idxlist_get_indices_4d</name>
+        <name type="F55e7b1da4270">xt_idxlist_get_indices_5d</name>
+        <name type="F55e7b1d86490">xt_idxlist_get_indices_1d</name>
+        <name type="F55e7b1dabf60">xt_idxlist_get_indices_6d</name>
+        <name type="F55e7b1d8d8c0">xt_idxlist_get_indices_2d</name>
+        <name type="F55e7b1db3e80">xt_idxlist_get_indices_7d</name>
+        <name type="F55e7b1d94f20">xt_idxlist_get_indices_3d</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_idxlist_get_pos_exts_of_index_stripes" lineno="198" file="xt_idxlist_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="199" file="xt_idxlist_f.f90">
+        <name type="F55e7b1debc50">gpe_is_a_p1d_l</name>
+        <name type="F55e7b1de2a90">gpe_is_i4_a_i4_p1d_l</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="200" file="xt_idxlist_f.f90">
+        <name type="F55e7b1debc50">gpe_is_a_p1d_l</name>
+        <name type="F55e7b1de2a90">gpe_is_i4_a_i4_p1d_l</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>
