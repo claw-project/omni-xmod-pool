@@ -1,0 +1,51 @@
+#!/bin/bash
+
+###
+
+yaxt_dir='/path/to/yaxt'
+yaxt_ver='0.7.0'
+
+###
+
+set -eu
+set -o pipefail
+
+script_dir=$(cd "$(dirname "$0")"; pwd)
+root_dir=$(cd "${script_dir}/../.."; pwd)
+output_dir="${root_dir}/yaxt/${yaxt_ver}"
+
+FPP='gfortran -E -cpp'
+FPP_FLAGS='-DHAVE_VOLATILE -DHAVE_FC_LOGICAL_INTEROP -DHAVE_FC_LOGICAL_C_BOOL -DHAVE_FC_PTR_BOUND_REMAP -DXT_MPI_AINT_KIND=c_long -DXT_MPI_FINT_FC_KIND=c_int -DXT_INT_FC_KIND=c_int -DXT_INT_FC_MPIDT=MPI_INTEGER4 -DSIZEOF_XT_INT=4'
+
+OMNI='F_Front'
+OMNI_FLAGS="-M ${output_dir} -M ${root_dir}/mpi/3.0"
+
+files='
+xt_mpi_f.f90
+xt_core_f.f90
+xt_sort_f.f90
+xt_idxlist_f.f90
+xt_idxvec_f.f90
+xt_idxstripes_f.f90
+xt_idxsection_f.f90
+xt_idxlist_collection_f.f90
+xt_idxmod_f.f90
+xt_xmap_f.f90
+xt_xmap_intersection_f.f90
+xt_request_f.f90
+xt_redist_f.f90
+xt_redist_int_i2.f90
+xt_redist_int_i4.f90
+xt_redist_int_i8.f90
+xt_redist_logical.f90
+xt_redist_real_sp.f90
+xt_redist_real_dp.f90
+yaxt.f90
+'
+
+mkdir -p "${output_dir}"
+cd "${yaxt_dir}/src"
+
+for file in ${files}; do
+	${FPP} ${FPP_FLAGS} ${file} | ${OMNI} ${OMNI_FLAGS} >/dev/null
+done
