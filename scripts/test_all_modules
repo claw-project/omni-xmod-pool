@@ -25,10 +25,13 @@ do
   moduledir=$(dirname "${file}")
   modulename="${filename%.*}"
 
+  echo "Checking '${modulename}' from '${moduledir}'..."
+
   echo "module mod1" > ${tmpmod}
   echo " use ${modulename}" >> ${tmpmod}
   echo "end module mod1" >> ${tmpmod}
 
-  ${ffront} -M "${moduledir}" "${tmpmod}"
+  ${ffront} -M "${moduledir}" "${tmpmod}" >/dev/null || exit $?
+
 done < tmp
 rm tmp
