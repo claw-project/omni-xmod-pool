@@ -1,0 +1,163 @@
+<OmniFortranModule version="1.0">
+  <name>error_handling</name>
+  <depends>
+  </depends>
+  <typeTable>
+    <FstructType type="S5567b08936a0" is_public="true">
+      <symbols>
+        <id type="S5567b0893fc0">
+          <name>info</name>
+          <value>
+            <functionCall type="V5567b08944e0" is_intrinsic="true">
+              <name>null</name>
+            </functionCall>
+          </value>
+        </id>
+      </symbols>
+      <typeBoundProcedures>
+        <typeBoundProcedure type="F5567b0895030" pass="pass">
+          <name>report</name>
+          <binding>
+            <name>error_report</name>
+          </binding>
+        </typeBoundProcedure>
+        <typeBoundProcedure type="F5567b0895830" pass="pass">
+          <name>discard</name>
+          <binding>
+            <name>error_discard</name>
+          </binding>
+        </typeBoundProcedure>
+      </typeBoundProcedures>
+    </FstructType>
+    <FstructType type="S5567b08917d0" is_public="true">
+      <symbols>
+        <id type="C5567b0892290">
+          <name>error_string</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="C5567b0892060" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">256</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C5567b0892290" ref="C5567b0892060"/>
+    <FbasicType type="S5567b0893fc0" is_pointer="true" is_class="true" ref="S5567b08917d0"/>
+    <FbasicType type="V5567b08944e0" is_target="true" ref="FnumericAll"/>
+    <FstructType type="S5567b08928e0" is_public="true" extends="S5567b08917d0">
+      <symbols>
+      </symbols>
+    </FstructType>
+    <FstructType type="S5567b08930b0" is_public="true" extends="S5567b08917d0">
+      <symbols>
+      </symbols>
+    </FstructType>
+    <FfunctionType type="F5567b0896900" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S5567b0897990">new_error</name>
+        <name type="S5567b08980f0">new_info</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S5567b0897850" ref="S5567b08936a0"/>
+    <FbasicType type="S5567b0897990" intent="inout" ref="S5567b0897850"/>
+    <FbasicType type="S5567b08980f0" intent="in" is_class="true" ref="S5567b08917d0"/>
+    <FbasicType type="S5567b08996b0" is_pointer="true" ref="S5567b0893fc0"/>
+    <FbasicType type="C5567b089abb0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">33</FintConstant>
+      </len>
+    </FbasicType>
+    <FfunctionType type="F5567b089bb20" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S5567b089cbb0">inform</name>
+        <name type="S5567b089d3c0">new_error</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S5567b089ca70" ref="S5567b08936a0"/>
+    <FbasicType type="S5567b089cbb0" intent="in" ref="S5567b089ca70"/>
+    <FbasicType type="S5567b089d280" ref="S5567b08936a0"/>
+    <FbasicType type="S5567b089d3c0" intent="inout" ref="S5567b089d280"/>
+    <FfunctionType type="F5567b089e810" return_type="Flogical"/>
+    <FbasicType type="S5567b089e300" is_pointer="true" ref="S5567b0893fc0"/>
+    <FbasicType type="S5567b089f400" is_pointer="true" ref="S5567b0893fc0"/>
+    <FbasicType type="S5567b089f720" is_pointer="true" ref="S5567b0893fc0"/>
+    <FfunctionType type="F5567b08a04b0" return_type="Fvoid">
+      <params>
+        <name type="S5567b08a0fe0">this</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S5567b08a0fe0" is_class="true" ref="S5567b08936a0"/>
+    <FfunctionType type="F5567b08a20d0" return_type="Flogical"/>
+    <FbasicType type="S5567b08a1bc0" is_pointer="true" ref="S5567b0893fc0"/>
+    <FbasicType type="C5567b08a2e20" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">14</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C5567b08a3330" is_pointer="true" ref="C5567b0892290"/>
+    <FbasicType type="S5567b08a3130" is_pointer="true" ref="S5567b0893fc0"/>
+    <FbasicType type="C5567b08a3d00" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">7</FintConstant>
+      </len>
+    </FbasicType>
+    <FfunctionType type="F5567b08a50b0" return_type="Fvoid">
+      <params>
+        <name type="S5567b08a5be0">this</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S5567b08a5be0" is_class="true" ref="S5567b08936a0"/>
+    <FfunctionType type="F5567b08a74b0" return_type="Flogical"/>
+    <FbasicType type="S5567b08a6fa0" is_pointer="true" ref="S5567b0893fc0"/>
+    <FbasicType type="S5567b08a7f50" is_pointer="true" ref="S5567b0893fc0"/>
+    <FbasicType type="C5567b08a93f0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">33</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="I5567b0891070" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="F5567b0895030" ref="F5567b08a04b0"/>
+    <FbasicType type="F5567b0895830" ref="F5567b08a50b0"/>
+  </typeTable>
+  <identifiers>
+    <id type="S5567b08936a0" sclass="ftype_name" original_name="t_error" declared_in="error_handling">
+      <name>t_error</name>
+    </id>
+    <id type="S5567b08917d0" sclass="ftype_name" original_name="t_error_info" declared_in="error_handling">
+      <name>t_error_info</name>
+    </id>
+    <id type="S5567b08928e0" sclass="ftype_name" original_name="t_invalid_input_error" declared_in="error_handling">
+      <name>t_invalid_input_error</name>
+    </id>
+    <id type="S5567b08930b0" sclass="ftype_name" original_name="t_arithmetic_error" declared_in="error_handling">
+      <name>t_arithmetic_error</name>
+    </id>
+    <id type="F5567b0896900" sclass="ffunc" original_name="create_error" declared_in="error_handling">
+      <name>create_error</name>
+    </id>
+    <id type="F5567b089bb20" sclass="ffunc" original_name="transfer_error" declared_in="error_handling">
+      <name>transfer_error</name>
+    </id>
+    <id type="I5567b0891070" sclass="flocal" original_name="max_error_str_len" declared_in="error_handling">
+      <name>max_error_str_len</name>
+    </id>
+    <id type="F5567b08a04b0" sclass="ffunc" original_name="error_report" declared_in="error_handling">
+      <name>error_report</name>
+    </id>
+    <id type="F5567b08a50b0" sclass="ffunc" original_name="error_discard" declared_in="error_handling">
+      <name>error_discard</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl lineno="25" file="error_handling.f90">
+      <name type="I5567b0891070">max_error_str_len</name>
+      <value>
+        <FintConstant type="Fint">256</FintConstant>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

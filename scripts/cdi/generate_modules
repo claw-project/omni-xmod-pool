@@ -1,0 +1,29 @@
+#!/bin/bash
+
+###
+
+cdi_dir='/path/to/cdi'
+cdi_ver='1.8.x'
+
+###
+
+set -eu
+set -o pipefail
+
+script_dir=$(cd "$(dirname "$0")"; pwd)
+root_dir=$(cd "${script_dir}/../.."; pwd)
+output_dir="${root_dir}/cdi/${cdi_ver}"
+
+OMNI='F_Front'
+OMNI_FLAGS="-M ${output_dir}"
+
+files='
+mo_cdi.f90
+'
+
+mkdir -p "${output_dir}"
+cd "${cdi_dir}/src"
+
+for file in ${files}; do
+	${OMNI} ${OMNI_FLAGS} ${file} >/dev/null
+done

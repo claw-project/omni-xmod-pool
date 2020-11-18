@@ -1,0 +1,381 @@
+<OmniFortranModule version="1.0">
+  <name>mtime_utilities</name>
+  <depends>
+    <name>iso_c_binding</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I55d201a8d5e0" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d201a8ce60" is_parameter="true" ref="I55d201a8d5e0"/>
+    <FbasicType type="I55d201a8d800" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d201a8d170" is_parameter="true" ref="I55d201a8d800"/>
+    <FbasicType type="C55d201a8d420" is_parameter="true" ref="Fcharacter"/>
+    <FfunctionType type="F55d201a9f720" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="C55d201aa1f80">recurringtimeinterval</name>
+        <name type="C55d201aa29a0">repetitor</name>
+        <name type="C55d201aa33c0">start</name>
+        <name type="C55d201aa3de0">end</name>
+        <name type="C55d201aa4800">duration</name>
+        <name type="L55d201aa5090">lrepetitor</name>
+        <name type="L55d201aa5900">lstart</name>
+        <name type="L55d201aa6170">lend</name>
+        <name type="L55d201aa69e0">lduration</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C55d201aa1e40" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55d201aa1f80" intent="in" ref="C55d201aa1e40"/>
+    <FbasicType type="C55d201aa2860" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55d201aa29a0" intent="out" ref="C55d201aa2860"/>
+    <FbasicType type="C55d201aa3280" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55d201aa33c0" intent="out" ref="C55d201aa3280"/>
+    <FbasicType type="C55d201aa3ca0" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55d201aa3de0" intent="out" ref="C55d201aa3ca0"/>
+    <FbasicType type="C55d201aa46c0" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55d201aa4800" intent="out" ref="C55d201aa46c0"/>
+    <FbasicType type="L55d201aa5090" intent="out" ref="Flogical"/>
+    <FbasicType type="L55d201aa5900" intent="out" ref="Flogical"/>
+    <FbasicType type="L55d201aa6170" intent="out" ref="Flogical"/>
+    <FbasicType type="L55d201aa69e0" intent="out" ref="Flogical"/>
+    <FfunctionType type="F55d201aaa760" return_type="C55d201aaa620"/>
+    <FbasicType type="C55d201aaa620" ref="C55d201aa1e40"/>
+    <FfunctionType type="F55d201aaa2c0" return_type="C55d201aaa180"/>
+    <FbasicType type="C55d201aaa180" ref="C55d201aa1e40"/>
+    <FfunctionType type="F55d201aae130" return_type="Fint"/>
+    <FfunctionType type="F55d201ac29b0" return_type="Fint"/>
+    <FfunctionType type="F55d201a93a00" return_type="Fvoid" is_private="true" bind="C" bind_name="splitRepetitionString">
+      <params>
+        <name type="A55d201a95cd0">recurringtimeinterval</name>
+        <name type="A55d201a96980">repetitor</name>
+        <name type="A55d201a97630">start</name>
+        <name type="A55d201a982e0">end</name>
+        <name type="A55d201a98f90">duration</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C55d201a95a50" ref="Fcharacter">
+      <len>
+        <Var type="I55d201a8d170" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201a95cd0" ref="C55d201a95a50">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201a96700" ref="Fcharacter">
+      <len>
+        <Var type="I55d201a8d170" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201a96980" ref="C55d201a96700">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201a973b0" ref="Fcharacter">
+      <len>
+        <Var type="I55d201a8d170" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201a97630" ref="C55d201a973b0">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201a98060" ref="Fcharacter">
+      <len>
+        <Var type="I55d201a8d170" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201a982e0" ref="C55d201a98060">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201a98d10" ref="Fcharacter">
+      <len>
+        <Var type="I55d201a8d170" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201a98f90" ref="C55d201a98d10">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201aaaa90" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">0</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201aac290" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201aaf520" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201aaf0e0" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <Var type="Fint" scope="local">i</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201ab1240" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201ab0e00" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <functionCall type="Fint" is_intrinsic="true">
+            <name>len</name>
+            <arguments>
+              <Var type="C55d201aa29a0" scope="local">repetitor</Var>
+            </arguments>
+          </functionCall>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55d201ab2460" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201ab55a0" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201ab5160" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <Var type="Fint" scope="local">i</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201ab72c0" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201ab6e80" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <functionCall type="Fint" is_intrinsic="true">
+            <name>len</name>
+            <arguments>
+              <Var type="C55d201aa33c0" scope="local">start</Var>
+            </arguments>
+          </functionCall>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55d201ab8480" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201abb500" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201abb0c0" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <Var type="Fint" scope="local">i</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201abd1c0" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201abcd80" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <functionCall type="Fint" is_intrinsic="true">
+            <name>len</name>
+            <arguments>
+              <Var type="C55d201aa3de0" scope="local">end</Var>
+            </arguments>
+          </functionCall>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A55d201abe3e0" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201ac1520" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201ac10e0" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <Var type="Fint" scope="local">i</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201ac3240" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201ac2e00" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <functionCall type="Fint" is_intrinsic="true">
+            <name>len</name>
+            <arguments>
+              <Var type="C55d201aa4800" scope="local">duration</Var>
+            </arguments>
+          </functionCall>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F55d201a9aff0" result_name="r" return_type="Fint" is_public="true">
+      <params>
+        <name type="C55d201a9c740">repetitionstring</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C55d201a9c600" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C55d201a9c740" intent="in" ref="C55d201a9c600"/>
+    <FfunctionType type="F55d201a9df60" return_type="C55d201a9de20"/>
+    <FbasicType type="C55d201a9de20" ref="C55d201a9c600"/>
+    <FfunctionType type="F55d201a9dac0" return_type="C55d201a9d980"/>
+    <FbasicType type="C55d201a9d980" ref="C55d201a9c600"/>
+    <FbasicType type="I55d201a91700" ref="Fint">
+      <kind>
+        <Var type="I55d201a8ce60" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d201a90820" ref="I55d201a91700"/>
+    <FfunctionType type="F55d201a90410" return_type="I55d201a90820" is_private="true" bind="C" bind_name="getRepetitions">
+      <params>
+        <name type="A55d201a92550">repetitionstring</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C55d201a922d0" ref="Fcharacter">
+      <len>
+        <Var type="I55d201a8d170" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d201a92550" ref="C55d201a922d0">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201a9e2f0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">0</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="I55d201a8ece0" is_public="true" is_parameter="true" ref="Fint"/>
+  </typeTable>
+  <identifiers>
+    <id type="I55d201a8ce60" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="I55d201a8d170" sclass="flocal" original_name="c_char" declared_in="iso_c_binding">
+      <name>c_char</name>
+    </id>
+    <id type="C55d201a8d420" sclass="flocal" original_name="c_null_char" declared_in="iso_c_binding">
+      <name>c_null_char</name>
+    </id>
+    <id type="F55d201a9f720" sclass="ffunc" original_name="splitrepetitionstring" declared_in="mtime_utilities">
+      <name>splitrepetitionstring</name>
+    </id>
+    <id type="F55d201a9aff0" sclass="ffunc" original_name="getrepetitions" declared_in="mtime_utilities">
+      <name>getrepetitions</name>
+    </id>
+    <id type="I55d201a8ece0" sclass="flocal" original_name="max_repetition_str_len" declared_in="mtime_utilities">
+      <name>max_repetition_str_len</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I55d201a8ce60">c_int</name>
+    </varDecl>
+    <varDecl>
+      <name type="I55d201a8d170">c_char</name>
+    </varDecl>
+    <varDecl>
+      <name type="C55d201a8d420">c_null_char</name>
+    </varDecl>
+    <varDecl lineno="3232" file="libmtime.f90">
+      <name type="I55d201a8ece0">max_repetition_str_len</name>
+      <value>
+        <FintConstant type="Fint">132</FintConstant>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>
