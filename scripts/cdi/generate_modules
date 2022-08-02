@@ -2,8 +2,10 @@
 
 ###
 
-cdi_dir='/path/to/cdi'
-cdi_ver='1.8.x'
+src_root='/path/to/cdi'
+
+name='cdi'
+version='1.8.4'
 
 ###
 
@@ -12,7 +14,10 @@ set -o pipefail
 
 script_dir=$(cd "$(dirname "$0")"; pwd)
 root_dir=$(cd "${script_dir}/../.."; pwd)
-output_dir="${root_dir}/cdi/${cdi_ver}"
+output_dir="${root_dir}/${name}/${version}"
+
+FPP='gfortran -E -cpp'
+FPP_FLAGS=
 
 OMNI='F_Front'
 OMNI_FLAGS="-M ${output_dir}"
@@ -22,8 +27,8 @@ mo_cdi.f90
 '
 
 mkdir -p "${output_dir}"
-cd "${cdi_dir}/src"
+cd "${src_root}/src"
 
 for file in ${files}; do
-	${OMNI} ${OMNI_FLAGS} ${file} >/dev/null
+	${FPP} ${FPP_FLAGS} ${file} | ${OMNI} ${OMNI_FLAGS} >/dev/null
 done
