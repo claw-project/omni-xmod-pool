@@ -5,7 +5,7 @@
 src_root='/path/to/yac'
 
 name='yac'
-version='2.4.2'
+version='2.5.2'
 
 ###
 
