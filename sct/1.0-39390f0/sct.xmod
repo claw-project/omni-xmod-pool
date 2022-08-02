@@ -1,0 +1,991 @@
+<OmniFortranModule version="1.0">
+  <name>sct</name>
+  <depends>
+    <name>iso_c_binding</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I1_sct" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I2_sct" is_parameter="true" ref="I1_sct"/>
+    <FbasicType type="I3_sct" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I4_sct" is_parameter="true" ref="I3_sct"/>
+    <FbasicType type="I5_sct" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I6_sct" is_parameter="true" ref="I5_sct"/>
+    <FbasicType type="I7_sct" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I8_sct" is_parameter="true" ref="I7_sct"/>
+    <FbasicType type="I9_sct" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I10_sct" is_parameter="true" ref="I9_sct"/>
+    <FbasicType type="C1_sct" is_parameter="true" ref="Fcharacter"/>
+    <FfunctionType type="F1_sct" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="I11_sct">timer_max</name>
+        <name type="C2_sct">default_context_name</name>
+        <name type="I12_sct">default_comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I11_sct" intent="in" ref="Fint"/>
+    <FbasicType type="C3_sct" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C2_sct" intent="in" is_optional="true" ref="C3_sct"/>
+    <FbasicType type="I12_sct" intent="in" is_optional="true" ref="Fint"/>
+    <FfunctionType type="F2_sct" return_type="Fvoid" is_private="true" bind="C" bind_name="sct_init_f">
+      <params>
+        <name type="I13_sct">timer_max</name>
+        <name type="A1_sct">default_context_name</name>
+        <name type="I14_sct">default_comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I15_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I13_sct" is_value="true" ref="I15_sct"/>
+    <FbasicType type="C4_sct" ref="Fcharacter">
+      <len>
+        <Var type="I10_sct" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A1_sct" intent="in" ref="C4_sct">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I14_sct" is_value="true" ref="I15_sct"/>
+    <FbasicType type="C5_sct" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">127</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C6_sct" ref="C5_sct"/>
+    <FfunctionType type="F3_sct" return_type="Flogical"/>
+    <FfunctionType type="F4_sct" return_type="Flogical"/>
+    <FfunctionType type="F5_sct" return_type="C7_sct"/>
+    <FbasicType type="C7_sct" ref="C5_sct"/>
+    <FfunctionType type="F6_sct" return_type="C8_sct"/>
+    <FbasicType type="C8_sct" ref="C5_sct"/>
+    <FbasicType type="C9_sct" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">15</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C10_sct" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">128</FintConstant>
+      </len>
+    </FbasicType>
+    <FfunctionType type="F7_sct" return_type="I16_sct" is_private="true" bind="C" bind_name="sct_active">
+      <params>
+        <name type="I17_sct">itimer</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I16_sct" ref="Fint">
+      <kind>
+        <Var type="Freal" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I18_sct" ref="Fint">
+      <kind>
+        <Var type="Freal" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I17_sct" intent="in" is_value="true" ref="I18_sct"/>
+    <FfunctionType type="F8_sct" return_type="Flogical" is_public="true">
+      <params>
+        <name type="I19_sct">itimer</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I19_sct" intent="in" ref="Fint"/>
+    <FfunctionType type="F9_sct" return_type="I20_sct" is_private="true" bind="C" bind_name="sct_new_global_context">
+      <params>
+        <name type="A2_sct">label</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I20_sct" ref="Fint">
+      <kind>
+        <Var type="Freal" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C11_sct" ref="Fcharacter">
+      <len>
+        <Var type="I10_sct" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A2_sct" intent="in" ref="C11_sct">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F10_sct" return_type="Fint" is_private="true">
+      <params>
+        <name type="C12_sct">label</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C13_sct" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C12_sct" intent="in" ref="C13_sct"/>
+    <FfunctionType type="F11_sct" return_type="C14_sct"/>
+    <FbasicType type="C14_sct" ref="C13_sct"/>
+    <FfunctionType type="F12_sct" return_type="C15_sct"/>
+    <FbasicType type="C15_sct" ref="C13_sct"/>
+    <FbasicType type="C16_sct" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">0</FintConstant>
+      </len>
+    </FbasicType>
+    <FfunctionType type="F13_sct" return_type="I21_sct" is_private="true" bind="C" bind_name="sct_new_context_f">
+      <params>
+        <name type="A3_sct">label</name>
+        <name type="I22_sct">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I21_sct" ref="Fint">
+      <kind>
+        <Var type="Freal" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C17_sct" ref="Fcharacter">
+      <len>
+        <Var type="I10_sct" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A3_sct" intent="in" ref="C17_sct">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I23_sct" ref="Fint">
+      <kind>
+        <Var type="Freal" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I22_sct" intent="in" ref="I23_sct"/>
+    <FfunctionType type="F14_sct" return_type="Fint" is_private="true">
+      <params>
+        <name type="C18_sct">label</name>
+        <name type="I24_sct">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C19_sct" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C18_sct" intent="in" ref="C19_sct"/>
+    <FbasicType type="I24_sct" intent="in" ref="Fint"/>
+    <FfunctionType type="F15_sct" return_type="C20_sct"/>
+    <FbasicType type="C20_sct" ref="C19_sct"/>
+    <FfunctionType type="F16_sct" return_type="C21_sct"/>
+    <FbasicType type="C21_sct" ref="C19_sct"/>
+    <FbasicType type="C22_sct" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">0</FintConstant>
+      </len>
+    </FbasicType>
+    <FfunctionType type="F17_sct" return_type="I25_sct" is_private="true" bind="C" bind_name="sct_new_timer">
+      <params>
+        <name type="A4_sct">label</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I25_sct" ref="Fint">
+      <kind>
+        <Var type="Freal" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C23_sct" ref="Fcharacter">
+      <len>
+        <Var type="I10_sct" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A4_sct" intent="in" ref="C23_sct">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F18_sct" return_type="Fint" is_public="true">
+      <params>
+        <name type="C24_sct">label</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C25_sct" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C24_sct" intent="in" ref="C25_sct"/>
+    <FfunctionType type="F19_sct" return_type="C26_sct"/>
+    <FbasicType type="C26_sct" ref="C25_sct"/>
+    <FfunctionType type="F20_sct" return_type="C27_sct"/>
+    <FbasicType type="C27_sct" ref="C25_sct"/>
+    <FbasicType type="C28_sct" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">0</FintConstant>
+      </len>
+    </FbasicType>
+    <FfunctionType type="F21_sct" return_type="Fvoid" is_private="true" bind="C" bind_name="sct_single_report">
+      <params>
+        <name type="I26_sct">timer_choice</name>
+        <name type="I27_sct">proc_choice</name>
+        <name type="I28_sct">thread_choice</name>
+        <name type="I29_sct">sp_merging</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I30_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I26_sct" intent="in" is_value="true" ref="I30_sct"/>
+    <FbasicType type="I27_sct" intent="in" is_value="true" ref="I30_sct"/>
+    <FbasicType type="I28_sct" intent="in" is_value="true" ref="I30_sct"/>
+    <FbasicType type="I29_sct" intent="in" is_value="true" ref="I30_sct"/>
+    <FfunctionType type="F22_sct" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="I31_sct">timer_choice</name>
+        <name type="I32_sct">proc_choice</name>
+        <name type="I33_sct">thread_choice</name>
+        <name type="I34_sct">sp_merging</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I31_sct" intent="in" is_optional="true" ref="Fint"/>
+    <FbasicType type="I32_sct" intent="in" is_optional="true" ref="Fint"/>
+    <FbasicType type="I33_sct" intent="in" is_optional="true" ref="Fint"/>
+    <FbasicType type="I34_sct" intent="in" is_optional="true" ref="Fint"/>
+    <FfunctionType type="F23_sct" return_type="Flogical"/>
+    <FfunctionType type="F24_sct" return_type="Flogical"/>
+    <FbasicType type="I35_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I36_sct" is_public="true" is_parameter="true" ref="I35_sct"/>
+    <FbasicType type="I37_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I38_sct" is_public="true" is_parameter="true" ref="I37_sct"/>
+    <FfunctionType type="F25_sct" return_type="Fvoid" is_public="true" bind="C" bind_name="sct_del_timer">
+      <params>
+        <name type="I39_sct">itimer</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I40_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I39_sct" intent="in" is_value="true" ref="I40_sct"/>
+    <FfunctionType type="F26_sct" return_type="Fvoid" is_public="true" bind="C" bind_name="sct_start">
+      <params>
+        <name type="I41_sct">itimer</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I42_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I41_sct" intent="in" is_value="true" ref="I42_sct"/>
+    <FfunctionType type="F27_sct" return_type="Fvoid" is_public="true" bind="C" bind_name="sct_stop">
+      <params>
+        <name type="I43_sct">itimer</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I44_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I43_sct" intent="in" is_value="true" ref="I44_sct"/>
+    <FfunctionType type="F28_sct" return_type="Fvoid" is_public="true" bind="C" bind_name="sct_reset_timer">
+      <params>
+        <name type="I45_sct">itimer</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I46_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I45_sct" intent="in" is_value="true" ref="I46_sct"/>
+    <FfunctionType type="F29_sct" return_type="Fvoid" is_public="true" bind="C" bind_name="sct_reset_all">
+      <params>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F30_sct" return_type="R1_sct" is_public="true" bind="C" bind_name="sct_resolution">
+      <params>
+      </params>
+    </FfunctionType>
+    <FbasicType type="R1_sct" ref="Freal">
+      <kind>
+        <Var type="Freal" scope="local">c_double</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F31_sct" return_type="R2_sct" is_public="true" bind="C" bind_name="sct_val">
+      <params>
+        <name type="I47_sct">itimer</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="R2_sct" ref="Freal">
+      <kind>
+        <Var type="Freal" scope="local">c_double</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I48_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I47_sct" intent="in" is_value="true" ref="I48_sct"/>
+    <FfunctionType type="F32_sct" return_type="V1_sct" is_public="true"/>
+    <FbasicType type="V1_sct" ref="FnumericAll"/>
+    <FfunctionType type="F33_sct" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="C29_sct">key</name>
+        <name type="I49_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C30_sct" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C29_sct" intent="in" ref="C30_sct"/>
+    <FbasicType type="I50_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I49_sct" intent="in" ref="I50_sct"/>
+    <FfunctionType type="F34_sct" return_type="Fvoid" is_private="true" bind="C" bind_name="sct_add_report_attribute_int">
+      <params>
+        <name type="A5_sct">key</name>
+        <name type="I51_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C31_sct" ref="Fcharacter">
+      <len>
+        <Var type="I10_sct" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A5_sct" intent="in" ref="C31_sct">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I52_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I51_sct" intent="in" is_value="true" ref="I52_sct"/>
+    <FfunctionType type="F35_sct" return_type="C32_sct"/>
+    <FbasicType type="C32_sct" ref="C30_sct"/>
+    <FfunctionType type="F36_sct" return_type="C33_sct"/>
+    <FbasicType type="C33_sct" ref="C30_sct"/>
+    <FfunctionType type="F37_sct" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="C34_sct">key</name>
+        <name type="I53_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C35_sct" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C34_sct" intent="in" ref="C35_sct"/>
+    <FbasicType type="I54_sct" ref="Fint">
+      <kind>
+        <Var type="I4_sct" scope="local">c_long</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I53_sct" intent="in" ref="I54_sct"/>
+    <FfunctionType type="F38_sct" return_type="Fvoid" is_private="true" bind="C" bind_name="sct_add_report_attribute_long">
+      <params>
+        <name type="A6_sct">key</name>
+        <name type="I55_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C36_sct" ref="Fcharacter">
+      <len>
+        <Var type="I10_sct" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A6_sct" intent="in" ref="C36_sct">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I56_sct" ref="Fint">
+      <kind>
+        <Var type="I4_sct" scope="local">c_long</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55_sct" intent="in" is_value="true" ref="I56_sct"/>
+    <FfunctionType type="F39_sct" return_type="C37_sct"/>
+    <FbasicType type="C37_sct" ref="C35_sct"/>
+    <FfunctionType type="F40_sct" return_type="C38_sct"/>
+    <FbasicType type="C38_sct" ref="C35_sct"/>
+    <FfunctionType type="F41_sct" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="C39_sct">key</name>
+        <name type="R3_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C40_sct" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C39_sct" intent="in" ref="C40_sct"/>
+    <FbasicType type="R4_sct" ref="Freal">
+      <kind>
+        <Var type="I6_sct" scope="local">c_float</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="R3_sct" intent="in" ref="R4_sct"/>
+    <FfunctionType type="F42_sct" return_type="Fvoid" is_private="true" bind="C" bind_name="sct_add_report_attribute_float">
+      <params>
+        <name type="A7_sct">key</name>
+        <name type="R5_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C41_sct" ref="Fcharacter">
+      <len>
+        <Var type="I10_sct" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A7_sct" intent="in" ref="C41_sct">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="R6_sct" ref="Freal">
+      <kind>
+        <Var type="I6_sct" scope="local">c_float</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="R5_sct" intent="in" is_value="true" ref="R6_sct"/>
+    <FfunctionType type="F43_sct" return_type="C42_sct"/>
+    <FbasicType type="C42_sct" ref="C40_sct"/>
+    <FfunctionType type="F44_sct" return_type="C43_sct"/>
+    <FbasicType type="C43_sct" ref="C40_sct"/>
+    <FfunctionType type="F45_sct" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="C44_sct">key</name>
+        <name type="R7_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C45_sct" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C44_sct" intent="in" ref="C45_sct"/>
+    <FbasicType type="R8_sct" ref="Freal">
+      <kind>
+        <Var type="I8_sct" scope="local">c_double</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="R7_sct" intent="in" ref="R8_sct"/>
+    <FfunctionType type="F46_sct" return_type="Fvoid" is_private="true" bind="C" bind_name="sct_add_report_attribute_double">
+      <params>
+        <name type="A8_sct">key</name>
+        <name type="R9_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C46_sct" ref="Fcharacter">
+      <len>
+        <Var type="I10_sct" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A8_sct" intent="in" ref="C46_sct">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="R10_sct" ref="Freal">
+      <kind>
+        <Var type="I8_sct" scope="local">c_double</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="R9_sct" intent="in" is_value="true" ref="R10_sct"/>
+    <FfunctionType type="F47_sct" return_type="C47_sct"/>
+    <FbasicType type="C47_sct" ref="C45_sct"/>
+    <FfunctionType type="F48_sct" return_type="C48_sct"/>
+    <FbasicType type="C48_sct" ref="C45_sct"/>
+    <FfunctionType type="F49_sct" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="C49_sct">key</name>
+        <name type="C50_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C51_sct" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C49_sct" intent="in" ref="C51_sct"/>
+    <FbasicType type="C52_sct" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C50_sct" intent="in" ref="C52_sct"/>
+    <FfunctionType type="F50_sct" return_type="Fvoid" is_private="true" bind="C" bind_name="sct_add_report_attribute_string">
+      <params>
+        <name type="A9_sct">key</name>
+        <name type="A10_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C53_sct" ref="Fcharacter">
+      <len>
+        <Var type="I10_sct" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A9_sct" intent="in" ref="C53_sct">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C54_sct" ref="Fcharacter">
+      <len>
+        <Var type="I10_sct" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A10_sct" intent="in" ref="C54_sct">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F51_sct" return_type="C55_sct"/>
+    <FbasicType type="C55_sct" ref="C52_sct"/>
+    <FfunctionType type="F52_sct" return_type="C55_sct"/>
+    <FfunctionType type="F53_sct" return_type="C56_sct"/>
+    <FbasicType type="C56_sct" ref="C52_sct"/>
+    <FfunctionType type="F54_sct" return_type="C56_sct"/>
+    <FfunctionType type="F55_sct" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F56_sct" return_type="Fvoid" is_public="true" bind="C" bind_name="sct_set_callstats">
+      <params>
+        <name type="I57_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I58_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I57_sct" intent="in" is_value="true" ref="I58_sct"/>
+    <FfunctionType type="F57_sct" return_type="Fvoid" is_public="true" bind="C" bind_name="sct_set_eventcounters">
+      <params>
+        <name type="I59_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I60_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I59_sct" intent="in" is_value="true" ref="I60_sct"/>
+    <FfunctionType type="F58_sct" return_type="Fvoid" is_public="true" bind="C" bind_name="sct_set_nestedtimers">
+      <params>
+        <name type="I61_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I62_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I61_sct" intent="in" is_value="true" ref="I62_sct"/>
+    <FfunctionType type="F59_sct" return_type="Fvoid" is_public="true" bind="C" bind_name="sct_stop_all">
+      <params>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F60_sct" return_type="Fvoid" is_public="true" bind="C" bind_name="sct_context_start">
+      <params>
+        <name type="I63_sct">icon</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I64_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I63_sct" intent="in" is_value="true" ref="I64_sct"/>
+    <FfunctionType type="F61_sct" return_type="Fvoid" is_public="true" bind="C" bind_name="sct_context_stop">
+      <params>
+        <name type="I65_sct">icon</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I66_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I65_sct" intent="in" is_value="true" ref="I66_sct"/>
+    <FfunctionType type="F62_sct" return_type="R11_sct" is_public="true" bind="C" bind_name="sct_last_dt">
+      <params>
+        <name type="I67_sct">itimer</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="R11_sct" ref="Freal">
+      <kind>
+        <Var type="Freal" scope="local">c_double</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I68_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I67_sct" intent="in" is_value="true" ref="I68_sct"/>
+    <FbasicType type="I69_sct" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I70_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I71_sct" is_public="true" is_parameter="true" ref="I70_sct"/>
+    <FbasicType type="I72_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I73_sct" is_public="true" is_parameter="true" ref="I72_sct"/>
+    <FbasicType type="I74_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I75_sct" is_public="true" is_parameter="true" ref="I74_sct"/>
+    <FbasicType type="I76_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I77_sct" is_public="true" is_parameter="true" ref="I76_sct"/>
+    <FbasicType type="I78_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I79_sct" is_public="true" is_parameter="true" ref="I78_sct"/>
+    <FbasicType type="I80_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I81_sct" is_public="true" is_parameter="true" ref="I80_sct"/>
+    <FbasicType type="I82_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I83_sct" is_public="true" is_parameter="true" ref="I82_sct"/>
+    <FbasicType type="I84_sct" ref="Fint">
+      <kind>
+        <Var type="I2_sct" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I85_sct" is_public="true" is_parameter="true" ref="I84_sct"/>
+    <FfunctionType type="F63_sct" return_type="Fvoid">
+      <params>
+        <name type="C34_sct">key</name>
+        <name type="I53_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F64_sct" return_type="Fvoid">
+      <params>
+        <name type="C39_sct">key</name>
+        <name type="R3_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F65_sct" return_type="Fvoid">
+      <params>
+        <name type="C49_sct">key</name>
+        <name type="C50_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F66_sct" return_type="Fvoid">
+      <params>
+        <name type="C44_sct">key</name>
+        <name type="R7_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F67_sct" return_type="Fvoid">
+      <params>
+        <name type="C29_sct">key</name>
+        <name type="I49_sct">val</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F68_sct" return_type="Fint">
+      <params>
+        <name type="C12_sct">label</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F69_sct" return_type="Fint">
+      <params>
+        <name type="C18_sct">label</name>
+        <name type="I24_sct">comm</name>
+      </params>
+    </FfunctionType>
+  </typeTable>
+  <identifiers>
+    <id type="I2_sct" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="I4_sct" sclass="flocal" original_name="c_long" declared_in="iso_c_binding">
+      <name>c_long</name>
+    </id>
+    <id type="I6_sct" sclass="flocal" original_name="c_float" declared_in="iso_c_binding">
+      <name>c_float</name>
+    </id>
+    <id type="I8_sct" sclass="flocal" original_name="c_double" declared_in="iso_c_binding">
+      <name>c_double</name>
+    </id>
+    <id type="I10_sct" sclass="flocal" original_name="c_char" declared_in="iso_c_binding">
+      <name>c_char</name>
+    </id>
+    <id type="C1_sct" sclass="flocal" original_name="c_null_char" declared_in="iso_c_binding">
+      <name>c_null_char</name>
+    </id>
+    <id type="F1_sct" sclass="ffunc" original_name="sct_init" declared_in="sct">
+      <name>sct_init</name>
+    </id>
+    <id type="F18_sct" sclass="ffunc" original_name="sct_new_timer" declared_in="sct">
+      <name>sct_new_timer</name>
+    </id>
+    <id type="F25_sct" sclass="ffunc" original_name="sct_del_timer" declared_in="sct">
+      <name>sct_del_timer</name>
+    </id>
+    <id type="F26_sct" sclass="ffunc" original_name="sct_start" declared_in="sct">
+      <name>sct_start</name>
+    </id>
+    <id type="F27_sct" sclass="ffunc" original_name="sct_stop" declared_in="sct">
+      <name>sct_stop</name>
+    </id>
+    <id type="F28_sct" sclass="ffunc" original_name="sct_reset_timer" declared_in="sct">
+      <name>sct_reset_timer</name>
+    </id>
+    <id type="F29_sct" sclass="ffunc" original_name="sct_reset_all" declared_in="sct">
+      <name>sct_reset_all</name>
+    </id>
+    <id type="F30_sct" sclass="ffunc" original_name="sct_resolution" declared_in="sct">
+      <name>sct_resolution</name>
+    </id>
+    <id type="F31_sct" sclass="ffunc" original_name="sct_val" declared_in="sct">
+      <name>sct_val</name>
+    </id>
+    <id type="F22_sct" sclass="ffunc" original_name="sct_report" declared_in="sct">
+      <name>sct_report</name>
+    </id>
+    <id type="F32_sct" sclass="ffunc" original_name="sct_new_context" declared_in="sct">
+      <name>sct_new_context</name>
+    </id>
+    <id type="F60_sct" sclass="ffunc" original_name="sct_context_start" declared_in="sct">
+      <name>sct_context_start</name>
+    </id>
+    <id type="F61_sct" sclass="ffunc" original_name="sct_context_stop" declared_in="sct">
+      <name>sct_context_stop</name>
+    </id>
+    <id type="F8_sct" sclass="ffunc" original_name="sct_active" declared_in="sct">
+      <name>sct_active</name>
+    </id>
+    <id type="F62_sct" sclass="ffunc" original_name="sct_last_dt" declared_in="sct">
+      <name>sct_last_dt</name>
+    </id>
+    <id type="F59_sct" sclass="ffunc" original_name="sct_stop_all" declared_in="sct">
+      <name>sct_stop_all</name>
+    </id>
+    <id type="F56_sct" sclass="ffunc" original_name="sct_set_callstats" declared_in="sct">
+      <name>sct_set_callstats</name>
+    </id>
+    <id type="F57_sct" sclass="ffunc" original_name="sct_set_eventcounters" declared_in="sct">
+      <name>sct_set_eventcounters</name>
+    </id>
+    <id type="F58_sct" sclass="ffunc" original_name="sct_set_nestedtimers" declared_in="sct">
+      <name>sct_set_nestedtimers</name>
+    </id>
+    <id type="F55_sct" sclass="ffunc" original_name="sct_add_report_attribute" declared_in="sct">
+      <name>sct_add_report_attribute</name>
+    </id>
+    <id type="I69_sct" sclass="flocal" original_name="sct_comm_world" declared_in="sct">
+      <name>sct_comm_world</name>
+    </id>
+    <id type="I71_sct" sclass="flocal" original_name="sct_without_callstats" declared_in="sct">
+      <name>sct_without_callstats</name>
+    </id>
+    <id type="I73_sct" sclass="flocal" original_name="sct_with_callstats" declared_in="sct">
+      <name>sct_with_callstats</name>
+    </id>
+    <id type="I75_sct" sclass="flocal" original_name="sct_default_callstats" declared_in="sct">
+      <name>sct_default_callstats</name>
+    </id>
+    <id type="I77_sct" sclass="flocal" original_name="sct_sp_merge_simple" declared_in="sct">
+      <name>sct_sp_merge_simple</name>
+    </id>
+    <id type="I79_sct" sclass="flocal" original_name="sct_sp_serial_only" declared_in="sct">
+      <name>sct_sp_serial_only</name>
+    </id>
+    <id type="I81_sct" sclass="flocal" original_name="sct_sp_parallel_only" declared_in="sct">
+      <name>sct_sp_parallel_only</name>
+    </id>
+    <id type="I83_sct" sclass="flocal" original_name="sct_sp_select_all" declared_in="sct">
+      <name>sct_sp_select_all</name>
+    </id>
+    <id type="I36_sct" sclass="flocal" original_name="sct_select_all" declared_in="sct">
+      <name>sct_select_all</name>
+    </id>
+    <id type="I85_sct" sclass="flocal" original_name="sct_reduce_all" declared_in="sct">
+      <name>sct_reduce_all</name>
+    </id>
+    <id type="I38_sct" sclass="flocal" original_name="sct_getenv" declared_in="sct">
+      <name>sct_getenv</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I2_sct">c_int</name>
+    </varDecl>
+    <varDecl>
+      <name type="I4_sct">c_long</name>
+    </varDecl>
+    <varDecl>
+      <name type="I6_sct">c_float</name>
+    </varDecl>
+    <varDecl>
+      <name type="I8_sct">c_double</name>
+    </varDecl>
+    <varDecl>
+      <name type="I10_sct">c_char</name>
+    </varDecl>
+    <varDecl>
+      <name type="C1_sct">c_null_char</name>
+    </varDecl>
+    <varDecl lineno="61" file="sct.f90">
+      <name type="I69_sct">sct_comm_world</name>
+      <value>
+        <FintConstant type="Fint">0</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="64" file="sct.f90">
+      <name type="I71_sct">sct_without_callstats</name>
+      <value>
+        <FintConstant type="Fint">0</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="65" file="sct.f90">
+      <name type="I73_sct">sct_with_callstats</name>
+      <value>
+        <FintConstant type="Fint">1</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="66" file="sct.f90">
+      <name type="I75_sct">sct_default_callstats</name>
+      <value>
+        <FintConstant type="Fint">2</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="68" file="sct.f90">
+      <name type="I77_sct">sct_sp_merge_simple</name>
+      <value>
+        <FintConstant type="Fint">1</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="69" file="sct.f90">
+      <name type="I79_sct">sct_sp_serial_only</name>
+      <value>
+        <FintConstant type="Fint">2</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="70" file="sct.f90">
+      <name type="I81_sct">sct_sp_parallel_only</name>
+      <value>
+        <FintConstant type="Fint">4</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="71" file="sct.f90">
+      <name type="I83_sct">sct_sp_select_all</name>
+      <value>
+        <FintConstant type="Fint">8</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="73" file="sct.f90">
+      <name type="I36_sct">sct_select_all</name>
+      <value>
+        <FintConstant type="Fint">-1</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="74" file="sct.f90">
+      <name type="I85_sct">sct_reduce_all</name>
+      <value>
+        <FintConstant type="Fint">-2</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="76" file="sct.f90">
+      <name type="I38_sct">sct_getenv</name>
+      <value>
+        <FintConstant type="Fint">-255</FintConstant>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="sct_new_context" lineno="79" file="sct.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="80" file="sct.f90">
+        <name type="F68_sct">new_global_context</name>
+        <name type="F69_sct">new_general_context</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="81" file="sct.f90">
+        <name type="F68_sct">new_global_context</name>
+        <name type="F69_sct">new_general_context</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="sct_add_report_attribute" lineno="85" file="sct.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="86" file="sct.f90">
+        <name type="F63_sct">sct_add_report_attribute_long_f</name>
+        <name type="F64_sct">sct_add_report_attribute_float_f</name>
+        <name type="F65_sct">sct_add_report_attribute_string_f</name>
+        <name type="F66_sct">sct_add_report_attribute_double_f</name>
+        <name type="F67_sct">sct_add_report_attribute_int_f</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="87" file="sct.f90">
+        <name type="F63_sct">sct_add_report_attribute_long_f</name>
+        <name type="F64_sct">sct_add_report_attribute_float_f</name>
+        <name type="F65_sct">sct_add_report_attribute_string_f</name>
+        <name type="F66_sct">sct_add_report_attribute_double_f</name>
+        <name type="F67_sct">sct_add_report_attribute_int_f</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="88" file="sct.f90">
+        <name type="F63_sct">sct_add_report_attribute_long_f</name>
+        <name type="F64_sct">sct_add_report_attribute_float_f</name>
+        <name type="F65_sct">sct_add_report_attribute_string_f</name>
+        <name type="F66_sct">sct_add_report_attribute_double_f</name>
+        <name type="F67_sct">sct_add_report_attribute_int_f</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="89" file="sct.f90">
+        <name type="F63_sct">sct_add_report_attribute_long_f</name>
+        <name type="F64_sct">sct_add_report_attribute_float_f</name>
+        <name type="F65_sct">sct_add_report_attribute_string_f</name>
+        <name type="F66_sct">sct_add_report_attribute_double_f</name>
+        <name type="F67_sct">sct_add_report_attribute_int_f</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="90" file="sct.f90">
+        <name type="F63_sct">sct_add_report_attribute_long_f</name>
+        <name type="F64_sct">sct_add_report_attribute_float_f</name>
+        <name type="F65_sct">sct_add_report_attribute_string_f</name>
+        <name type="F66_sct">sct_add_report_attribute_double_f</name>
+        <name type="F67_sct">sct_add_report_attribute_int_f</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>
