@@ -1,0 +1,560 @@
+<OmniFortranModule version="1.0">
+  <name>xt_xmap_rename</name>
+  <depends>
+    <name>xt_xmap_abstract</name>
+  </depends>
+  <typeTable>
+    <FfunctionType type="F1_xt_xmap_rename" result_name="xmap" return_type="S1_xt_xmap_rename">
+      <params>
+        <name type="S2_xt_xmap_rename">src_idxlist</name>
+        <name type="S3_xt_xmap_rename">dst_idxlist</name>
+        <name type="I1_xt_xmap_rename">comm</name>
+      </params>
+    </FfunctionType>
+    <FstructType type="S4_xt_xmap_rename" is_internal_private="true" bind="C">
+      <symbols>
+        <id type="S5_xt_xmap_rename">
+          <name>cptr</name>
+          <value>
+            <Var type="S6_xt_xmap_rename" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FstructType type="S7_xt_xmap_rename" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I2_xt_xmap_rename">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I3_xt_xmap_rename" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I4_xt_xmap_rename" is_parameter="true" ref="I3_xt_xmap_rename"/>
+    <FbasicType type="I2_xt_xmap_rename" ref="Fint">
+      <kind>
+        <Var type="I4_xt_xmap_rename" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S8_xt_xmap_rename" ref="S7_xt_xmap_rename"/>
+    <FbasicType type="S5_xt_xmap_rename" ref="S8_xt_xmap_rename"/>
+    <FbasicType type="S9_xt_xmap_rename" imported_id="S3_iso_c_binding" ref="S7_xt_xmap_rename"/>
+    <FbasicType type="S6_xt_xmap_rename" imported_id="S4_iso_c_binding" is_parameter="true" ref="S9_xt_xmap_rename"/>
+    <FbasicType type="S10_xt_xmap_rename" ref="S4_xt_xmap_rename"/>
+    <FbasicType type="S1_xt_xmap_rename" ref="S10_xt_xmap_rename"/>
+    <FstructType type="S11_xt_xmap_rename" imported_id="S23_xt_idxlist_abstract" is_internal_private="true">
+      <symbols>
+        <id type="S12_xt_xmap_rename">
+          <name>cptr</name>
+          <value>
+            <Var type="S13_xt_xmap_rename" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FstructType type="S14_xt_xmap_rename" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I5_xt_xmap_rename">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I6_xt_xmap_rename" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I7_xt_xmap_rename" is_parameter="true" ref="I6_xt_xmap_rename"/>
+    <FbasicType type="I5_xt_xmap_rename" ref="Fint">
+      <kind>
+        <Var type="I7_xt_xmap_rename" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S15_xt_xmap_rename" imported_id="S25_xt_idxlist_abstract" ref="S14_xt_xmap_rename"/>
+    <FbasicType type="S12_xt_xmap_rename" imported_id="S24_xt_idxlist_abstract" ref="S15_xt_xmap_rename"/>
+    <FstructType type="S16_xt_xmap_rename" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I8_xt_xmap_rename">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I8_xt_xmap_rename" ref="Fint">
+      <kind>
+        <Var type="I7_xt_xmap_rename" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S17_xt_xmap_rename" imported_id="S3_iso_c_binding" ref="S16_xt_xmap_rename"/>
+    <FbasicType type="S13_xt_xmap_rename" imported_id="S4_iso_c_binding" is_parameter="true" ref="S17_xt_xmap_rename"/>
+    <FbasicType type="S18_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S2_xt_xmap_rename" intent="in" ref="S18_xt_xmap_rename"/>
+    <FbasicType type="S19_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S3_xt_xmap_rename" intent="in" ref="S19_xt_xmap_rename"/>
+    <FbasicType type="I1_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FfunctionType type="F2_xt_xmap_rename" result_name="xmap_ptr" return_type="S20_xt_xmap_rename" is_private="true" bind="C" bind_name="xt_xmap_all2all_new_f">
+      <params>
+        <name type="S21_xt_xmap_rename">src_idxlist</name>
+        <name type="S22_xt_xmap_rename">dst_idxlist</name>
+        <name type="I9_xt_xmap_rename">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S23_xt_xmap_rename" ref="S7_xt_xmap_rename"/>
+    <FbasicType type="S24_xt_xmap_rename" ref="S23_xt_xmap_rename"/>
+    <FbasicType type="S20_xt_xmap_rename" ref="S24_xt_xmap_rename"/>
+    <FbasicType type="S25_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S26_xt_xmap_rename" ref="S25_xt_xmap_rename"/>
+    <FbasicType type="S21_xt_xmap_rename" intent="in" ref="S26_xt_xmap_rename"/>
+    <FbasicType type="S22_xt_xmap_rename" intent="in" ref="S26_xt_xmap_rename"/>
+    <FbasicType type="I10_xt_xmap_rename" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I11_xt_xmap_rename" ref="Fint">
+      <kind>
+        <Var type="I10_xt_xmap_rename" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I9_xt_xmap_rename" intent="in" is_value="true" ref="I11_xt_xmap_rename"/>
+    <FstructType type="S27_xt_xmap_rename" is_public="true" is_internal_private="true" bind="C">
+      <symbols>
+        <id type="S28_xt_xmap_rename">
+          <name>cptr</name>
+          <value>
+            <Var type="S6_xt_xmap_rename" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="S29_xt_xmap_rename" ref="S7_xt_xmap_rename"/>
+    <FbasicType type="S28_xt_xmap_rename" ref="S29_xt_xmap_rename"/>
+    <FbasicType type="I12_xt_xmap_rename" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I13_xt_xmap_rename" is_parameter="true" ref="I12_xt_xmap_rename"/>
+    <FbasicType type="S30_xt_xmap_rename" ref="S24_xt_xmap_rename"/>
+    <FbasicType type="S31_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S32_xt_xmap_rename" intent="in" ref="S31_xt_xmap_rename"/>
+    <FbasicType type="S33_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S34_xt_xmap_rename" intent="in" ref="S33_xt_xmap_rename"/>
+    <FbasicType type="I14_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FfunctionType type="F3_xt_xmap_rename" result_name="xmap" return_type="S35_xt_xmap_rename" is_public="true">
+      <params>
+        <name type="S32_xt_xmap_rename">src_idxlist</name>
+        <name type="S34_xt_xmap_rename">dst_idxlist</name>
+        <name type="I14_xt_xmap_rename">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S36_xt_xmap_rename" ref="S27_xt_xmap_rename"/>
+    <FbasicType type="S35_xt_xmap_rename" ref="S36_xt_xmap_rename"/>
+    <FbasicType type="S37_xt_xmap_rename" ref="S28_xt_xmap_rename"/>
+    <FfunctionType type="F4_xt_xmap_rename" result_name="xmap" return_type="S38_xt_xmap_rename">
+      <params>
+        <name type="S39_xt_xmap_rename">src_idxlist</name>
+        <name type="S40_xt_xmap_rename">dst_idxlist</name>
+        <name type="I15_xt_xmap_rename">comm</name>
+        <name type="S41_xt_xmap_rename">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S42_xt_xmap_rename" ref="S4_xt_xmap_rename"/>
+    <FbasicType type="S38_xt_xmap_rename" ref="S42_xt_xmap_rename"/>
+    <FbasicType type="S43_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S39_xt_xmap_rename" intent="in" ref="S43_xt_xmap_rename"/>
+    <FbasicType type="S44_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S40_xt_xmap_rename" intent="in" ref="S44_xt_xmap_rename"/>
+    <FbasicType type="I15_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FstructType type="S45_xt_xmap_rename" imported_id="S4_xt_config_f" is_internal_private="true">
+      <symbols>
+        <id type="S46_xt_xmap_rename">
+          <name>cptr</name>
+          <value>
+            <Var type="S47_xt_xmap_rename" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FstructType type="S48_xt_xmap_rename" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I16_xt_xmap_rename">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I17_xt_xmap_rename" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I18_xt_xmap_rename" is_parameter="true" ref="I17_xt_xmap_rename"/>
+    <FbasicType type="I16_xt_xmap_rename" ref="Fint">
+      <kind>
+        <Var type="I18_xt_xmap_rename" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S49_xt_xmap_rename" imported_id="S6_xt_config_f" ref="S48_xt_xmap_rename"/>
+    <FbasicType type="S46_xt_xmap_rename" imported_id="S5_xt_config_f" ref="S49_xt_xmap_rename"/>
+    <FstructType type="S50_xt_xmap_rename" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I19_xt_xmap_rename">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I19_xt_xmap_rename" ref="Fint">
+      <kind>
+        <Var type="I18_xt_xmap_rename" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S51_xt_xmap_rename" imported_id="S3_iso_c_binding" ref="S50_xt_xmap_rename"/>
+    <FbasicType type="S47_xt_xmap_rename" imported_id="S4_iso_c_binding" is_parameter="true" ref="S51_xt_xmap_rename"/>
+    <FbasicType type="S52_xt_xmap_rename" ref="S45_xt_xmap_rename"/>
+    <FbasicType type="S41_xt_xmap_rename" intent="in" ref="S52_xt_xmap_rename"/>
+    <FfunctionType type="F5_xt_xmap_rename" result_name="xmap_ptr" return_type="S53_xt_xmap_rename" is_private="true" bind="C" bind_name="xt_xmap_all2all_custom_new_f">
+      <params>
+        <name type="S54_xt_xmap_rename">src_idxlist</name>
+        <name type="S55_xt_xmap_rename">dst_idxlist</name>
+        <name type="I20_xt_xmap_rename">comm</name>
+        <name type="S56_xt_xmap_rename">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S57_xt_xmap_rename" ref="S7_xt_xmap_rename"/>
+    <FbasicType type="S58_xt_xmap_rename" ref="S57_xt_xmap_rename"/>
+    <FbasicType type="S53_xt_xmap_rename" ref="S58_xt_xmap_rename"/>
+    <FbasicType type="S59_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S60_xt_xmap_rename" ref="S59_xt_xmap_rename"/>
+    <FbasicType type="S54_xt_xmap_rename" intent="in" ref="S60_xt_xmap_rename"/>
+    <FbasicType type="S55_xt_xmap_rename" intent="in" ref="S60_xt_xmap_rename"/>
+    <FbasicType type="I21_xt_xmap_rename" ref="Fint">
+      <kind>
+        <Var type="I10_xt_xmap_rename" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I20_xt_xmap_rename" intent="in" is_value="true" ref="I21_xt_xmap_rename"/>
+    <FbasicType type="S61_xt_xmap_rename" ref="S45_xt_xmap_rename"/>
+    <FbasicType type="S62_xt_xmap_rename" ref="S61_xt_xmap_rename"/>
+    <FbasicType type="S56_xt_xmap_rename" intent="in" ref="S62_xt_xmap_rename"/>
+    <FbasicType type="S63_xt_xmap_rename" ref="S58_xt_xmap_rename"/>
+    <FbasicType type="S64_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S65_xt_xmap_rename" intent="in" ref="S64_xt_xmap_rename"/>
+    <FbasicType type="S66_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S67_xt_xmap_rename" intent="in" ref="S66_xt_xmap_rename"/>
+    <FbasicType type="I22_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FbasicType type="S68_xt_xmap_rename" ref="S45_xt_xmap_rename"/>
+    <FbasicType type="S69_xt_xmap_rename" intent="in" ref="S68_xt_xmap_rename"/>
+    <FfunctionType type="F6_xt_xmap_rename" result_name="xmap" return_type="S70_xt_xmap_rename" is_public="true">
+      <params>
+        <name type="S65_xt_xmap_rename">src_idxlist</name>
+        <name type="S67_xt_xmap_rename">dst_idxlist</name>
+        <name type="I22_xt_xmap_rename">comm</name>
+        <name type="S69_xt_xmap_rename">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S71_xt_xmap_rename" ref="S27_xt_xmap_rename"/>
+    <FbasicType type="S70_xt_xmap_rename" ref="S71_xt_xmap_rename"/>
+    <FbasicType type="S72_xt_xmap_rename" ref="S28_xt_xmap_rename"/>
+    <FfunctionType type="F7_xt_xmap_rename" result_name="xmap" return_type="S73_xt_xmap_rename">
+      <params>
+        <name type="S74_xt_xmap_rename">src_idxlist</name>
+        <name type="S75_xt_xmap_rename">dst_idxlist</name>
+        <name type="I23_xt_xmap_rename">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S76_xt_xmap_rename" ref="S4_xt_xmap_rename"/>
+    <FbasicType type="S73_xt_xmap_rename" ref="S76_xt_xmap_rename"/>
+    <FbasicType type="S77_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S74_xt_xmap_rename" intent="in" ref="S77_xt_xmap_rename"/>
+    <FbasicType type="S78_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S75_xt_xmap_rename" intent="in" ref="S78_xt_xmap_rename"/>
+    <FbasicType type="I23_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FfunctionType type="F8_xt_xmap_rename" result_name="xmap_ptr" return_type="S79_xt_xmap_rename" is_private="true" bind="C" bind_name="xt_xmap_dist_dir_new_f">
+      <params>
+        <name type="S80_xt_xmap_rename">src_idxlist</name>
+        <name type="S81_xt_xmap_rename">dst_idxlist</name>
+        <name type="I24_xt_xmap_rename">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S82_xt_xmap_rename" ref="S7_xt_xmap_rename"/>
+    <FbasicType type="S83_xt_xmap_rename" ref="S82_xt_xmap_rename"/>
+    <FbasicType type="S79_xt_xmap_rename" ref="S83_xt_xmap_rename"/>
+    <FbasicType type="S84_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S85_xt_xmap_rename" ref="S84_xt_xmap_rename"/>
+    <FbasicType type="S80_xt_xmap_rename" intent="in" ref="S85_xt_xmap_rename"/>
+    <FbasicType type="S81_xt_xmap_rename" intent="in" ref="S85_xt_xmap_rename"/>
+    <FbasicType type="I25_xt_xmap_rename" ref="Fint">
+      <kind>
+        <Var type="I10_xt_xmap_rename" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I24_xt_xmap_rename" intent="in" is_value="true" ref="I25_xt_xmap_rename"/>
+    <FbasicType type="S86_xt_xmap_rename" ref="S83_xt_xmap_rename"/>
+    <FbasicType type="S87_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S88_xt_xmap_rename" intent="in" ref="S87_xt_xmap_rename"/>
+    <FbasicType type="S89_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S90_xt_xmap_rename" intent="in" ref="S89_xt_xmap_rename"/>
+    <FbasicType type="I26_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FfunctionType type="F9_xt_xmap_rename" result_name="xmap" return_type="S91_xt_xmap_rename" is_public="true">
+      <params>
+        <name type="S88_xt_xmap_rename">src_idxlist</name>
+        <name type="S90_xt_xmap_rename">dst_idxlist</name>
+        <name type="I26_xt_xmap_rename">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S92_xt_xmap_rename" ref="S27_xt_xmap_rename"/>
+    <FbasicType type="S91_xt_xmap_rename" ref="S92_xt_xmap_rename"/>
+    <FbasicType type="S93_xt_xmap_rename" ref="S28_xt_xmap_rename"/>
+    <FfunctionType type="F10_xt_xmap_rename" result_name="xmap" return_type="S94_xt_xmap_rename">
+      <params>
+        <name type="S95_xt_xmap_rename">src_idxlist</name>
+        <name type="S96_xt_xmap_rename">dst_idxlist</name>
+        <name type="I27_xt_xmap_rename">comm</name>
+        <name type="S97_xt_xmap_rename">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S98_xt_xmap_rename" ref="S4_xt_xmap_rename"/>
+    <FbasicType type="S94_xt_xmap_rename" ref="S98_xt_xmap_rename"/>
+    <FbasicType type="S99_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S95_xt_xmap_rename" intent="in" ref="S99_xt_xmap_rename"/>
+    <FbasicType type="S100_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S96_xt_xmap_rename" intent="in" ref="S100_xt_xmap_rename"/>
+    <FbasicType type="I27_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FbasicType type="S101_xt_xmap_rename" ref="S45_xt_xmap_rename"/>
+    <FbasicType type="S97_xt_xmap_rename" intent="in" ref="S101_xt_xmap_rename"/>
+    <FfunctionType type="F11_xt_xmap_rename" result_name="xmap_ptr" return_type="S102_xt_xmap_rename" is_private="true" bind="C" bind_name="xt_xmap_dist_dir_custom_new_f">
+      <params>
+        <name type="S103_xt_xmap_rename">src_idxlist</name>
+        <name type="S104_xt_xmap_rename">dst_idxlist</name>
+        <name type="I28_xt_xmap_rename">comm</name>
+        <name type="S105_xt_xmap_rename">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S106_xt_xmap_rename" ref="S7_xt_xmap_rename"/>
+    <FbasicType type="S107_xt_xmap_rename" ref="S106_xt_xmap_rename"/>
+    <FbasicType type="S102_xt_xmap_rename" ref="S107_xt_xmap_rename"/>
+    <FbasicType type="S108_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S109_xt_xmap_rename" ref="S108_xt_xmap_rename"/>
+    <FbasicType type="S103_xt_xmap_rename" intent="in" ref="S109_xt_xmap_rename"/>
+    <FbasicType type="S104_xt_xmap_rename" intent="in" ref="S109_xt_xmap_rename"/>
+    <FbasicType type="I29_xt_xmap_rename" ref="Fint">
+      <kind>
+        <Var type="I10_xt_xmap_rename" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I28_xt_xmap_rename" intent="in" is_value="true" ref="I29_xt_xmap_rename"/>
+    <FbasicType type="S110_xt_xmap_rename" ref="S45_xt_xmap_rename"/>
+    <FbasicType type="S111_xt_xmap_rename" ref="S110_xt_xmap_rename"/>
+    <FbasicType type="S105_xt_xmap_rename" intent="in" ref="S111_xt_xmap_rename"/>
+    <FbasicType type="S112_xt_xmap_rename" ref="S107_xt_xmap_rename"/>
+    <FbasicType type="S113_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S114_xt_xmap_rename" intent="in" ref="S113_xt_xmap_rename"/>
+    <FbasicType type="S115_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S116_xt_xmap_rename" intent="in" ref="S115_xt_xmap_rename"/>
+    <FbasicType type="I30_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FbasicType type="S117_xt_xmap_rename" ref="S45_xt_xmap_rename"/>
+    <FbasicType type="S118_xt_xmap_rename" intent="in" ref="S117_xt_xmap_rename"/>
+    <FfunctionType type="F12_xt_xmap_rename" result_name="xmap" return_type="S119_xt_xmap_rename" is_public="true">
+      <params>
+        <name type="S114_xt_xmap_rename">src_idxlist</name>
+        <name type="S116_xt_xmap_rename">dst_idxlist</name>
+        <name type="I30_xt_xmap_rename">comm</name>
+        <name type="S118_xt_xmap_rename">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S120_xt_xmap_rename" ref="S27_xt_xmap_rename"/>
+    <FbasicType type="S119_xt_xmap_rename" ref="S120_xt_xmap_rename"/>
+    <FbasicType type="S121_xt_xmap_rename" ref="S28_xt_xmap_rename"/>
+    <FfunctionType type="F13_xt_xmap_rename" result_name="xmap" return_type="S122_xt_xmap_rename">
+      <params>
+        <name type="S123_xt_xmap_rename">src_idxlist</name>
+        <name type="S124_xt_xmap_rename">dst_idxlist</name>
+        <name type="I31_xt_xmap_rename">inter_comm</name>
+        <name type="I32_xt_xmap_rename">intra_comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S125_xt_xmap_rename" ref="S4_xt_xmap_rename"/>
+    <FbasicType type="S122_xt_xmap_rename" ref="S125_xt_xmap_rename"/>
+    <FbasicType type="S126_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S123_xt_xmap_rename" intent="in" ref="S126_xt_xmap_rename"/>
+    <FbasicType type="S127_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S124_xt_xmap_rename" intent="in" ref="S127_xt_xmap_rename"/>
+    <FbasicType type="I31_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FbasicType type="I32_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FfunctionType type="F14_xt_xmap_rename" result_name="xmap_ptr" return_type="S128_xt_xmap_rename" is_private="true" bind="C" bind_name="xt_xmap_dist_dir_intercomm_new_f">
+      <params>
+        <name type="S129_xt_xmap_rename">src_idxlist</name>
+        <name type="S130_xt_xmap_rename">dst_idxlist</name>
+        <name type="I33_xt_xmap_rename">inter_comm</name>
+        <name type="I34_xt_xmap_rename">intra_comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S131_xt_xmap_rename" ref="S7_xt_xmap_rename"/>
+    <FbasicType type="S132_xt_xmap_rename" ref="S131_xt_xmap_rename"/>
+    <FbasicType type="S128_xt_xmap_rename" ref="S132_xt_xmap_rename"/>
+    <FbasicType type="S133_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S134_xt_xmap_rename" ref="S133_xt_xmap_rename"/>
+    <FbasicType type="S129_xt_xmap_rename" intent="in" ref="S134_xt_xmap_rename"/>
+    <FbasicType type="S130_xt_xmap_rename" intent="in" ref="S134_xt_xmap_rename"/>
+    <FbasicType type="I35_xt_xmap_rename" ref="Fint">
+      <kind>
+        <Var type="I10_xt_xmap_rename" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I33_xt_xmap_rename" intent="in" is_value="true" ref="I35_xt_xmap_rename"/>
+    <FbasicType type="I34_xt_xmap_rename" intent="in" is_value="true" ref="I35_xt_xmap_rename"/>
+    <FbasicType type="S135_xt_xmap_rename" ref="S132_xt_xmap_rename"/>
+    <FbasicType type="S136_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S137_xt_xmap_rename" intent="in" ref="S136_xt_xmap_rename"/>
+    <FbasicType type="S138_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S139_xt_xmap_rename" intent="in" ref="S138_xt_xmap_rename"/>
+    <FbasicType type="I36_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FbasicType type="I37_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FfunctionType type="F15_xt_xmap_rename" result_name="xmap" return_type="S140_xt_xmap_rename" is_public="true">
+      <params>
+        <name type="S137_xt_xmap_rename">src_idxlist</name>
+        <name type="S139_xt_xmap_rename">dst_idxlist</name>
+        <name type="I36_xt_xmap_rename">inter_comm</name>
+        <name type="I37_xt_xmap_rename">intra_comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S141_xt_xmap_rename" ref="S27_xt_xmap_rename"/>
+    <FbasicType type="S140_xt_xmap_rename" ref="S141_xt_xmap_rename"/>
+    <FbasicType type="S142_xt_xmap_rename" ref="S28_xt_xmap_rename"/>
+    <FfunctionType type="F16_xt_xmap_rename" result_name="xmap" return_type="S143_xt_xmap_rename">
+      <params>
+        <name type="S144_xt_xmap_rename">src_idxlist</name>
+        <name type="S145_xt_xmap_rename">dst_idxlist</name>
+        <name type="I38_xt_xmap_rename">inter_comm</name>
+        <name type="I39_xt_xmap_rename">intra_comm</name>
+        <name type="S146_xt_xmap_rename">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S147_xt_xmap_rename" ref="S4_xt_xmap_rename"/>
+    <FbasicType type="S143_xt_xmap_rename" ref="S147_xt_xmap_rename"/>
+    <FbasicType type="S148_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S144_xt_xmap_rename" intent="in" ref="S148_xt_xmap_rename"/>
+    <FbasicType type="S149_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S145_xt_xmap_rename" intent="in" ref="S149_xt_xmap_rename"/>
+    <FbasicType type="I38_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FbasicType type="I39_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FbasicType type="S150_xt_xmap_rename" ref="S45_xt_xmap_rename"/>
+    <FbasicType type="S146_xt_xmap_rename" intent="in" ref="S150_xt_xmap_rename"/>
+    <FfunctionType type="F17_xt_xmap_rename" result_name="xmap_ptr" return_type="S151_xt_xmap_rename" is_private="true" bind="C" bind_name="xt_xmap_dist_dir_intercomm_custom_new_f">
+      <params>
+        <name type="S152_xt_xmap_rename">src_idxlist</name>
+        <name type="S153_xt_xmap_rename">dst_idxlist</name>
+        <name type="I40_xt_xmap_rename">inter_comm</name>
+        <name type="I41_xt_xmap_rename">intra_comm</name>
+        <name type="S154_xt_xmap_rename">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S155_xt_xmap_rename" ref="S7_xt_xmap_rename"/>
+    <FbasicType type="S156_xt_xmap_rename" ref="S155_xt_xmap_rename"/>
+    <FbasicType type="S151_xt_xmap_rename" ref="S156_xt_xmap_rename"/>
+    <FbasicType type="S157_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S158_xt_xmap_rename" ref="S157_xt_xmap_rename"/>
+    <FbasicType type="S152_xt_xmap_rename" intent="in" ref="S158_xt_xmap_rename"/>
+    <FbasicType type="S153_xt_xmap_rename" intent="in" ref="S158_xt_xmap_rename"/>
+    <FbasicType type="I42_xt_xmap_rename" ref="Fint">
+      <kind>
+        <Var type="I10_xt_xmap_rename" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I40_xt_xmap_rename" intent="in" is_value="true" ref="I42_xt_xmap_rename"/>
+    <FbasicType type="I41_xt_xmap_rename" intent="in" is_value="true" ref="I42_xt_xmap_rename"/>
+    <FbasicType type="S159_xt_xmap_rename" ref="S45_xt_xmap_rename"/>
+    <FbasicType type="S160_xt_xmap_rename" ref="S159_xt_xmap_rename"/>
+    <FbasicType type="S154_xt_xmap_rename" intent="in" ref="S160_xt_xmap_rename"/>
+    <FbasicType type="S161_xt_xmap_rename" ref="S156_xt_xmap_rename"/>
+    <FbasicType type="S162_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S163_xt_xmap_rename" intent="in" ref="S162_xt_xmap_rename"/>
+    <FbasicType type="S164_xt_xmap_rename" ref="S11_xt_xmap_rename"/>
+    <FbasicType type="S165_xt_xmap_rename" intent="in" ref="S164_xt_xmap_rename"/>
+    <FbasicType type="I43_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FbasicType type="I44_xt_xmap_rename" intent="in" ref="Fint"/>
+    <FbasicType type="S166_xt_xmap_rename" ref="S45_xt_xmap_rename"/>
+    <FbasicType type="S167_xt_xmap_rename" intent="in" ref="S166_xt_xmap_rename"/>
+    <FfunctionType type="F18_xt_xmap_rename" result_name="xmap" return_type="S168_xt_xmap_rename" is_public="true">
+      <params>
+        <name type="S163_xt_xmap_rename">src_idxlist</name>
+        <name type="S165_xt_xmap_rename">dst_idxlist</name>
+        <name type="I43_xt_xmap_rename">inter_comm</name>
+        <name type="I44_xt_xmap_rename">intra_comm</name>
+        <name type="S167_xt_xmap_rename">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S169_xt_xmap_rename" ref="S27_xt_xmap_rename"/>
+    <FbasicType type="S168_xt_xmap_rename" ref="S169_xt_xmap_rename"/>
+    <FbasicType type="S170_xt_xmap_rename" ref="S28_xt_xmap_rename"/>
+    <FfunctionType type="F19_xt_xmap_rename" return_type="V1_xt_xmap_rename" is_public="true"/>
+    <FbasicType type="V1_xt_xmap_rename" ref="FnumericAll"/>
+    <FfunctionType type="F20_xt_xmap_rename" return_type="V2_xt_xmap_rename" is_public="true"/>
+    <FbasicType type="V2_xt_xmap_rename" ref="FnumericAll"/>
+    <FfunctionType type="F21_xt_xmap_rename" return_type="V3_xt_xmap_rename" is_public="true"/>
+    <FbasicType type="V3_xt_xmap_rename" ref="FnumericAll"/>
+  </typeTable>
+  <identifiers>
+    <id type="F1_xt_xmap_rename" sclass="ffunc" original_name="xt_xmap_all2all_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_all2all_orig_new</name>
+    </id>
+    <id type="F4_xt_xmap_rename" sclass="ffunc" original_name="xt_xmap_all2all_custom_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_all2all_custom_new</name>
+    </id>
+    <id type="F7_xt_xmap_rename" sclass="ffunc" original_name="xt_xmap_dist_dir_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_dist_dir_orig_new</name>
+    </id>
+    <id type="F10_xt_xmap_rename" sclass="ffunc" original_name="xt_xmap_dist_dir_custom_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_dist_dir_custom_new</name>
+    </id>
+    <id type="F13_xt_xmap_rename" sclass="ffunc" original_name="xt_xmap_dist_dir_intercomm_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_dist_dir_intercomm_orig_new</name>
+    </id>
+    <id type="F16_xt_xmap_rename" sclass="ffunc" original_name="xt_xmap_dist_dir_intercomm_custom_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_dist_dir_intercomm_custom_new</name>
+    </id>
+    <id type="F19_xt_xmap_rename" sclass="ffunc" original_name="xt_xmap_all2all_new" declared_in="xt_xmap_rename">
+      <name>xt_xmap_all2all_new</name>
+    </id>
+    <id type="F20_xt_xmap_rename" sclass="ffunc" original_name="xt_xmap_dist_dir_new" declared_in="xt_xmap_rename">
+      <name>xt_xmap_dist_dir_new</name>
+    </id>
+    <id type="F21_xt_xmap_rename" sclass="ffunc" original_name="xt_xmap_dist_dir_intercomm_new" declared_in="xt_xmap_rename">
+      <name>xt_xmap_dist_dir_intercomm_new</name>
+    </id>
+  </identifiers>
+  <declarations>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="xt_xmap_all2all_new" lineno="751" file="xt_xmap_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="752" file="xt_xmap_f.f90">
+        <name type="F1_xt_xmap_rename">xt_xmap_all2all_orig_new</name>
+        <name type="F4_xt_xmap_rename">xt_xmap_all2all_custom_new</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="753" file="xt_xmap_f.f90">
+        <name type="F1_xt_xmap_rename">xt_xmap_all2all_orig_new</name>
+        <name type="F4_xt_xmap_rename">xt_xmap_all2all_custom_new</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_xmap_dist_dir_new" lineno="756" file="xt_xmap_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="757" file="xt_xmap_f.f90">
+        <name type="F10_xt_xmap_rename">xt_xmap_dist_dir_custom_new</name>
+        <name type="F7_xt_xmap_rename">xt_xmap_dist_dir_orig_new</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="758" file="xt_xmap_f.f90">
+        <name type="F10_xt_xmap_rename">xt_xmap_dist_dir_custom_new</name>
+        <name type="F7_xt_xmap_rename">xt_xmap_dist_dir_orig_new</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_xmap_dist_dir_intercomm_new" lineno="761" file="xt_xmap_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="762" file="xt_xmap_f.f90">
+        <name type="F13_xt_xmap_rename">xt_xmap_dist_dir_intercomm_orig_new</name>
+        <name type="F16_xt_xmap_rename">xt_xmap_dist_dir_intercomm_custom_new</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="763" file="xt_xmap_f.f90">
+        <name type="F13_xt_xmap_rename">xt_xmap_dist_dir_intercomm_orig_new</name>
+        <name type="F16_xt_xmap_rename">xt_xmap_dist_dir_intercomm_custom_new</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

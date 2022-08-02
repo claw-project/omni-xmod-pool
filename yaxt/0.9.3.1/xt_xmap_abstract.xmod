@@ -1,0 +1,1843 @@
+<OmniFortranModule version="1.0">
+  <name>xt_xmap_abstract</name>
+  <depends>
+    <name>iso_c_binding</name>
+    <name>xt_core</name>
+    <name>xt_config_f</name>
+    <name>xt_idxlist_abstract</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I1_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I2_xt_xmap_abstract" is_parameter="true" ref="I1_xt_xmap_abstract"/>
+    <FstructType type="S1_xt_xmap_abstract" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I3_xt_xmap_abstract">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I4_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I5_xt_xmap_abstract" is_parameter="true" ref="I4_xt_xmap_abstract"/>
+    <FbasicType type="I3_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I5_xt_xmap_abstract" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S2_xt_xmap_abstract" imported_id="S3_iso_c_binding" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S3_xt_xmap_abstract" imported_id="S4_iso_c_binding" is_parameter="true" ref="S2_xt_xmap_abstract"/>
+    <FfunctionType type="F1_xt_xmap_abstract" return_type="FnumericAll"/>
+    <FfunctionType type="F2_xt_xmap_abstract" return_type="L1_xt_xmap_abstract">
+      <params>
+        <name type="S4_xt_xmap_abstract" imported_id="S13_iso_c_binding">c_ptr_1</name>
+        <name type="S5_xt_xmap_abstract" imported_id="S14_iso_c_binding">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L1_xt_xmap_abstract" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S6_xt_xmap_abstract" imported_id="S2_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I6_xt_xmap_abstract">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I6_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I5_xt_xmap_abstract" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S7_xt_xmap_abstract" imported_id="S15_iso_c_binding" ref="S6_xt_xmap_abstract"/>
+    <FbasicType type="S4_xt_xmap_abstract" imported_id="S13_iso_c_binding" ref="S7_xt_xmap_abstract"/>
+    <FbasicType type="S8_xt_xmap_abstract" imported_id="S16_iso_c_binding" ref="S6_xt_xmap_abstract"/>
+    <FbasicType type="S5_xt_xmap_abstract" imported_id="S14_iso_c_binding" is_optional="true" ref="S8_xt_xmap_abstract"/>
+    <FfunctionType type="F3_xt_xmap_abstract" return_type="L2_xt_xmap_abstract">
+      <params>
+        <name type="S9_xt_xmap_abstract" imported_id="S9_iso_c_binding">c_ptr_1</name>
+        <name type="S10_xt_xmap_abstract" imported_id="S10_iso_c_binding">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L2_xt_xmap_abstract" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S11_xt_xmap_abstract" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I7_xt_xmap_abstract">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I7_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I5_xt_xmap_abstract" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S12_xt_xmap_abstract" imported_id="S11_iso_c_binding" ref="S11_xt_xmap_abstract"/>
+    <FbasicType type="S9_xt_xmap_abstract" imported_id="S9_iso_c_binding" ref="S12_xt_xmap_abstract"/>
+    <FbasicType type="S13_xt_xmap_abstract" imported_id="S12_iso_c_binding" ref="S11_xt_xmap_abstract"/>
+    <FbasicType type="S10_xt_xmap_abstract" imported_id="S10_iso_c_binding" is_optional="true" ref="S13_xt_xmap_abstract"/>
+    <FfunctionType type="F4_xt_xmap_abstract" return_type="Fvoid"/>
+    <FfunctionType type="F5_xt_xmap_abstract" return_type="Fvoid">
+      <params>
+        <name type="I8_xt_xmap_abstract">cptr</name>
+        <name type="I9_xt_xmap_abstract">fptr</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I10_xt_xmap_abstract" is_pointer="true" ref="Fint"/>
+    <FbasicType type="I8_xt_xmap_abstract" intent="in" is_pointer="true" ref="I10_xt_xmap_abstract"/>
+    <FbasicType type="I11_xt_xmap_abstract" is_pointer="true" ref="Fint"/>
+    <FbasicType type="I9_xt_xmap_abstract" intent="out" is_pointer="true" ref="I11_xt_xmap_abstract"/>
+    <FfunctionType type="F6_xt_xmap_abstract" return_type="S14_xt_xmap_abstract">
+      <params>
+        <name type="Fint">x</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S15_xt_xmap_abstract" imported_id="S44_iso_c_binding" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S14_xt_xmap_abstract" imported_id="S43_iso_c_binding" ref="S15_xt_xmap_abstract"/>
+    <FbasicType type="I12_xt_xmap_abstract" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I13_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I14_xt_xmap_abstract" is_parameter="true" ref="I13_xt_xmap_abstract"/>
+    <FbasicType type="I15_xt_xmap_abstract" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I16_xt_xmap_abstract" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I17_xt_xmap_abstract" is_parameter="true" ref="Fint"/>
+    <FfunctionType type="F7_xt_xmap_abstract" return_type="Fvoid"/>
+    <FfunctionType type="F8_xt_xmap_abstract" return_type="Fvoid">
+      <params>
+        <name type="C1_xt_xmap_abstract">msg</name>
+        <name type="C2_xt_xmap_abstract">source</name>
+        <name type="I18_xt_xmap_abstract">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C3_xt_xmap_abstract" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C1_xt_xmap_abstract" intent="in" ref="C3_xt_xmap_abstract"/>
+    <FbasicType type="C4_xt_xmap_abstract" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C2_xt_xmap_abstract" intent="in" ref="C4_xt_xmap_abstract"/>
+    <FbasicType type="I18_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FfunctionType type="F9_xt_xmap_abstract" return_type="Fvoid">
+      <params>
+        <name type="I19_xt_xmap_abstract">comm</name>
+        <name type="C5_xt_xmap_abstract">msg</name>
+        <name type="C6_xt_xmap_abstract">source</name>
+        <name type="I20_xt_xmap_abstract">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I19_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="C7_xt_xmap_abstract" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C5_xt_xmap_abstract" intent="in" ref="C7_xt_xmap_abstract"/>
+    <FbasicType type="C8_xt_xmap_abstract" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C6_xt_xmap_abstract" intent="in" ref="C8_xt_xmap_abstract"/>
+    <FbasicType type="I20_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FstructType type="S16_xt_xmap_abstract" imported_id="S6_xt_core">
+      <symbols>
+        <id type="I21_xt_xmap_abstract">
+          <name>start</name>
+        </id>
+        <id type="I21_xt_xmap_abstract">
+          <name>size</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I22_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I23_xt_xmap_abstract" is_parameter="true" ref="I22_xt_xmap_abstract"/>
+    <FbasicType type="I21_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I23_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FstructType type="S17_xt_xmap_abstract" imported_id="S4_xt_config_f" is_internal_private="true">
+      <symbols>
+        <id type="S18_xt_xmap_abstract">
+          <name>cptr</name>
+          <value>
+            <Var type="S19_xt_xmap_abstract" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FstructType type="S20_xt_xmap_abstract" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I24_xt_xmap_abstract">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I25_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I26_xt_xmap_abstract" is_parameter="true" ref="I25_xt_xmap_abstract"/>
+    <FbasicType type="I24_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I26_xt_xmap_abstract" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S21_xt_xmap_abstract" imported_id="S6_xt_config_f" ref="S20_xt_xmap_abstract"/>
+    <FbasicType type="S18_xt_xmap_abstract" imported_id="S5_xt_config_f" ref="S21_xt_xmap_abstract"/>
+    <FstructType type="S22_xt_xmap_abstract" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I27_xt_xmap_abstract">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I27_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I26_xt_xmap_abstract" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S23_xt_xmap_abstract" imported_id="S3_iso_c_binding" ref="S22_xt_xmap_abstract"/>
+    <FbasicType type="S19_xt_xmap_abstract" imported_id="S4_iso_c_binding" is_parameter="true" ref="S23_xt_xmap_abstract"/>
+    <FstructType type="S24_xt_xmap_abstract" imported_id="S23_xt_idxlist_abstract" is_internal_private="true">
+      <symbols>
+        <id type="S25_xt_xmap_abstract">
+          <name>cptr</name>
+          <value>
+            <Var type="S26_xt_xmap_abstract" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FstructType type="S27_xt_xmap_abstract" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I28_xt_xmap_abstract">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I29_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I30_xt_xmap_abstract" is_parameter="true" ref="I29_xt_xmap_abstract"/>
+    <FbasicType type="I28_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I30_xt_xmap_abstract" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S28_xt_xmap_abstract" imported_id="S25_xt_idxlist_abstract" ref="S27_xt_xmap_abstract"/>
+    <FbasicType type="S25_xt_xmap_abstract" imported_id="S24_xt_idxlist_abstract" ref="S28_xt_xmap_abstract"/>
+    <FstructType type="S29_xt_xmap_abstract" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I31_xt_xmap_abstract">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I31_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I30_xt_xmap_abstract" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S30_xt_xmap_abstract" imported_id="S3_iso_c_binding" ref="S29_xt_xmap_abstract"/>
+    <FbasicType type="S26_xt_xmap_abstract" imported_id="S4_iso_c_binding" is_parameter="true" ref="S30_xt_xmap_abstract"/>
+    <FfunctionType type="F10_xt_xmap_abstract" result_name="p" return_type="S31_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S32_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FstructType type="S33_xt_xmap_abstract" is_public="true" is_internal_private="true" bind="C">
+      <symbols>
+        <id type="S34_xt_xmap_abstract">
+          <name>cptr</name>
+          <value>
+            <Var type="S3_xt_xmap_abstract" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="S35_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S34_xt_xmap_abstract" ref="S35_xt_xmap_abstract"/>
+    <FbasicType type="S36_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S31_xt_xmap_abstract" ref="S36_xt_xmap_abstract"/>
+    <FbasicType type="S37_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S32_xt_xmap_abstract" intent="in" ref="S37_xt_xmap_abstract"/>
+    <FbasicType type="S38_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F11_xt_xmap_abstract" result_name="res_ptr" return_type="S39_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_copy">
+      <params>
+        <name type="S40_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S41_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S42_xt_xmap_abstract" ref="S41_xt_xmap_abstract"/>
+    <FbasicType type="S39_xt_xmap_abstract" ref="S42_xt_xmap_abstract"/>
+    <FbasicType type="S43_xt_xmap_abstract" ref="S41_xt_xmap_abstract"/>
+    <FbasicType type="S40_xt_xmap_abstract" intent="in" is_value="true" ref="S43_xt_xmap_abstract"/>
+    <FbasicType type="S44_xt_xmap_abstract" ref="S42_xt_xmap_abstract"/>
+    <FfunctionType type="F12_xt_xmap_abstract" result_name="xmap_copy" return_type="S45_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S46_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S47_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S45_xt_xmap_abstract" ref="S47_xt_xmap_abstract"/>
+    <FbasicType type="S48_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S46_xt_xmap_abstract" intent="in" ref="S48_xt_xmap_abstract"/>
+    <FbasicType type="S49_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FbasicType type="S50_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F13_xt_xmap_abstract" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="S51_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S52_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S51_xt_xmap_abstract" intent="inout" ref="S52_xt_xmap_abstract"/>
+    <FfunctionType type="F14_xt_xmap_abstract" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_xmap_delete">
+      <params>
+        <name type="S53_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S54_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S55_xt_xmap_abstract" ref="S54_xt_xmap_abstract"/>
+    <FbasicType type="S53_xt_xmap_abstract" intent="in" is_value="true" ref="S55_xt_xmap_abstract"/>
+    <FbasicType type="S56_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FbasicType type="S57_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F15_xt_xmap_abstract" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="A1_xt_xmap_abstract">xmaps</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S58_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S59_xt_xmap_abstract" intent="inout" ref="S58_xt_xmap_abstract"/>
+    <FbasicType type="A1_xt_xmap_abstract" intent="inout" ref="S59_xt_xmap_abstract">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F16_xt_xmap_abstract" return_type="Fint"/>
+    <FbasicType type="S60_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FbasicType type="S61_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F17_xt_xmap_abstract" result_name="xmap_ptr" return_type="S62_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_all2all_new_f">
+      <params>
+        <name type="S63_xt_xmap_abstract">src_idxlist</name>
+        <name type="S64_xt_xmap_abstract">dst_idxlist</name>
+        <name type="I32_xt_xmap_abstract">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S65_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S66_xt_xmap_abstract" ref="S65_xt_xmap_abstract"/>
+    <FbasicType type="S62_xt_xmap_abstract" ref="S66_xt_xmap_abstract"/>
+    <FbasicType type="S67_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S68_xt_xmap_abstract" ref="S67_xt_xmap_abstract"/>
+    <FbasicType type="S63_xt_xmap_abstract" intent="in" ref="S68_xt_xmap_abstract"/>
+    <FbasicType type="S64_xt_xmap_abstract" intent="in" ref="S68_xt_xmap_abstract"/>
+    <FbasicType type="I33_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I12_xt_xmap_abstract" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I32_xt_xmap_abstract" intent="in" is_value="true" ref="I33_xt_xmap_abstract"/>
+    <FbasicType type="S69_xt_xmap_abstract" ref="S66_xt_xmap_abstract"/>
+    <FfunctionType type="F18_xt_xmap_abstract" result_name="xmap" return_type="S70_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S71_xt_xmap_abstract">src_idxlist</name>
+        <name type="S72_xt_xmap_abstract">dst_idxlist</name>
+        <name type="I34_xt_xmap_abstract">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S73_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S70_xt_xmap_abstract" ref="S73_xt_xmap_abstract"/>
+    <FbasicType type="S74_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S71_xt_xmap_abstract" intent="in" ref="S74_xt_xmap_abstract"/>
+    <FbasicType type="S75_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S72_xt_xmap_abstract" intent="in" ref="S75_xt_xmap_abstract"/>
+    <FbasicType type="I34_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="S76_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F19_xt_xmap_abstract" result_name="xmap_ptr" return_type="S77_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_all2all_custom_new_f">
+      <params>
+        <name type="S78_xt_xmap_abstract">src_idxlist</name>
+        <name type="S79_xt_xmap_abstract">dst_idxlist</name>
+        <name type="I35_xt_xmap_abstract">comm</name>
+        <name type="S80_xt_xmap_abstract">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S81_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S82_xt_xmap_abstract" ref="S81_xt_xmap_abstract"/>
+    <FbasicType type="S77_xt_xmap_abstract" ref="S82_xt_xmap_abstract"/>
+    <FbasicType type="S83_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S84_xt_xmap_abstract" ref="S83_xt_xmap_abstract"/>
+    <FbasicType type="S78_xt_xmap_abstract" intent="in" ref="S84_xt_xmap_abstract"/>
+    <FbasicType type="S79_xt_xmap_abstract" intent="in" ref="S84_xt_xmap_abstract"/>
+    <FbasicType type="I36_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I12_xt_xmap_abstract" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I35_xt_xmap_abstract" intent="in" is_value="true" ref="I36_xt_xmap_abstract"/>
+    <FbasicType type="S85_xt_xmap_abstract" ref="S17_xt_xmap_abstract"/>
+    <FbasicType type="S86_xt_xmap_abstract" ref="S85_xt_xmap_abstract"/>
+    <FbasicType type="S80_xt_xmap_abstract" intent="in" ref="S86_xt_xmap_abstract"/>
+    <FbasicType type="S87_xt_xmap_abstract" ref="S82_xt_xmap_abstract"/>
+    <FfunctionType type="F20_xt_xmap_abstract" result_name="xmap" return_type="S88_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S89_xt_xmap_abstract">src_idxlist</name>
+        <name type="S90_xt_xmap_abstract">dst_idxlist</name>
+        <name type="I37_xt_xmap_abstract">comm</name>
+        <name type="S91_xt_xmap_abstract">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S92_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S88_xt_xmap_abstract" ref="S92_xt_xmap_abstract"/>
+    <FbasicType type="S93_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S89_xt_xmap_abstract" intent="in" ref="S93_xt_xmap_abstract"/>
+    <FbasicType type="S94_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S90_xt_xmap_abstract" intent="in" ref="S94_xt_xmap_abstract"/>
+    <FbasicType type="I37_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="S95_xt_xmap_abstract" ref="S17_xt_xmap_abstract"/>
+    <FbasicType type="S91_xt_xmap_abstract" intent="in" ref="S95_xt_xmap_abstract"/>
+    <FbasicType type="S96_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F21_xt_xmap_abstract" result_name="xmap_ptr" return_type="S97_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_dist_dir_new_f">
+      <params>
+        <name type="S98_xt_xmap_abstract">src_idxlist</name>
+        <name type="S99_xt_xmap_abstract">dst_idxlist</name>
+        <name type="I38_xt_xmap_abstract">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S100_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S101_xt_xmap_abstract" ref="S100_xt_xmap_abstract"/>
+    <FbasicType type="S97_xt_xmap_abstract" ref="S101_xt_xmap_abstract"/>
+    <FbasicType type="S102_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S103_xt_xmap_abstract" ref="S102_xt_xmap_abstract"/>
+    <FbasicType type="S98_xt_xmap_abstract" intent="in" ref="S103_xt_xmap_abstract"/>
+    <FbasicType type="S99_xt_xmap_abstract" intent="in" ref="S103_xt_xmap_abstract"/>
+    <FbasicType type="I39_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I12_xt_xmap_abstract" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I38_xt_xmap_abstract" intent="in" is_value="true" ref="I39_xt_xmap_abstract"/>
+    <FbasicType type="S104_xt_xmap_abstract" ref="S101_xt_xmap_abstract"/>
+    <FfunctionType type="F22_xt_xmap_abstract" result_name="xmap" return_type="S105_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S106_xt_xmap_abstract">src_idxlist</name>
+        <name type="S107_xt_xmap_abstract">dst_idxlist</name>
+        <name type="I40_xt_xmap_abstract">comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S108_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S105_xt_xmap_abstract" ref="S108_xt_xmap_abstract"/>
+    <FbasicType type="S109_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S106_xt_xmap_abstract" intent="in" ref="S109_xt_xmap_abstract"/>
+    <FbasicType type="S110_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S107_xt_xmap_abstract" intent="in" ref="S110_xt_xmap_abstract"/>
+    <FbasicType type="I40_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="S111_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F23_xt_xmap_abstract" result_name="xmap_ptr" return_type="S112_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_dist_dir_custom_new_f">
+      <params>
+        <name type="S113_xt_xmap_abstract">src_idxlist</name>
+        <name type="S114_xt_xmap_abstract">dst_idxlist</name>
+        <name type="I41_xt_xmap_abstract">comm</name>
+        <name type="S115_xt_xmap_abstract">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S116_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S117_xt_xmap_abstract" ref="S116_xt_xmap_abstract"/>
+    <FbasicType type="S112_xt_xmap_abstract" ref="S117_xt_xmap_abstract"/>
+    <FbasicType type="S118_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S119_xt_xmap_abstract" ref="S118_xt_xmap_abstract"/>
+    <FbasicType type="S113_xt_xmap_abstract" intent="in" ref="S119_xt_xmap_abstract"/>
+    <FbasicType type="S114_xt_xmap_abstract" intent="in" ref="S119_xt_xmap_abstract"/>
+    <FbasicType type="I42_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I12_xt_xmap_abstract" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I41_xt_xmap_abstract" intent="in" is_value="true" ref="I42_xt_xmap_abstract"/>
+    <FbasicType type="S120_xt_xmap_abstract" ref="S17_xt_xmap_abstract"/>
+    <FbasicType type="S121_xt_xmap_abstract" ref="S120_xt_xmap_abstract"/>
+    <FbasicType type="S115_xt_xmap_abstract" intent="in" ref="S121_xt_xmap_abstract"/>
+    <FbasicType type="S122_xt_xmap_abstract" ref="S117_xt_xmap_abstract"/>
+    <FfunctionType type="F24_xt_xmap_abstract" result_name="xmap" return_type="S123_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S124_xt_xmap_abstract">src_idxlist</name>
+        <name type="S125_xt_xmap_abstract">dst_idxlist</name>
+        <name type="I43_xt_xmap_abstract">comm</name>
+        <name type="S126_xt_xmap_abstract">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S127_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S123_xt_xmap_abstract" ref="S127_xt_xmap_abstract"/>
+    <FbasicType type="S128_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S124_xt_xmap_abstract" intent="in" ref="S128_xt_xmap_abstract"/>
+    <FbasicType type="S129_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S125_xt_xmap_abstract" intent="in" ref="S129_xt_xmap_abstract"/>
+    <FbasicType type="I43_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="S130_xt_xmap_abstract" ref="S17_xt_xmap_abstract"/>
+    <FbasicType type="S126_xt_xmap_abstract" intent="in" ref="S130_xt_xmap_abstract"/>
+    <FbasicType type="S131_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F25_xt_xmap_abstract" result_name="xmap_ptr" return_type="S132_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_dist_dir_intercomm_new_f">
+      <params>
+        <name type="S133_xt_xmap_abstract">src_idxlist</name>
+        <name type="S134_xt_xmap_abstract">dst_idxlist</name>
+        <name type="I44_xt_xmap_abstract">inter_comm</name>
+        <name type="I45_xt_xmap_abstract">intra_comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S135_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S136_xt_xmap_abstract" ref="S135_xt_xmap_abstract"/>
+    <FbasicType type="S132_xt_xmap_abstract" ref="S136_xt_xmap_abstract"/>
+    <FbasicType type="S137_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S138_xt_xmap_abstract" ref="S137_xt_xmap_abstract"/>
+    <FbasicType type="S133_xt_xmap_abstract" intent="in" ref="S138_xt_xmap_abstract"/>
+    <FbasicType type="S134_xt_xmap_abstract" intent="in" ref="S138_xt_xmap_abstract"/>
+    <FbasicType type="I46_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I12_xt_xmap_abstract" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I44_xt_xmap_abstract" intent="in" is_value="true" ref="I46_xt_xmap_abstract"/>
+    <FbasicType type="I45_xt_xmap_abstract" intent="in" is_value="true" ref="I46_xt_xmap_abstract"/>
+    <FbasicType type="S139_xt_xmap_abstract" ref="S136_xt_xmap_abstract"/>
+    <FfunctionType type="F26_xt_xmap_abstract" result_name="xmap" return_type="S140_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S141_xt_xmap_abstract">src_idxlist</name>
+        <name type="S142_xt_xmap_abstract">dst_idxlist</name>
+        <name type="I47_xt_xmap_abstract">inter_comm</name>
+        <name type="I48_xt_xmap_abstract">intra_comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S143_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S140_xt_xmap_abstract" ref="S143_xt_xmap_abstract"/>
+    <FbasicType type="S144_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S141_xt_xmap_abstract" intent="in" ref="S144_xt_xmap_abstract"/>
+    <FbasicType type="S145_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S142_xt_xmap_abstract" intent="in" ref="S145_xt_xmap_abstract"/>
+    <FbasicType type="I47_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="I48_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="S146_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F27_xt_xmap_abstract" result_name="xmap_ptr" return_type="S147_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_dist_dir_intercomm_custom_new_f">
+      <params>
+        <name type="S148_xt_xmap_abstract">src_idxlist</name>
+        <name type="S149_xt_xmap_abstract">dst_idxlist</name>
+        <name type="I49_xt_xmap_abstract">inter_comm</name>
+        <name type="I50_xt_xmap_abstract">intra_comm</name>
+        <name type="S150_xt_xmap_abstract">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S151_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S152_xt_xmap_abstract" ref="S151_xt_xmap_abstract"/>
+    <FbasicType type="S147_xt_xmap_abstract" ref="S152_xt_xmap_abstract"/>
+    <FbasicType type="S153_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S154_xt_xmap_abstract" ref="S153_xt_xmap_abstract"/>
+    <FbasicType type="S148_xt_xmap_abstract" intent="in" ref="S154_xt_xmap_abstract"/>
+    <FbasicType type="S149_xt_xmap_abstract" intent="in" ref="S154_xt_xmap_abstract"/>
+    <FbasicType type="I51_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I12_xt_xmap_abstract" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I49_xt_xmap_abstract" intent="in" is_value="true" ref="I51_xt_xmap_abstract"/>
+    <FbasicType type="I50_xt_xmap_abstract" intent="in" is_value="true" ref="I51_xt_xmap_abstract"/>
+    <FbasicType type="S155_xt_xmap_abstract" ref="S17_xt_xmap_abstract"/>
+    <FbasicType type="S156_xt_xmap_abstract" ref="S155_xt_xmap_abstract"/>
+    <FbasicType type="S150_xt_xmap_abstract" intent="in" ref="S156_xt_xmap_abstract"/>
+    <FbasicType type="S157_xt_xmap_abstract" ref="S152_xt_xmap_abstract"/>
+    <FfunctionType type="F28_xt_xmap_abstract" result_name="xmap" return_type="S158_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S159_xt_xmap_abstract">src_idxlist</name>
+        <name type="S160_xt_xmap_abstract">dst_idxlist</name>
+        <name type="I52_xt_xmap_abstract">inter_comm</name>
+        <name type="I53_xt_xmap_abstract">intra_comm</name>
+        <name type="S161_xt_xmap_abstract">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S162_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S158_xt_xmap_abstract" ref="S162_xt_xmap_abstract"/>
+    <FbasicType type="S163_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S159_xt_xmap_abstract" intent="in" ref="S163_xt_xmap_abstract"/>
+    <FbasicType type="S164_xt_xmap_abstract" ref="S24_xt_xmap_abstract"/>
+    <FbasicType type="S160_xt_xmap_abstract" intent="in" ref="S164_xt_xmap_abstract"/>
+    <FbasicType type="I52_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="I53_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="S165_xt_xmap_abstract" ref="S17_xt_xmap_abstract"/>
+    <FbasicType type="S161_xt_xmap_abstract" intent="in" ref="S165_xt_xmap_abstract"/>
+    <FbasicType type="S166_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F29_xt_xmap_abstract" result_name="num" return_type="I54_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_get_num_destinations">
+      <params>
+        <name type="S167_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I54_xt_xmap_abstract" ref="I55_xt_xmap_abstract"/>
+    <FbasicType type="S168_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S169_xt_xmap_abstract" ref="S168_xt_xmap_abstract"/>
+    <FbasicType type="S167_xt_xmap_abstract" intent="in" is_value="true" ref="S169_xt_xmap_abstract"/>
+    <FbasicType type="I56_xt_xmap_abstract" ref="I55_xt_xmap_abstract"/>
+    <FfunctionType type="F30_xt_xmap_abstract" result_name="num" return_type="Fint" is_public="true">
+      <params>
+        <name type="S170_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S171_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S170_xt_xmap_abstract" intent="in" ref="S171_xt_xmap_abstract"/>
+    <FfunctionType type="F31_xt_xmap_abstract" return_type="Fint"/>
+    <FbasicType type="S172_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F32_xt_xmap_abstract" result_name="num" return_type="I57_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_get_num_sources">
+      <params>
+        <name type="S173_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I58_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I57_xt_xmap_abstract" ref="I58_xt_xmap_abstract"/>
+    <FbasicType type="S174_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S175_xt_xmap_abstract" ref="S174_xt_xmap_abstract"/>
+    <FbasicType type="S173_xt_xmap_abstract" intent="in" is_value="true" ref="S175_xt_xmap_abstract"/>
+    <FbasicType type="I59_xt_xmap_abstract" ref="I58_xt_xmap_abstract"/>
+    <FfunctionType type="F33_xt_xmap_abstract" result_name="num" return_type="Fint" is_public="true">
+      <params>
+        <name type="S176_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S177_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S176_xt_xmap_abstract" intent="in" ref="S177_xt_xmap_abstract"/>
+    <FfunctionType type="F34_xt_xmap_abstract" return_type="Fint"/>
+    <FbasicType type="S178_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F35_xt_xmap_abstract" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_xmap_get_destination_ranks">
+      <params>
+        <name type="S179_xt_xmap_abstract">xmap</name>
+        <name type="A2_xt_xmap_abstract">ranks</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S180_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S181_xt_xmap_abstract" ref="S180_xt_xmap_abstract"/>
+    <FbasicType type="S179_xt_xmap_abstract" intent="in" is_value="true" ref="S181_xt_xmap_abstract"/>
+    <FbasicType type="I60_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I61_xt_xmap_abstract" intent="out" ref="I60_xt_xmap_abstract"/>
+    <FbasicType type="A2_xt_xmap_abstract" intent="out" ref="I61_xt_xmap_abstract">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F36_xt_xmap_abstract" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S182_xt_xmap_abstract">xmap</name>
+        <name type="A3_xt_xmap_abstract">ranks</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S183_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S182_xt_xmap_abstract" intent="in" ref="S183_xt_xmap_abstract"/>
+    <FbasicType type="I62_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I63_xt_xmap_abstract" intent="out" ref="I62_xt_xmap_abstract"/>
+    <FbasicType type="A3_xt_xmap_abstract" intent="out" ref="I63_xt_xmap_abstract">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S184_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F37_xt_xmap_abstract" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_xmap_get_source_ranks">
+      <params>
+        <name type="S185_xt_xmap_abstract">xmap</name>
+        <name type="A4_xt_xmap_abstract">ranks</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S186_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S187_xt_xmap_abstract" ref="S186_xt_xmap_abstract"/>
+    <FbasicType type="S185_xt_xmap_abstract" intent="in" is_value="true" ref="S187_xt_xmap_abstract"/>
+    <FbasicType type="I64_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I65_xt_xmap_abstract" intent="out" ref="I64_xt_xmap_abstract"/>
+    <FbasicType type="A4_xt_xmap_abstract" intent="out" ref="I65_xt_xmap_abstract">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F38_xt_xmap_abstract" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S188_xt_xmap_abstract">xmap</name>
+        <name type="A5_xt_xmap_abstract">ranks</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S189_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S188_xt_xmap_abstract" intent="in" ref="S189_xt_xmap_abstract"/>
+    <FbasicType type="I66_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I67_xt_xmap_abstract" intent="out" ref="I66_xt_xmap_abstract"/>
+    <FbasicType type="A5_xt_xmap_abstract" intent="out" ref="I67_xt_xmap_abstract">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S190_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F39_xt_xmap_abstract" result_name="num" return_type="I68_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_get_max_src_pos">
+      <params>
+        <name type="S191_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I69_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I68_xt_xmap_abstract" ref="I69_xt_xmap_abstract"/>
+    <FbasicType type="S192_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S193_xt_xmap_abstract" ref="S192_xt_xmap_abstract"/>
+    <FbasicType type="S191_xt_xmap_abstract" intent="in" is_value="true" ref="S193_xt_xmap_abstract"/>
+    <FbasicType type="I70_xt_xmap_abstract" ref="I69_xt_xmap_abstract"/>
+    <FfunctionType type="F40_xt_xmap_abstract" result_name="num" return_type="Fint" is_public="true">
+      <params>
+        <name type="S194_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S195_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S194_xt_xmap_abstract" intent="in" ref="S195_xt_xmap_abstract"/>
+    <FfunctionType type="F41_xt_xmap_abstract" return_type="Fint"/>
+    <FbasicType type="S196_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F42_xt_xmap_abstract" result_name="num" return_type="I71_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_get_max_dst_pos">
+      <params>
+        <name type="S197_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I72_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I71_xt_xmap_abstract" ref="I72_xt_xmap_abstract"/>
+    <FbasicType type="S198_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S199_xt_xmap_abstract" ref="S198_xt_xmap_abstract"/>
+    <FbasicType type="S197_xt_xmap_abstract" intent="in" is_value="true" ref="S199_xt_xmap_abstract"/>
+    <FbasicType type="I73_xt_xmap_abstract" ref="I72_xt_xmap_abstract"/>
+    <FfunctionType type="F43_xt_xmap_abstract" result_name="num" return_type="Fint" is_public="true">
+      <params>
+        <name type="S200_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S201_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S200_xt_xmap_abstract" intent="in" ref="S201_xt_xmap_abstract"/>
+    <FfunctionType type="F44_xt_xmap_abstract" return_type="Fint"/>
+    <FbasicType type="S202_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F45_xt_xmap_abstract" result_name="xmap_reorder_ptr" return_type="S203_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_reorder">
+      <params>
+        <name type="S204_xt_xmap_abstract">xmap</name>
+        <name type="I74_xt_xmap_abstract">reorder_type</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S205_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S206_xt_xmap_abstract" ref="S205_xt_xmap_abstract"/>
+    <FbasicType type="S203_xt_xmap_abstract" ref="S206_xt_xmap_abstract"/>
+    <FbasicType type="S207_xt_xmap_abstract" ref="S205_xt_xmap_abstract"/>
+    <FbasicType type="S204_xt_xmap_abstract" intent="in" is_value="true" ref="S207_xt_xmap_abstract"/>
+    <FbasicType type="I75_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I74_xt_xmap_abstract" intent="in" is_value="true" ref="I75_xt_xmap_abstract"/>
+    <FbasicType type="S208_xt_xmap_abstract" ref="S206_xt_xmap_abstract"/>
+    <FfunctionType type="F46_xt_xmap_abstract" result_name="xmap_reorder" return_type="S209_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S210_xt_xmap_abstract">xmap</name>
+        <name type="I76_xt_xmap_abstract">reorder_type</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S211_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S209_xt_xmap_abstract" ref="S211_xt_xmap_abstract"/>
+    <FbasicType type="S212_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S210_xt_xmap_abstract" intent="in" ref="S212_xt_xmap_abstract"/>
+    <FbasicType type="I77_xt_xmap_abstract" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I78_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>kind</name>
+          <arguments>
+            <Var type="I77_xt_xmap_abstract" scope="local">xt_reorder_none</Var>
+          </arguments>
+        </functionCall>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I76_xt_xmap_abstract" intent="in" ref="I78_xt_xmap_abstract"/>
+    <FbasicType type="L3_xt_xmap_abstract" is_parameter="true" ref="Flogical"/>
+    <FbasicType type="I79_xt_xmap_abstract" is_parameter="true" ref="Fint"/>
+    <FfunctionType type="F47_xt_xmap_abstract" return_type="Fint"/>
+    <FfunctionType type="F48_xt_xmap_abstract" return_type="Fint"/>
+    <FfunctionType type="F49_xt_xmap_abstract" return_type="Fint"/>
+    <FfunctionType type="F50_xt_xmap_abstract" return_type="I80_xt_xmap_abstract"/>
+    <FbasicType type="I80_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F51_xt_xmap_abstract" return_type="I81_xt_xmap_abstract"/>
+    <FbasicType type="I81_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="A6_xt_xmap_abstract" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I82_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C9_xt_xmap_abstract" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">20</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C10_xt_xmap_abstract" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">13</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="S213_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FbasicType type="S214_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F52_xt_xmap_abstract" return_type="Fvoid">
+      <params>
+        <name type="I83_xt_xmap_abstract">n</name>
+        <name type="A7_xt_xmap_abstract">arg</name>
+        <name type="A8_xt_xmap_abstract">argc</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I83_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="I84_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="A7_xt_xmap_abstract" intent="in" ref="I84_xt_xmap_abstract">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I85_xt_xmap_abstract" is_allocatable="true" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I86_xt_xmap_abstract" intent="inout" is_allocatable="true" ref="I85_xt_xmap_abstract"/>
+    <FbasicType type="A8_xt_xmap_abstract" intent="inout" is_allocatable="true" ref="I86_xt_xmap_abstract">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F53_xt_xmap_abstract" return_type="I87_xt_xmap_abstract"/>
+    <FbasicType type="I87_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="A9_xt_xmap_abstract" intent="inout" is_allocatable="true" ref="I86_xt_xmap_abstract">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I83_xt_xmap_abstract" scope="local">n</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F54_xt_xmap_abstract" result_name="xmap_updated_ptr" return_type="S215_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_update_positions">
+      <params>
+        <name type="S216_xt_xmap_abstract">xmap</name>
+        <name type="S217_xt_xmap_abstract">src_positions</name>
+        <name type="S218_xt_xmap_abstract">dst_positions</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S219_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S220_xt_xmap_abstract" ref="S219_xt_xmap_abstract"/>
+    <FbasicType type="S215_xt_xmap_abstract" ref="S220_xt_xmap_abstract"/>
+    <FbasicType type="S221_xt_xmap_abstract" ref="S219_xt_xmap_abstract"/>
+    <FbasicType type="S216_xt_xmap_abstract" intent="in" is_value="true" ref="S221_xt_xmap_abstract"/>
+    <FbasicType type="S217_xt_xmap_abstract" intent="in" is_value="true" ref="S221_xt_xmap_abstract"/>
+    <FbasicType type="S218_xt_xmap_abstract" intent="in" is_value="true" ref="S221_xt_xmap_abstract"/>
+    <FbasicType type="S222_xt_xmap_abstract" ref="S220_xt_xmap_abstract"/>
+    <FfunctionType type="F55_xt_xmap_abstract" result_name="xmap_updated" return_type="S223_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S224_xt_xmap_abstract">xmap</name>
+        <name type="A10_xt_xmap_abstract">src_positions</name>
+        <name type="A11_xt_xmap_abstract">dst_positions</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S225_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S223_xt_xmap_abstract" ref="S225_xt_xmap_abstract"/>
+    <FbasicType type="S226_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S224_xt_xmap_abstract" intent="in" ref="S226_xt_xmap_abstract"/>
+    <FbasicType type="I88_xt_xmap_abstract" is_target="true" ref="Fint"/>
+    <FbasicType type="I89_xt_xmap_abstract" intent="in" is_target="true" ref="I88_xt_xmap_abstract"/>
+    <FbasicType type="A10_xt_xmap_abstract" intent="in" is_target="true" ref="I89_xt_xmap_abstract">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I90_xt_xmap_abstract" is_target="true" ref="Fint"/>
+    <FbasicType type="I91_xt_xmap_abstract" intent="in" is_target="true" ref="I90_xt_xmap_abstract"/>
+    <FbasicType type="A11_xt_xmap_abstract" intent="in" is_target="true" ref="I91_xt_xmap_abstract">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I92_xt_xmap_abstract" is_target="true" is_allocatable="true" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I93_xt_xmap_abstract" is_target="true" is_allocatable="true" ref="I92_xt_xmap_abstract"/>
+    <FbasicType type="A12_xt_xmap_abstract" is_target="true" is_allocatable="true" ref="I93_xt_xmap_abstract">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I94_xt_xmap_abstract" is_target="true" is_allocatable="true" ref="I92_xt_xmap_abstract"/>
+    <FbasicType type="A13_xt_xmap_abstract" is_target="true" is_allocatable="true" ref="I94_xt_xmap_abstract">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S227_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S228_xt_xmap_abstract" ref="S227_xt_xmap_abstract"/>
+    <FbasicType type="S229_xt_xmap_abstract" ref="S227_xt_xmap_abstract"/>
+    <FfunctionType type="F56_xt_xmap_abstract" return_type="Fvoid"/>
+    <FbasicType type="S230_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FbasicType type="S231_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F57_xt_xmap_abstract" result_name="xmap_spread" return_type="S232_xt_xmap_abstract" is_private="true">
+      <params>
+        <name type="S233_xt_xmap_abstract">xmap</name>
+        <name type="A14_xt_xmap_abstract">src_displacements</name>
+        <name type="A15_xt_xmap_abstract">dst_displacements</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S234_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S232_xt_xmap_abstract" ref="S234_xt_xmap_abstract"/>
+    <FbasicType type="S235_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S233_xt_xmap_abstract" intent="in" ref="S235_xt_xmap_abstract"/>
+    <FbasicType type="I95_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="A14_xt_xmap_abstract" intent="in" ref="I95_xt_xmap_abstract">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I96_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="A15_xt_xmap_abstract" intent="in" ref="I96_xt_xmap_abstract">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I97_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I17_xt_xmap_abstract" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I98_xt_xmap_abstract" ref="I97_xt_xmap_abstract"/>
+    <FfunctionType type="F58_xt_xmap_abstract" return_type="Fint"/>
+    <FfunctionType type="F59_xt_xmap_abstract" return_type="Fint"/>
+    <FfunctionType type="F60_xt_xmap_abstract" return_type="I99_xt_xmap_abstract"/>
+    <FbasicType type="I99_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I17_xt_xmap_abstract" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C11_xt_xmap_abstract" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">29</FintConstant>
+      </len>
+    </FbasicType>
+    <FfunctionType type="F61_xt_xmap_abstract" return_type="V1_xt_xmap_abstract" is_public="true"/>
+    <FbasicType type="V1_xt_xmap_abstract" ref="FnumericAll"/>
+    <FfunctionType type="F62_xt_xmap_abstract" result_name="xmap_spread" return_type="S236_xt_xmap_abstract" is_private="true">
+      <params>
+        <name type="S237_xt_xmap_abstract">xmap</name>
+        <name type="I100_xt_xmap_abstract">num_repetitions</name>
+        <name type="A16_xt_xmap_abstract">src_displacements</name>
+        <name type="A17_xt_xmap_abstract">dst_displacements</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S238_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S236_xt_xmap_abstract" ref="S238_xt_xmap_abstract"/>
+    <FbasicType type="S239_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S237_xt_xmap_abstract" intent="in" ref="S239_xt_xmap_abstract"/>
+    <FbasicType type="I101_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I15_xt_xmap_abstract" scope="local">i2</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I100_xt_xmap_abstract" intent="in" ref="I101_xt_xmap_abstract"/>
+    <FbasicType type="I102_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="A16_xt_xmap_abstract" intent="in" ref="I102_xt_xmap_abstract">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I100_xt_xmap_abstract" scope="local">num_repetitions</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I103_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="A17_xt_xmap_abstract" intent="in" ref="I103_xt_xmap_abstract">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I100_xt_xmap_abstract" scope="local">num_repetitions</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I104_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I17_xt_xmap_abstract" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I105_xt_xmap_abstract" ref="I104_xt_xmap_abstract"/>
+    <FfunctionType type="F63_xt_xmap_abstract" return_type="I106_xt_xmap_abstract"/>
+    <FbasicType type="I106_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I17_xt_xmap_abstract" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F64_xt_xmap_abstract" result_name="xmap_spread" return_type="S240_xt_xmap_abstract" is_private="true">
+      <params>
+        <name type="S241_xt_xmap_abstract">xmap</name>
+        <name type="I107_xt_xmap_abstract">num_repetitions</name>
+        <name type="A18_xt_xmap_abstract">src_displacements</name>
+        <name type="A19_xt_xmap_abstract">dst_displacements</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S242_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S240_xt_xmap_abstract" ref="S242_xt_xmap_abstract"/>
+    <FbasicType type="S243_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S241_xt_xmap_abstract" intent="in" ref="S243_xt_xmap_abstract"/>
+    <FbasicType type="I108_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I16_xt_xmap_abstract" scope="local">i4</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I107_xt_xmap_abstract" intent="in" ref="I108_xt_xmap_abstract"/>
+    <FbasicType type="I109_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="A18_xt_xmap_abstract" intent="in" ref="I109_xt_xmap_abstract">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I107_xt_xmap_abstract" scope="local">num_repetitions</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I110_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="A19_xt_xmap_abstract" intent="in" ref="I110_xt_xmap_abstract">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I107_xt_xmap_abstract" scope="local">num_repetitions</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I111_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I17_xt_xmap_abstract" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I112_xt_xmap_abstract" ref="I111_xt_xmap_abstract"/>
+    <FfunctionType type="F65_xt_xmap_abstract" return_type="I113_xt_xmap_abstract"/>
+    <FbasicType type="I113_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I17_xt_xmap_abstract" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F66_xt_xmap_abstract" return_type="Fvoid">
+      <params>
+        <name type="A20_xt_xmap_abstract">arg</name>
+        <name type="A21_xt_xmap_abstract">argc</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I114_xt_xmap_abstract" intent="in" ref="Fint"/>
+    <FbasicType type="A20_xt_xmap_abstract" intent="in" ref="I114_xt_xmap_abstract">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I115_xt_xmap_abstract" is_allocatable="true" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I116_xt_xmap_abstract" intent="inout" is_allocatable="true" ref="I115_xt_xmap_abstract"/>
+    <FbasicType type="A21_xt_xmap_abstract" intent="inout" is_allocatable="true" ref="I116_xt_xmap_abstract">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I117_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I17_xt_xmap_abstract" scope="local">i8</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I118_xt_xmap_abstract" intent="in" ref="I117_xt_xmap_abstract"/>
+    <FbasicType type="A22_xt_xmap_abstract" intent="inout" is_allocatable="true" ref="I116_xt_xmap_abstract">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="Fint" scope="local">n</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I119_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F67_xt_xmap_abstract" result_name="xmap_spread_ptr" return_type="S244_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_spread">
+      <params>
+        <name type="S245_xt_xmap_abstract">xmap</name>
+        <name type="I120_xt_xmap_abstract">num_repetitions</name>
+        <name type="S246_xt_xmap_abstract">src_displacements</name>
+        <name type="S247_xt_xmap_abstract">dst_displacements</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S248_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S249_xt_xmap_abstract" ref="S248_xt_xmap_abstract"/>
+    <FbasicType type="S244_xt_xmap_abstract" ref="S249_xt_xmap_abstract"/>
+    <FbasicType type="S250_xt_xmap_abstract" ref="S248_xt_xmap_abstract"/>
+    <FbasicType type="S245_xt_xmap_abstract" intent="in" is_value="true" ref="S250_xt_xmap_abstract"/>
+    <FbasicType type="I121_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I120_xt_xmap_abstract" intent="in" is_value="true" ref="I121_xt_xmap_abstract"/>
+    <FbasicType type="S246_xt_xmap_abstract" intent="in" is_value="true" ref="S250_xt_xmap_abstract"/>
+    <FbasicType type="S247_xt_xmap_abstract" intent="in" is_value="true" ref="S250_xt_xmap_abstract"/>
+    <FbasicType type="S251_xt_xmap_abstract" ref="S249_xt_xmap_abstract"/>
+    <FfunctionType type="F68_xt_xmap_abstract" result_name="xmap_spread" return_type="S252_xt_xmap_abstract" is_private="true">
+      <params>
+        <name type="S253_xt_xmap_abstract">xmap</name>
+        <name type="I118_xt_xmap_abstract">num_repetitions</name>
+        <name type="A23_xt_xmap_abstract">src_displacements</name>
+        <name type="A24_xt_xmap_abstract">dst_displacements</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S254_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S252_xt_xmap_abstract" ref="S254_xt_xmap_abstract"/>
+    <FbasicType type="S255_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S253_xt_xmap_abstract" intent="in" ref="S255_xt_xmap_abstract"/>
+    <FbasicType type="I122_xt_xmap_abstract" is_target="true" ref="Fint"/>
+    <FbasicType type="I123_xt_xmap_abstract" intent="in" is_target="true" ref="I122_xt_xmap_abstract"/>
+    <FbasicType type="A23_xt_xmap_abstract" intent="in" is_target="true" ref="I123_xt_xmap_abstract">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I118_xt_xmap_abstract" scope="local">num_repetitions</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I124_xt_xmap_abstract" is_target="true" ref="Fint"/>
+    <FbasicType type="I125_xt_xmap_abstract" intent="in" is_target="true" ref="I124_xt_xmap_abstract"/>
+    <FbasicType type="A24_xt_xmap_abstract" intent="in" is_target="true" ref="I125_xt_xmap_abstract">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I118_xt_xmap_abstract" scope="local">num_repetitions</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I126_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I127_xt_xmap_abstract" ref="I126_xt_xmap_abstract"/>
+    <FbasicType type="I128_xt_xmap_abstract" is_target="true" is_allocatable="true" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I129_xt_xmap_abstract" is_target="true" is_allocatable="true" ref="I128_xt_xmap_abstract"/>
+    <FbasicType type="A25_xt_xmap_abstract" is_target="true" is_allocatable="true" ref="I129_xt_xmap_abstract">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I130_xt_xmap_abstract" is_target="true" is_allocatable="true" ref="I128_xt_xmap_abstract"/>
+    <FbasicType type="A26_xt_xmap_abstract" is_target="true" is_allocatable="true" ref="I130_xt_xmap_abstract">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S256_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S257_xt_xmap_abstract" ref="S256_xt_xmap_abstract"/>
+    <FbasicType type="S258_xt_xmap_abstract" ref="S256_xt_xmap_abstract"/>
+    <FfunctionType type="F69_xt_xmap_abstract" return_type="I131_xt_xmap_abstract"/>
+    <FbasicType type="I131_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F70_xt_xmap_abstract" return_type="I119_xt_xmap_abstract"/>
+    <FfunctionType type="F71_xt_xmap_abstract" return_type="I119_xt_xmap_abstract"/>
+    <FfunctionType type="F72_xt_xmap_abstract" return_type="Fvoid"/>
+    <FbasicType type="I132_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I133_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C12_xt_xmap_abstract" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">25</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="I134_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S259_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FbasicType type="S260_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F73_xt_xmap_abstract" result_name="cptr" return_type="S261_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_get_out_iterator">
+      <params>
+        <name type="S262_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S263_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S264_xt_xmap_abstract" ref="S263_xt_xmap_abstract"/>
+    <FbasicType type="S261_xt_xmap_abstract" ref="S264_xt_xmap_abstract"/>
+    <FbasicType type="S265_xt_xmap_abstract" ref="S263_xt_xmap_abstract"/>
+    <FbasicType type="S262_xt_xmap_abstract" intent="in" is_value="true" ref="S265_xt_xmap_abstract"/>
+    <FbasicType type="S266_xt_xmap_abstract" ref="S264_xt_xmap_abstract"/>
+    <FfunctionType type="F74_xt_xmap_abstract" result_name="iter" return_type="S267_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S268_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FstructType type="S269_xt_xmap_abstract" is_public="true" is_internal_private="true" bind="C">
+      <symbols>
+        <id type="S270_xt_xmap_abstract">
+          <name>cptr</name>
+          <value>
+            <Var type="S3_xt_xmap_abstract" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="S271_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S270_xt_xmap_abstract" ref="S271_xt_xmap_abstract"/>
+    <FbasicType type="S272_xt_xmap_abstract" ref="S269_xt_xmap_abstract"/>
+    <FbasicType type="S267_xt_xmap_abstract" ref="S272_xt_xmap_abstract"/>
+    <FbasicType type="S273_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S268_xt_xmap_abstract" intent="in" ref="S273_xt_xmap_abstract"/>
+    <FbasicType type="S274_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FbasicType type="S275_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F75_xt_xmap_abstract" result_name="cptr" return_type="S276_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_get_in_iterator">
+      <params>
+        <name type="S277_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S278_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S279_xt_xmap_abstract" ref="S278_xt_xmap_abstract"/>
+    <FbasicType type="S276_xt_xmap_abstract" ref="S279_xt_xmap_abstract"/>
+    <FbasicType type="S280_xt_xmap_abstract" ref="S278_xt_xmap_abstract"/>
+    <FbasicType type="S277_xt_xmap_abstract" intent="in" is_value="true" ref="S280_xt_xmap_abstract"/>
+    <FbasicType type="S281_xt_xmap_abstract" ref="S279_xt_xmap_abstract"/>
+    <FfunctionType type="F76_xt_xmap_abstract" result_name="iter" return_type="S282_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S283_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S284_xt_xmap_abstract" ref="S269_xt_xmap_abstract"/>
+    <FbasicType type="S282_xt_xmap_abstract" ref="S284_xt_xmap_abstract"/>
+    <FbasicType type="S285_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S283_xt_xmap_abstract" intent="in" ref="S285_xt_xmap_abstract"/>
+    <FbasicType type="S286_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FbasicType type="S287_xt_xmap_abstract" ref="S34_xt_xmap_abstract"/>
+    <FfunctionType type="F77_xt_xmap_abstract" result_name="p" return_type="Flogical" is_private="true">
+      <params>
+        <name type="S288_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S289_xt_xmap_abstract" ref="S269_xt_xmap_abstract"/>
+    <FbasicType type="S288_xt_xmap_abstract" intent="in" ref="S289_xt_xmap_abstract"/>
+    <FbasicType type="S290_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FfunctionType type="F78_xt_xmap_abstract" result_name="avail" return_type="I135_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_iterator_next">
+      <params>
+        <name type="S291_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I136_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I135_xt_xmap_abstract" ref="I136_xt_xmap_abstract"/>
+    <FbasicType type="S292_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S293_xt_xmap_abstract" ref="S292_xt_xmap_abstract"/>
+    <FbasicType type="S291_xt_xmap_abstract" intent="in" is_value="true" ref="S293_xt_xmap_abstract"/>
+    <FbasicType type="I137_xt_xmap_abstract" ref="I136_xt_xmap_abstract"/>
+    <FfunctionType type="F79_xt_xmap_abstract" result_name="avail" return_type="Flogical" is_public="true">
+      <params>
+        <name type="S294_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S295_xt_xmap_abstract" ref="S269_xt_xmap_abstract"/>
+    <FbasicType type="S294_xt_xmap_abstract" intent="inout" ref="S295_xt_xmap_abstract"/>
+    <FbasicType type="S296_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FfunctionType type="F80_xt_xmap_abstract" result_name="rank" return_type="I138_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_iterator_get_rank">
+      <params>
+        <name type="S297_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I139_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I138_xt_xmap_abstract" ref="I139_xt_xmap_abstract"/>
+    <FbasicType type="S298_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S299_xt_xmap_abstract" ref="S298_xt_xmap_abstract"/>
+    <FbasicType type="S297_xt_xmap_abstract" intent="in" is_value="true" ref="S299_xt_xmap_abstract"/>
+    <FbasicType type="I140_xt_xmap_abstract" ref="I139_xt_xmap_abstract"/>
+    <FfunctionType type="F81_xt_xmap_abstract" result_name="rank" return_type="Fint" is_public="true">
+      <params>
+        <name type="S300_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S301_xt_xmap_abstract" ref="S269_xt_xmap_abstract"/>
+    <FbasicType type="S300_xt_xmap_abstract" intent="in" ref="S301_xt_xmap_abstract"/>
+    <FfunctionType type="F82_xt_xmap_abstract" return_type="Fint"/>
+    <FbasicType type="S302_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FfunctionType type="F83_xt_xmap_abstract" result_name="transfer_pos" return_type="S303_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_iterator_get_transfer_pos">
+      <params>
+        <name type="S304_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S305_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S306_xt_xmap_abstract" ref="S305_xt_xmap_abstract"/>
+    <FbasicType type="S303_xt_xmap_abstract" ref="S306_xt_xmap_abstract"/>
+    <FbasicType type="S307_xt_xmap_abstract" ref="S305_xt_xmap_abstract"/>
+    <FbasicType type="S304_xt_xmap_abstract" intent="in" is_value="true" ref="S307_xt_xmap_abstract"/>
+    <FbasicType type="S308_xt_xmap_abstract" ref="S306_xt_xmap_abstract"/>
+    <FfunctionType type="F84_xt_xmap_abstract" result_name="transfer_pos" return_type="A27_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S309_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I141_xt_xmap_abstract" is_pointer="true" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I142_xt_xmap_abstract" is_pointer="true" ref="I141_xt_xmap_abstract"/>
+    <FbasicType type="A27_xt_xmap_abstract" is_pointer="true" ref="I142_xt_xmap_abstract">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S310_xt_xmap_abstract" ref="S269_xt_xmap_abstract"/>
+    <FbasicType type="S309_xt_xmap_abstract" intent="in" ref="S310_xt_xmap_abstract"/>
+    <FbasicType type="A28_xt_xmap_abstract" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S311_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S312_xt_xmap_abstract" ref="S311_xt_xmap_abstract"/>
+    <FfunctionType type="F85_xt_xmap_abstract" return_type="Fint"/>
+    <FbasicType type="I143_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I144_xt_xmap_abstract" ref="I143_xt_xmap_abstract"/>
+    <FfunctionType type="F86_xt_xmap_abstract" result_name="num" return_type="I144_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_iterator_get_num_transfer_pos">
+      <params>
+        <name type="S313_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S314_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S315_xt_xmap_abstract" ref="S314_xt_xmap_abstract"/>
+    <FbasicType type="S313_xt_xmap_abstract" intent="in" is_value="true" ref="S315_xt_xmap_abstract"/>
+    <FbasicType type="S316_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FbasicType type="S317_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FfunctionType type="F87_xt_xmap_abstract" result_name="num" return_type="Fint" is_public="true">
+      <params>
+        <name type="S318_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S319_xt_xmap_abstract" ref="S269_xt_xmap_abstract"/>
+    <FbasicType type="S318_xt_xmap_abstract" intent="in" ref="S319_xt_xmap_abstract"/>
+    <FfunctionType type="F88_xt_xmap_abstract" return_type="Fint"/>
+    <FbasicType type="S320_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FfunctionType type="F89_xt_xmap_abstract" result_name="transfer_pos_ext" return_type="S321_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_iterator_get_transfer_pos_ext">
+      <params>
+        <name type="S322_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S323_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S324_xt_xmap_abstract" ref="S323_xt_xmap_abstract"/>
+    <FbasicType type="S321_xt_xmap_abstract" ref="S324_xt_xmap_abstract"/>
+    <FbasicType type="S325_xt_xmap_abstract" ref="S323_xt_xmap_abstract"/>
+    <FbasicType type="S322_xt_xmap_abstract" intent="in" is_value="true" ref="S325_xt_xmap_abstract"/>
+    <FbasicType type="S326_xt_xmap_abstract" ref="S324_xt_xmap_abstract"/>
+    <FfunctionType type="F90_xt_xmap_abstract" result_name="transfer_pos_ext" return_type="A29_xt_xmap_abstract" is_public="true">
+      <params>
+        <name type="S327_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S328_xt_xmap_abstract" is_pointer="true" ref="S16_xt_xmap_abstract"/>
+    <FbasicType type="S329_xt_xmap_abstract" is_pointer="true" ref="S328_xt_xmap_abstract"/>
+    <FbasicType type="A29_xt_xmap_abstract" is_pointer="true" ref="S329_xt_xmap_abstract">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S330_xt_xmap_abstract" ref="S269_xt_xmap_abstract"/>
+    <FbasicType type="S327_xt_xmap_abstract" intent="in" ref="S330_xt_xmap_abstract"/>
+    <FbasicType type="A30_xt_xmap_abstract" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S331_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S332_xt_xmap_abstract" ref="S331_xt_xmap_abstract"/>
+    <FfunctionType type="F91_xt_xmap_abstract" return_type="Fint"/>
+    <FbasicType type="I145_xt_xmap_abstract" ref="Fint">
+      <kind>
+        <Var type="I2_xt_xmap_abstract" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I146_xt_xmap_abstract" ref="I145_xt_xmap_abstract"/>
+    <FfunctionType type="F92_xt_xmap_abstract" result_name="num" return_type="I146_xt_xmap_abstract" is_private="true" bind="C" bind_name="xt_xmap_iterator_get_num_transfer_pos_ext">
+      <params>
+        <name type="S333_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S334_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S335_xt_xmap_abstract" ref="S334_xt_xmap_abstract"/>
+    <FbasicType type="S333_xt_xmap_abstract" intent="in" is_value="true" ref="S335_xt_xmap_abstract"/>
+    <FbasicType type="S336_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FbasicType type="S337_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FfunctionType type="F93_xt_xmap_abstract" result_name="num" return_type="Fint" is_public="true">
+      <params>
+        <name type="S338_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S339_xt_xmap_abstract" ref="S269_xt_xmap_abstract"/>
+    <FbasicType type="S338_xt_xmap_abstract" intent="in" ref="S339_xt_xmap_abstract"/>
+    <FfunctionType type="F94_xt_xmap_abstract" return_type="Fint"/>
+    <FbasicType type="S340_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FfunctionType type="F95_xt_xmap_abstract" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_xmap_iterator_delete">
+      <params>
+        <name type="S341_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S342_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S343_xt_xmap_abstract" ref="S342_xt_xmap_abstract"/>
+    <FbasicType type="S341_xt_xmap_abstract" intent="in" is_value="true" ref="S343_xt_xmap_abstract"/>
+    <FfunctionType type="F96_xt_xmap_abstract" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S344_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S345_xt_xmap_abstract" ref="S269_xt_xmap_abstract"/>
+    <FbasicType type="S344_xt_xmap_abstract" intent="inout" ref="S345_xt_xmap_abstract"/>
+    <FbasicType type="S346_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FbasicType type="S347_xt_xmap_abstract" ref="S270_xt_xmap_abstract"/>
+    <FfunctionType type="F97_xt_xmap_abstract" result_name="p" return_type="S348_xt_xmap_abstract" is_public="true" bind="C" bind_name="xt_xmap_f2c">
+      <params>
+        <name type="S349_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S350_xt_xmap_abstract" ref="S1_xt_xmap_abstract"/>
+    <FbasicType type="S351_xt_xmap_abstract" ref="S350_xt_xmap_abstract"/>
+    <FbasicType type="S348_xt_xmap_abstract" ref="S351_xt_xmap_abstract"/>
+    <FbasicType type="S352_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S353_xt_xmap_abstract" ref="S352_xt_xmap_abstract"/>
+    <FbasicType type="S349_xt_xmap_abstract" intent="in" ref="S353_xt_xmap_abstract"/>
+    <FbasicType type="S354_xt_xmap_abstract" ref="S351_xt_xmap_abstract"/>
+    <FfunctionType type="F98_xt_xmap_abstract" return_type="V2_xt_xmap_abstract" is_public="true"/>
+    <FbasicType type="V2_xt_xmap_abstract" ref="FnumericAll"/>
+    <FfunctionType type="F99_xt_xmap_abstract" result_name="p" return_type="Flogical" is_private="true">
+      <params>
+        <name type="S355_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S356_xt_xmap_abstract" ref="S33_xt_xmap_abstract"/>
+    <FbasicType type="S355_xt_xmap_abstract" intent="in" ref="S356_xt_xmap_abstract"/>
+    <FbasicType type="I147_xt_xmap_abstract" ref="I143_xt_xmap_abstract"/>
+    <FbasicType type="I148_xt_xmap_abstract" ref="I145_xt_xmap_abstract"/>
+    <FfunctionType type="F100_xt_xmap_abstract" return_type="Fvoid" is_public="true"/>
+    <FbasicType type="I149_xt_xmap_abstract" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I150_xt_xmap_abstract" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I151_xt_xmap_abstract" is_public="true" is_parameter="true" ref="Fint"/>
+    <FfunctionType type="F101_xt_xmap_abstract" result_name="p" return_type="Flogical">
+      <params>
+        <name type="S355_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F102_xt_xmap_abstract" result_name="p" return_type="Flogical">
+      <params>
+        <name type="S288_xt_xmap_abstract">iter</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F103_xt_xmap_abstract" return_type="Fvoid">
+      <params>
+        <name type="A1_xt_xmap_abstract">xmaps</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F104_xt_xmap_abstract" return_type="Fvoid">
+      <params>
+        <name type="S51_xt_xmap_abstract">xmap</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F105_xt_xmap_abstract" result_name="xmap_spread" return_type="S252_xt_xmap_abstract">
+      <params>
+        <name type="S253_xt_xmap_abstract">xmap</name>
+        <name type="I118_xt_xmap_abstract">num_repetitions</name>
+        <name type="A23_xt_xmap_abstract">src_displacements</name>
+        <name type="A24_xt_xmap_abstract">dst_displacements</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F106_xt_xmap_abstract" result_name="xmap_spread" return_type="S240_xt_xmap_abstract">
+      <params>
+        <name type="S241_xt_xmap_abstract">xmap</name>
+        <name type="I107_xt_xmap_abstract">num_repetitions</name>
+        <name type="A18_xt_xmap_abstract">src_displacements</name>
+        <name type="A19_xt_xmap_abstract">dst_displacements</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F107_xt_xmap_abstract" result_name="xmap_spread" return_type="S232_xt_xmap_abstract">
+      <params>
+        <name type="S233_xt_xmap_abstract">xmap</name>
+        <name type="A14_xt_xmap_abstract">src_displacements</name>
+        <name type="A15_xt_xmap_abstract">dst_displacements</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F108_xt_xmap_abstract" result_name="xmap_spread" return_type="S236_xt_xmap_abstract">
+      <params>
+        <name type="S237_xt_xmap_abstract">xmap</name>
+        <name type="I100_xt_xmap_abstract">num_repetitions</name>
+        <name type="A16_xt_xmap_abstract">src_displacements</name>
+        <name type="A17_xt_xmap_abstract">dst_displacements</name>
+      </params>
+    </FfunctionType>
+  </typeTable>
+  <identifiers>
+    <id type="I2_xt_xmap_abstract" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="S1_xt_xmap_abstract" imported_id="S1_iso_c_binding" sclass="ftype_name" original_name="c_ptr" declared_in="iso_c_binding">
+      <name>c_ptr</name>
+    </id>
+    <id type="S3_xt_xmap_abstract" imported_id="S4_iso_c_binding" sclass="flocal" original_name="c_null_ptr" declared_in="iso_c_binding">
+      <name>c_null_ptr</name>
+    </id>
+    <id type="F1_xt_xmap_abstract" sclass="ffunc" original_name="c_associated" declared_in="iso_c_binding">
+      <name>c_associated</name>
+    </id>
+    <id type="F4_xt_xmap_abstract" sclass="ffunc" original_name="c_f_pointer" declared_in="iso_c_binding">
+      <name>c_f_pointer</name>
+    </id>
+    <id type="F6_xt_xmap_abstract" sclass="ffunc" original_name="c_loc" declared_in="iso_c_binding">
+      <name>c_loc</name>
+    </id>
+    <id type="I12_xt_xmap_abstract" sclass="flocal" original_name="xt_mpi_fint_kind" declared_in="xt_mpi">
+      <name>xt_mpi_fint_kind</name>
+    </id>
+    <id type="I15_xt_xmap_abstract" sclass="flocal" original_name="i2" declared_in="xt_core">
+      <name>i2</name>
+    </id>
+    <id type="I16_xt_xmap_abstract" sclass="flocal" original_name="i4" declared_in="xt_core">
+      <name>i4</name>
+    </id>
+    <id type="I17_xt_xmap_abstract" sclass="flocal" original_name="i8" declared_in="xt_core">
+      <name>i8</name>
+    </id>
+    <id type="F7_xt_xmap_abstract" sclass="ffunc" original_name="xt_abort" declared_in="xt_core">
+      <name>xt_abort</name>
+    </id>
+    <id type="S16_xt_xmap_abstract" imported_id="S6_xt_core" sclass="ftype_name" original_name="xt_pos_ext" declared_in="xt_core">
+      <name>xt_pos_ext</name>
+    </id>
+    <id type="S17_xt_xmap_abstract" imported_id="S4_xt_config_f" sclass="ftype_name" original_name="xt_config" declared_in="xt_config_f">
+      <name>xt_config</name>
+    </id>
+    <id type="S24_xt_xmap_abstract" imported_id="S23_xt_idxlist_abstract" sclass="ftype_name" original_name="xt_idxlist" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist</name>
+    </id>
+    <id type="F10_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_c2f" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_c2f</name>
+    </id>
+    <id type="F97_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_f2c" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_f2c</name>
+    </id>
+    <id type="F98_xt_xmap_abstract" sclass="ffunc" original_name="xt_is_null" declared_in="xt_xmap_abstract">
+      <name>xt_is_null</name>
+    </id>
+    <id type="F12_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_copy" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_copy</name>
+    </id>
+    <id type="F100_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_delete" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_delete</name>
+    </id>
+    <id type="F30_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_get_num_destinations" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_num_destinations</name>
+    </id>
+    <id type="F33_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_get_num_sources" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_num_sources</name>
+    </id>
+    <id type="F36_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_get_destination_ranks" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_destination_ranks</name>
+    </id>
+    <id type="F40_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_get_max_src_pos" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_max_src_pos</name>
+    </id>
+    <id type="F43_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_get_max_dst_pos" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_max_dst_pos</name>
+    </id>
+    <id type="F38_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_get_source_ranks" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_source_ranks</name>
+    </id>
+    <id type="F46_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_reorder" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_reorder</name>
+    </id>
+    <id type="I149_xt_xmap_abstract" sclass="flocal" original_name="xt_reorder_type_kind" declared_in="xt_xmap_abstract">
+      <name>xt_reorder_type_kind</name>
+    </id>
+    <id type="I77_xt_xmap_abstract" sclass="flocal" original_name="xt_reorder_none" declared_in="xt_xmap_abstract">
+      <name>xt_reorder_none</name>
+    </id>
+    <id type="I150_xt_xmap_abstract" sclass="flocal" original_name="xt_reorder_send_up" declared_in="xt_xmap_abstract">
+      <name>xt_reorder_send_up</name>
+    </id>
+    <id type="I151_xt_xmap_abstract" sclass="flocal" original_name="xt_reorder_recv_up" declared_in="xt_xmap_abstract">
+      <name>xt_reorder_recv_up</name>
+    </id>
+    <id type="F55_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_update_positions" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_update_positions</name>
+    </id>
+    <id type="F61_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_spread" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_spread</name>
+    </id>
+    <id type="F18_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_all2all_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_all2all_new</name>
+    </id>
+    <id type="F20_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_all2all_custom_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_all2all_custom_new</name>
+    </id>
+    <id type="F22_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_dist_dir_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_dist_dir_new</name>
+    </id>
+    <id type="F24_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_dist_dir_custom_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_dist_dir_custom_new</name>
+    </id>
+    <id type="F26_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_dist_dir_intercomm_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_dist_dir_intercomm_new</name>
+    </id>
+    <id type="F28_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_dist_dir_intercomm_custom_new" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_dist_dir_intercomm_custom_new</name>
+    </id>
+    <id type="F76_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_get_in_iterator" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_in_iterator</name>
+    </id>
+    <id type="F74_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_get_out_iterator" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_get_out_iterator</name>
+    </id>
+    <id type="F79_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_iterator_next" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_next</name>
+    </id>
+    <id type="F81_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_iterator_get_rank" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_get_rank</name>
+    </id>
+    <id type="F84_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_iterator_get_transfer_pos" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_get_transfer_pos</name>
+    </id>
+    <id type="F90_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_iterator_get_transfer_pos_ext" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_get_transfer_pos_ext</name>
+    </id>
+    <id type="F87_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_iterator_get_num_transfer_pos" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_get_num_transfer_pos</name>
+    </id>
+    <id type="F93_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_iterator_get_num_transfer_pos_ext" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_get_num_transfer_pos_ext</name>
+    </id>
+    <id type="F96_xt_xmap_abstract" sclass="ffunc" original_name="xt_xmap_iterator_delete" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iterator_delete</name>
+    </id>
+    <id type="S33_xt_xmap_abstract" sclass="ftype_name" original_name="xt_xmap" declared_in="xt_xmap_abstract">
+      <name>xt_xmap</name>
+    </id>
+    <id type="S269_xt_xmap_abstract" sclass="ftype_name" original_name="xt_xmap_iter" declared_in="xt_xmap_abstract">
+      <name>xt_xmap_iter</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I2_xt_xmap_abstract">c_int</name>
+    </varDecl>
+    <varDecl>
+      <name type="S3_xt_xmap_abstract" imported_id="S4_iso_c_binding">c_null_ptr</name>
+    </varDecl>
+    <varDecl>
+      <name type="I12_xt_xmap_abstract">xt_mpi_fint_kind</name>
+      <value>
+        <Var type="I14_xt_xmap_abstract" scope="local">c_int</Var>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I15_xt_xmap_abstract">i2</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>selected_int_kind</name>
+          <arguments>
+            <FintConstant type="Fint">4</FintConstant>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I16_xt_xmap_abstract">i4</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>selected_int_kind</name>
+          <arguments>
+            <FintConstant type="Fint">9</FintConstant>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I17_xt_xmap_abstract">i8</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>selected_int_kind</name>
+          <arguments>
+            <FintConstant type="Fint">14</FintConstant>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl lineno="97" file="xt_xmap_f.f90">
+      <name type="I149_xt_xmap_abstract">xt_reorder_type_kind</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>kind</name>
+          <arguments>
+            <Var type="I77_xt_xmap_abstract" scope="local">xt_reorder_none</Var>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I77_xt_xmap_abstract">xt_reorder_none</name>
+    </varDecl>
+    <varDecl>
+      <name type="I150_xt_xmap_abstract">xt_reorder_send_up</name>
+    </varDecl>
+    <varDecl>
+      <name type="I151_xt_xmap_abstract">xt_reorder_recv_up</name>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="xt_is_null" lineno="122" file="xt_xmap_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="123" file="xt_xmap_f.f90">
+        <name type="F101_xt_xmap_abstract">xt_xmap_is_null</name>
+        <name type="F102_xt_xmap_abstract">xt_xmap_iterator_is_null</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="124" file="xt_xmap_f.f90">
+        <name type="F101_xt_xmap_abstract">xt_xmap_is_null</name>
+        <name type="F102_xt_xmap_abstract">xt_xmap_iterator_is_null</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_xmap_delete" lineno="117" file="xt_xmap_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="118" file="xt_xmap_f.f90">
+        <name type="F103_xt_xmap_abstract">xt_xmap_delete_a1d</name>
+        <name type="F104_xt_xmap_abstract">xt_xmap_delete_1</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="119" file="xt_xmap_f.f90">
+        <name type="F103_xt_xmap_abstract">xt_xmap_delete_a1d</name>
+        <name type="F104_xt_xmap_abstract">xt_xmap_delete_1</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_xmap_spread" lineno="143" file="xt_xmap_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="144" file="xt_xmap_f.f90">
+        <name type="F105_xt_xmap_abstract">xt_xmap_spread_i8_a1d</name>
+        <name type="F106_xt_xmap_abstract">xt_xmap_spread_i4_a1d</name>
+        <name type="F107_xt_xmap_abstract">xt_xmap_spread_a1d</name>
+        <name type="F108_xt_xmap_abstract">xt_xmap_spread_i2_a1d</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="145" file="xt_xmap_f.f90">
+        <name type="F105_xt_xmap_abstract">xt_xmap_spread_i8_a1d</name>
+        <name type="F106_xt_xmap_abstract">xt_xmap_spread_i4_a1d</name>
+        <name type="F107_xt_xmap_abstract">xt_xmap_spread_a1d</name>
+        <name type="F108_xt_xmap_abstract">xt_xmap_spread_i2_a1d</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="146" file="xt_xmap_f.f90">
+        <name type="F105_xt_xmap_abstract">xt_xmap_spread_i8_a1d</name>
+        <name type="F106_xt_xmap_abstract">xt_xmap_spread_i4_a1d</name>
+        <name type="F107_xt_xmap_abstract">xt_xmap_spread_a1d</name>
+        <name type="F108_xt_xmap_abstract">xt_xmap_spread_i2_a1d</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="147" file="xt_xmap_f.f90">
+        <name type="F105_xt_xmap_abstract">xt_xmap_spread_i8_a1d</name>
+        <name type="F106_xt_xmap_abstract">xt_xmap_spread_i4_a1d</name>
+        <name type="F107_xt_xmap_abstract">xt_xmap_spread_a1d</name>
+        <name type="F108_xt_xmap_abstract">xt_xmap_spread_i2_a1d</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

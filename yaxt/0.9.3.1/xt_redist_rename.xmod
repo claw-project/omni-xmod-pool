@@ -1,0 +1,276 @@
+<OmniFortranModule version="1.0">
+  <name>xt_redist_rename</name>
+  <depends>
+    <name>xt_redist_base</name>
+  </depends>
+  <typeTable>
+    <FfunctionType type="F1_xt_redist_rename" result_name="res" return_type="S1_xt_redist_rename">
+      <params>
+        <name type="S2_xt_redist_rename">xmap</name>
+        <name type="I1_xt_redist_rename">datatype</name>
+      </params>
+    </FfunctionType>
+    <FstructType type="S3_xt_redist_rename" is_internal_private="true" bind="C">
+      <symbols>
+        <id type="S4_xt_redist_rename">
+          <name>cptr</name>
+          <value>
+            <Var type="S5_xt_redist_rename" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FstructType type="S6_xt_redist_rename" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I2_xt_redist_rename">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I3_xt_redist_rename" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I4_xt_redist_rename" is_parameter="true" ref="I3_xt_redist_rename"/>
+    <FbasicType type="I2_xt_redist_rename" ref="Fint">
+      <kind>
+        <Var type="I4_xt_redist_rename" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S7_xt_redist_rename" ref="S6_xt_redist_rename"/>
+    <FbasicType type="S4_xt_redist_rename" ref="S7_xt_redist_rename"/>
+    <FbasicType type="S8_xt_redist_rename" imported_id="S3_iso_c_binding" ref="S6_xt_redist_rename"/>
+    <FbasicType type="S5_xt_redist_rename" imported_id="S4_iso_c_binding" is_parameter="true" ref="S8_xt_redist_rename"/>
+    <FbasicType type="S9_xt_redist_rename" ref="S3_xt_redist_rename"/>
+    <FbasicType type="S1_xt_redist_rename" ref="S9_xt_redist_rename"/>
+    <FstructType type="S10_xt_redist_rename" imported_id="S33_xt_xmap_abstract" is_internal_private="true">
+      <symbols>
+        <id type="S11_xt_redist_rename">
+          <name>cptr</name>
+          <value>
+            <Var type="S12_xt_redist_rename" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FstructType type="S13_xt_redist_rename" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I5_xt_redist_rename">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I6_xt_redist_rename" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I7_xt_redist_rename" is_parameter="true" ref="I6_xt_redist_rename"/>
+    <FbasicType type="I5_xt_redist_rename" ref="Fint">
+      <kind>
+        <Var type="I7_xt_redist_rename" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S14_xt_redist_rename" imported_id="S35_xt_xmap_abstract" ref="S13_xt_redist_rename"/>
+    <FbasicType type="S11_xt_redist_rename" imported_id="S34_xt_xmap_abstract" ref="S14_xt_redist_rename"/>
+    <FstructType type="S15_xt_redist_rename" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I8_xt_redist_rename">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I8_xt_redist_rename" ref="Fint">
+      <kind>
+        <Var type="I7_xt_redist_rename" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S16_xt_redist_rename" imported_id="S3_iso_c_binding" ref="S15_xt_redist_rename"/>
+    <FbasicType type="S12_xt_redist_rename" imported_id="S4_iso_c_binding" is_parameter="true" ref="S16_xt_redist_rename"/>
+    <FbasicType type="S17_xt_redist_rename" ref="S10_xt_redist_rename"/>
+    <FbasicType type="S2_xt_redist_rename" intent="in" ref="S17_xt_redist_rename"/>
+    <FbasicType type="I1_xt_redist_rename" intent="in" ref="Fint"/>
+    <FfunctionType type="F2_xt_redist_rename" result_name="res_ptr" return_type="S18_xt_redist_rename" is_private="true" bind="C" bind_name="xt_redist_p2p_new_f">
+      <params>
+        <name type="S19_xt_redist_rename">xmap</name>
+        <name type="I9_xt_redist_rename">datatype</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S20_xt_redist_rename" ref="S6_xt_redist_rename"/>
+    <FbasicType type="S21_xt_redist_rename" ref="S20_xt_redist_rename"/>
+    <FbasicType type="S18_xt_redist_rename" ref="S21_xt_redist_rename"/>
+    <FbasicType type="S22_xt_redist_rename" ref="S10_xt_redist_rename"/>
+    <FbasicType type="S23_xt_redist_rename" ref="S22_xt_redist_rename"/>
+    <FbasicType type="S19_xt_redist_rename" intent="in" ref="S23_xt_redist_rename"/>
+    <FbasicType type="I10_xt_redist_rename" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I11_xt_redist_rename" ref="Fint">
+      <kind>
+        <Var type="I10_xt_redist_rename" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I9_xt_redist_rename" intent="in" is_value="true" ref="I11_xt_redist_rename"/>
+    <FstructType type="S24_xt_redist_rename" is_public="true" is_internal_private="true" bind="C">
+      <symbols>
+        <id type="S25_xt_redist_rename">
+          <name>cptr</name>
+          <value>
+            <Var type="S5_xt_redist_rename" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="S26_xt_redist_rename" ref="S6_xt_redist_rename"/>
+    <FbasicType type="S25_xt_redist_rename" ref="S26_xt_redist_rename"/>
+    <FbasicType type="I12_xt_redist_rename" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I13_xt_redist_rename" is_parameter="true" ref="I12_xt_redist_rename"/>
+    <FbasicType type="I14_xt_redist_rename" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I15_xt_redist_rename" is_parameter="true" ref="I14_xt_redist_rename"/>
+    <FbasicType type="S27_xt_redist_rename" ref="S21_xt_redist_rename"/>
+    <FbasicType type="S28_xt_redist_rename" ref="S10_xt_redist_rename"/>
+    <FbasicType type="S29_xt_redist_rename" intent="in" ref="S28_xt_redist_rename"/>
+    <FbasicType type="I16_xt_redist_rename" intent="in" ref="Fint"/>
+    <FfunctionType type="F3_xt_redist_rename" result_name="res" return_type="S30_xt_redist_rename" is_public="true">
+      <params>
+        <name type="S29_xt_redist_rename">xmap</name>
+        <name type="I16_xt_redist_rename">datatype</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S31_xt_redist_rename" ref="S24_xt_redist_rename"/>
+    <FbasicType type="S30_xt_redist_rename" ref="S31_xt_redist_rename"/>
+    <FbasicType type="S32_xt_redist_rename" ref="S25_xt_redist_rename"/>
+    <FfunctionType type="F4_xt_redist_rename" result_name="res" return_type="S33_xt_redist_rename">
+      <params>
+        <name type="S34_xt_redist_rename">xmap</name>
+        <name type="I17_xt_redist_rename">datatype</name>
+        <name type="S35_xt_redist_rename">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S36_xt_redist_rename" ref="S3_xt_redist_rename"/>
+    <FbasicType type="S33_xt_redist_rename" ref="S36_xt_redist_rename"/>
+    <FbasicType type="S37_xt_redist_rename" ref="S10_xt_redist_rename"/>
+    <FbasicType type="S34_xt_redist_rename" intent="in" ref="S37_xt_redist_rename"/>
+    <FbasicType type="I17_xt_redist_rename" intent="in" ref="Fint"/>
+    <FstructType type="S38_xt_redist_rename" imported_id="S4_xt_config_f" is_internal_private="true">
+      <symbols>
+        <id type="S39_xt_redist_rename">
+          <name>cptr</name>
+          <value>
+            <Var type="S40_xt_redist_rename" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FstructType type="S41_xt_redist_rename" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I18_xt_redist_rename">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I19_xt_redist_rename" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I20_xt_redist_rename" is_parameter="true" ref="I19_xt_redist_rename"/>
+    <FbasicType type="I18_xt_redist_rename" ref="Fint">
+      <kind>
+        <Var type="I20_xt_redist_rename" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S42_xt_redist_rename" imported_id="S6_xt_config_f" ref="S41_xt_redist_rename"/>
+    <FbasicType type="S39_xt_redist_rename" imported_id="S5_xt_config_f" ref="S42_xt_redist_rename"/>
+    <FstructType type="S43_xt_redist_rename" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I21_xt_redist_rename">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I21_xt_redist_rename" ref="Fint">
+      <kind>
+        <Var type="I20_xt_redist_rename" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S44_xt_redist_rename" imported_id="S3_iso_c_binding" ref="S43_xt_redist_rename"/>
+    <FbasicType type="S40_xt_redist_rename" imported_id="S4_iso_c_binding" is_parameter="true" ref="S44_xt_redist_rename"/>
+    <FbasicType type="S45_xt_redist_rename" ref="S38_xt_redist_rename"/>
+    <FbasicType type="S35_xt_redist_rename" intent="in" ref="S45_xt_redist_rename"/>
+    <FfunctionType type="F5_xt_redist_rename" result_name="res_ptr" return_type="S46_xt_redist_rename" is_private="true" bind="C" bind_name="xt_redist_p2p_custom_new_f">
+      <params>
+        <name type="S47_xt_redist_rename">xmap</name>
+        <name type="I22_xt_redist_rename">datatype</name>
+        <name type="S48_xt_redist_rename">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S49_xt_redist_rename" ref="S6_xt_redist_rename"/>
+    <FbasicType type="S50_xt_redist_rename" ref="S49_xt_redist_rename"/>
+    <FbasicType type="S46_xt_redist_rename" ref="S50_xt_redist_rename"/>
+    <FbasicType type="S51_xt_redist_rename" ref="S10_xt_redist_rename"/>
+    <FbasicType type="S52_xt_redist_rename" ref="S51_xt_redist_rename"/>
+    <FbasicType type="S47_xt_redist_rename" intent="in" ref="S52_xt_redist_rename"/>
+    <FbasicType type="I23_xt_redist_rename" ref="Fint">
+      <kind>
+        <Var type="I10_xt_redist_rename" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I22_xt_redist_rename" intent="in" is_value="true" ref="I23_xt_redist_rename"/>
+    <FbasicType type="S53_xt_redist_rename" ref="S38_xt_redist_rename"/>
+    <FbasicType type="S54_xt_redist_rename" ref="S53_xt_redist_rename"/>
+    <FbasicType type="S48_xt_redist_rename" intent="in" ref="S54_xt_redist_rename"/>
+    <FbasicType type="S55_xt_redist_rename" ref="S50_xt_redist_rename"/>
+    <FbasicType type="S56_xt_redist_rename" ref="S10_xt_redist_rename"/>
+    <FbasicType type="S57_xt_redist_rename" intent="in" ref="S56_xt_redist_rename"/>
+    <FbasicType type="I24_xt_redist_rename" intent="in" ref="Fint"/>
+    <FbasicType type="S58_xt_redist_rename" ref="S38_xt_redist_rename"/>
+    <FbasicType type="S59_xt_redist_rename" intent="in" ref="S58_xt_redist_rename"/>
+    <FfunctionType type="F6_xt_redist_rename" result_name="res" return_type="S60_xt_redist_rename" is_public="true">
+      <params>
+        <name type="S57_xt_redist_rename">xmap</name>
+        <name type="I24_xt_redist_rename">datatype</name>
+        <name type="S59_xt_redist_rename">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S61_xt_redist_rename" ref="S24_xt_redist_rename"/>
+    <FbasicType type="S60_xt_redist_rename" ref="S61_xt_redist_rename"/>
+    <FbasicType type="S62_xt_redist_rename" ref="S25_xt_redist_rename"/>
+    <FfunctionType type="F7_xt_redist_rename" return_type="V1_xt_redist_rename" is_public="true"/>
+    <FbasicType type="V1_xt_redist_rename" ref="FnumericAll"/>
+  </typeTable>
+  <identifiers>
+    <id type="F1_xt_redist_rename" sclass="ffunc" original_name="xt_redist_p2p_new" declared_in="xt_redist_base">
+      <name>xt_redist_p2p_orig_new</name>
+    </id>
+    <id type="F4_xt_redist_rename" sclass="ffunc" original_name="xt_redist_p2p_custom_new" declared_in="xt_redist_base">
+      <name>xt_redist_p2p_custom_new</name>
+    </id>
+    <id type="F7_xt_redist_rename" sclass="ffunc" original_name="xt_redist_p2p_new" declared_in="xt_redist_rename">
+      <name>xt_redist_p2p_new</name>
+    </id>
+  </identifiers>
+  <declarations>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="xt_redist_p2p_new" lineno="1556" file="xt_redist_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="1557" file="xt_redist_f.f90">
+        <name type="F1_xt_redist_rename">xt_redist_p2p_orig_new</name>
+        <name type="F4_xt_redist_rename">xt_redist_p2p_custom_new</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="1558" file="xt_redist_f.f90">
+        <name type="F1_xt_redist_rename">xt_redist_p2p_orig_new</name>
+        <name type="F4_xt_redist_rename">xt_redist_p2p_custom_new</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

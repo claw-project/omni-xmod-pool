@@ -1,0 +1,470 @@
+<OmniFortranModule version="1.0">
+  <name>xt_config_f</name>
+  <depends>
+    <name>iso_c_binding</name>
+    <name>xt_core</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I1_xt_config_f" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I2_xt_config_f" is_parameter="true" ref="I1_xt_config_f"/>
+    <FbasicType type="I3_xt_config_f" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I4_xt_config_f" is_parameter="true" ref="I3_xt_config_f"/>
+    <FbasicType type="C1_xt_config_f" is_parameter="true" ref="Fcharacter"/>
+    <FstructType type="S1_xt_config_f" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I5_xt_config_f">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I6_xt_config_f" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I7_xt_config_f" is_parameter="true" ref="I6_xt_config_f"/>
+    <FbasicType type="I5_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I7_xt_config_f" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S2_xt_config_f" imported_id="S3_iso_c_binding" ref="S1_xt_config_f"/>
+    <FbasicType type="S3_xt_config_f" imported_id="S4_iso_c_binding" is_parameter="true" ref="S2_xt_config_f"/>
+    <FfunctionType type="F1_xt_config_f" return_type="Fvoid"/>
+    <FfunctionType type="F2_xt_config_f" return_type="Fvoid">
+      <params>
+        <name type="C2_xt_config_f">msg</name>
+        <name type="C3_xt_config_f">source</name>
+        <name type="I8_xt_config_f">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C4_xt_config_f" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C2_xt_config_f" intent="in" ref="C4_xt_config_f"/>
+    <FbasicType type="C5_xt_config_f" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C3_xt_config_f" intent="in" ref="C5_xt_config_f"/>
+    <FbasicType type="I8_xt_config_f" intent="in" ref="Fint"/>
+    <FfunctionType type="F3_xt_config_f" return_type="Fvoid">
+      <params>
+        <name type="I9_xt_config_f">comm</name>
+        <name type="C6_xt_config_f">msg</name>
+        <name type="C7_xt_config_f">source</name>
+        <name type="I10_xt_config_f">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I9_xt_config_f" intent="in" ref="Fint"/>
+    <FbasicType type="C8_xt_config_f" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C6_xt_config_f" intent="in" ref="C8_xt_config_f"/>
+    <FbasicType type="C9_xt_config_f" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C7_xt_config_f" intent="in" ref="C9_xt_config_f"/>
+    <FbasicType type="I10_xt_config_f" intent="in" ref="Fint"/>
+    <FstructType type="S4_xt_config_f" is_public="true" is_internal_private="true" bind="C">
+      <symbols>
+        <id type="S5_xt_config_f">
+          <name>cptr</name>
+          <value>
+            <Var type="S3_xt_config_f" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="S6_xt_config_f" ref="S1_xt_config_f"/>
+    <FbasicType type="S5_xt_config_f" ref="S6_xt_config_f"/>
+    <FfunctionType type="F4_xt_config_f" result_name="p" return_type="S7_xt_config_f" is_public="true" bind="C" bind_name="xt_config_f2c">
+      <params>
+        <name type="S8_xt_config_f">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S9_xt_config_f" ref="S1_xt_config_f"/>
+    <FbasicType type="S10_xt_config_f" ref="S9_xt_config_f"/>
+    <FbasicType type="S7_xt_config_f" ref="S10_xt_config_f"/>
+    <FbasicType type="S11_xt_config_f" ref="S4_xt_config_f"/>
+    <FbasicType type="S12_xt_config_f" ref="S11_xt_config_f"/>
+    <FbasicType type="S8_xt_config_f" intent="in" ref="S12_xt_config_f"/>
+    <FbasicType type="S13_xt_config_f" ref="S10_xt_config_f"/>
+    <FfunctionType type="F5_xt_config_f" result_name="config" return_type="S14_xt_config_f" is_public="true">
+      <params>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S15_xt_config_f" ref="S4_xt_config_f"/>
+    <FbasicType type="S14_xt_config_f" ref="S15_xt_config_f"/>
+    <FfunctionType type="F6_xt_config_f" result_name="config" return_type="S16_xt_config_f" is_private="true" bind="C" bind_name="xt_config_new">
+      <params>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S17_xt_config_f" ref="S1_xt_config_f"/>
+    <FbasicType type="S18_xt_config_f" ref="S17_xt_config_f"/>
+    <FbasicType type="S16_xt_config_f" ref="S18_xt_config_f"/>
+    <FbasicType type="S19_xt_config_f" ref="S18_xt_config_f"/>
+    <FbasicType type="S20_xt_config_f" ref="S5_xt_config_f"/>
+    <FfunctionType type="F7_xt_config_f" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_config_delete">
+      <params>
+        <name type="S21_xt_config_f">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S22_xt_config_f" ref="S1_xt_config_f"/>
+    <FbasicType type="S23_xt_config_f" ref="S22_xt_config_f"/>
+    <FbasicType type="S21_xt_config_f" intent="in" is_value="true" ref="S23_xt_config_f"/>
+    <FfunctionType type="F8_xt_config_f" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S24_xt_config_f">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S25_xt_config_f" ref="S4_xt_config_f"/>
+    <FbasicType type="S24_xt_config_f" intent="in" ref="S25_xt_config_f"/>
+    <FbasicType type="S26_xt_config_f" ref="S5_xt_config_f"/>
+    <FfunctionType type="F9_xt_config_f" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_config_set_exchange_method">
+      <params>
+        <name type="S27_xt_config_f">config</name>
+        <name type="I11_xt_config_f">method</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S28_xt_config_f" ref="S1_xt_config_f"/>
+    <FbasicType type="S29_xt_config_f" ref="S28_xt_config_f"/>
+    <FbasicType type="S27_xt_config_f" is_value="true" ref="S29_xt_config_f"/>
+    <FbasicType type="I12_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I2_xt_config_f" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I11_xt_config_f" is_value="true" ref="I12_xt_config_f"/>
+    <FfunctionType type="F10_xt_config_f" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S30_xt_config_f">config</name>
+        <name type="I13_xt_config_f">method</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S31_xt_config_f" ref="S4_xt_config_f"/>
+    <FbasicType type="S30_xt_config_f" intent="inout" ref="S31_xt_config_f"/>
+    <FbasicType type="I13_xt_config_f" intent="in" ref="Fint"/>
+    <FbasicType type="I14_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I2_xt_config_f" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I15_xt_config_f" ref="I14_xt_config_f"/>
+    <FfunctionType type="F11_xt_config_f" return_type="I16_xt_config_f"/>
+    <FbasicType type="I16_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I2_xt_config_f" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S32_xt_config_f" ref="S5_xt_config_f"/>
+    <FfunctionType type="F12_xt_config_f" result_name="method" return_type="I17_xt_config_f" is_private="true" bind="C" bind_name="xt_config_get_exchange_method">
+      <params>
+        <name type="S33_xt_config_f">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I18_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I2_xt_config_f" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I17_xt_config_f" ref="I18_xt_config_f"/>
+    <FbasicType type="S34_xt_config_f" ref="S1_xt_config_f"/>
+    <FbasicType type="S35_xt_config_f" ref="S34_xt_config_f"/>
+    <FbasicType type="S33_xt_config_f" is_value="true" ref="S35_xt_config_f"/>
+    <FbasicType type="I19_xt_config_f" ref="I18_xt_config_f"/>
+    <FfunctionType type="F13_xt_config_f" result_name="method" return_type="Fint" is_public="true">
+      <params>
+        <name type="S36_xt_config_f">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S37_xt_config_f" ref="S4_xt_config_f"/>
+    <FbasicType type="S36_xt_config_f" intent="in" ref="S37_xt_config_f"/>
+    <FfunctionType type="F14_xt_config_f" return_type="Fint"/>
+    <FbasicType type="S38_xt_config_f" ref="S5_xt_config_f"/>
+    <FfunctionType type="F15_xt_config_f" result_name="exchanger_id" return_type="I20_xt_config_f" is_private="true" bind="C" bind_name="xt_exchanger_id_by_name">
+      <params>
+        <name type="A1_xt_config_f">name</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I21_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I2_xt_config_f" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I20_xt_config_f" ref="I21_xt_config_f"/>
+    <FbasicType type="C10_xt_config_f" ref="Fcharacter">
+      <kind>
+        <Var type="I4_xt_config_f" scope="local">c_char</Var>
+      </kind>
+      <len>
+        <FintConstant type="Fint">1</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C11_xt_config_f" intent="in" ref="C10_xt_config_f"/>
+    <FbasicType type="A1_xt_config_f" intent="in" ref="C11_xt_config_f">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I22_xt_config_f" ref="I21_xt_config_f"/>
+    <FfunctionType type="F16_xt_config_f" result_name="exchanger_id" return_type="Fint" is_public="true">
+      <params>
+        <name type="C12_xt_config_f">name</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C13_xt_config_f" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C12_xt_config_f" intent="in" ref="C13_xt_config_f"/>
+    <FbasicType type="I23_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I2_xt_config_f" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I24_xt_config_f" ref="I23_xt_config_f"/>
+    <FbasicType type="A2_xt_config_f" ref="Fcharacter">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <plusExpr type="Fint">
+            <functionCall type="Fint" is_intrinsic="true">
+              <name>len</name>
+              <arguments>
+                <Var type="C12_xt_config_f" scope="local">name</Var>
+              </arguments>
+            </functionCall>
+            <FintConstant type="Fint">1</FintConstant>
+          </plusExpr>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F17_xt_config_f" return_type="Fint"/>
+    <FfunctionType type="F18_xt_config_f" return_type="Fint"/>
+    <FfunctionType type="F19_xt_config_f" return_type="Fint"/>
+    <FbasicType type="C14_xt_config_f" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A3_xt_config_f" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <Var type="Fint" scope="local">i</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F20_xt_config_f" result_name="cnvsize" return_type="I25_xt_config_f" is_private="true" bind="C" bind_name="xt_config_get_idxvec_autoconvert_size">
+      <params>
+        <name type="S39_xt_config_f">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I26_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I2_xt_config_f" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I25_xt_config_f" ref="I26_xt_config_f"/>
+    <FbasicType type="S40_xt_config_f" ref="S1_xt_config_f"/>
+    <FbasicType type="S41_xt_config_f" ref="S40_xt_config_f"/>
+    <FbasicType type="S39_xt_config_f" is_value="true" ref="S41_xt_config_f"/>
+    <FbasicType type="I27_xt_config_f" ref="I26_xt_config_f"/>
+    <FfunctionType type="F21_xt_config_f" result_name="cnvsize" return_type="Fint" is_public="true">
+      <params>
+        <name type="S42_xt_config_f">config</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S43_xt_config_f" ref="S4_xt_config_f"/>
+    <FbasicType type="S42_xt_config_f" intent="in" ref="S43_xt_config_f"/>
+    <FfunctionType type="F22_xt_config_f" return_type="Fint"/>
+    <FbasicType type="S44_xt_config_f" ref="S5_xt_config_f"/>
+    <FfunctionType type="F23_xt_config_f" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_config_set_idxvec_autoconvert_size">
+      <params>
+        <name type="S45_xt_config_f">config</name>
+        <name type="I28_xt_config_f">cnvsize</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S46_xt_config_f" ref="S1_xt_config_f"/>
+    <FbasicType type="S47_xt_config_f" ref="S46_xt_config_f"/>
+    <FbasicType type="S45_xt_config_f" is_value="true" ref="S47_xt_config_f"/>
+    <FbasicType type="I29_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I2_xt_config_f" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I28_xt_config_f" is_value="true" ref="I29_xt_config_f"/>
+    <FfunctionType type="F24_xt_config_f" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S48_xt_config_f">config</name>
+        <name type="I30_xt_config_f">cnvsize</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S49_xt_config_f" ref="S4_xt_config_f"/>
+    <FbasicType type="S48_xt_config_f" intent="inout" ref="S49_xt_config_f"/>
+    <FbasicType type="I30_xt_config_f" intent="in" ref="Fint"/>
+    <FbasicType type="I31_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I2_xt_config_f" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I32_xt_config_f" ref="I31_xt_config_f"/>
+    <FfunctionType type="F25_xt_config_f" return_type="I33_xt_config_f"/>
+    <FbasicType type="I33_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I2_xt_config_f" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F26_xt_config_f" return_type="I34_xt_config_f"/>
+    <FbasicType type="I34_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I2_xt_config_f" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I35_xt_config_f" ref="Fint">
+      <kind>
+        <Var type="I2_xt_config_f" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C15_xt_config_f" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">23</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C16_xt_config_f" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">15</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="S50_xt_config_f" ref="S5_xt_config_f"/>
+    <FbasicType type="I36_xt_config_f" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I37_xt_config_f" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I38_xt_config_f" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I39_xt_config_f" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I40_xt_config_f" is_public="true" is_parameter="true" ref="Fint"/>
+  </typeTable>
+  <identifiers>
+    <id type="I2_xt_config_f" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="I4_xt_config_f" sclass="flocal" original_name="c_char" declared_in="iso_c_binding">
+      <name>c_char</name>
+    </id>
+    <id type="C1_xt_config_f" sclass="flocal" original_name="c_null_char" declared_in="iso_c_binding">
+      <name>c_null_char</name>
+    </id>
+    <id type="S1_xt_config_f" imported_id="S1_iso_c_binding" sclass="ftype_name" original_name="c_ptr" declared_in="iso_c_binding">
+      <name>c_ptr</name>
+    </id>
+    <id type="S3_xt_config_f" imported_id="S4_iso_c_binding" sclass="flocal" original_name="c_null_ptr" declared_in="iso_c_binding">
+      <name>c_null_ptr</name>
+    </id>
+    <id type="F1_xt_config_f" sclass="ffunc" original_name="xt_abort" declared_in="xt_core">
+      <name>xt_abort</name>
+    </id>
+    <id type="S4_xt_config_f" sclass="ftype_name" original_name="xt_config" declared_in="xt_config_f">
+      <name>xt_config</name>
+    </id>
+    <id type="F4_xt_config_f" sclass="ffunc" original_name="xt_config_f2c" declared_in="xt_config_f">
+      <name>xt_config_f2c</name>
+    </id>
+    <id type="F5_xt_config_f" sclass="ffunc" original_name="xt_config_new" declared_in="xt_config_f">
+      <name>xt_config_new</name>
+    </id>
+    <id type="F8_xt_config_f" sclass="ffunc" original_name="xt_config_delete" declared_in="xt_config_f">
+      <name>xt_config_delete</name>
+    </id>
+    <id type="F16_xt_config_f" sclass="ffunc" original_name="xt_exchanger_id_by_name" declared_in="xt_config_f">
+      <name>xt_exchanger_id_by_name</name>
+    </id>
+    <id type="F13_xt_config_f" sclass="ffunc" original_name="xt_config_get_exchange_method" declared_in="xt_config_f">
+      <name>xt_config_get_exchange_method</name>
+    </id>
+    <id type="F10_xt_config_f" sclass="ffunc" original_name="xt_config_set_exchange_method" declared_in="xt_config_f">
+      <name>xt_config_set_exchange_method</name>
+    </id>
+    <id type="F21_xt_config_f" sclass="ffunc" original_name="xt_config_get_idxvec_autoconvert_size" declared_in="xt_config_f">
+      <name>xt_config_get_idxvec_autoconvert_size</name>
+    </id>
+    <id type="F24_xt_config_f" sclass="ffunc" original_name="xt_config_set_idxvec_autoconvert_size" declared_in="xt_config_f">
+      <name>xt_config_set_idxvec_autoconvert_size</name>
+    </id>
+    <id type="I36_xt_config_f" sclass="flocal" original_name="xt_exchanger_irecv_send" declared_in="xt_config_f">
+      <name>xt_exchanger_irecv_send</name>
+    </id>
+    <id type="I37_xt_config_f" sclass="flocal" original_name="xt_exchanger_irecv_isend" declared_in="xt_config_f">
+      <name>xt_exchanger_irecv_isend</name>
+    </id>
+    <id type="I38_xt_config_f" sclass="flocal" original_name="xt_exchanger_irecv_isend_packed" declared_in="xt_config_f">
+      <name>xt_exchanger_irecv_isend_packed</name>
+    </id>
+    <id type="I39_xt_config_f" sclass="flocal" original_name="xt_exchanger_mix_isend_irecv" declared_in="xt_config_f">
+      <name>xt_exchanger_mix_isend_irecv</name>
+    </id>
+    <id type="I40_xt_config_f" sclass="flocal" original_name="xt_exchanger_neigh_alltoall" declared_in="xt_config_f">
+      <name>xt_exchanger_neigh_alltoall</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I2_xt_config_f">c_int</name>
+    </varDecl>
+    <varDecl>
+      <name type="I4_xt_config_f">c_char</name>
+    </varDecl>
+    <varDecl>
+      <name type="C1_xt_config_f">c_null_char</name>
+    </varDecl>
+    <varDecl>
+      <name type="S3_xt_config_f" imported_id="S4_iso_c_binding">c_null_ptr</name>
+    </varDecl>
+    <varDecl lineno="82" file="xt_config_f.f90">
+      <name type="I36_xt_config_f">xt_exchanger_irecv_send</name>
+      <value>
+        <FintConstant type="Fint">0</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="82" file="xt_config_f.f90">
+      <name type="I37_xt_config_f">xt_exchanger_irecv_isend</name>
+      <value>
+        <FintConstant type="Fint">1</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="82" file="xt_config_f.f90">
+      <name type="I38_xt_config_f">xt_exchanger_irecv_isend_packed</name>
+      <value>
+        <FintConstant type="Fint">2</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="82" file="xt_config_f.f90">
+      <name type="I39_xt_config_f">xt_exchanger_mix_isend_irecv</name>
+      <value>
+        <FintConstant type="Fint">3</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="82" file="xt_config_f.f90">
+      <name type="I40_xt_config_f">xt_exchanger_neigh_alltoall</name>
+      <value>
+        <FintConstant type="Fint">4</FintConstant>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>
