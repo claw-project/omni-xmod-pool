@@ -1,0 +1,41 @@
+#!/bin/bash
+
+###
+
+src_root='/path/to/yac'
+
+name='yac'
+version='2.4.2'
+
+###
+
+set -eu
+set -o pipefail
+
+script_dir=$(cd "$(dirname "$0")"; pwd)
+root_dir=$(cd "${script_dir}/../.."; pwd)
+output_dir="${root_dir}/${name}/${version}"
+
+tmp_dir=$(mktemp -d)
+trap 'rm -rf -- "${tmp_dir}"' EXIT
+
+cat > "${tmp_dir}/config.h" << _EOF
+#define YAC_MPI_FINT_FC_KIND c_int
+_EOF
+
+FPP='gfortran -E -cpp'
+FPP_FLAGS="-I${tmp_dir} -DHAVE_CONFIG_H"
+
+OMNI='F_Front'
+OMNI_FLAGS="-M ${output_dir}"
+
+files='
+mo_yac_finterface.f90
+'
+
+mkdir -p "${output_dir}"
+cd "${src_root}/src"
+
+for file in ${files}; do
+	${FPP} ${FPP_FLAGS} ${file} | ${OMNI} ${OMNI_FLAGS} >/dev/null
+done
