@@ -1,0 +1,125 @@
+<OmniFortranModule version="1.0">
+  <name>mtime_print_by_callback</name>
+  <depends>
+  </depends>
+  <typeTable>
+    <FfunctionType type="F1_mtime_print_by_callback" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="F2_mtime_print_by_callback">message_procedure</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F3_mtime_print_by_callback" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="F4_mtime_print_by_callback">finish_procedure</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F5_mtime_print_by_callback" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="C1_mtime_print_by_callback">leading_text</name>
+        <name type="C2_mtime_print_by_callback">message_text</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C3_mtime_print_by_callback" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C1_mtime_print_by_callback" intent="in" ref="C3_mtime_print_by_callback"/>
+    <FbasicType type="C4_mtime_print_by_callback" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C2_mtime_print_by_callback" intent="in" ref="C4_mtime_print_by_callback"/>
+    <FfunctionType type="F6_mtime_print_by_callback" return_type="Flogical"/>
+    <FfunctionType type="F7_mtime_print_by_callback" return_type="C5_mtime_print_by_callback"/>
+    <FbasicType type="C5_mtime_print_by_callback" ref="C4_mtime_print_by_callback"/>
+    <FfunctionType type="F8_mtime_print_by_callback" return_type="C5_mtime_print_by_callback"/>
+    <FbasicType type="C6_mtime_print_by_callback" ref="C3_mtime_print_by_callback"/>
+    <FbasicType type="C7_mtime_print_by_callback" ref="C4_mtime_print_by_callback"/>
+    <FbasicType type="C8_mtime_print_by_callback" ref="C3_mtime_print_by_callback"/>
+    <FbasicType type="C9_mtime_print_by_callback" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">2</FintConstant>
+      </len>
+    </FbasicType>
+    <FfunctionType type="F9_mtime_print_by_callback" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F10_mtime_print_by_callback" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="C10_mtime_print_by_callback">leading_text</name>
+        <name type="C11_mtime_print_by_callback">message_text</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C12_mtime_print_by_callback" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C10_mtime_print_by_callback" intent="in" ref="C12_mtime_print_by_callback"/>
+    <FbasicType type="C13_mtime_print_by_callback" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C11_mtime_print_by_callback" intent="in" ref="C13_mtime_print_by_callback"/>
+    <FfunctionType type="F11_mtime_print_by_callback" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F12_mtime_print_by_callback" return_type="Fvoid">
+      <params>
+        <name type="C1_mtime_print_by_callback">leading_text</name>
+        <name type="C2_mtime_print_by_callback">message_text</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F13_mtime_print_by_callback" return_type="Fvoid">
+      <params>
+        <name type="C1_mtime_print_by_callback">leading_text</name>
+        <name type="C2_mtime_print_by_callback">message_text</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F14_mtime_print_by_callback" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="C14_mtime_print_by_callback">leading_text</name>
+        <name type="C15_mtime_print_by_callback">message_text</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C16_mtime_print_by_callback" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C14_mtime_print_by_callback" intent="in" ref="C16_mtime_print_by_callback"/>
+    <FbasicType type="C17_mtime_print_by_callback" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C15_mtime_print_by_callback" intent="in" ref="C17_mtime_print_by_callback"/>
+    <FbasicType type="F2_mtime_print_by_callback" is_procedure="true" ref="F14_mtime_print_by_callback"/>
+    <FbasicType type="F15_mtime_print_by_callback" is_private="true" is_pointer="true" is_procedure="true" ref="F14_mtime_print_by_callback"/>
+    <FbasicType type="F4_mtime_print_by_callback" is_procedure="true" ref="F10_mtime_print_by_callback"/>
+    <FbasicType type="F16_mtime_print_by_callback" is_private="true" is_pointer="true" is_procedure="true" ref="F10_mtime_print_by_callback"/>
+  </typeTable>
+  <identifiers>
+    <id type="F1_mtime_print_by_callback" sclass="ffunc" original_name="register_print_mtime_procedure" declared_in="mtime_print_by_callback">
+      <name>register_print_mtime_procedure</name>
+    </id>
+    <id type="F3_mtime_print_by_callback" sclass="ffunc" original_name="register_finish_mtime_procedure" declared_in="mtime_print_by_callback">
+      <name>register_finish_mtime_procedure</name>
+    </id>
+    <id type="F9_mtime_print_by_callback" sclass="ffunc" original_name="print_mtime" declared_in="mtime_print_by_callback">
+      <name>print_mtime</name>
+    </id>
+    <id type="F11_mtime_print_by_callback" sclass="ffunc" original_name="finish_mtime" declared_in="mtime_print_by_callback">
+      <name>finish_mtime</name>
+    </id>
+  </identifiers>
+  <declarations>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="print_mtime" lineno="35" file="mtime_error_handling.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="36" file="mtime_error_handling.f90">
+        <name type="F13_mtime_print_by_callback">finish_mtime_plain</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="finish_mtime" lineno="52" file="mtime_error_handling.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="53" file="mtime_error_handling.f90">
+        <name type="F12_mtime_print_by_callback">finish_mtime_plain</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

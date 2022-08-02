@@ -1,0 +1,333 @@
+<OmniFortranModule version="1.0">
+  <name>mtime_julianday</name>
+  <depends>
+    <name>iso_c_binding</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I55d20149bca0" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d201499ec0" is_parameter="true" ref="I55d20149bca0"/>
+    <FbasicType type="I55d20149bde0" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d20149a1d0" is_parameter="true" ref="I55d20149bde0"/>
+    <FbasicType type="C55d20149a480" is_parameter="true" ref="Fcharacter"/>
+    <FstructType type="S55d20149a730" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55d20149c190">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d201423820" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d201423e50" is_parameter="true" ref="I55d201423820"/>
+    <FbasicType type="I55d20149c190" ref="Fint">
+      <kind>
+        <Var type="I55d201423e50" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55d20149aeb0" return_type="FnumericAll"/>
+    <FfunctionType type="F55d201458f60" return_type="L55d201431580">
+      <params>
+        <name type="S55d201430a90" imported_id="S555a51971d90">c_ptr_1</name>
+        <name type="S55d201431010" imported_id="S555a51972510">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L55d201431580" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55d20142cba0" imported_id="S555a51946610" is_internal_private="true">
+      <symbols>
+        <id type="I55d20142d320">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d20142d320" ref="Fint">
+      <kind>
+        <Var type="I55d201423e50" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55d201431ba0" imported_id="S555a51971c50" ref="S55d20142cba0"/>
+    <FbasicType type="S55d201430a90" imported_id="S555a51971d90" ref="S55d201431ba0"/>
+    <FbasicType type="S55d201431d50" imported_id="S555a519723d0" ref="S55d20142cba0"/>
+    <FbasicType type="S55d201431010" imported_id="S555a51972510" is_optional="true" ref="S55d201431d50"/>
+    <FfunctionType type="F55d2014597d0" return_type="L55d20142fa60">
+      <params>
+        <name type="S55d20142f0d0" imported_id="S555a5196eaf0">c_ptr_1</name>
+        <name type="S55d20142f4d0" imported_id="S555a5196f270">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L55d20142fa60" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55d20142bd30" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55d20142c6b0">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d20142c6b0" ref="Fint">
+      <kind>
+        <Var type="I55d201423e50" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55d201430260" imported_id="S555a5196e9b0" ref="S55d20142bd30"/>
+    <FbasicType type="S55d20142f0d0" imported_id="S555a5196eaf0" ref="S55d201430260"/>
+    <FbasicType type="S55d201430410" imported_id="S555a5196f130" ref="S55d20142bd30"/>
+    <FbasicType type="S55d20142f4d0" imported_id="S555a5196f270" is_optional="true" ref="S55d201430410"/>
+    <FfunctionType type="F55d20149b620" return_type="Fvoid"/>
+    <FfunctionType type="F55d201458840" return_type="Fvoid">
+      <params>
+        <name type="I55d201432450">cptr</name>
+        <name type="I55d201432850">fptr</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55d201432c30" is_pointer="true" ref="Fint"/>
+    <FbasicType type="I55d201432450" intent="in" is_pointer="true" ref="I55d201432c30"/>
+    <FbasicType type="I55d201433230" is_pointer="true" ref="Fint"/>
+    <FbasicType type="I55d201432850" intent="out" is_pointer="true" ref="I55d201433230"/>
+    <FfunctionType type="F55d20149b9a0" return_type="S55d20149c930">
+      <params>
+        <name type="Fint">x</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d20149ca70" imported_id="S555a5198b690" ref="S55d20149a730"/>
+    <FbasicType type="S55d20149c930" imported_id="S555a5198b7d0" ref="S55d20149ca70"/>
+    <FbasicType type="I55d20149e3e0" is_public="true" is_parameter="true" ref="Fint"/>
+    <FstructType type="S55d20149ecd0" is_public="true" bind="C">
+      <symbols>
+        <id type="I55d20149f720">
+          <name>day</name>
+        </id>
+        <id type="I55d2014a0020">
+          <name>ms</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d20149f4f0" ref="Fint">
+      <kind>
+        <Var type="I55d201499ec0" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d20149f720" ref="I55d20149f4f0"/>
+    <FbasicType type="I55d20149fdf0" ref="Fint">
+      <kind>
+        <Var type="I55d201499ec0" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d2014a0020" ref="I55d20149fdf0"/>
+    <FfunctionType type="F55d2014ac020" result_name="ret_julianday" return_type="S55d2014ad440" is_public="true">
+      <params>
+        <name type="I55d2014addd0">day</name>
+        <name type="I55d2014ae760">ms</name>
+        <name type="I55d2014af6c0">errno</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d2014ad210" is_pointer="true" ref="S55d20149ecd0"/>
+    <FbasicType type="S55d2014ad440" is_pointer="true" ref="S55d2014ad210"/>
+    <FbasicType type="I55d2014adc90" ref="Fint">
+      <kind>
+        <Var type="I55d201499ec0" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d2014addd0" intent="in" ref="I55d2014adc90"/>
+    <FbasicType type="I55d2014ae620" ref="Fint">
+      <kind>
+        <Var type="I55d201499ec0" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d2014ae760" intent="in" ref="I55d2014ae620"/>
+    <FbasicType type="I55d2014af6c0" is_optional="true" ref="Fint"/>
+    <FbasicType type="S55d2014aecb0" ref="S55d20149a730"/>
+    <FbasicType type="S55d2014aeee0" ref="S55d2014aecb0"/>
+    <FfunctionType type="F55d2014b08e0" return_type="Flogical"/>
+    <FfunctionType type="F55d2014b2d50" return_type="Flogical"/>
+    <FbasicType type="S55d2014a2420" ref="S55d20149a730"/>
+    <FbasicType type="S55d2014a2a90" ref="S55d2014a2420"/>
+    <FbasicType type="S55d2014a1b00" ref="S55d2014a2a90"/>
+    <FfunctionType type="F55d2014a1510" result_name="c_pointer" return_type="S55d2014a1b00" is_private="true" bind="C" bind_name="newJulianDay">
+      <params>
+        <name type="I55d2014a35c0">day</name>
+        <name type="I55d2014a3ec0">ms</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55d2014a3480" ref="Fint">
+      <kind>
+        <Var type="I55d201499ec0" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d2014a35c0" is_value="true" ref="I55d2014a3480"/>
+    <FbasicType type="I55d2014a3d80" ref="Fint">
+      <kind>
+        <Var type="I55d201499ec0" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d2014a3ec0" is_value="true" ref="I55d2014a3d80"/>
+    <FfunctionType type="F55d2014b4f50" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S55d2014b5c20">my_julianday</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d2014b5ae0" is_pointer="true" ref="S55d20149ecd0"/>
+    <FbasicType type="S55d2014b5c20" is_pointer="true" ref="S55d2014b5ae0"/>
+    <FfunctionType type="F55d2014b71e0" return_type="V55d2014b70a0"/>
+    <FbasicType type="V55d2014b70a0" is_target="true" ref="FnumericAll"/>
+    <FfunctionType type="F55d2014a5250" return_type="Fvoid" is_private="true" bind="C" bind_name="deallocateJulianDay">
+      <params>
+        <name type="S55d2014a6410">jd</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d2014a5b70" ref="S55d20149a730"/>
+    <FbasicType type="S55d2014a62d0" ref="S55d2014a5b70"/>
+    <FbasicType type="S55d2014a6410" is_value="true" ref="S55d2014a62d0"/>
+    <FfunctionType type="F55d2014b8100" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S55d2014b9430">my_julianday</name>
+        <name type="C55d2014b9e50">string</name>
+        <name type="I55d2014bb5d0">errno</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d2014b92f0" is_pointer="true" ref="S55d20149ecd0"/>
+    <FbasicType type="S55d2014b9430" is_pointer="true" ref="S55d2014b92f0"/>
+    <FbasicType type="C55d2014b9d10" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">32</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55d2014b9e50" intent="out" ref="C55d2014b9d10"/>
+    <FbasicType type="I55d2014bb5d0" is_optional="true" ref="Fint"/>
+    <FbasicType type="S55d2014ba3e0" ref="S55d20149a730"/>
+    <FbasicType type="S55d2014ba610" ref="S55d2014ba3e0"/>
+    <FfunctionType type="F55d2014bc790" return_type="Flogical"/>
+    <FfunctionType type="F55d2014beff0" return_type="Flogical"/>
+    <FfunctionType type="F55d2014c0c40" return_type="Fint"/>
+    <FfunctionType type="F55d2014c3520" return_type="Fint"/>
+    <FbasicType type="S55d2014a84d0" ref="S55d20149a730"/>
+    <FbasicType type="S55d2014a8c30" ref="S55d2014a84d0"/>
+    <FbasicType type="S55d2014a7ca0" ref="S55d2014a8c30"/>
+    <FfunctionType type="F55d2014a76b0" result_name="string_ptr" return_type="S55d2014a7ca0" is_private="true" bind="C" bind_name="juliandayToString">
+      <params>
+        <name type="S55d2014a95e0">my_julianday</name>
+        <name type="A55d2014aa2f0">string</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d2014a94a0" ref="S55d2014a84d0"/>
+    <FbasicType type="S55d2014a95e0" is_value="true" ref="S55d2014a94a0"/>
+    <FbasicType type="C55d2014aa070" ref="Fcharacter">
+      <len>
+        <Var type="I55d20149a1d0" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d2014aa2f0" ref="C55d2014aa070">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d2014c2030" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d2014c1bf0" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <Var type="Fint" scope="local">i</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d2014c3db0" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d2014c3970" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <functionCall type="Fint" is_intrinsic="true">
+            <name>len</name>
+            <arguments>
+              <Var type="C55d2014b9e50" scope="local">string</Var>
+            </arguments>
+          </functionCall>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+  </typeTable>
+  <identifiers>
+    <id type="I55d201499ec0" sclass="flocal" original_name="c_int64_t" declared_in="iso_c_binding">
+      <name>c_int64_t</name>
+    </id>
+    <id type="I55d20149a1d0" sclass="flocal" original_name="c_char" declared_in="iso_c_binding">
+      <name>c_char</name>
+    </id>
+    <id type="C55d20149a480" sclass="flocal" original_name="c_null_char" declared_in="iso_c_binding">
+      <name>c_null_char</name>
+    </id>
+    <id type="S55d20149a730" imported_id="S555a51945380" sclass="ftype_name" original_name="c_ptr" declared_in="iso_c_binding">
+      <name>c_ptr</name>
+    </id>
+    <id type="F55d20149aeb0" sclass="ffunc" original_name="c_associated" declared_in="iso_c_binding">
+      <name>c_associated</name>
+    </id>
+    <id type="F55d20149b620" sclass="ffunc" original_name="c_f_pointer" declared_in="iso_c_binding">
+      <name>c_f_pointer</name>
+    </id>
+    <id type="F55d20149b9a0" sclass="ffunc" original_name="c_loc" declared_in="iso_c_binding">
+      <name>c_loc</name>
+    </id>
+    <id type="I55d20149e3e0" sclass="flocal" original_name="max_julianday_str_len" declared_in="mtime_julianday">
+      <name>max_julianday_str_len</name>
+    </id>
+    <id type="S55d20149ecd0" sclass="ftype_name" original_name="julianday" declared_in="mtime_julianday">
+      <name>julianday</name>
+    </id>
+    <id type="F55d2014ac020" sclass="ffunc" original_name="newjulianday" declared_in="mtime_julianday">
+      <name>newjulianday</name>
+    </id>
+    <id type="F55d2014b4f50" sclass="ffunc" original_name="deallocatejulianday" declared_in="mtime_julianday">
+      <name>deallocatejulianday</name>
+    </id>
+    <id type="F55d2014b8100" sclass="ffunc" original_name="juliandaytostring" declared_in="mtime_julianday">
+      <name>juliandaytostring</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I55d201499ec0">c_int64_t</name>
+    </varDecl>
+    <varDecl>
+      <name type="I55d20149a1d0">c_char</name>
+    </varDecl>
+    <varDecl>
+      <name type="C55d20149a480">c_null_char</name>
+    </varDecl>
+    <varDecl lineno="228" file="libmtime.f90">
+      <name type="I55d20149e3e0">max_julianday_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

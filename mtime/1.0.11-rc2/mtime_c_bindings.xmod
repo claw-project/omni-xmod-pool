@@ -1,0 +1,3354 @@
+<OmniFortranModule version="1.0">
+  <name>mtime_c_bindings</name>
+  <depends>
+    <name>iso_c_binding</name>
+    <name>mtime_constants</name>
+    <name>mtime_error_handling</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I1_mtime_c_bindings" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I2_mtime_c_bindings" is_parameter="true" ref="I1_mtime_c_bindings"/>
+    <FbasicType type="I3_mtime_c_bindings" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I4_mtime_c_bindings" is_parameter="true" ref="I3_mtime_c_bindings"/>
+    <FbasicType type="I5_mtime_c_bindings" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I6_mtime_c_bindings" is_parameter="true" ref="I5_mtime_c_bindings"/>
+    <FbasicType type="I7_mtime_c_bindings" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I8_mtime_c_bindings" is_parameter="true" ref="I7_mtime_c_bindings"/>
+    <FbasicType type="I9_mtime_c_bindings" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I10_mtime_c_bindings" is_parameter="true" ref="I9_mtime_c_bindings"/>
+    <FbasicType type="I11_mtime_c_bindings" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I12_mtime_c_bindings" is_parameter="true" ref="I11_mtime_c_bindings"/>
+    <FbasicType type="C1_mtime_c_bindings" is_parameter="true" ref="Fcharacter"/>
+    <FstructType type="S1_mtime_c_bindings" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I13_mtime_c_bindings">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I14_mtime_c_bindings" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I15_mtime_c_bindings" is_parameter="true" ref="I14_mtime_c_bindings"/>
+    <FbasicType type="I13_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I15_mtime_c_bindings" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F1_mtime_c_bindings" return_type="FnumericAll"/>
+    <FfunctionType type="F2_mtime_c_bindings" return_type="L1_mtime_c_bindings">
+      <params>
+        <name type="S2_mtime_c_bindings" imported_id="S13_iso_c_binding">c_ptr_1</name>
+        <name type="S3_mtime_c_bindings" imported_id="S14_iso_c_binding">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L1_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S4_mtime_c_bindings" imported_id="S2_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I16_mtime_c_bindings">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I16_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I15_mtime_c_bindings" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S5_mtime_c_bindings" imported_id="S15_iso_c_binding" ref="S4_mtime_c_bindings"/>
+    <FbasicType type="S2_mtime_c_bindings" imported_id="S13_iso_c_binding" ref="S5_mtime_c_bindings"/>
+    <FbasicType type="S6_mtime_c_bindings" imported_id="S16_iso_c_binding" ref="S4_mtime_c_bindings"/>
+    <FbasicType type="S3_mtime_c_bindings" imported_id="S14_iso_c_binding" is_optional="true" ref="S6_mtime_c_bindings"/>
+    <FfunctionType type="F3_mtime_c_bindings" return_type="L2_mtime_c_bindings">
+      <params>
+        <name type="S7_mtime_c_bindings" imported_id="S9_iso_c_binding">c_ptr_1</name>
+        <name type="S8_mtime_c_bindings" imported_id="S10_iso_c_binding">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L2_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S9_mtime_c_bindings" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I17_mtime_c_bindings">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I17_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I15_mtime_c_bindings" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S10_mtime_c_bindings" imported_id="S11_iso_c_binding" ref="S9_mtime_c_bindings"/>
+    <FbasicType type="S7_mtime_c_bindings" imported_id="S9_iso_c_binding" ref="S10_mtime_c_bindings"/>
+    <FbasicType type="S11_mtime_c_bindings" imported_id="S12_iso_c_binding" ref="S9_mtime_c_bindings"/>
+    <FbasicType type="S8_mtime_c_bindings" imported_id="S10_iso_c_binding" is_optional="true" ref="S11_mtime_c_bindings"/>
+    <FbasicType type="I18_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I19_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I20_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I21_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I22_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I23_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I24_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I25_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I26_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I27_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FfunctionType type="F4_mtime_c_bindings" return_type="Fvoid">
+      <params>
+        <name type="F5_mtime_c_bindings">message_procedure</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F6_mtime_c_bindings" return_type="Fvoid">
+      <params>
+        <name type="F7_mtime_c_bindings">finish_procedure</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F8_mtime_c_bindings" return_type="Fvoid"/>
+    <FfunctionType type="F9_mtime_c_bindings" return_type="Fvoid"/>
+    <FbasicType type="I28_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I29_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I30_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I31_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I32_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I33_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I34_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I35_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I36_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I37_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I38_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I39_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I40_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I41_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I42_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I43_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I44_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I45_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I46_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I47_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I48_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I49_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I50_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I51_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I52_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I53_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I54_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I56_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I57_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I58_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I59_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I60_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I61_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I62_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I63_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I64_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I65_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I66_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I67_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I68_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I69_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I70_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I71_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I72_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I73_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I74_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I75_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I76_mtime_c_bindings" is_parameter="true" ref="Fint"/>
+    <FfunctionType type="F10_mtime_c_bindings" return_type="Fvoid">
+      <params>
+        <name type="I77_mtime_c_bindings">errno</name>
+        <name type="C2_mtime_c_bindings">error_message</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I77_mtime_c_bindings" intent="in" ref="Fint"/>
+    <FbasicType type="C3_mtime_c_bindings" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C2_mtime_c_bindings" intent="out" ref="C3_mtime_c_bindings"/>
+    <FbasicType type="I78_mtime_c_bindings" intent="in" ref="Fint"/>
+    <FbasicType type="C4_mtime_c_bindings" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C5_mtime_c_bindings" intent="out" ref="C4_mtime_c_bindings"/>
+    <FstructType type="S12_mtime_c_bindings" is_public="true" bind="C">
+      <symbols>
+        <id type="S13_mtime_c_bindings">
+          <name>nexteventingroup</name>
+        </id>
+        <id type="I79_mtime_c_bindings">
+          <name>eventid</name>
+        </id>
+        <id type="S14_mtime_c_bindings">
+          <name>eventname</name>
+        </id>
+        <id type="S15_mtime_c_bindings">
+          <name>eventslastevaluationdatetime</name>
+        </id>
+        <id type="S16_mtime_c_bindings">
+          <name>eventreferencedatetime</name>
+        </id>
+        <id type="S17_mtime_c_bindings">
+          <name>eventfirstdatetime</name>
+        </id>
+        <id type="S18_mtime_c_bindings">
+          <name>eventlastdatetime</name>
+        </id>
+        <id type="S19_mtime_c_bindings">
+          <name>eventinterval</name>
+        </id>
+        <id type="S20_mtime_c_bindings">
+          <name>eventoffset</name>
+        </id>
+        <id type="L3_mtime_c_bindings">
+          <name>nevertriggerevent</name>
+        </id>
+        <id type="L4_mtime_c_bindings">
+          <name>triggercurrentevent</name>
+        </id>
+        <id type="L5_mtime_c_bindings">
+          <name>nexteventisfirst</name>
+        </id>
+        <id type="L6_mtime_c_bindings">
+          <name>lasteventwasfinal</name>
+        </id>
+        <id type="L7_mtime_c_bindings">
+          <name>eventisfirstinday</name>
+        </id>
+        <id type="L8_mtime_c_bindings">
+          <name>eventisfirstinmonth</name>
+        </id>
+        <id type="L9_mtime_c_bindings">
+          <name>eventisfirstinyear</name>
+        </id>
+        <id type="L10_mtime_c_bindings">
+          <name>eventislastinday</name>
+        </id>
+        <id type="L11_mtime_c_bindings">
+          <name>eventislastinmonth</name>
+        </id>
+        <id type="L12_mtime_c_bindings">
+          <name>eventislastinyear</name>
+        </id>
+        <id type="S21_mtime_c_bindings">
+          <name>triggernexteventdatetime</name>
+        </id>
+        <id type="S22_mtime_c_bindings">
+          <name>triggeredpreviouseventdatetime</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="S23_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S13_mtime_c_bindings" ref="S23_mtime_c_bindings"/>
+    <FbasicType type="I80_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I79_mtime_c_bindings" ref="I80_mtime_c_bindings"/>
+    <FbasicType type="S24_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S14_mtime_c_bindings" ref="S24_mtime_c_bindings"/>
+    <FbasicType type="S25_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S15_mtime_c_bindings" ref="S25_mtime_c_bindings"/>
+    <FbasicType type="S26_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S16_mtime_c_bindings" ref="S26_mtime_c_bindings"/>
+    <FbasicType type="S27_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S17_mtime_c_bindings" ref="S27_mtime_c_bindings"/>
+    <FbasicType type="S28_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S18_mtime_c_bindings" ref="S28_mtime_c_bindings"/>
+    <FbasicType type="S29_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S19_mtime_c_bindings" ref="S29_mtime_c_bindings"/>
+    <FbasicType type="S30_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S20_mtime_c_bindings" ref="S30_mtime_c_bindings"/>
+    <FbasicType type="L13_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L3_mtime_c_bindings" ref="L13_mtime_c_bindings"/>
+    <FbasicType type="L14_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L4_mtime_c_bindings" ref="L14_mtime_c_bindings"/>
+    <FbasicType type="L15_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L5_mtime_c_bindings" ref="L15_mtime_c_bindings"/>
+    <FbasicType type="L16_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L6_mtime_c_bindings" ref="L16_mtime_c_bindings"/>
+    <FbasicType type="L17_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L7_mtime_c_bindings" ref="L17_mtime_c_bindings"/>
+    <FbasicType type="L18_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L8_mtime_c_bindings" ref="L18_mtime_c_bindings"/>
+    <FbasicType type="L19_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L9_mtime_c_bindings" ref="L19_mtime_c_bindings"/>
+    <FbasicType type="L20_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L10_mtime_c_bindings" ref="L20_mtime_c_bindings"/>
+    <FbasicType type="L21_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L11_mtime_c_bindings" ref="L21_mtime_c_bindings"/>
+    <FbasicType type="L22_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L12_mtime_c_bindings" ref="L22_mtime_c_bindings"/>
+    <FbasicType type="S31_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S21_mtime_c_bindings" ref="S31_mtime_c_bindings"/>
+    <FbasicType type="S32_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S22_mtime_c_bindings" ref="S32_mtime_c_bindings"/>
+    <FstructType type="S33_mtime_c_bindings" is_public="true" bind="C">
+      <symbols>
+        <id type="I81_mtime_c_bindings">
+          <name>eventgroupid</name>
+        </id>
+        <id type="S34_mtime_c_bindings">
+          <name>eventgroupname</name>
+        </id>
+        <id type="S35_mtime_c_bindings">
+          <name>firsteventingroup</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I82_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I81_mtime_c_bindings" ref="I82_mtime_c_bindings"/>
+    <FbasicType type="S36_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S34_mtime_c_bindings" ref="S36_mtime_c_bindings"/>
+    <FbasicType type="S37_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S35_mtime_c_bindings" ref="S37_mtime_c_bindings"/>
+    <FstructType type="S38_mtime_c_bindings" is_public="true" bind="C">
+      <symbols>
+        <id type="I83_mtime_c_bindings">
+          <name>day</name>
+        </id>
+        <id type="I84_mtime_c_bindings">
+          <name>ms</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I85_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I83_mtime_c_bindings" ref="I85_mtime_c_bindings"/>
+    <FbasicType type="I86_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I84_mtime_c_bindings" ref="I86_mtime_c_bindings"/>
+    <FstructType type="S39_mtime_c_bindings" is_public="true" bind="C">
+      <symbols>
+        <id type="C6_mtime_c_bindings">
+          <name>sign</name>
+        </id>
+        <id type="I87_mtime_c_bindings">
+          <name>day</name>
+        </id>
+        <id type="I88_mtime_c_bindings">
+          <name>ms</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="C6_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="I89_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I87_mtime_c_bindings" ref="I89_mtime_c_bindings"/>
+    <FbasicType type="I90_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I88_mtime_c_bindings" ref="I90_mtime_c_bindings"/>
+    <FstructType type="S40_mtime_c_bindings" is_public="true" bind="C">
+      <symbols>
+        <id type="I91_mtime_c_bindings">
+          <name>year</name>
+        </id>
+        <id type="I92_mtime_c_bindings">
+          <name>month</name>
+        </id>
+        <id type="I93_mtime_c_bindings">
+          <name>day</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I94_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I91_mtime_c_bindings" ref="I94_mtime_c_bindings"/>
+    <FbasicType type="I95_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I92_mtime_c_bindings" ref="I95_mtime_c_bindings"/>
+    <FbasicType type="I96_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I93_mtime_c_bindings" ref="I96_mtime_c_bindings"/>
+    <FstructType type="S41_mtime_c_bindings" is_public="true" bind="C">
+      <symbols>
+        <id type="I97_mtime_c_bindings">
+          <name>hour</name>
+        </id>
+        <id type="I98_mtime_c_bindings">
+          <name>minute</name>
+        </id>
+        <id type="I99_mtime_c_bindings">
+          <name>second</name>
+        </id>
+        <id type="I100_mtime_c_bindings">
+          <name>ms</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I101_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I97_mtime_c_bindings" ref="I101_mtime_c_bindings"/>
+    <FbasicType type="I102_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I98_mtime_c_bindings" ref="I102_mtime_c_bindings"/>
+    <FbasicType type="I103_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I99_mtime_c_bindings" ref="I103_mtime_c_bindings"/>
+    <FbasicType type="I104_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I100_mtime_c_bindings" ref="I104_mtime_c_bindings"/>
+    <FstructType type="S42_mtime_c_bindings" is_public="true" bind="C">
+      <symbols>
+        <id type="S43_mtime_c_bindings">
+          <name>date</name>
+        </id>
+        <id type="S44_mtime_c_bindings">
+          <name>time</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="S45_mtime_c_bindings" ref="S40_mtime_c_bindings"/>
+    <FbasicType type="S43_mtime_c_bindings" ref="S45_mtime_c_bindings"/>
+    <FbasicType type="S46_mtime_c_bindings" ref="S41_mtime_c_bindings"/>
+    <FbasicType type="S44_mtime_c_bindings" ref="S46_mtime_c_bindings"/>
+    <FstructType type="S47_mtime_c_bindings" is_public="true" bind="C">
+      <symbols>
+        <id type="I105_mtime_c_bindings">
+          <name>flag_std_form</name>
+        </id>
+        <id type="C7_mtime_c_bindings">
+          <name>sign</name>
+        </id>
+        <id type="I106_mtime_c_bindings">
+          <name>year</name>
+        </id>
+        <id type="I107_mtime_c_bindings">
+          <name>month</name>
+        </id>
+        <id type="I108_mtime_c_bindings">
+          <name>day</name>
+        </id>
+        <id type="I109_mtime_c_bindings">
+          <name>hour</name>
+        </id>
+        <id type="I110_mtime_c_bindings">
+          <name>minute</name>
+        </id>
+        <id type="I111_mtime_c_bindings">
+          <name>second</name>
+        </id>
+        <id type="I112_mtime_c_bindings">
+          <name>ms</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I113_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I105_mtime_c_bindings" ref="I113_mtime_c_bindings"/>
+    <FbasicType type="C7_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="I114_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I106_mtime_c_bindings" ref="I114_mtime_c_bindings"/>
+    <FbasicType type="I115_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I107_mtime_c_bindings" ref="I115_mtime_c_bindings"/>
+    <FbasicType type="I116_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I108_mtime_c_bindings" ref="I116_mtime_c_bindings"/>
+    <FbasicType type="I117_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I109_mtime_c_bindings" ref="I117_mtime_c_bindings"/>
+    <FbasicType type="I118_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I110_mtime_c_bindings" ref="I118_mtime_c_bindings"/>
+    <FbasicType type="I119_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I111_mtime_c_bindings" ref="I119_mtime_c_bindings"/>
+    <FbasicType type="I120_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I112_mtime_c_bindings" ref="I120_mtime_c_bindings"/>
+    <FstructType type="S48_mtime_c_bindings" is_public="true" bind="C">
+      <symbols>
+        <id type="I121_mtime_c_bindings">
+          <name>quotient</name>
+        </id>
+        <id type="I122_mtime_c_bindings">
+          <name>remainder_in_ms</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I123_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I121_mtime_c_bindings" ref="I123_mtime_c_bindings"/>
+    <FbasicType type="I124_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I122_mtime_c_bindings" ref="I124_mtime_c_bindings"/>
+    <FfunctionType type="F11_mtime_c_bindings" return_type="Fvoid" is_public="true" bind="C" bind_name="initCalendar">
+      <params>
+        <name type="I125_mtime_c_bindings">ct</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I126_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I125_mtime_c_bindings" is_value="true" ref="I126_mtime_c_bindings"/>
+    <FfunctionType type="F12_mtime_c_bindings" return_type="Fvoid" is_public="true" bind="C" bind_name="freeCalendar">
+      <params>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F13_mtime_c_bindings" return_type="I127_mtime_c_bindings" is_public="true" bind="C" bind_name="getCalendarType">
+      <params>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I128_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I127_mtime_c_bindings" ref="I128_mtime_c_bindings"/>
+    <FfunctionType type="F14_mtime_c_bindings" result_name="c_pointer" return_type="S49_mtime_c_bindings" is_public="true" bind="C" bind_name="calendarToString">
+      <params>
+        <name type="A1_mtime_c_bindings">calendar</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S50_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S51_mtime_c_bindings" ref="S50_mtime_c_bindings"/>
+    <FbasicType type="S49_mtime_c_bindings" ref="S51_mtime_c_bindings"/>
+    <FbasicType type="C8_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A1_mtime_c_bindings" ref="C8_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S52_mtime_c_bindings" ref="S51_mtime_c_bindings"/>
+    <FfunctionType type="F15_mtime_c_bindings" result_name="c_pointer" return_type="S53_mtime_c_bindings" is_public="true" bind="C" bind_name="newJulianDelta">
+      <params>
+        <name type="C9_mtime_c_bindings">sign</name>
+        <name type="I129_mtime_c_bindings">day</name>
+        <name type="I130_mtime_c_bindings">ms</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S54_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S55_mtime_c_bindings" ref="S54_mtime_c_bindings"/>
+    <FbasicType type="S53_mtime_c_bindings" ref="S55_mtime_c_bindings"/>
+    <FbasicType type="C9_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="I131_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I129_mtime_c_bindings" is_value="true" ref="I131_mtime_c_bindings"/>
+    <FbasicType type="I132_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I130_mtime_c_bindings" is_value="true" ref="I132_mtime_c_bindings"/>
+    <FbasicType type="S56_mtime_c_bindings" ref="S55_mtime_c_bindings"/>
+    <FfunctionType type="F16_mtime_c_bindings" return_type="Fvoid" is_public="true" bind="C" bind_name="deallocateJulianDelta">
+      <params>
+        <name type="S57_mtime_c_bindings">jd</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S58_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S59_mtime_c_bindings" ref="S58_mtime_c_bindings"/>
+    <FbasicType type="S57_mtime_c_bindings" is_value="true" ref="S59_mtime_c_bindings"/>
+    <FfunctionType type="F17_mtime_c_bindings" result_name="c_pointer" return_type="S60_mtime_c_bindings" is_public="true" bind="C" bind_name="newJulianDay">
+      <params>
+        <name type="I133_mtime_c_bindings">day</name>
+        <name type="I134_mtime_c_bindings">ms</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S61_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S62_mtime_c_bindings" ref="S61_mtime_c_bindings"/>
+    <FbasicType type="S60_mtime_c_bindings" ref="S62_mtime_c_bindings"/>
+    <FbasicType type="I135_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I133_mtime_c_bindings" is_value="true" ref="I135_mtime_c_bindings"/>
+    <FbasicType type="I136_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I134_mtime_c_bindings" is_value="true" ref="I136_mtime_c_bindings"/>
+    <FbasicType type="S63_mtime_c_bindings" ref="S62_mtime_c_bindings"/>
+    <FfunctionType type="F18_mtime_c_bindings" return_type="Fvoid" is_public="true" bind="C" bind_name="deallocateJulianDay">
+      <params>
+        <name type="S64_mtime_c_bindings">jd</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S65_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S66_mtime_c_bindings" ref="S65_mtime_c_bindings"/>
+    <FbasicType type="S64_mtime_c_bindings" is_value="true" ref="S66_mtime_c_bindings"/>
+    <FfunctionType type="F19_mtime_c_bindings" result_name="string_ptr" return_type="S67_mtime_c_bindings" is_public="true" bind="C" bind_name="juliandayToString">
+      <params>
+        <name type="S68_mtime_c_bindings">my_julianday</name>
+        <name type="A2_mtime_c_bindings">string</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S69_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S70_mtime_c_bindings" ref="S69_mtime_c_bindings"/>
+    <FbasicType type="S67_mtime_c_bindings" ref="S70_mtime_c_bindings"/>
+    <FbasicType type="S71_mtime_c_bindings" ref="S69_mtime_c_bindings"/>
+    <FbasicType type="S68_mtime_c_bindings" is_value="true" ref="S71_mtime_c_bindings"/>
+    <FbasicType type="C10_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A2_mtime_c_bindings" ref="C10_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S72_mtime_c_bindings" ref="S70_mtime_c_bindings"/>
+    <FfunctionType type="F20_mtime_c_bindings" result_name="c_pointer" return_type="S73_mtime_c_bindings" is_public="true" bind="C" bind_name="newDate">
+      <params>
+        <name type="A3_mtime_c_bindings">string</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S74_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S75_mtime_c_bindings" ref="S74_mtime_c_bindings"/>
+    <FbasicType type="S73_mtime_c_bindings" ref="S75_mtime_c_bindings"/>
+    <FbasicType type="C11_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A3_mtime_c_bindings" ref="C11_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S76_mtime_c_bindings" ref="S75_mtime_c_bindings"/>
+    <FfunctionType type="F21_mtime_c_bindings" result_name="c_pointer" return_type="S77_mtime_c_bindings" is_public="true" bind="C" bind_name="newRawDate">
+      <params>
+        <name type="I137_mtime_c_bindings">year</name>
+        <name type="I138_mtime_c_bindings">month</name>
+        <name type="I139_mtime_c_bindings">day</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S78_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S79_mtime_c_bindings" ref="S78_mtime_c_bindings"/>
+    <FbasicType type="S77_mtime_c_bindings" ref="S79_mtime_c_bindings"/>
+    <FbasicType type="I140_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I137_mtime_c_bindings" is_value="true" ref="I140_mtime_c_bindings"/>
+    <FbasicType type="I141_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I138_mtime_c_bindings" is_value="true" ref="I141_mtime_c_bindings"/>
+    <FbasicType type="I139_mtime_c_bindings" is_value="true" ref="I141_mtime_c_bindings"/>
+    <FbasicType type="S80_mtime_c_bindings" ref="S79_mtime_c_bindings"/>
+    <FfunctionType type="F22_mtime_c_bindings" result_name="c_pointer" return_type="S81_mtime_c_bindings" is_public="true" bind="C" bind_name="constructAndCopyDate">
+      <params>
+        <name type="S82_mtime_c_bindings">d</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S83_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S84_mtime_c_bindings" ref="S83_mtime_c_bindings"/>
+    <FbasicType type="S81_mtime_c_bindings" ref="S84_mtime_c_bindings"/>
+    <FbasicType type="S85_mtime_c_bindings" ref="S83_mtime_c_bindings"/>
+    <FbasicType type="S82_mtime_c_bindings" is_value="true" ref="S85_mtime_c_bindings"/>
+    <FbasicType type="S86_mtime_c_bindings" ref="S84_mtime_c_bindings"/>
+    <FfunctionType type="F23_mtime_c_bindings" return_type="Fvoid" is_public="true" bind="C" bind_name="deallocateDate">
+      <params>
+        <name type="S87_mtime_c_bindings">d</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S88_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S89_mtime_c_bindings" ref="S88_mtime_c_bindings"/>
+    <FbasicType type="S87_mtime_c_bindings" is_value="true" ref="S89_mtime_c_bindings"/>
+    <FfunctionType type="F24_mtime_c_bindings" result_name="ret_dest" return_type="S90_mtime_c_bindings" is_public="true" bind="C" bind_name="replaceDate">
+      <params>
+        <name type="S91_mtime_c_bindings">src</name>
+        <name type="S92_mtime_c_bindings">dest</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S93_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S94_mtime_c_bindings" ref="S93_mtime_c_bindings"/>
+    <FbasicType type="S90_mtime_c_bindings" ref="S94_mtime_c_bindings"/>
+    <FbasicType type="S95_mtime_c_bindings" ref="S93_mtime_c_bindings"/>
+    <FbasicType type="S91_mtime_c_bindings" is_value="true" ref="S95_mtime_c_bindings"/>
+    <FbasicType type="S92_mtime_c_bindings" is_value="true" ref="S95_mtime_c_bindings"/>
+    <FbasicType type="S96_mtime_c_bindings" ref="S94_mtime_c_bindings"/>
+    <FfunctionType type="F25_mtime_c_bindings" result_name="string_ptr" return_type="S97_mtime_c_bindings" is_public="true" bind="C" bind_name="dateToString">
+      <params>
+        <name type="S98_mtime_c_bindings">my_date</name>
+        <name type="A4_mtime_c_bindings">string</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S99_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S100_mtime_c_bindings" ref="S99_mtime_c_bindings"/>
+    <FbasicType type="S97_mtime_c_bindings" ref="S100_mtime_c_bindings"/>
+    <FbasicType type="S101_mtime_c_bindings" ref="S99_mtime_c_bindings"/>
+    <FbasicType type="S98_mtime_c_bindings" is_value="true" ref="S101_mtime_c_bindings"/>
+    <FbasicType type="C12_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A4_mtime_c_bindings" ref="C12_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S102_mtime_c_bindings" ref="S100_mtime_c_bindings"/>
+    <FfunctionType type="F26_mtime_c_bindings" result_name="string_ptr" return_type="S103_mtime_c_bindings" is_public="true" bind="C" bind_name="dateToPosixString">
+      <params>
+        <name type="S104_mtime_c_bindings">my_date</name>
+        <name type="A5_mtime_c_bindings">string</name>
+        <name type="A6_mtime_c_bindings">fmtstr</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S105_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S106_mtime_c_bindings" ref="S105_mtime_c_bindings"/>
+    <FbasicType type="S103_mtime_c_bindings" ref="S106_mtime_c_bindings"/>
+    <FbasicType type="S107_mtime_c_bindings" ref="S105_mtime_c_bindings"/>
+    <FbasicType type="S104_mtime_c_bindings" is_value="true" ref="S107_mtime_c_bindings"/>
+    <FbasicType type="C13_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A5_mtime_c_bindings" ref="C13_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C14_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A6_mtime_c_bindings" ref="C14_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S108_mtime_c_bindings" ref="S106_mtime_c_bindings"/>
+    <FfunctionType type="F27_mtime_c_bindings" result_name="c_pointer" return_type="S109_mtime_c_bindings" is_public="true" bind="C" bind_name="newTime">
+      <params>
+        <name type="A7_mtime_c_bindings">string</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S110_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S111_mtime_c_bindings" ref="S110_mtime_c_bindings"/>
+    <FbasicType type="S109_mtime_c_bindings" ref="S111_mtime_c_bindings"/>
+    <FbasicType type="C15_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A7_mtime_c_bindings" ref="C15_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S112_mtime_c_bindings" ref="S111_mtime_c_bindings"/>
+    <FfunctionType type="F28_mtime_c_bindings" result_name="c_pointer" return_type="S113_mtime_c_bindings" is_public="true" bind="C" bind_name="newRawTime">
+      <params>
+        <name type="I142_mtime_c_bindings">hour</name>
+        <name type="I143_mtime_c_bindings">minute</name>
+        <name type="I144_mtime_c_bindings">second</name>
+        <name type="I145_mtime_c_bindings">ms</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S114_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S115_mtime_c_bindings" ref="S114_mtime_c_bindings"/>
+    <FbasicType type="S113_mtime_c_bindings" ref="S115_mtime_c_bindings"/>
+    <FbasicType type="I146_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I142_mtime_c_bindings" is_value="true" ref="I146_mtime_c_bindings"/>
+    <FbasicType type="I143_mtime_c_bindings" is_value="true" ref="I146_mtime_c_bindings"/>
+    <FbasicType type="I144_mtime_c_bindings" is_value="true" ref="I146_mtime_c_bindings"/>
+    <FbasicType type="I145_mtime_c_bindings" is_value="true" ref="I146_mtime_c_bindings"/>
+    <FbasicType type="S116_mtime_c_bindings" ref="S115_mtime_c_bindings"/>
+    <FfunctionType type="F29_mtime_c_bindings" result_name="c_pointer" return_type="S117_mtime_c_bindings" is_public="true" bind="C" bind_name="constructAndCopyTime">
+      <params>
+        <name type="S118_mtime_c_bindings">t</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S119_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S120_mtime_c_bindings" ref="S119_mtime_c_bindings"/>
+    <FbasicType type="S117_mtime_c_bindings" ref="S120_mtime_c_bindings"/>
+    <FbasicType type="S121_mtime_c_bindings" ref="S119_mtime_c_bindings"/>
+    <FbasicType type="S118_mtime_c_bindings" is_value="true" ref="S121_mtime_c_bindings"/>
+    <FbasicType type="S122_mtime_c_bindings" ref="S120_mtime_c_bindings"/>
+    <FfunctionType type="F30_mtime_c_bindings" return_type="Fvoid" is_public="true" bind="C" bind_name="deallocateTime">
+      <params>
+        <name type="S123_mtime_c_bindings">t</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S124_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S125_mtime_c_bindings" ref="S124_mtime_c_bindings"/>
+    <FbasicType type="S123_mtime_c_bindings" is_value="true" ref="S125_mtime_c_bindings"/>
+    <FfunctionType type="F31_mtime_c_bindings" result_name="ret_dest" return_type="S126_mtime_c_bindings" is_public="true" bind="C" bind_name="replaceTime">
+      <params>
+        <name type="S127_mtime_c_bindings">src</name>
+        <name type="S128_mtime_c_bindings">dest</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S129_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S130_mtime_c_bindings" ref="S129_mtime_c_bindings"/>
+    <FbasicType type="S126_mtime_c_bindings" ref="S130_mtime_c_bindings"/>
+    <FbasicType type="S131_mtime_c_bindings" ref="S129_mtime_c_bindings"/>
+    <FbasicType type="S127_mtime_c_bindings" is_value="true" ref="S131_mtime_c_bindings"/>
+    <FbasicType type="S128_mtime_c_bindings" is_value="true" ref="S131_mtime_c_bindings"/>
+    <FbasicType type="S132_mtime_c_bindings" ref="S130_mtime_c_bindings"/>
+    <FfunctionType type="F32_mtime_c_bindings" result_name="string_ptr" return_type="S133_mtime_c_bindings" is_public="true" bind="C" bind_name="timeToString">
+      <params>
+        <name type="S134_mtime_c_bindings">my_time</name>
+        <name type="A8_mtime_c_bindings">string</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S135_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S136_mtime_c_bindings" ref="S135_mtime_c_bindings"/>
+    <FbasicType type="S133_mtime_c_bindings" ref="S136_mtime_c_bindings"/>
+    <FbasicType type="S137_mtime_c_bindings" ref="S135_mtime_c_bindings"/>
+    <FbasicType type="S134_mtime_c_bindings" is_value="true" ref="S137_mtime_c_bindings"/>
+    <FbasicType type="C16_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A8_mtime_c_bindings" ref="C16_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S138_mtime_c_bindings" ref="S136_mtime_c_bindings"/>
+    <FfunctionType type="F33_mtime_c_bindings" result_name="string_ptr" return_type="S139_mtime_c_bindings" is_public="true" bind="C" bind_name="timeToPosixString">
+      <params>
+        <name type="S140_mtime_c_bindings">my_time</name>
+        <name type="A9_mtime_c_bindings">string</name>
+        <name type="A10_mtime_c_bindings">fmtstr</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S141_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S142_mtime_c_bindings" ref="S141_mtime_c_bindings"/>
+    <FbasicType type="S139_mtime_c_bindings" ref="S142_mtime_c_bindings"/>
+    <FbasicType type="S143_mtime_c_bindings" ref="S141_mtime_c_bindings"/>
+    <FbasicType type="S140_mtime_c_bindings" is_value="true" ref="S143_mtime_c_bindings"/>
+    <FbasicType type="C17_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A9_mtime_c_bindings" ref="C17_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C18_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A10_mtime_c_bindings" ref="C18_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S144_mtime_c_bindings" ref="S142_mtime_c_bindings"/>
+    <FfunctionType type="F34_mtime_c_bindings" result_name="c_pointer" return_type="S145_mtime_c_bindings" is_public="true" bind="C" bind_name="newDateTime">
+      <params>
+        <name type="A11_mtime_c_bindings">string</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S146_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S147_mtime_c_bindings" ref="S146_mtime_c_bindings"/>
+    <FbasicType type="S145_mtime_c_bindings" ref="S147_mtime_c_bindings"/>
+    <FbasicType type="C19_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A11_mtime_c_bindings" ref="C19_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S148_mtime_c_bindings" ref="S147_mtime_c_bindings"/>
+    <FfunctionType type="F35_mtime_c_bindings" result_name="c_pointer" return_type="S149_mtime_c_bindings" is_public="true" bind="C" bind_name="newRawDateTime">
+      <params>
+        <name type="I147_mtime_c_bindings">year</name>
+        <name type="I148_mtime_c_bindings">month</name>
+        <name type="I149_mtime_c_bindings">day</name>
+        <name type="I150_mtime_c_bindings">hour</name>
+        <name type="I151_mtime_c_bindings">minute</name>
+        <name type="I152_mtime_c_bindings">second</name>
+        <name type="I153_mtime_c_bindings">ms</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S150_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S151_mtime_c_bindings" ref="S150_mtime_c_bindings"/>
+    <FbasicType type="S149_mtime_c_bindings" ref="S151_mtime_c_bindings"/>
+    <FbasicType type="I154_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I147_mtime_c_bindings" is_value="true" ref="I154_mtime_c_bindings"/>
+    <FbasicType type="I155_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I148_mtime_c_bindings" is_value="true" ref="I155_mtime_c_bindings"/>
+    <FbasicType type="I149_mtime_c_bindings" is_value="true" ref="I155_mtime_c_bindings"/>
+    <FbasicType type="I150_mtime_c_bindings" is_value="true" ref="I155_mtime_c_bindings"/>
+    <FbasicType type="I151_mtime_c_bindings" is_value="true" ref="I155_mtime_c_bindings"/>
+    <FbasicType type="I152_mtime_c_bindings" is_value="true" ref="I155_mtime_c_bindings"/>
+    <FbasicType type="I153_mtime_c_bindings" is_value="true" ref="I155_mtime_c_bindings"/>
+    <FbasicType type="S152_mtime_c_bindings" ref="S151_mtime_c_bindings"/>
+    <FfunctionType type="F36_mtime_c_bindings" result_name="c_pointer" return_type="S153_mtime_c_bindings" is_public="true" bind="C" bind_name="constructAndCopyDateTime">
+      <params>
+        <name type="S154_mtime_c_bindings">dt</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S155_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S156_mtime_c_bindings" ref="S155_mtime_c_bindings"/>
+    <FbasicType type="S153_mtime_c_bindings" ref="S156_mtime_c_bindings"/>
+    <FbasicType type="S157_mtime_c_bindings" ref="S155_mtime_c_bindings"/>
+    <FbasicType type="S154_mtime_c_bindings" is_value="true" ref="S157_mtime_c_bindings"/>
+    <FbasicType type="S158_mtime_c_bindings" ref="S156_mtime_c_bindings"/>
+    <FfunctionType type="F37_mtime_c_bindings" return_type="Fvoid" is_public="true" bind="C" bind_name="deallocateDateTime">
+      <params>
+        <name type="S159_mtime_c_bindings">dt</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S160_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S161_mtime_c_bindings" ref="S160_mtime_c_bindings"/>
+    <FbasicType type="S159_mtime_c_bindings" is_value="true" ref="S161_mtime_c_bindings"/>
+    <FfunctionType type="F38_mtime_c_bindings" result_name="ret" return_type="I156_mtime_c_bindings" is_public="true" bind="C" bind_name="compareDatetime">
+      <params>
+        <name type="S162_mtime_c_bindings">op1</name>
+        <name type="S163_mtime_c_bindings">op2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I157_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I156_mtime_c_bindings" ref="I157_mtime_c_bindings"/>
+    <FbasicType type="S164_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S165_mtime_c_bindings" ref="S164_mtime_c_bindings"/>
+    <FbasicType type="S162_mtime_c_bindings" is_value="true" ref="S165_mtime_c_bindings"/>
+    <FbasicType type="S166_mtime_c_bindings" ref="S164_mtime_c_bindings"/>
+    <FbasicType type="S163_mtime_c_bindings" is_value="true" ref="S166_mtime_c_bindings"/>
+    <FbasicType type="I158_mtime_c_bindings" ref="I157_mtime_c_bindings"/>
+    <FfunctionType type="F39_mtime_c_bindings" result_name="ret_dest" return_type="S167_mtime_c_bindings" is_public="true" bind="C" bind_name="replaceDatetime">
+      <params>
+        <name type="S168_mtime_c_bindings">src</name>
+        <name type="S169_mtime_c_bindings">dest</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S170_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S171_mtime_c_bindings" ref="S170_mtime_c_bindings"/>
+    <FbasicType type="S167_mtime_c_bindings" ref="S171_mtime_c_bindings"/>
+    <FbasicType type="S172_mtime_c_bindings" ref="S170_mtime_c_bindings"/>
+    <FbasicType type="S168_mtime_c_bindings" is_value="true" ref="S172_mtime_c_bindings"/>
+    <FbasicType type="S173_mtime_c_bindings" ref="S170_mtime_c_bindings"/>
+    <FbasicType type="S169_mtime_c_bindings" is_value="true" ref="S173_mtime_c_bindings"/>
+    <FbasicType type="S174_mtime_c_bindings" ref="S171_mtime_c_bindings"/>
+    <FfunctionType type="F40_mtime_c_bindings" result_name="string_ptr" return_type="S175_mtime_c_bindings" is_public="true" bind="C" bind_name="datetimeToString">
+      <params>
+        <name type="S176_mtime_c_bindings">my_time</name>
+        <name type="A12_mtime_c_bindings">string</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S177_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S178_mtime_c_bindings" ref="S177_mtime_c_bindings"/>
+    <FbasicType type="S175_mtime_c_bindings" ref="S178_mtime_c_bindings"/>
+    <FbasicType type="S179_mtime_c_bindings" ref="S177_mtime_c_bindings"/>
+    <FbasicType type="S176_mtime_c_bindings" is_value="true" ref="S179_mtime_c_bindings"/>
+    <FbasicType type="C20_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A12_mtime_c_bindings" ref="C20_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S180_mtime_c_bindings" ref="S178_mtime_c_bindings"/>
+    <FfunctionType type="F41_mtime_c_bindings" result_name="string_ptr" return_type="S181_mtime_c_bindings" is_public="true" bind="C" bind_name="datetimeToPosixString">
+      <params>
+        <name type="S182_mtime_c_bindings">my_time</name>
+        <name type="A13_mtime_c_bindings">string</name>
+        <name type="A14_mtime_c_bindings">fmtstr</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S183_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S184_mtime_c_bindings" ref="S183_mtime_c_bindings"/>
+    <FbasicType type="S181_mtime_c_bindings" ref="S184_mtime_c_bindings"/>
+    <FbasicType type="S185_mtime_c_bindings" ref="S183_mtime_c_bindings"/>
+    <FbasicType type="S182_mtime_c_bindings" is_value="true" ref="S185_mtime_c_bindings"/>
+    <FbasicType type="C21_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A13_mtime_c_bindings" ref="C21_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C22_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A14_mtime_c_bindings" ref="C22_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S186_mtime_c_bindings" ref="S184_mtime_c_bindings"/>
+    <FfunctionType type="F42_mtime_c_bindings" return_type="I159_mtime_c_bindings" is_public="true" bind="C" bind_name="getNoOfDaysInMonthDateTime">
+      <params>
+        <name type="S187_mtime_c_bindings">dt</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I160_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I159_mtime_c_bindings" ref="I160_mtime_c_bindings"/>
+    <FbasicType type="S188_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S189_mtime_c_bindings" ref="S188_mtime_c_bindings"/>
+    <FbasicType type="S187_mtime_c_bindings" is_value="true" ref="S189_mtime_c_bindings"/>
+    <FfunctionType type="F43_mtime_c_bindings" return_type="I161_mtime_c_bindings" is_public="true" bind="C" bind_name="getNoOfDaysInYearDateTime">
+      <params>
+        <name type="S190_mtime_c_bindings">dt</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I162_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I161_mtime_c_bindings" ref="I162_mtime_c_bindings"/>
+    <FbasicType type="S191_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S192_mtime_c_bindings" ref="S191_mtime_c_bindings"/>
+    <FbasicType type="S190_mtime_c_bindings" is_value="true" ref="S192_mtime_c_bindings"/>
+    <FfunctionType type="F44_mtime_c_bindings" return_type="I163_mtime_c_bindings" is_public="true" bind="C" bind_name="getDayOfYearFromDateTime">
+      <params>
+        <name type="S193_mtime_c_bindings">dt</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I164_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I163_mtime_c_bindings" ref="I164_mtime_c_bindings"/>
+    <FbasicType type="S194_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S195_mtime_c_bindings" ref="S194_mtime_c_bindings"/>
+    <FbasicType type="S193_mtime_c_bindings" is_value="true" ref="S195_mtime_c_bindings"/>
+    <FfunctionType type="F45_mtime_c_bindings" return_type="I165_mtime_c_bindings" is_public="true" bind="C" bind_name="getNoOfSecondsElapsedInMonthDateTime">
+      <params>
+        <name type="S196_mtime_c_bindings">dt</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I166_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I165_mtime_c_bindings" ref="I166_mtime_c_bindings"/>
+    <FbasicType type="S197_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S198_mtime_c_bindings" ref="S197_mtime_c_bindings"/>
+    <FbasicType type="S196_mtime_c_bindings" is_value="true" ref="S198_mtime_c_bindings"/>
+    <FfunctionType type="F46_mtime_c_bindings" return_type="I167_mtime_c_bindings" is_public="true" bind="C" bind_name="getNoOfSecondsElapsedInDayDateTime">
+      <params>
+        <name type="S199_mtime_c_bindings">dt</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I168_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I167_mtime_c_bindings" ref="I168_mtime_c_bindings"/>
+    <FbasicType type="S200_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S201_mtime_c_bindings" ref="S200_mtime_c_bindings"/>
+    <FbasicType type="S199_mtime_c_bindings" is_value="true" ref="S201_mtime_c_bindings"/>
+    <FfunctionType type="F47_mtime_c_bindings" return_type="S202_mtime_c_bindings" is_public="true" bind="C" bind_name="getJulianDayFromDateTime">
+      <params>
+        <name type="S203_mtime_c_bindings">dt</name>
+        <name type="S204_mtime_c_bindings">jd</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S205_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S206_mtime_c_bindings" ref="S205_mtime_c_bindings"/>
+    <FbasicType type="S202_mtime_c_bindings" ref="S206_mtime_c_bindings"/>
+    <FbasicType type="S207_mtime_c_bindings" ref="S205_mtime_c_bindings"/>
+    <FbasicType type="S203_mtime_c_bindings" is_value="true" ref="S207_mtime_c_bindings"/>
+    <FbasicType type="S204_mtime_c_bindings" is_value="true" ref="S207_mtime_c_bindings"/>
+    <FfunctionType type="F48_mtime_c_bindings" return_type="S208_mtime_c_bindings" is_public="true" bind="C" bind_name="getDateTimeFromJulianDay">
+      <params>
+        <name type="S209_mtime_c_bindings">jd</name>
+        <name type="S210_mtime_c_bindings">dt</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S211_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S212_mtime_c_bindings" ref="S211_mtime_c_bindings"/>
+    <FbasicType type="S208_mtime_c_bindings" ref="S212_mtime_c_bindings"/>
+    <FbasicType type="S213_mtime_c_bindings" ref="S211_mtime_c_bindings"/>
+    <FbasicType type="S209_mtime_c_bindings" is_value="true" ref="S213_mtime_c_bindings"/>
+    <FbasicType type="S210_mtime_c_bindings" is_value="true" ref="S213_mtime_c_bindings"/>
+    <FfunctionType type="F49_mtime_c_bindings" result_name="c_pointer" return_type="S214_mtime_c_bindings" is_public="true" bind="C" bind_name="newTimeDelta">
+      <params>
+        <name type="A15_mtime_c_bindings">string</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S215_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S216_mtime_c_bindings" ref="S215_mtime_c_bindings"/>
+    <FbasicType type="S214_mtime_c_bindings" ref="S216_mtime_c_bindings"/>
+    <FbasicType type="C23_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A15_mtime_c_bindings" ref="C23_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S217_mtime_c_bindings" ref="S216_mtime_c_bindings"/>
+    <FfunctionType type="F50_mtime_c_bindings" result_name="c_pointer" return_type="S218_mtime_c_bindings" is_public="true" bind="C" bind_name="newRawTimeDelta">
+      <params>
+        <name type="C24_mtime_c_bindings">sign</name>
+        <name type="I169_mtime_c_bindings">year</name>
+        <name type="I170_mtime_c_bindings">month</name>
+        <name type="I171_mtime_c_bindings">day</name>
+        <name type="I172_mtime_c_bindings">hour</name>
+        <name type="I173_mtime_c_bindings">minute</name>
+        <name type="I174_mtime_c_bindings">second</name>
+        <name type="I175_mtime_c_bindings">ms</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S219_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S220_mtime_c_bindings" ref="S219_mtime_c_bindings"/>
+    <FbasicType type="S218_mtime_c_bindings" ref="S220_mtime_c_bindings"/>
+    <FbasicType type="C25_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="C24_mtime_c_bindings" is_value="true" ref="C25_mtime_c_bindings"/>
+    <FbasicType type="I176_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I169_mtime_c_bindings" is_value="true" ref="I176_mtime_c_bindings"/>
+    <FbasicType type="I177_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I170_mtime_c_bindings" is_value="true" ref="I177_mtime_c_bindings"/>
+    <FbasicType type="I171_mtime_c_bindings" is_value="true" ref="I177_mtime_c_bindings"/>
+    <FbasicType type="I172_mtime_c_bindings" is_value="true" ref="I177_mtime_c_bindings"/>
+    <FbasicType type="I173_mtime_c_bindings" is_value="true" ref="I177_mtime_c_bindings"/>
+    <FbasicType type="I174_mtime_c_bindings" is_value="true" ref="I177_mtime_c_bindings"/>
+    <FbasicType type="I175_mtime_c_bindings" is_value="true" ref="I177_mtime_c_bindings"/>
+    <FbasicType type="S221_mtime_c_bindings" ref="S220_mtime_c_bindings"/>
+    <FfunctionType type="F51_mtime_c_bindings" result_name="c_pointer" return_type="S222_mtime_c_bindings" is_public="true" bind="C" bind_name="constructAndCopyTimeDelta">
+      <params>
+        <name type="S223_mtime_c_bindings">td</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S224_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S225_mtime_c_bindings" ref="S224_mtime_c_bindings"/>
+    <FbasicType type="S222_mtime_c_bindings" ref="S225_mtime_c_bindings"/>
+    <FbasicType type="S226_mtime_c_bindings" ref="S224_mtime_c_bindings"/>
+    <FbasicType type="S223_mtime_c_bindings" is_value="true" ref="S226_mtime_c_bindings"/>
+    <FbasicType type="S227_mtime_c_bindings" ref="S225_mtime_c_bindings"/>
+    <FfunctionType type="F52_mtime_c_bindings" return_type="Fvoid" is_public="true" bind="C" bind_name="deallocateTimeDelta">
+      <params>
+        <name type="S228_mtime_c_bindings">dt</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S229_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S230_mtime_c_bindings" ref="S229_mtime_c_bindings"/>
+    <FbasicType type="S228_mtime_c_bindings" is_value="true" ref="S230_mtime_c_bindings"/>
+    <FfunctionType type="F53_mtime_c_bindings" result_name="ret" return_type="I178_mtime_c_bindings" is_public="true" bind="C" bind_name="compareTimeDelta">
+      <params>
+        <name type="S231_mtime_c_bindings">op1</name>
+        <name type="S232_mtime_c_bindings">op2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I179_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I178_mtime_c_bindings" ref="I179_mtime_c_bindings"/>
+    <FbasicType type="S233_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S234_mtime_c_bindings" ref="S233_mtime_c_bindings"/>
+    <FbasicType type="S231_mtime_c_bindings" is_value="true" ref="S234_mtime_c_bindings"/>
+    <FbasicType type="S235_mtime_c_bindings" ref="S233_mtime_c_bindings"/>
+    <FbasicType type="S232_mtime_c_bindings" is_value="true" ref="S235_mtime_c_bindings"/>
+    <FbasicType type="I180_mtime_c_bindings" ref="I179_mtime_c_bindings"/>
+    <FfunctionType type="F54_mtime_c_bindings" result_name="timedelta_ptr" return_type="S236_mtime_c_bindings" is_public="true" bind="C" bind_name="getTimeDeltaFromDate">
+      <params>
+        <name type="S237_mtime_c_bindings">my_date1</name>
+        <name type="S238_mtime_c_bindings">my_date2</name>
+        <name type="S239_mtime_c_bindings">timedelta_return</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S240_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S241_mtime_c_bindings" ref="S240_mtime_c_bindings"/>
+    <FbasicType type="S236_mtime_c_bindings" ref="S241_mtime_c_bindings"/>
+    <FbasicType type="S242_mtime_c_bindings" ref="S240_mtime_c_bindings"/>
+    <FbasicType type="S237_mtime_c_bindings" is_value="true" ref="S242_mtime_c_bindings"/>
+    <FbasicType type="S238_mtime_c_bindings" is_value="true" ref="S242_mtime_c_bindings"/>
+    <FbasicType type="S239_mtime_c_bindings" is_value="true" ref="S242_mtime_c_bindings"/>
+    <FbasicType type="S243_mtime_c_bindings" ref="S241_mtime_c_bindings"/>
+    <FfunctionType type="F55_mtime_c_bindings" result_name="timedelta_ptr" return_type="S244_mtime_c_bindings" is_public="true" bind="C" bind_name="getTimeDeltaFromDateTime">
+      <params>
+        <name type="S245_mtime_c_bindings">my_datetime1</name>
+        <name type="S246_mtime_c_bindings">my_datetime2</name>
+        <name type="S247_mtime_c_bindings">timedelta_return</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S248_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S249_mtime_c_bindings" ref="S248_mtime_c_bindings"/>
+    <FbasicType type="S244_mtime_c_bindings" ref="S249_mtime_c_bindings"/>
+    <FbasicType type="S250_mtime_c_bindings" ref="S248_mtime_c_bindings"/>
+    <FbasicType type="S245_mtime_c_bindings" is_value="true" ref="S250_mtime_c_bindings"/>
+    <FbasicType type="S246_mtime_c_bindings" is_value="true" ref="S250_mtime_c_bindings"/>
+    <FbasicType type="S247_mtime_c_bindings" is_value="true" ref="S250_mtime_c_bindings"/>
+    <FbasicType type="S251_mtime_c_bindings" ref="S249_mtime_c_bindings"/>
+    <FfunctionType type="F56_mtime_c_bindings" return_type="I181_mtime_c_bindings" is_public="true" bind="C" bind_name="getTotalMilliSecondsTimeDelta">
+      <params>
+        <name type="S252_mtime_c_bindings">my_timedelta</name>
+        <name type="S253_mtime_c_bindings">my_datetime</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I182_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I181_mtime_c_bindings" ref="I182_mtime_c_bindings"/>
+    <FbasicType type="S254_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S255_mtime_c_bindings" ref="S254_mtime_c_bindings"/>
+    <FbasicType type="S252_mtime_c_bindings" is_value="true" ref="S255_mtime_c_bindings"/>
+    <FbasicType type="S253_mtime_c_bindings" is_value="true" ref="S255_mtime_c_bindings"/>
+    <FfunctionType type="F57_mtime_c_bindings" return_type="I183_mtime_c_bindings" is_public="true" bind="C" bind_name="getTotalSecondsTimeDelta">
+      <params>
+        <name type="S256_mtime_c_bindings">my_timedelta</name>
+        <name type="S257_mtime_c_bindings">my_datetime</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I184_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I183_mtime_c_bindings" ref="I184_mtime_c_bindings"/>
+    <FbasicType type="S258_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S259_mtime_c_bindings" ref="S258_mtime_c_bindings"/>
+    <FbasicType type="S256_mtime_c_bindings" is_value="true" ref="S259_mtime_c_bindings"/>
+    <FbasicType type="S257_mtime_c_bindings" is_value="true" ref="S259_mtime_c_bindings"/>
+    <FfunctionType type="F58_mtime_c_bindings" result_name="string_ptr" return_type="S260_mtime_c_bindings" is_public="true" bind="C" bind_name="timedeltaToString">
+      <params>
+        <name type="S261_mtime_c_bindings">td</name>
+        <name type="A16_mtime_c_bindings">tostring</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S262_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S263_mtime_c_bindings" ref="S262_mtime_c_bindings"/>
+    <FbasicType type="S260_mtime_c_bindings" ref="S263_mtime_c_bindings"/>
+    <FbasicType type="S264_mtime_c_bindings" ref="S262_mtime_c_bindings"/>
+    <FbasicType type="S261_mtime_c_bindings" is_value="true" ref="S264_mtime_c_bindings"/>
+    <FbasicType type="C26_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A16_mtime_c_bindings" ref="C26_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S265_mtime_c_bindings" ref="S263_mtime_c_bindings"/>
+    <FfunctionType type="F59_mtime_c_bindings" result_name="datetime_ptr" return_type="S266_mtime_c_bindings" is_public="true" bind="C" bind_name="addTimeDeltaToDateTime">
+      <params>
+        <name type="S267_mtime_c_bindings">my_datetime</name>
+        <name type="S268_mtime_c_bindings">my_timedelta</name>
+        <name type="S269_mtime_c_bindings">ret_datetime</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S270_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S271_mtime_c_bindings" ref="S270_mtime_c_bindings"/>
+    <FbasicType type="S266_mtime_c_bindings" ref="S271_mtime_c_bindings"/>
+    <FbasicType type="S272_mtime_c_bindings" ref="S270_mtime_c_bindings"/>
+    <FbasicType type="S267_mtime_c_bindings" is_value="true" ref="S272_mtime_c_bindings"/>
+    <FbasicType type="S268_mtime_c_bindings" is_value="true" ref="S272_mtime_c_bindings"/>
+    <FbasicType type="S269_mtime_c_bindings" is_value="true" ref="S272_mtime_c_bindings"/>
+    <FbasicType type="S273_mtime_c_bindings" ref="S271_mtime_c_bindings"/>
+    <FfunctionType type="F60_mtime_c_bindings" result_name="date_ptr" return_type="S274_mtime_c_bindings" is_public="true" bind="C" bind_name="addTimeDeltaToDate">
+      <params>
+        <name type="S275_mtime_c_bindings">my_date</name>
+        <name type="S276_mtime_c_bindings">my_timedelta</name>
+        <name type="S277_mtime_c_bindings">ret_date</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S278_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S279_mtime_c_bindings" ref="S278_mtime_c_bindings"/>
+    <FbasicType type="S274_mtime_c_bindings" ref="S279_mtime_c_bindings"/>
+    <FbasicType type="S280_mtime_c_bindings" ref="S278_mtime_c_bindings"/>
+    <FbasicType type="S275_mtime_c_bindings" is_value="true" ref="S280_mtime_c_bindings"/>
+    <FbasicType type="S276_mtime_c_bindings" is_value="true" ref="S280_mtime_c_bindings"/>
+    <FbasicType type="S277_mtime_c_bindings" is_value="true" ref="S280_mtime_c_bindings"/>
+    <FbasicType type="S281_mtime_c_bindings" ref="S279_mtime_c_bindings"/>
+    <FfunctionType type="F61_mtime_c_bindings" result_name="timedelta_return" return_type="S282_mtime_c_bindings" is_public="true" bind="C" bind_name="elementwiseScalarMultiplyTimeDelta">
+      <params>
+        <name type="S283_mtime_c_bindings">my_timedelta</name>
+        <name type="I185_mtime_c_bindings">lambda</name>
+        <name type="S284_mtime_c_bindings">scaled_timedelta</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S285_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S286_mtime_c_bindings" ref="S285_mtime_c_bindings"/>
+    <FbasicType type="S282_mtime_c_bindings" ref="S286_mtime_c_bindings"/>
+    <FbasicType type="S287_mtime_c_bindings" ref="S285_mtime_c_bindings"/>
+    <FbasicType type="S283_mtime_c_bindings" is_value="true" ref="S287_mtime_c_bindings"/>
+    <FbasicType type="I186_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I185_mtime_c_bindings" is_value="true" ref="I186_mtime_c_bindings"/>
+    <FbasicType type="S284_mtime_c_bindings" is_value="true" ref="S287_mtime_c_bindings"/>
+    <FbasicType type="S288_mtime_c_bindings" ref="S286_mtime_c_bindings"/>
+    <FfunctionType type="F62_mtime_c_bindings" result_name="timedelta_return" return_type="S289_mtime_c_bindings" is_public="true" bind="C" bind_name="elementwiseScalarMultiplyTimeDeltaDP">
+      <params>
+        <name type="S290_mtime_c_bindings">my_timedelta</name>
+        <name type="R1_mtime_c_bindings">lambda</name>
+        <name type="S291_mtime_c_bindings">scaled_timedelta</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S292_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S293_mtime_c_bindings" ref="S292_mtime_c_bindings"/>
+    <FbasicType type="S289_mtime_c_bindings" ref="S293_mtime_c_bindings"/>
+    <FbasicType type="S294_mtime_c_bindings" ref="S292_mtime_c_bindings"/>
+    <FbasicType type="S290_mtime_c_bindings" is_value="true" ref="S294_mtime_c_bindings"/>
+    <FbasicType type="R2_mtime_c_bindings" ref="Freal">
+      <kind>
+        <Var type="I8_mtime_c_bindings" scope="local">c_double</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="R1_mtime_c_bindings" is_value="true" ref="R2_mtime_c_bindings"/>
+    <FbasicType type="S291_mtime_c_bindings" is_value="true" ref="S294_mtime_c_bindings"/>
+    <FbasicType type="S295_mtime_c_bindings" ref="S293_mtime_c_bindings"/>
+    <FfunctionType type="F63_mtime_c_bindings" result_name="timedelta_return" return_type="S296_mtime_c_bindings" is_public="true" bind="C" bind_name="elementwiseAddTimeDeltatoTimeDelta">
+      <params>
+        <name type="S297_mtime_c_bindings">my_timedelta1</name>
+        <name type="S298_mtime_c_bindings">my_timedelta2</name>
+        <name type="S299_mtime_c_bindings">added_timedelta</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S300_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S301_mtime_c_bindings" ref="S300_mtime_c_bindings"/>
+    <FbasicType type="S296_mtime_c_bindings" ref="S301_mtime_c_bindings"/>
+    <FbasicType type="S302_mtime_c_bindings" ref="S300_mtime_c_bindings"/>
+    <FbasicType type="S297_mtime_c_bindings" is_value="true" ref="S302_mtime_c_bindings"/>
+    <FbasicType type="S298_mtime_c_bindings" is_value="true" ref="S302_mtime_c_bindings"/>
+    <FbasicType type="S299_mtime_c_bindings" is_value="true" ref="S302_mtime_c_bindings"/>
+    <FbasicType type="S303_mtime_c_bindings" ref="S301_mtime_c_bindings"/>
+    <FfunctionType type="F64_mtime_c_bindings" result_name="rem" return_type="I187_mtime_c_bindings" is_public="true" bind="C" bind_name="moduloTimedelta">
+      <params>
+        <name type="S304_mtime_c_bindings">a</name>
+        <name type="S305_mtime_c_bindings">p</name>
+        <name type="S306_mtime_c_bindings">quot</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I188_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I187_mtime_c_bindings" ref="I188_mtime_c_bindings"/>
+    <FbasicType type="S307_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S308_mtime_c_bindings" ref="S307_mtime_c_bindings"/>
+    <FbasicType type="S304_mtime_c_bindings" is_value="true" ref="S308_mtime_c_bindings"/>
+    <FbasicType type="S309_mtime_c_bindings" ref="S307_mtime_c_bindings"/>
+    <FbasicType type="S305_mtime_c_bindings" is_value="true" ref="S309_mtime_c_bindings"/>
+    <FbasicType type="S310_mtime_c_bindings" ref="S307_mtime_c_bindings"/>
+    <FbasicType type="S306_mtime_c_bindings" is_value="true" ref="S310_mtime_c_bindings"/>
+    <FbasicType type="I189_mtime_c_bindings" ref="I188_mtime_c_bindings"/>
+    <FfunctionType type="F65_mtime_c_bindings" result_name="string_ptr" return_type="S311_mtime_c_bindings" is_public="true" bind="C" bind_name="getPTStringFromMS">
+      <params>
+        <name type="I190_mtime_c_bindings">ms</name>
+        <name type="A17_mtime_c_bindings">tostring</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S312_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S313_mtime_c_bindings" ref="S312_mtime_c_bindings"/>
+    <FbasicType type="S311_mtime_c_bindings" ref="S313_mtime_c_bindings"/>
+    <FbasicType type="I191_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I190_mtime_c_bindings" is_value="true" ref="I191_mtime_c_bindings"/>
+    <FbasicType type="C27_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A17_mtime_c_bindings" ref="C27_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S314_mtime_c_bindings" ref="S313_mtime_c_bindings"/>
+    <FfunctionType type="F66_mtime_c_bindings" result_name="string_ptr" return_type="S315_mtime_c_bindings" is_public="true" bind="C" bind_name="getPTStringFromSeconds">
+      <params>
+        <name type="I192_mtime_c_bindings">s</name>
+        <name type="A18_mtime_c_bindings">tostring</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S316_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S317_mtime_c_bindings" ref="S316_mtime_c_bindings"/>
+    <FbasicType type="S315_mtime_c_bindings" ref="S317_mtime_c_bindings"/>
+    <FbasicType type="I193_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I192_mtime_c_bindings" is_value="true" ref="I193_mtime_c_bindings"/>
+    <FbasicType type="C28_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A18_mtime_c_bindings" ref="C28_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S318_mtime_c_bindings" ref="S317_mtime_c_bindings"/>
+    <FfunctionType type="F67_mtime_c_bindings" result_name="string_ptr" return_type="S319_mtime_c_bindings" is_public="true" bind="C" bind_name="getPTStringFromSecondsFloat">
+      <params>
+        <name type="R3_mtime_c_bindings">s</name>
+        <name type="A19_mtime_c_bindings">tostring</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S320_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S321_mtime_c_bindings" ref="S320_mtime_c_bindings"/>
+    <FbasicType type="S319_mtime_c_bindings" ref="S321_mtime_c_bindings"/>
+    <FbasicType type="R4_mtime_c_bindings" ref="Freal">
+      <kind>
+        <Var type="I6_mtime_c_bindings" scope="local">c_float</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="R3_mtime_c_bindings" is_value="true" ref="R4_mtime_c_bindings"/>
+    <FbasicType type="C29_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A19_mtime_c_bindings" ref="C29_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S322_mtime_c_bindings" ref="S321_mtime_c_bindings"/>
+    <FfunctionType type="F68_mtime_c_bindings" result_name="string_ptr" return_type="S323_mtime_c_bindings" is_public="true" bind="C" bind_name="getPTStringFromSecondsDouble">
+      <params>
+        <name type="R5_mtime_c_bindings">s</name>
+        <name type="A20_mtime_c_bindings">tostring</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S324_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S325_mtime_c_bindings" ref="S324_mtime_c_bindings"/>
+    <FbasicType type="S323_mtime_c_bindings" ref="S325_mtime_c_bindings"/>
+    <FbasicType type="R6_mtime_c_bindings" ref="Freal">
+      <kind>
+        <Var type="I8_mtime_c_bindings" scope="local">c_double</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="R5_mtime_c_bindings" is_value="true" ref="R6_mtime_c_bindings"/>
+    <FbasicType type="C30_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A20_mtime_c_bindings" ref="C30_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S326_mtime_c_bindings" ref="S325_mtime_c_bindings"/>
+    <FfunctionType type="F69_mtime_c_bindings" result_name="string_ptr" return_type="S327_mtime_c_bindings" is_public="true" bind="C" bind_name="getPTStringFromMinutes">
+      <params>
+        <name type="I194_mtime_c_bindings">m</name>
+        <name type="A21_mtime_c_bindings">tostring</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S328_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S329_mtime_c_bindings" ref="S328_mtime_c_bindings"/>
+    <FbasicType type="S327_mtime_c_bindings" ref="S329_mtime_c_bindings"/>
+    <FbasicType type="I195_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I194_mtime_c_bindings" is_value="true" ref="I195_mtime_c_bindings"/>
+    <FbasicType type="C31_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A21_mtime_c_bindings" ref="C31_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S330_mtime_c_bindings" ref="S329_mtime_c_bindings"/>
+    <FfunctionType type="F70_mtime_c_bindings" result_name="string_ptr" return_type="S331_mtime_c_bindings" is_public="true" bind="C" bind_name="getPTStringFromHours">
+      <params>
+        <name type="I196_mtime_c_bindings">h</name>
+        <name type="A22_mtime_c_bindings">tostring</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S332_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S333_mtime_c_bindings" ref="S332_mtime_c_bindings"/>
+    <FbasicType type="S331_mtime_c_bindings" ref="S333_mtime_c_bindings"/>
+    <FbasicType type="I197_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I4_mtime_c_bindings" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I196_mtime_c_bindings" is_value="true" ref="I197_mtime_c_bindings"/>
+    <FbasicType type="C32_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A22_mtime_c_bindings" ref="C32_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S334_mtime_c_bindings" ref="S333_mtime_c_bindings"/>
+    <FfunctionType type="F71_mtime_c_bindings" result_name="c_pointer" return_type="S335_mtime_c_bindings" is_public="true" bind="C" bind_name="timeDeltaToJulianDelta">
+      <params>
+        <name type="S336_mtime_c_bindings">td</name>
+        <name type="S337_mtime_c_bindings">dt</name>
+        <name type="S338_mtime_c_bindings">jd</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S339_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S340_mtime_c_bindings" ref="S339_mtime_c_bindings"/>
+    <FbasicType type="S335_mtime_c_bindings" ref="S340_mtime_c_bindings"/>
+    <FbasicType type="S341_mtime_c_bindings" ref="S339_mtime_c_bindings"/>
+    <FbasicType type="S336_mtime_c_bindings" is_value="true" ref="S341_mtime_c_bindings"/>
+    <FbasicType type="S342_mtime_c_bindings" ref="S339_mtime_c_bindings"/>
+    <FbasicType type="S337_mtime_c_bindings" is_value="true" ref="S342_mtime_c_bindings"/>
+    <FbasicType type="S343_mtime_c_bindings" ref="S339_mtime_c_bindings"/>
+    <FbasicType type="S338_mtime_c_bindings" is_value="true" ref="S343_mtime_c_bindings"/>
+    <FbasicType type="S344_mtime_c_bindings" ref="S340_mtime_c_bindings"/>
+    <FfunctionType type="F72_mtime_c_bindings" result_name="ret_quotient" return_type="S345_mtime_c_bindings" is_public="true" bind="C" bind_name="divideTimeDeltaInSeconds">
+      <params>
+        <name type="S346_mtime_c_bindings">dividend</name>
+        <name type="S347_mtime_c_bindings">divisor</name>
+        <name type="S348_mtime_c_bindings">quotient</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S349_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S350_mtime_c_bindings" ref="S349_mtime_c_bindings"/>
+    <FbasicType type="S345_mtime_c_bindings" ref="S350_mtime_c_bindings"/>
+    <FbasicType type="S351_mtime_c_bindings" ref="S349_mtime_c_bindings"/>
+    <FbasicType type="S346_mtime_c_bindings" is_value="true" ref="S351_mtime_c_bindings"/>
+    <FbasicType type="S352_mtime_c_bindings" ref="S349_mtime_c_bindings"/>
+    <FbasicType type="S347_mtime_c_bindings" is_value="true" ref="S352_mtime_c_bindings"/>
+    <FbasicType type="S353_mtime_c_bindings" ref="S349_mtime_c_bindings"/>
+    <FbasicType type="S348_mtime_c_bindings" is_value="true" ref="S353_mtime_c_bindings"/>
+    <FbasicType type="S354_mtime_c_bindings" ref="S350_mtime_c_bindings"/>
+    <FfunctionType type="F73_mtime_c_bindings" result_name="ret_quotient" return_type="S355_mtime_c_bindings" is_public="true" bind="C" bind_name="divideDatetimeDifferenceInSeconds">
+      <params>
+        <name type="S356_mtime_c_bindings">dt1</name>
+        <name type="S357_mtime_c_bindings">dt2</name>
+        <name type="S358_mtime_c_bindings">divisor</name>
+        <name type="S359_mtime_c_bindings">quotient</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S360_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S361_mtime_c_bindings" ref="S360_mtime_c_bindings"/>
+    <FbasicType type="S355_mtime_c_bindings" ref="S361_mtime_c_bindings"/>
+    <FbasicType type="S362_mtime_c_bindings" ref="S360_mtime_c_bindings"/>
+    <FbasicType type="S356_mtime_c_bindings" is_value="true" ref="S362_mtime_c_bindings"/>
+    <FbasicType type="S363_mtime_c_bindings" ref="S360_mtime_c_bindings"/>
+    <FbasicType type="S357_mtime_c_bindings" is_value="true" ref="S363_mtime_c_bindings"/>
+    <FbasicType type="S364_mtime_c_bindings" ref="S360_mtime_c_bindings"/>
+    <FbasicType type="S358_mtime_c_bindings" is_value="true" ref="S364_mtime_c_bindings"/>
+    <FbasicType type="S365_mtime_c_bindings" ref="S360_mtime_c_bindings"/>
+    <FbasicType type="S359_mtime_c_bindings" is_value="true" ref="S365_mtime_c_bindings"/>
+    <FbasicType type="S366_mtime_c_bindings" ref="S361_mtime_c_bindings"/>
+    <FfunctionType type="F74_mtime_c_bindings" result_name="ret_quotient" return_type="S367_mtime_c_bindings" is_public="true" bind="C" bind_name="divideTwoDatetimeDiffsInSeconds">
+      <params>
+        <name type="S368_mtime_c_bindings">dt1_dividend</name>
+        <name type="S369_mtime_c_bindings">dt2_dividend</name>
+        <name type="S370_mtime_c_bindings">dt1_divisor</name>
+        <name type="S371_mtime_c_bindings">dt2_divisor</name>
+        <name type="S372_mtime_c_bindings">denominator</name>
+        <name type="S373_mtime_c_bindings">quotient</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S374_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S375_mtime_c_bindings" ref="S374_mtime_c_bindings"/>
+    <FbasicType type="S367_mtime_c_bindings" ref="S375_mtime_c_bindings"/>
+    <FbasicType type="S376_mtime_c_bindings" ref="S374_mtime_c_bindings"/>
+    <FbasicType type="S368_mtime_c_bindings" is_value="true" ref="S376_mtime_c_bindings"/>
+    <FbasicType type="S377_mtime_c_bindings" ref="S374_mtime_c_bindings"/>
+    <FbasicType type="S369_mtime_c_bindings" is_value="true" ref="S377_mtime_c_bindings"/>
+    <FbasicType type="S378_mtime_c_bindings" ref="S374_mtime_c_bindings"/>
+    <FbasicType type="S370_mtime_c_bindings" is_value="true" ref="S378_mtime_c_bindings"/>
+    <FbasicType type="S379_mtime_c_bindings" ref="S374_mtime_c_bindings"/>
+    <FbasicType type="S371_mtime_c_bindings" is_value="true" ref="S379_mtime_c_bindings"/>
+    <FbasicType type="S380_mtime_c_bindings" ref="S374_mtime_c_bindings"/>
+    <FbasicType type="S372_mtime_c_bindings" is_value="true" ref="S380_mtime_c_bindings"/>
+    <FbasicType type="S381_mtime_c_bindings" ref="S374_mtime_c_bindings"/>
+    <FbasicType type="S373_mtime_c_bindings" is_value="true" ref="S381_mtime_c_bindings"/>
+    <FbasicType type="S382_mtime_c_bindings" ref="S375_mtime_c_bindings"/>
+    <FfunctionType type="F75_mtime_c_bindings" result_name="c_pointer" return_type="S383_mtime_c_bindings" is_public="true" bind="C" bind_name="newEvent">
+      <params>
+        <name type="A23_mtime_c_bindings">name</name>
+        <name type="A24_mtime_c_bindings">referencedate</name>
+        <name type="A25_mtime_c_bindings">firstdate</name>
+        <name type="A26_mtime_c_bindings">lastdate</name>
+        <name type="A27_mtime_c_bindings">interval</name>
+        <name type="A28_mtime_c_bindings">offset</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S384_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S385_mtime_c_bindings" ref="S384_mtime_c_bindings"/>
+    <FbasicType type="S383_mtime_c_bindings" ref="S385_mtime_c_bindings"/>
+    <FbasicType type="C33_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A23_mtime_c_bindings" ref="C33_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C34_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A24_mtime_c_bindings" ref="C34_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C35_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A25_mtime_c_bindings" ref="C35_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C36_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A26_mtime_c_bindings" ref="C36_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C37_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A27_mtime_c_bindings" ref="C37_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C38_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A28_mtime_c_bindings" ref="C38_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S386_mtime_c_bindings" ref="S385_mtime_c_bindings"/>
+    <FfunctionType type="F76_mtime_c_bindings" result_name="c_pointer" return_type="S387_mtime_c_bindings" is_public="true" bind="C" bind_name="newEventWithDataType">
+      <params>
+        <name type="A29_mtime_c_bindings">name</name>
+        <name type="S388_mtime_c_bindings">referencedate</name>
+        <name type="S389_mtime_c_bindings">firstdate</name>
+        <name type="S390_mtime_c_bindings">lastdate</name>
+        <name type="S391_mtime_c_bindings">interval</name>
+        <name type="S392_mtime_c_bindings">offset</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S393_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S394_mtime_c_bindings" ref="S393_mtime_c_bindings"/>
+    <FbasicType type="S387_mtime_c_bindings" ref="S394_mtime_c_bindings"/>
+    <FbasicType type="C39_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A29_mtime_c_bindings" ref="C39_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S395_mtime_c_bindings" ref="S393_mtime_c_bindings"/>
+    <FbasicType type="S388_mtime_c_bindings" is_value="true" ref="S395_mtime_c_bindings"/>
+    <FbasicType type="S396_mtime_c_bindings" ref="S393_mtime_c_bindings"/>
+    <FbasicType type="S389_mtime_c_bindings" is_value="true" ref="S396_mtime_c_bindings"/>
+    <FbasicType type="S397_mtime_c_bindings" ref="S393_mtime_c_bindings"/>
+    <FbasicType type="S390_mtime_c_bindings" is_value="true" ref="S397_mtime_c_bindings"/>
+    <FbasicType type="S398_mtime_c_bindings" ref="S393_mtime_c_bindings"/>
+    <FbasicType type="S391_mtime_c_bindings" is_value="true" ref="S398_mtime_c_bindings"/>
+    <FbasicType type="S399_mtime_c_bindings" ref="S393_mtime_c_bindings"/>
+    <FbasicType type="S392_mtime_c_bindings" is_value="true" ref="S399_mtime_c_bindings"/>
+    <FbasicType type="S400_mtime_c_bindings" ref="S394_mtime_c_bindings"/>
+    <FfunctionType type="F77_mtime_c_bindings" return_type="Fvoid" is_public="true" bind="C" bind_name="deallocateEvent">
+      <params>
+        <name type="S401_mtime_c_bindings">ev</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S402_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S403_mtime_c_bindings" ref="S402_mtime_c_bindings"/>
+    <FbasicType type="S401_mtime_c_bindings" is_value="true" ref="S403_mtime_c_bindings"/>
+    <FfunctionType type="F78_mtime_c_bindings" result_name="event_copy" return_type="S404_mtime_c_bindings" is_public="true" bind="C" bind_name="constructAndCopyEvent">
+      <params>
+        <name type="S405_mtime_c_bindings">my_event</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S406_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S407_mtime_c_bindings" ref="S406_mtime_c_bindings"/>
+    <FbasicType type="S404_mtime_c_bindings" ref="S407_mtime_c_bindings"/>
+    <FbasicType type="S408_mtime_c_bindings" ref="S406_mtime_c_bindings"/>
+    <FbasicType type="S405_mtime_c_bindings" is_value="true" ref="S408_mtime_c_bindings"/>
+    <FbasicType type="S409_mtime_c_bindings" ref="S407_mtime_c_bindings"/>
+    <FfunctionType type="F79_mtime_c_bindings" result_name="string_ptr" return_type="S410_mtime_c_bindings" is_public="true" bind="C" bind_name="eventToString">
+      <params>
+        <name type="S411_mtime_c_bindings">my_event</name>
+        <name type="A30_mtime_c_bindings">string</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S412_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S413_mtime_c_bindings" ref="S412_mtime_c_bindings"/>
+    <FbasicType type="S410_mtime_c_bindings" ref="S413_mtime_c_bindings"/>
+    <FbasicType type="S414_mtime_c_bindings" ref="S412_mtime_c_bindings"/>
+    <FbasicType type="S411_mtime_c_bindings" is_value="true" ref="S414_mtime_c_bindings"/>
+    <FbasicType type="C40_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A30_mtime_c_bindings" ref="C40_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S415_mtime_c_bindings" ref="S413_mtime_c_bindings"/>
+    <FfunctionType type="F80_mtime_c_bindings" result_name="ret" return_type="L23_mtime_c_bindings" is_public="true" bind="C" bind_name="isCurrentEventActive">
+      <params>
+        <name type="S416_mtime_c_bindings">my_event</name>
+        <name type="S417_mtime_c_bindings">my_datetime</name>
+        <name type="S418_mtime_c_bindings">plus_slack</name>
+        <name type="S419_mtime_c_bindings">minus_slack</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L24_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L23_mtime_c_bindings" ref="L24_mtime_c_bindings"/>
+    <FbasicType type="S420_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S421_mtime_c_bindings" ref="S420_mtime_c_bindings"/>
+    <FbasicType type="S416_mtime_c_bindings" is_value="true" ref="S421_mtime_c_bindings"/>
+    <FbasicType type="S422_mtime_c_bindings" ref="S420_mtime_c_bindings"/>
+    <FbasicType type="S417_mtime_c_bindings" is_value="true" ref="S422_mtime_c_bindings"/>
+    <FbasicType type="S423_mtime_c_bindings" ref="S420_mtime_c_bindings"/>
+    <FbasicType type="S418_mtime_c_bindings" is_value="true" ref="S423_mtime_c_bindings"/>
+    <FbasicType type="S424_mtime_c_bindings" ref="S420_mtime_c_bindings"/>
+    <FbasicType type="S419_mtime_c_bindings" is_value="true" ref="S424_mtime_c_bindings"/>
+    <FbasicType type="L25_mtime_c_bindings" ref="L24_mtime_c_bindings"/>
+    <FfunctionType type="F81_mtime_c_bindings" result_name="ret" return_type="L26_mtime_c_bindings" is_public="true" bind="C" bind_name="iseventNextInNextDay">
+      <params>
+        <name type="S425_mtime_c_bindings">my_event</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L27_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L26_mtime_c_bindings" ref="L27_mtime_c_bindings"/>
+    <FbasicType type="S426_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S427_mtime_c_bindings" ref="S426_mtime_c_bindings"/>
+    <FbasicType type="S425_mtime_c_bindings" is_value="true" ref="S427_mtime_c_bindings"/>
+    <FbasicType type="L28_mtime_c_bindings" ref="L27_mtime_c_bindings"/>
+    <FfunctionType type="F82_mtime_c_bindings" result_name="ret" return_type="L29_mtime_c_bindings" is_public="true" bind="C" bind_name="iseventNextInNextMonth">
+      <params>
+        <name type="S428_mtime_c_bindings">my_event</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L30_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L29_mtime_c_bindings" ref="L30_mtime_c_bindings"/>
+    <FbasicType type="S429_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S430_mtime_c_bindings" ref="S429_mtime_c_bindings"/>
+    <FbasicType type="S428_mtime_c_bindings" is_value="true" ref="S430_mtime_c_bindings"/>
+    <FbasicType type="L31_mtime_c_bindings" ref="L30_mtime_c_bindings"/>
+    <FfunctionType type="F83_mtime_c_bindings" result_name="ret" return_type="L32_mtime_c_bindings" is_public="true" bind="C" bind_name="iseventNextInNextYear">
+      <params>
+        <name type="S431_mtime_c_bindings">my_event</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L33_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L32_mtime_c_bindings" ref="L33_mtime_c_bindings"/>
+    <FbasicType type="S432_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S433_mtime_c_bindings" ref="S432_mtime_c_bindings"/>
+    <FbasicType type="S431_mtime_c_bindings" is_value="true" ref="S433_mtime_c_bindings"/>
+    <FbasicType type="L34_mtime_c_bindings" ref="L33_mtime_c_bindings"/>
+    <FfunctionType type="F84_mtime_c_bindings" result_name="c_pointer" return_type="S434_mtime_c_bindings" is_public="true" bind="C" bind_name="getTriggerNextEventAtDateTime">
+      <params>
+        <name type="S435_mtime_c_bindings">my_event</name>
+        <name type="S436_mtime_c_bindings">my_currentdatetime</name>
+        <name type="S437_mtime_c_bindings">my_datetime</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S438_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S439_mtime_c_bindings" ref="S438_mtime_c_bindings"/>
+    <FbasicType type="S434_mtime_c_bindings" ref="S439_mtime_c_bindings"/>
+    <FbasicType type="S440_mtime_c_bindings" ref="S438_mtime_c_bindings"/>
+    <FbasicType type="S435_mtime_c_bindings" is_value="true" ref="S440_mtime_c_bindings"/>
+    <FbasicType type="S441_mtime_c_bindings" ref="S438_mtime_c_bindings"/>
+    <FbasicType type="S436_mtime_c_bindings" is_value="true" ref="S441_mtime_c_bindings"/>
+    <FbasicType type="S442_mtime_c_bindings" ref="S438_mtime_c_bindings"/>
+    <FbasicType type="S437_mtime_c_bindings" is_value="true" ref="S442_mtime_c_bindings"/>
+    <FbasicType type="S443_mtime_c_bindings" ref="S439_mtime_c_bindings"/>
+    <FfunctionType type="F85_mtime_c_bindings" result_name="c_pointer" return_type="S444_mtime_c_bindings" is_public="true" bind="C" bind_name="getTriggeredPreviousEventAtDateTime">
+      <params>
+        <name type="S445_mtime_c_bindings">my_event</name>
+        <name type="S446_mtime_c_bindings">my_datetime</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S447_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S448_mtime_c_bindings" ref="S447_mtime_c_bindings"/>
+    <FbasicType type="S444_mtime_c_bindings" ref="S448_mtime_c_bindings"/>
+    <FbasicType type="S449_mtime_c_bindings" ref="S447_mtime_c_bindings"/>
+    <FbasicType type="S445_mtime_c_bindings" is_value="true" ref="S449_mtime_c_bindings"/>
+    <FbasicType type="S450_mtime_c_bindings" ref="S447_mtime_c_bindings"/>
+    <FbasicType type="S446_mtime_c_bindings" is_value="true" ref="S450_mtime_c_bindings"/>
+    <FbasicType type="S451_mtime_c_bindings" ref="S448_mtime_c_bindings"/>
+    <FfunctionType type="F86_mtime_c_bindings" result_name="c_pointer" return_type="S452_mtime_c_bindings" is_public="true" bind="C" bind_name="getEventName">
+      <params>
+        <name type="S453_mtime_c_bindings">my_event</name>
+        <name type="A31_mtime_c_bindings">string</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S454_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S455_mtime_c_bindings" ref="S454_mtime_c_bindings"/>
+    <FbasicType type="S452_mtime_c_bindings" ref="S455_mtime_c_bindings"/>
+    <FbasicType type="S456_mtime_c_bindings" ref="S454_mtime_c_bindings"/>
+    <FbasicType type="S453_mtime_c_bindings" is_value="true" ref="S456_mtime_c_bindings"/>
+    <FbasicType type="C41_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A31_mtime_c_bindings" ref="C41_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S457_mtime_c_bindings" ref="S455_mtime_c_bindings"/>
+    <FfunctionType type="F87_mtime_c_bindings" result_name="ret" return_type="L35_mtime_c_bindings" is_public="true" bind="C" bind_name="getNextEventIsFirst">
+      <params>
+        <name type="S458_mtime_c_bindings">my_event</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L36_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L35_mtime_c_bindings" ref="L36_mtime_c_bindings"/>
+    <FbasicType type="S459_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S460_mtime_c_bindings" ref="S459_mtime_c_bindings"/>
+    <FbasicType type="S458_mtime_c_bindings" is_value="true" ref="S460_mtime_c_bindings"/>
+    <FbasicType type="L37_mtime_c_bindings" ref="L36_mtime_c_bindings"/>
+    <FfunctionType type="F88_mtime_c_bindings" result_name="ret" return_type="L38_mtime_c_bindings" is_public="true" bind="C" bind_name="getEventisFirstInDay">
+      <params>
+        <name type="S461_mtime_c_bindings">my_event</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L39_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L38_mtime_c_bindings" ref="L39_mtime_c_bindings"/>
+    <FbasicType type="S462_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S463_mtime_c_bindings" ref="S462_mtime_c_bindings"/>
+    <FbasicType type="S461_mtime_c_bindings" is_value="true" ref="S463_mtime_c_bindings"/>
+    <FbasicType type="L40_mtime_c_bindings" ref="L39_mtime_c_bindings"/>
+    <FfunctionType type="F89_mtime_c_bindings" result_name="ret" return_type="L41_mtime_c_bindings" is_public="true" bind="C" bind_name="getEventisFirstInMonth">
+      <params>
+        <name type="S464_mtime_c_bindings">my_event</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L42_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L41_mtime_c_bindings" ref="L42_mtime_c_bindings"/>
+    <FbasicType type="S465_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S466_mtime_c_bindings" ref="S465_mtime_c_bindings"/>
+    <FbasicType type="S464_mtime_c_bindings" is_value="true" ref="S466_mtime_c_bindings"/>
+    <FbasicType type="L43_mtime_c_bindings" ref="L42_mtime_c_bindings"/>
+    <FfunctionType type="F90_mtime_c_bindings" result_name="ret" return_type="L44_mtime_c_bindings" is_public="true" bind="C" bind_name="getEventisFirstInYear">
+      <params>
+        <name type="S467_mtime_c_bindings">my_event</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L45_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L44_mtime_c_bindings" ref="L45_mtime_c_bindings"/>
+    <FbasicType type="S468_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S469_mtime_c_bindings" ref="S468_mtime_c_bindings"/>
+    <FbasicType type="S467_mtime_c_bindings" is_value="true" ref="S469_mtime_c_bindings"/>
+    <FbasicType type="L46_mtime_c_bindings" ref="L45_mtime_c_bindings"/>
+    <FfunctionType type="F91_mtime_c_bindings" result_name="ret" return_type="L47_mtime_c_bindings" is_public="true" bind="C" bind_name="getEventisLastInDay">
+      <params>
+        <name type="S470_mtime_c_bindings">my_event</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L48_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L47_mtime_c_bindings" ref="L48_mtime_c_bindings"/>
+    <FbasicType type="S471_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S472_mtime_c_bindings" ref="S471_mtime_c_bindings"/>
+    <FbasicType type="S470_mtime_c_bindings" is_value="true" ref="S472_mtime_c_bindings"/>
+    <FbasicType type="L49_mtime_c_bindings" ref="L48_mtime_c_bindings"/>
+    <FfunctionType type="F92_mtime_c_bindings" result_name="ret" return_type="L50_mtime_c_bindings" is_public="true" bind="C" bind_name="getEventisLastInMonth">
+      <params>
+        <name type="S473_mtime_c_bindings">my_event</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L51_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L50_mtime_c_bindings" ref="L51_mtime_c_bindings"/>
+    <FbasicType type="S474_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S475_mtime_c_bindings" ref="S474_mtime_c_bindings"/>
+    <FbasicType type="S473_mtime_c_bindings" is_value="true" ref="S475_mtime_c_bindings"/>
+    <FbasicType type="L52_mtime_c_bindings" ref="L51_mtime_c_bindings"/>
+    <FfunctionType type="F93_mtime_c_bindings" result_name="ret" return_type="L53_mtime_c_bindings" is_public="true" bind="C" bind_name="getEventisLastInYear">
+      <params>
+        <name type="S476_mtime_c_bindings">my_event</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L54_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L53_mtime_c_bindings" ref="L54_mtime_c_bindings"/>
+    <FbasicType type="S477_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S478_mtime_c_bindings" ref="S477_mtime_c_bindings"/>
+    <FbasicType type="S476_mtime_c_bindings" is_value="true" ref="S478_mtime_c_bindings"/>
+    <FbasicType type="L55_mtime_c_bindings" ref="L54_mtime_c_bindings"/>
+    <FfunctionType type="F94_mtime_c_bindings" result_name="c_pointer" return_type="S479_mtime_c_bindings" is_public="true" bind="C" bind_name="newEventGroup">
+      <params>
+        <name type="A32_mtime_c_bindings">name</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S480_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S481_mtime_c_bindings" ref="S480_mtime_c_bindings"/>
+    <FbasicType type="S479_mtime_c_bindings" ref="S481_mtime_c_bindings"/>
+    <FbasicType type="C42_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A32_mtime_c_bindings" ref="C42_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S482_mtime_c_bindings" ref="S481_mtime_c_bindings"/>
+    <FfunctionType type="F95_mtime_c_bindings" return_type="Fvoid" is_public="true" bind="C" bind_name="deallocateEventGroup">
+      <params>
+        <name type="S483_mtime_c_bindings">evgrp</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S484_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S485_mtime_c_bindings" ref="S484_mtime_c_bindings"/>
+    <FbasicType type="S483_mtime_c_bindings" is_value="true" ref="S485_mtime_c_bindings"/>
+    <FfunctionType type="F96_mtime_c_bindings" result_name="ret" return_type="L56_mtime_c_bindings" is_public="true" bind="C" bind_name="addNewEventToEventGroup">
+      <params>
+        <name type="S486_mtime_c_bindings">my_event</name>
+        <name type="S487_mtime_c_bindings">my_eventgroup</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L57_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L56_mtime_c_bindings" ref="L57_mtime_c_bindings"/>
+    <FbasicType type="S488_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S489_mtime_c_bindings" ref="S488_mtime_c_bindings"/>
+    <FbasicType type="S486_mtime_c_bindings" is_value="true" ref="S489_mtime_c_bindings"/>
+    <FbasicType type="S490_mtime_c_bindings" ref="S488_mtime_c_bindings"/>
+    <FbasicType type="S487_mtime_c_bindings" is_value="true" ref="S490_mtime_c_bindings"/>
+    <FbasicType type="L58_mtime_c_bindings" ref="L57_mtime_c_bindings"/>
+    <FfunctionType type="F97_mtime_c_bindings" result_name="ret" return_type="L59_mtime_c_bindings" is_public="true" bind="C" bind_name="removeEventFromEventGroup">
+      <params>
+        <name type="A33_mtime_c_bindings">evname</name>
+        <name type="S491_mtime_c_bindings">evgrp</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L60_mtime_c_bindings" ref="Flogical">
+      <kind>
+        <Var type="I10_mtime_c_bindings" scope="local">c_bool</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="L59_mtime_c_bindings" ref="L60_mtime_c_bindings"/>
+    <FbasicType type="C43_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A33_mtime_c_bindings" ref="C43_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S492_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S493_mtime_c_bindings" ref="S492_mtime_c_bindings"/>
+    <FbasicType type="S491_mtime_c_bindings" is_value="true" ref="S493_mtime_c_bindings"/>
+    <FbasicType type="L61_mtime_c_bindings" ref="L60_mtime_c_bindings"/>
+    <FfunctionType type="F98_mtime_c_bindings" result_name="string_ptr" return_type="S494_mtime_c_bindings" is_public="true" bind="C" bind_name="getEventGroupName">
+      <params>
+        <name type="S495_mtime_c_bindings">my_eventgroup</name>
+        <name type="A34_mtime_c_bindings">string</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S496_mtime_c_bindings" ref="S1_mtime_c_bindings"/>
+    <FbasicType type="S497_mtime_c_bindings" ref="S496_mtime_c_bindings"/>
+    <FbasicType type="S494_mtime_c_bindings" ref="S497_mtime_c_bindings"/>
+    <FbasicType type="S498_mtime_c_bindings" ref="S496_mtime_c_bindings"/>
+    <FbasicType type="S495_mtime_c_bindings" is_value="true" ref="S498_mtime_c_bindings"/>
+    <FbasicType type="C44_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A34_mtime_c_bindings" ref="C44_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S499_mtime_c_bindings" ref="S497_mtime_c_bindings"/>
+    <FfunctionType type="F99_mtime_c_bindings" return_type="I198_mtime_c_bindings" is_public="true" bind="C" bind_name="getRepetitions">
+      <params>
+        <name type="A35_mtime_c_bindings">repetitionstring</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I199_mtime_c_bindings" ref="Fint">
+      <kind>
+        <Var type="I2_mtime_c_bindings" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I198_mtime_c_bindings" ref="I199_mtime_c_bindings"/>
+    <FbasicType type="C45_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A35_mtime_c_bindings" ref="C45_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F100_mtime_c_bindings" return_type="Fvoid" is_public="true" bind="C" bind_name="splitRepetitionString">
+      <params>
+        <name type="A36_mtime_c_bindings">recurringtimeinterval</name>
+        <name type="A37_mtime_c_bindings">repetitor</name>
+        <name type="A38_mtime_c_bindings">start</name>
+        <name type="A39_mtime_c_bindings">end</name>
+        <name type="A40_mtime_c_bindings">duration</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C46_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A36_mtime_c_bindings" ref="C46_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C47_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A37_mtime_c_bindings" ref="C47_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C48_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A38_mtime_c_bindings" ref="C48_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C49_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A39_mtime_c_bindings" ref="C49_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C50_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <Var type="I12_mtime_c_bindings" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A40_mtime_c_bindings" ref="C50_mtime_c_bindings">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F101_mtime_c_bindings" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F102_mtime_c_bindings" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="I200_mtime_c_bindings">errno</name>
+        <name type="C51_mtime_c_bindings">routine_str</name>
+        <name type="I201_mtime_c_bindings">lineno</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I200_mtime_c_bindings" intent="in" ref="Fint"/>
+    <FbasicType type="C52_mtime_c_bindings" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C51_mtime_c_bindings" intent="in" ref="C52_mtime_c_bindings"/>
+    <FbasicType type="I201_mtime_c_bindings" intent="in" ref="Fint"/>
+    <FbasicType type="C53_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">132</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C54_mtime_c_bindings" ref="C53_mtime_c_bindings"/>
+    <FfunctionType type="F103_mtime_c_bindings" return_type="C55_mtime_c_bindings"/>
+    <FbasicType type="C55_mtime_c_bindings" ref="C53_mtime_c_bindings"/>
+    <FfunctionType type="F104_mtime_c_bindings" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="L62_mtime_c_bindings">lcond</name>
+        <name type="I202_mtime_c_bindings">errno</name>
+        <name type="C56_mtime_c_bindings">routine_str</name>
+        <name type="I203_mtime_c_bindings">lineno</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L62_mtime_c_bindings" intent="in" ref="Flogical"/>
+    <FbasicType type="I202_mtime_c_bindings" intent="in" ref="Fint"/>
+    <FbasicType type="C57_mtime_c_bindings" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C56_mtime_c_bindings" intent="in" ref="C57_mtime_c_bindings"/>
+    <FbasicType type="I203_mtime_c_bindings" intent="in" ref="Fint"/>
+    <FbasicType type="C58_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">132</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C59_mtime_c_bindings" ref="C58_mtime_c_bindings"/>
+    <FbasicType type="C60_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">8</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C61_mtime_c_bindings" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">9</FintConstant>
+      </len>
+    </FbasicType>
+    <FfunctionType type="F105_mtime_c_bindings" return_type="Fvoid">
+      <params>
+        <name type="L62_mtime_c_bindings">lcond</name>
+        <name type="I202_mtime_c_bindings">errno</name>
+        <name type="C56_mtime_c_bindings">routine_str</name>
+        <name type="I203_mtime_c_bindings">lineno</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F106_mtime_c_bindings" return_type="Fvoid">
+      <params>
+        <name type="I200_mtime_c_bindings">errno</name>
+        <name type="C51_mtime_c_bindings">routine_str</name>
+        <name type="I201_mtime_c_bindings">lineno</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F107_mtime_c_bindings" return_type="Fvoid">
+      <params>
+        <name type="C62_mtime_c_bindings">leading_text</name>
+        <name type="C63_mtime_c_bindings">message_text</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C64_mtime_c_bindings" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C62_mtime_c_bindings" intent="in" ref="C64_mtime_c_bindings"/>
+    <FbasicType type="C65_mtime_c_bindings" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C63_mtime_c_bindings" intent="in" ref="C65_mtime_c_bindings"/>
+    <FbasicType type="F5_mtime_c_bindings" is_procedure="true" ref="F107_mtime_c_bindings"/>
+    <FfunctionType type="F108_mtime_c_bindings" return_type="Fvoid">
+      <params>
+        <name type="C66_mtime_c_bindings">leading_text</name>
+        <name type="C67_mtime_c_bindings">message_text</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C68_mtime_c_bindings" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C66_mtime_c_bindings" intent="in" ref="C68_mtime_c_bindings"/>
+    <FbasicType type="C69_mtime_c_bindings" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C67_mtime_c_bindings" intent="in" ref="C69_mtime_c_bindings"/>
+    <FbasicType type="F109_mtime_c_bindings" is_procedure="true" ref="F108_mtime_c_bindings"/>
+    <FfunctionType type="F110_mtime_c_bindings" return_type="Fvoid">
+      <params>
+        <name type="C70_mtime_c_bindings">leading_text</name>
+        <name type="C71_mtime_c_bindings">message_text</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C72_mtime_c_bindings" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C70_mtime_c_bindings" intent="in" ref="C72_mtime_c_bindings"/>
+    <FbasicType type="C73_mtime_c_bindings" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C71_mtime_c_bindings" intent="in" ref="C73_mtime_c_bindings"/>
+    <FbasicType type="F7_mtime_c_bindings" is_procedure="true" ref="F110_mtime_c_bindings"/>
+    <FfunctionType type="F111_mtime_c_bindings" return_type="Fvoid">
+      <params>
+        <name type="C74_mtime_c_bindings">leading_text</name>
+        <name type="C75_mtime_c_bindings">message_text</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C76_mtime_c_bindings" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C74_mtime_c_bindings" intent="in" ref="C76_mtime_c_bindings"/>
+    <FbasicType type="C77_mtime_c_bindings" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C75_mtime_c_bindings" intent="in" ref="C77_mtime_c_bindings"/>
+    <FbasicType type="F112_mtime_c_bindings" is_procedure="true" ref="F111_mtime_c_bindings"/>
+  </typeTable>
+  <identifiers>
+    <id type="I2_mtime_c_bindings" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="I4_mtime_c_bindings" sclass="flocal" original_name="c_int64_t" declared_in="iso_c_binding">
+      <name>c_int64_t</name>
+    </id>
+    <id type="I6_mtime_c_bindings" sclass="flocal" original_name="c_float" declared_in="iso_c_binding">
+      <name>c_float</name>
+    </id>
+    <id type="I8_mtime_c_bindings" sclass="flocal" original_name="c_double" declared_in="iso_c_binding">
+      <name>c_double</name>
+    </id>
+    <id type="I10_mtime_c_bindings" sclass="flocal" original_name="c_bool" declared_in="iso_c_binding">
+      <name>c_bool</name>
+    </id>
+    <id type="I12_mtime_c_bindings" sclass="flocal" original_name="c_char" declared_in="iso_c_binding">
+      <name>c_char</name>
+    </id>
+    <id type="C1_mtime_c_bindings" sclass="flocal" original_name="c_null_char" declared_in="iso_c_binding">
+      <name>c_null_char</name>
+    </id>
+    <id type="S1_mtime_c_bindings" imported_id="S1_iso_c_binding" sclass="ftype_name" original_name="c_ptr" declared_in="iso_c_binding">
+      <name>c_ptr</name>
+    </id>
+    <id type="F1_mtime_c_bindings" sclass="ffunc" original_name="c_associated" declared_in="iso_c_binding">
+      <name>c_associated</name>
+    </id>
+    <id type="I18_mtime_c_bindings" sclass="flocal" original_name="max_calendar_str_len" declared_in="mtime_constants">
+      <name>max_calendar_str_len</name>
+    </id>
+    <id type="I19_mtime_c_bindings" sclass="flocal" original_name="max_date_str_len" declared_in="mtime_constants">
+      <name>max_date_str_len</name>
+    </id>
+    <id type="I20_mtime_c_bindings" sclass="flocal" original_name="max_datetime_str_len" declared_in="mtime_constants">
+      <name>max_datetime_str_len</name>
+    </id>
+    <id type="I21_mtime_c_bindings" sclass="flocal" original_name="max_time_str_len" declared_in="mtime_constants">
+      <name>max_time_str_len</name>
+    </id>
+    <id type="I22_mtime_c_bindings" sclass="flocal" original_name="max_julianday_str_len" declared_in="mtime_constants">
+      <name>max_julianday_str_len</name>
+    </id>
+    <id type="I23_mtime_c_bindings" sclass="flocal" original_name="max_timedelta_str_len" declared_in="mtime_constants">
+      <name>max_timedelta_str_len</name>
+    </id>
+    <id type="I24_mtime_c_bindings" sclass="flocal" original_name="max_mtime_error_str_len" declared_in="mtime_constants">
+      <name>max_mtime_error_str_len</name>
+    </id>
+    <id type="I25_mtime_c_bindings" sclass="flocal" original_name="max_eventname_str_len" declared_in="mtime_constants">
+      <name>max_eventname_str_len</name>
+    </id>
+    <id type="I26_mtime_c_bindings" sclass="flocal" original_name="max_event_str_len" declared_in="mtime_constants">
+      <name>max_event_str_len</name>
+    </id>
+    <id type="I27_mtime_c_bindings" sclass="flocal" original_name="max_groupname_str_len" declared_in="mtime_constants">
+      <name>max_groupname_str_len</name>
+    </id>
+    <id type="F4_mtime_c_bindings" sclass="ffunc" original_name="register_print_mtime_procedure" declared_in="mtime_print_by_callback">
+      <name>register_print_mtime_procedure</name>
+    </id>
+    <id type="F6_mtime_c_bindings" sclass="ffunc" original_name="register_finish_mtime_procedure" declared_in="mtime_print_by_callback">
+      <name>register_finish_mtime_procedure</name>
+    </id>
+    <id type="F8_mtime_c_bindings" sclass="ffunc" original_name="print_mtime" declared_in="mtime_print_by_callback">
+      <name>print_mtime</name>
+    </id>
+    <id type="F9_mtime_c_bindings" sclass="ffunc" original_name="finish_mtime" declared_in="mtime_print_by_callback">
+      <name>finish_mtime</name>
+    </id>
+    <id type="I28_mtime_c_bindings" sclass="flocal" original_name="no_error" declared_in="mtime_error_handling">
+      <name>no_error</name>
+    </id>
+    <id type="I29_mtime_c_bindings" sclass="flocal" original_name="calendar_calendartostring" declared_in="mtime_error_handling">
+      <name>calendar_calendartostring</name>
+    </id>
+    <id type="I30_mtime_c_bindings" sclass="flocal" original_name="general_arithmetic_error" declared_in="mtime_error_handling">
+      <name>general_arithmetic_error</name>
+    </id>
+    <id type="I31_mtime_c_bindings" sclass="flocal" original_name="julianday_newjulianday" declared_in="mtime_error_handling">
+      <name>julianday_newjulianday</name>
+    </id>
+    <id type="I32_mtime_c_bindings" sclass="flocal" original_name="julianday_juliandaytostring" declared_in="mtime_error_handling">
+      <name>julianday_juliandaytostring</name>
+    </id>
+    <id type="I33_mtime_c_bindings" sclass="flocal" original_name="date_newdatefromstring" declared_in="mtime_error_handling">
+      <name>date_newdatefromstring</name>
+    </id>
+    <id type="I34_mtime_c_bindings" sclass="flocal" original_name="date_newdatefromraw_yi8" declared_in="mtime_error_handling">
+      <name>date_newdatefromraw_yi8</name>
+    </id>
+    <id type="I35_mtime_c_bindings" sclass="flocal" original_name="date_newdatefromraw" declared_in="mtime_error_handling">
+      <name>date_newdatefromraw</name>
+    </id>
+    <id type="I36_mtime_c_bindings" sclass="flocal" original_name="date_newdatefromconstructandcopy" declared_in="mtime_error_handling">
+      <name>date_newdatefromconstructandcopy</name>
+    </id>
+    <id type="I37_mtime_c_bindings" sclass="flocal" original_name="date_replacedate" declared_in="mtime_error_handling">
+      <name>date_replacedate</name>
+    </id>
+    <id type="I38_mtime_c_bindings" sclass="flocal" original_name="date_datetostring" declared_in="mtime_error_handling">
+      <name>date_datetostring</name>
+    </id>
+    <id type="I39_mtime_c_bindings" sclass="flocal" original_name="date_datetoposixstring" declared_in="mtime_error_handling">
+      <name>date_datetoposixstring</name>
+    </id>
+    <id type="I40_mtime_c_bindings" sclass="flocal" original_name="time_newtimefromstring" declared_in="mtime_error_handling">
+      <name>time_newtimefromstring</name>
+    </id>
+    <id type="I41_mtime_c_bindings" sclass="flocal" original_name="time_newtimefromraw" declared_in="mtime_error_handling">
+      <name>time_newtimefromraw</name>
+    </id>
+    <id type="I42_mtime_c_bindings" sclass="flocal" original_name="time_newtimefromconstructandcopy" declared_in="mtime_error_handling">
+      <name>time_newtimefromconstructandcopy</name>
+    </id>
+    <id type="I43_mtime_c_bindings" sclass="flocal" original_name="time_replacetime" declared_in="mtime_error_handling">
+      <name>time_replacetime</name>
+    </id>
+    <id type="I44_mtime_c_bindings" sclass="flocal" original_name="time_timetostring" declared_in="mtime_error_handling">
+      <name>time_timetostring</name>
+    </id>
+    <id type="I45_mtime_c_bindings" sclass="flocal" original_name="time_timetoposixstring" declared_in="mtime_error_handling">
+      <name>time_timetoposixstring</name>
+    </id>
+    <id type="I46_mtime_c_bindings" sclass="flocal" original_name="datetime_newdatetimefromstring" declared_in="mtime_error_handling">
+      <name>datetime_newdatetimefromstring</name>
+    </id>
+    <id type="I47_mtime_c_bindings" sclass="flocal" original_name="datetime_newdatetimefromraw_yi8" declared_in="mtime_error_handling">
+      <name>datetime_newdatetimefromraw_yi8</name>
+    </id>
+    <id type="I48_mtime_c_bindings" sclass="flocal" original_name="datetime_newdatetimefromraw" declared_in="mtime_error_handling">
+      <name>datetime_newdatetimefromraw</name>
+    </id>
+    <id type="I49_mtime_c_bindings" sclass="flocal" original_name="datetime_newdatetimefromconstructandcopy" declared_in="mtime_error_handling">
+      <name>datetime_newdatetimefromconstructandcopy</name>
+    </id>
+    <id type="I50_mtime_c_bindings" sclass="flocal" original_name="datetime_datetimetostring" declared_in="mtime_error_handling">
+      <name>datetime_datetimetostring</name>
+    </id>
+    <id type="I51_mtime_c_bindings" sclass="flocal" original_name="datetime_datetimetoposixstring" declared_in="mtime_error_handling">
+      <name>datetime_datetimetoposixstring</name>
+    </id>
+    <id type="I52_mtime_c_bindings" sclass="flocal" original_name="datetime_getnoofdaysinmonthdatetime" declared_in="mtime_error_handling">
+      <name>datetime_getnoofdaysinmonthdatetime</name>
+    </id>
+    <id type="I53_mtime_c_bindings" sclass="flocal" original_name="datetime_getnoofdaysinyeardatetime" declared_in="mtime_error_handling">
+      <name>datetime_getnoofdaysinyeardatetime</name>
+    </id>
+    <id type="I54_mtime_c_bindings" sclass="flocal" original_name="datetime_getdayofyearfromdatetime" declared_in="mtime_error_handling">
+      <name>datetime_getdayofyearfromdatetime</name>
+    </id>
+    <id type="I55_mtime_c_bindings" sclass="flocal" original_name="datetime_getnoofsecondselapsedinmonthdatetime" declared_in="mtime_error_handling">
+      <name>datetime_getnoofsecondselapsedinmonthdatetime</name>
+    </id>
+    <id type="I56_mtime_c_bindings" sclass="flocal" original_name="datetime_getnoofsecondselapsedindaydatetime" declared_in="mtime_error_handling">
+      <name>datetime_getnoofsecondselapsedindaydatetime</name>
+    </id>
+    <id type="I57_mtime_c_bindings" sclass="flocal" original_name="datetime_getjuliandayfromdatetime" declared_in="mtime_error_handling">
+      <name>datetime_getjuliandayfromdatetime</name>
+    </id>
+    <id type="I58_mtime_c_bindings" sclass="flocal" original_name="datetime_getdatetimefromjulianday" declared_in="mtime_error_handling">
+      <name>datetime_getdatetimefromjulianday</name>
+    </id>
+    <id type="I59_mtime_c_bindings" sclass="flocal" original_name="timedelta_newtimedeltafromstring" declared_in="mtime_error_handling">
+      <name>timedelta_newtimedeltafromstring</name>
+    </id>
+    <id type="I60_mtime_c_bindings" sclass="flocal" original_name="timedelta_newtimedeltafromraw" declared_in="mtime_error_handling">
+      <name>timedelta_newtimedeltafromraw</name>
+    </id>
+    <id type="I61_mtime_c_bindings" sclass="flocal" original_name="timedelta_newtimedeltafromraw_yi8" declared_in="mtime_error_handling">
+      <name>timedelta_newtimedeltafromraw_yi8</name>
+    </id>
+    <id type="I62_mtime_c_bindings" sclass="flocal" original_name="timedelta_newtimedeltafromconstructandcopy" declared_in="mtime_error_handling">
+      <name>timedelta_newtimedeltafromconstructandcopy</name>
+    </id>
+    <id type="I63_mtime_c_bindings" sclass="flocal" original_name="timedelta_gettotalmillisecondstimedelta" declared_in="mtime_error_handling">
+      <name>timedelta_gettotalmillisecondstimedelta</name>
+    </id>
+    <id type="I64_mtime_c_bindings" sclass="flocal" original_name="timedelta_gettotalsecondstimedelta" declared_in="mtime_error_handling">
+      <name>timedelta_gettotalsecondstimedelta</name>
+    </id>
+    <id type="I65_mtime_c_bindings" sclass="flocal" original_name="timedelta_timedeltatostring" declared_in="mtime_error_handling">
+      <name>timedelta_timedeltatostring</name>
+    </id>
+    <id type="I66_mtime_c_bindings" sclass="flocal" original_name="timedelta_getptstring" declared_in="mtime_error_handling">
+      <name>timedelta_getptstring</name>
+    </id>
+    <id type="I67_mtime_c_bindings" sclass="flocal" original_name="events_newevent" declared_in="mtime_error_handling">
+      <name>events_newevent</name>
+    </id>
+    <id type="I68_mtime_c_bindings" sclass="flocal" original_name="events_eventtostring" declared_in="mtime_error_handling">
+      <name>events_eventtostring</name>
+    </id>
+    <id type="I69_mtime_c_bindings" sclass="flocal" original_name="events_gettriggernexteventatdatetime" declared_in="mtime_error_handling">
+      <name>events_gettriggernexteventatdatetime</name>
+    </id>
+    <id type="I70_mtime_c_bindings" sclass="flocal" original_name="events_gettriggeredpreviouseventatdatetime" declared_in="mtime_error_handling">
+      <name>events_gettriggeredpreviouseventatdatetime</name>
+    </id>
+    <id type="I71_mtime_c_bindings" sclass="flocal" original_name="events_geteventname" declared_in="mtime_error_handling">
+      <name>events_geteventname</name>
+    </id>
+    <id type="I72_mtime_c_bindings" sclass="flocal" original_name="events_getfirstdatetime" declared_in="mtime_error_handling">
+      <name>events_getfirstdatetime</name>
+    </id>
+    <id type="I73_mtime_c_bindings" sclass="flocal" original_name="events_geteventinterval" declared_in="mtime_error_handling">
+      <name>events_geteventinterval</name>
+    </id>
+    <id type="I74_mtime_c_bindings" sclass="flocal" original_name="events_getlastdatetime" declared_in="mtime_error_handling">
+      <name>events_getlastdatetime</name>
+    </id>
+    <id type="I75_mtime_c_bindings" sclass="flocal" original_name="eventgroups_neweventgroup" declared_in="mtime_error_handling">
+      <name>eventgroups_neweventgroup</name>
+    </id>
+    <id type="I76_mtime_c_bindings" sclass="flocal" original_name="eventgroups_geteventgroupname" declared_in="mtime_error_handling">
+      <name>eventgroups_geteventgroupname</name>
+    </id>
+    <id type="F10_mtime_c_bindings" sclass="ffunc" original_name="mtime_strerror" declared_in="mtime_error_handling">
+      <name>mtime_strerror</name>
+    </id>
+    <id type="S12_mtime_c_bindings" sclass="ftype_name" original_name="event" declared_in="mtime_c_bindings">
+      <name>event</name>
+    </id>
+    <id type="S33_mtime_c_bindings" sclass="ftype_name" original_name="eventgroup" declared_in="mtime_c_bindings">
+      <name>eventgroup</name>
+    </id>
+    <id type="S38_mtime_c_bindings" sclass="ftype_name" original_name="julianday" declared_in="mtime_c_bindings">
+      <name>julianday</name>
+    </id>
+    <id type="S39_mtime_c_bindings" sclass="ftype_name" original_name="juliandelta" declared_in="mtime_c_bindings">
+      <name>juliandelta</name>
+    </id>
+    <id type="S40_mtime_c_bindings" sclass="ftype_name" original_name="date" declared_in="mtime_c_bindings">
+      <name>date</name>
+    </id>
+    <id type="S41_mtime_c_bindings" sclass="ftype_name" original_name="time" declared_in="mtime_c_bindings">
+      <name>time</name>
+    </id>
+    <id type="S42_mtime_c_bindings" sclass="ftype_name" original_name="datetime" declared_in="mtime_c_bindings">
+      <name>datetime</name>
+    </id>
+    <id type="S47_mtime_c_bindings" sclass="ftype_name" original_name="timedelta" declared_in="mtime_c_bindings">
+      <name>timedelta</name>
+    </id>
+    <id type="S48_mtime_c_bindings" sclass="ftype_name" original_name="divisionquotienttimespan" declared_in="mtime_c_bindings">
+      <name>divisionquotienttimespan</name>
+    </id>
+    <id type="F11_mtime_c_bindings" sclass="ffunc" original_name="setcalendar" declared_in="mtime_c_bindings">
+      <name>setcalendar</name>
+    </id>
+    <id type="F12_mtime_c_bindings" sclass="ffunc" original_name="resetcalendar" declared_in="mtime_c_bindings">
+      <name>resetcalendar</name>
+    </id>
+    <id type="F13_mtime_c_bindings" sclass="ffunc" original_name="calendartype" declared_in="mtime_c_bindings">
+      <name>calendartype</name>
+    </id>
+    <id type="F14_mtime_c_bindings" sclass="ffunc" original_name="my_calendartostring" declared_in="mtime_c_bindings">
+      <name>my_calendartostring</name>
+    </id>
+    <id type="F15_mtime_c_bindings" sclass="ffunc" original_name="my_newjuliandelta" declared_in="mtime_c_bindings">
+      <name>my_newjuliandelta</name>
+    </id>
+    <id type="F16_mtime_c_bindings" sclass="ffunc" original_name="my_deallocatejuliandelta" declared_in="mtime_c_bindings">
+      <name>my_deallocatejuliandelta</name>
+    </id>
+    <id type="F17_mtime_c_bindings" sclass="ffunc" original_name="my_newjulianday" declared_in="mtime_c_bindings">
+      <name>my_newjulianday</name>
+    </id>
+    <id type="F18_mtime_c_bindings" sclass="ffunc" original_name="my_deallocatejulianday" declared_in="mtime_c_bindings">
+      <name>my_deallocatejulianday</name>
+    </id>
+    <id type="F19_mtime_c_bindings" sclass="ffunc" original_name="my_juliandaytostring" declared_in="mtime_c_bindings">
+      <name>my_juliandaytostring</name>
+    </id>
+    <id type="F20_mtime_c_bindings" sclass="ffunc" original_name="my_newdatefromstring" declared_in="mtime_c_bindings">
+      <name>my_newdatefromstring</name>
+    </id>
+    <id type="F21_mtime_c_bindings" sclass="ffunc" original_name="my_newrawdate" declared_in="mtime_c_bindings">
+      <name>my_newrawdate</name>
+    </id>
+    <id type="F22_mtime_c_bindings" sclass="ffunc" original_name="my_constructandcopydate" declared_in="mtime_c_bindings">
+      <name>my_constructandcopydate</name>
+    </id>
+    <id type="F23_mtime_c_bindings" sclass="ffunc" original_name="my_deallocatedate" declared_in="mtime_c_bindings">
+      <name>my_deallocatedate</name>
+    </id>
+    <id type="F24_mtime_c_bindings" sclass="ffunc" original_name="my_replacedate" declared_in="mtime_c_bindings">
+      <name>my_replacedate</name>
+    </id>
+    <id type="F25_mtime_c_bindings" sclass="ffunc" original_name="my_datetostring" declared_in="mtime_c_bindings">
+      <name>my_datetostring</name>
+    </id>
+    <id type="F26_mtime_c_bindings" sclass="ffunc" original_name="my_datetoposixstring" declared_in="mtime_c_bindings">
+      <name>my_datetoposixstring</name>
+    </id>
+    <id type="F27_mtime_c_bindings" sclass="ffunc" original_name="my_newtimefromstring" declared_in="mtime_c_bindings">
+      <name>my_newtimefromstring</name>
+    </id>
+    <id type="F28_mtime_c_bindings" sclass="ffunc" original_name="my_newrawtime" declared_in="mtime_c_bindings">
+      <name>my_newrawtime</name>
+    </id>
+    <id type="F29_mtime_c_bindings" sclass="ffunc" original_name="my_constructandcopytime" declared_in="mtime_c_bindings">
+      <name>my_constructandcopytime</name>
+    </id>
+    <id type="F30_mtime_c_bindings" sclass="ffunc" original_name="my_deallocatetime" declared_in="mtime_c_bindings">
+      <name>my_deallocatetime</name>
+    </id>
+    <id type="F31_mtime_c_bindings" sclass="ffunc" original_name="my_replacetime" declared_in="mtime_c_bindings">
+      <name>my_replacetime</name>
+    </id>
+    <id type="F32_mtime_c_bindings" sclass="ffunc" original_name="my_timetostring" declared_in="mtime_c_bindings">
+      <name>my_timetostring</name>
+    </id>
+    <id type="F33_mtime_c_bindings" sclass="ffunc" original_name="my_timetoposixstring" declared_in="mtime_c_bindings">
+      <name>my_timetoposixstring</name>
+    </id>
+    <id type="F34_mtime_c_bindings" sclass="ffunc" original_name="my_newdatetime" declared_in="mtime_c_bindings">
+      <name>my_newdatetime</name>
+    </id>
+    <id type="F35_mtime_c_bindings" sclass="ffunc" original_name="my_newrawdatetime" declared_in="mtime_c_bindings">
+      <name>my_newrawdatetime</name>
+    </id>
+    <id type="F36_mtime_c_bindings" sclass="ffunc" original_name="my_constructandcopydatetime" declared_in="mtime_c_bindings">
+      <name>my_constructandcopydatetime</name>
+    </id>
+    <id type="F37_mtime_c_bindings" sclass="ffunc" original_name="my_deallocatedatetime" declared_in="mtime_c_bindings">
+      <name>my_deallocatedatetime</name>
+    </id>
+    <id type="F38_mtime_c_bindings" sclass="ffunc" original_name="my_comparedatetime" declared_in="mtime_c_bindings">
+      <name>my_comparedatetime</name>
+    </id>
+    <id type="F39_mtime_c_bindings" sclass="ffunc" original_name="my_replacedatetime" declared_in="mtime_c_bindings">
+      <name>my_replacedatetime</name>
+    </id>
+    <id type="F40_mtime_c_bindings" sclass="ffunc" original_name="my_datetimetostring" declared_in="mtime_c_bindings">
+      <name>my_datetimetostring</name>
+    </id>
+    <id type="F41_mtime_c_bindings" sclass="ffunc" original_name="my_datetimetoposixstring" declared_in="mtime_c_bindings">
+      <name>my_datetimetoposixstring</name>
+    </id>
+    <id type="F42_mtime_c_bindings" sclass="ffunc" original_name="my_getnoofdaysinmonthdatetime" declared_in="mtime_c_bindings">
+      <name>my_getnoofdaysinmonthdatetime</name>
+    </id>
+    <id type="F43_mtime_c_bindings" sclass="ffunc" original_name="my_getnoofdaysinyeardatetime" declared_in="mtime_c_bindings">
+      <name>my_getnoofdaysinyeardatetime</name>
+    </id>
+    <id type="F44_mtime_c_bindings" sclass="ffunc" original_name="my_getdayofyearfromdatetime" declared_in="mtime_c_bindings">
+      <name>my_getdayofyearfromdatetime</name>
+    </id>
+    <id type="F45_mtime_c_bindings" sclass="ffunc" original_name="my_getnoofsecondselapsedinmonthdatetime" declared_in="mtime_c_bindings">
+      <name>my_getnoofsecondselapsedinmonthdatetime</name>
+    </id>
+    <id type="F46_mtime_c_bindings" sclass="ffunc" original_name="my_getnoofsecondselapsedindaydatetime" declared_in="mtime_c_bindings">
+      <name>my_getnoofsecondselapsedindaydatetime</name>
+    </id>
+    <id type="F47_mtime_c_bindings" sclass="ffunc" original_name="my_getjuliandayfromdatetime" declared_in="mtime_c_bindings">
+      <name>my_getjuliandayfromdatetime</name>
+    </id>
+    <id type="F48_mtime_c_bindings" sclass="ffunc" original_name="my_getdatetimefromjulianday" declared_in="mtime_c_bindings">
+      <name>my_getdatetimefromjulianday</name>
+    </id>
+    <id type="F49_mtime_c_bindings" sclass="ffunc" original_name="my_newtimedeltafromstring" declared_in="mtime_c_bindings">
+      <name>my_newtimedeltafromstring</name>
+    </id>
+    <id type="F50_mtime_c_bindings" sclass="ffunc" original_name="my_newrawtimedelta" declared_in="mtime_c_bindings">
+      <name>my_newrawtimedelta</name>
+    </id>
+    <id type="F51_mtime_c_bindings" sclass="ffunc" original_name="my_constructandcopytimedelta" declared_in="mtime_c_bindings">
+      <name>my_constructandcopytimedelta</name>
+    </id>
+    <id type="F52_mtime_c_bindings" sclass="ffunc" original_name="my_deallocatetimedelta" declared_in="mtime_c_bindings">
+      <name>my_deallocatetimedelta</name>
+    </id>
+    <id type="F53_mtime_c_bindings" sclass="ffunc" original_name="my_comparetimedelta" declared_in="mtime_c_bindings">
+      <name>my_comparetimedelta</name>
+    </id>
+    <id type="F54_mtime_c_bindings" sclass="ffunc" original_name="my_gettimedeltafromdate" declared_in="mtime_c_bindings">
+      <name>my_gettimedeltafromdate</name>
+    </id>
+    <id type="F55_mtime_c_bindings" sclass="ffunc" original_name="my_gettimedeltafromdatetime" declared_in="mtime_c_bindings">
+      <name>my_gettimedeltafromdatetime</name>
+    </id>
+    <id type="F56_mtime_c_bindings" sclass="ffunc" original_name="my_gettotalmillisecondstimedelta" declared_in="mtime_c_bindings">
+      <name>my_gettotalmillisecondstimedelta</name>
+    </id>
+    <id type="F57_mtime_c_bindings" sclass="ffunc" original_name="my_gettotalsecondstimedelta" declared_in="mtime_c_bindings">
+      <name>my_gettotalsecondstimedelta</name>
+    </id>
+    <id type="F58_mtime_c_bindings" sclass="ffunc" original_name="my_timedeltatostring" declared_in="mtime_c_bindings">
+      <name>my_timedeltatostring</name>
+    </id>
+    <id type="F59_mtime_c_bindings" sclass="ffunc" original_name="my_addtimedeltatodatetime" declared_in="mtime_c_bindings">
+      <name>my_addtimedeltatodatetime</name>
+    </id>
+    <id type="F60_mtime_c_bindings" sclass="ffunc" original_name="my_addtimedeltatodate" declared_in="mtime_c_bindings">
+      <name>my_addtimedeltatodate</name>
+    </id>
+    <id type="F61_mtime_c_bindings" sclass="ffunc" original_name="my_elementwisescalarmultiplytimedelta" declared_in="mtime_c_bindings">
+      <name>my_elementwisescalarmultiplytimedelta</name>
+    </id>
+    <id type="F62_mtime_c_bindings" sclass="ffunc" original_name="my_elementwisescalarmultiplytimedeltadp" declared_in="mtime_c_bindings">
+      <name>my_elementwisescalarmultiplytimedeltadp</name>
+    </id>
+    <id type="F63_mtime_c_bindings" sclass="ffunc" original_name="my_elementwiseaddtimedeltatotimedelta" declared_in="mtime_c_bindings">
+      <name>my_elementwiseaddtimedeltatotimedelta</name>
+    </id>
+    <id type="F64_mtime_c_bindings" sclass="ffunc" original_name="my_modulotimedelta" declared_in="mtime_c_bindings">
+      <name>my_modulotimedelta</name>
+    </id>
+    <id type="F65_mtime_c_bindings" sclass="ffunc" original_name="my_getptstringfromms" declared_in="mtime_c_bindings">
+      <name>my_getptstringfromms</name>
+    </id>
+    <id type="F66_mtime_c_bindings" sclass="ffunc" original_name="my_getptstringfromsecondsint" declared_in="mtime_c_bindings">
+      <name>my_getptstringfromsecondsint</name>
+    </id>
+    <id type="F67_mtime_c_bindings" sclass="ffunc" original_name="my_getptstringfromsecondsfloat" declared_in="mtime_c_bindings">
+      <name>my_getptstringfromsecondsfloat</name>
+    </id>
+    <id type="F68_mtime_c_bindings" sclass="ffunc" original_name="my_getptstringfromsecondsdouble" declared_in="mtime_c_bindings">
+      <name>my_getptstringfromsecondsdouble</name>
+    </id>
+    <id type="F69_mtime_c_bindings" sclass="ffunc" original_name="my_getptstringfromminutes" declared_in="mtime_c_bindings">
+      <name>my_getptstringfromminutes</name>
+    </id>
+    <id type="F70_mtime_c_bindings" sclass="ffunc" original_name="my_getptstringfromhours" declared_in="mtime_c_bindings">
+      <name>my_getptstringfromhours</name>
+    </id>
+    <id type="F71_mtime_c_bindings" sclass="ffunc" original_name="my_timedeltatojuliandelta" declared_in="mtime_c_bindings">
+      <name>my_timedeltatojuliandelta</name>
+    </id>
+    <id type="F72_mtime_c_bindings" sclass="ffunc" original_name="my_dividetimedeltainseconds" declared_in="mtime_c_bindings">
+      <name>my_dividetimedeltainseconds</name>
+    </id>
+    <id type="F73_mtime_c_bindings" sclass="ffunc" original_name="my_dividedatetimedifferenceinseconds" declared_in="mtime_c_bindings">
+      <name>my_dividedatetimedifferenceinseconds</name>
+    </id>
+    <id type="F74_mtime_c_bindings" sclass="ffunc" original_name="my_dividetwodatetimediffsinseconds" declared_in="mtime_c_bindings">
+      <name>my_dividetwodatetimediffsinseconds</name>
+    </id>
+    <id type="F75_mtime_c_bindings" sclass="ffunc" original_name="my_newevent" declared_in="mtime_c_bindings">
+      <name>my_newevent</name>
+    </id>
+    <id type="F76_mtime_c_bindings" sclass="ffunc" original_name="my_neweventwithdatatypes" declared_in="mtime_c_bindings">
+      <name>my_neweventwithdatatypes</name>
+    </id>
+    <id type="F77_mtime_c_bindings" sclass="ffunc" original_name="my_deallocateevent" declared_in="mtime_c_bindings">
+      <name>my_deallocateevent</name>
+    </id>
+    <id type="F78_mtime_c_bindings" sclass="ffunc" original_name="my_constructandcopyevent" declared_in="mtime_c_bindings">
+      <name>my_constructandcopyevent</name>
+    </id>
+    <id type="F79_mtime_c_bindings" sclass="ffunc" original_name="my_eventtostring" declared_in="mtime_c_bindings">
+      <name>my_eventtostring</name>
+    </id>
+    <id type="F80_mtime_c_bindings" sclass="ffunc" original_name="my_iscurrenteventactive" declared_in="mtime_c_bindings">
+      <name>my_iscurrenteventactive</name>
+    </id>
+    <id type="F81_mtime_c_bindings" sclass="ffunc" original_name="my_iseventnextinnextday" declared_in="mtime_c_bindings">
+      <name>my_iseventnextinnextday</name>
+    </id>
+    <id type="F82_mtime_c_bindings" sclass="ffunc" original_name="my_iseventnextinnextmonth" declared_in="mtime_c_bindings">
+      <name>my_iseventnextinnextmonth</name>
+    </id>
+    <id type="F83_mtime_c_bindings" sclass="ffunc" original_name="my_iseventnextinnextyear" declared_in="mtime_c_bindings">
+      <name>my_iseventnextinnextyear</name>
+    </id>
+    <id type="F84_mtime_c_bindings" sclass="ffunc" original_name="my_gettriggernexteventatdatetime" declared_in="mtime_c_bindings">
+      <name>my_gettriggernexteventatdatetime</name>
+    </id>
+    <id type="F85_mtime_c_bindings" sclass="ffunc" original_name="my_gettriggeredpreviouseventatdatetime" declared_in="mtime_c_bindings">
+      <name>my_gettriggeredpreviouseventatdatetime</name>
+    </id>
+    <id type="F86_mtime_c_bindings" sclass="ffunc" original_name="my_geteventname" declared_in="mtime_c_bindings">
+      <name>my_geteventname</name>
+    </id>
+    <id type="F87_mtime_c_bindings" sclass="ffunc" original_name="my_getnexteventisfirst" declared_in="mtime_c_bindings">
+      <name>my_getnexteventisfirst</name>
+    </id>
+    <id type="F88_mtime_c_bindings" sclass="ffunc" original_name="my_geteventisfirstinday" declared_in="mtime_c_bindings">
+      <name>my_geteventisfirstinday</name>
+    </id>
+    <id type="F89_mtime_c_bindings" sclass="ffunc" original_name="my_geteventisfirstinmonth" declared_in="mtime_c_bindings">
+      <name>my_geteventisfirstinmonth</name>
+    </id>
+    <id type="F90_mtime_c_bindings" sclass="ffunc" original_name="my_geteventisfirstinyear" declared_in="mtime_c_bindings">
+      <name>my_geteventisfirstinyear</name>
+    </id>
+    <id type="F91_mtime_c_bindings" sclass="ffunc" original_name="my_geteventislastinday" declared_in="mtime_c_bindings">
+      <name>my_geteventislastinday</name>
+    </id>
+    <id type="F92_mtime_c_bindings" sclass="ffunc" original_name="my_geteventislastinmonth" declared_in="mtime_c_bindings">
+      <name>my_geteventislastinmonth</name>
+    </id>
+    <id type="F93_mtime_c_bindings" sclass="ffunc" original_name="my_geteventislastinyear" declared_in="mtime_c_bindings">
+      <name>my_geteventislastinyear</name>
+    </id>
+    <id type="F94_mtime_c_bindings" sclass="ffunc" original_name="my_neweventgroup" declared_in="mtime_c_bindings">
+      <name>my_neweventgroup</name>
+    </id>
+    <id type="F95_mtime_c_bindings" sclass="ffunc" original_name="my_deallocateeventgroup" declared_in="mtime_c_bindings">
+      <name>my_deallocateeventgroup</name>
+    </id>
+    <id type="F96_mtime_c_bindings" sclass="ffunc" original_name="my_addeventtoeventgroup" declared_in="mtime_c_bindings">
+      <name>my_addeventtoeventgroup</name>
+    </id>
+    <id type="F97_mtime_c_bindings" sclass="ffunc" original_name="my_removeeventfromeventgroup" declared_in="mtime_c_bindings">
+      <name>my_removeeventfromeventgroup</name>
+    </id>
+    <id type="F98_mtime_c_bindings" sclass="ffunc" original_name="my_geteventgroupname" declared_in="mtime_c_bindings">
+      <name>my_geteventgroupname</name>
+    </id>
+    <id type="F99_mtime_c_bindings" sclass="ffunc" original_name="my_getrepetitions" declared_in="mtime_c_bindings">
+      <name>my_getrepetitions</name>
+    </id>
+    <id type="F100_mtime_c_bindings" sclass="ffunc" original_name="my_splitrepetitionstring" declared_in="mtime_c_bindings">
+      <name>my_splitrepetitionstring</name>
+    </id>
+    <id type="F101_mtime_c_bindings" sclass="ffunc" original_name="handle_errno" declared_in="mtime_c_bindings">
+      <name>handle_errno</name>
+    </id>
+    <id type="F102_mtime_c_bindings" sclass="ffunc" original_name="handle_errno_base" declared_in="mtime_c_bindings">
+      <name>handle_errno_base</name>
+    </id>
+    <id type="F104_mtime_c_bindings" sclass="ffunc" original_name="handle_errno_cond" declared_in="mtime_c_bindings">
+      <name>handle_errno_cond</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I2_mtime_c_bindings">c_int</name>
+    </varDecl>
+    <varDecl>
+      <name type="I4_mtime_c_bindings">c_int64_t</name>
+    </varDecl>
+    <varDecl>
+      <name type="I6_mtime_c_bindings">c_float</name>
+    </varDecl>
+    <varDecl>
+      <name type="I8_mtime_c_bindings">c_double</name>
+    </varDecl>
+    <varDecl>
+      <name type="I10_mtime_c_bindings">c_bool</name>
+    </varDecl>
+    <varDecl>
+      <name type="I12_mtime_c_bindings">c_char</name>
+    </varDecl>
+    <varDecl>
+      <name type="C1_mtime_c_bindings">c_null_char</name>
+    </varDecl>
+    <varDecl>
+      <name type="I18_mtime_c_bindings">max_calendar_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I19_mtime_c_bindings">max_date_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I20_mtime_c_bindings">max_datetime_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I21_mtime_c_bindings">max_time_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I22_mtime_c_bindings">max_julianday_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I23_mtime_c_bindings">max_timedelta_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I24_mtime_c_bindings">max_mtime_error_str_len</name>
+      <value>
+        <FintConstant type="Fint">132</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I25_mtime_c_bindings">max_eventname_str_len</name>
+      <value>
+        <FintConstant type="Fint">132</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I26_mtime_c_bindings">max_event_str_len</name>
+      <value>
+        <FintConstant type="Fint">512</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I27_mtime_c_bindings">max_groupname_str_len</name>
+      <value>
+        <FintConstant type="Fint">132</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I28_mtime_c_bindings">no_error</name>
+      <value>
+        <FintConstant type="Fint">0</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I29_mtime_c_bindings">calendar_calendartostring</name>
+      <value>
+        <FintConstant type="Fint">1</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I30_mtime_c_bindings">general_arithmetic_error</name>
+      <value>
+        <FintConstant type="Fint">2</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I31_mtime_c_bindings">julianday_newjulianday</name>
+      <value>
+        <FintConstant type="Fint">101</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I32_mtime_c_bindings">julianday_juliandaytostring</name>
+      <value>
+        <FintConstant type="Fint">103</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I33_mtime_c_bindings">date_newdatefromstring</name>
+      <value>
+        <FintConstant type="Fint">201</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I34_mtime_c_bindings">date_newdatefromraw_yi8</name>
+      <value>
+        <FintConstant type="Fint">202</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I35_mtime_c_bindings">date_newdatefromraw</name>
+      <value>
+        <FintConstant type="Fint">203</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I36_mtime_c_bindings">date_newdatefromconstructandcopy</name>
+      <value>
+        <FintConstant type="Fint">204</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I37_mtime_c_bindings">date_replacedate</name>
+      <value>
+        <FintConstant type="Fint">206</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I38_mtime_c_bindings">date_datetostring</name>
+      <value>
+        <FintConstant type="Fint">207</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I39_mtime_c_bindings">date_datetoposixstring</name>
+      <value>
+        <FintConstant type="Fint">208</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I40_mtime_c_bindings">time_newtimefromstring</name>
+      <value>
+        <FintConstant type="Fint">301</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I41_mtime_c_bindings">time_newtimefromraw</name>
+      <value>
+        <FintConstant type="Fint">302</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I42_mtime_c_bindings">time_newtimefromconstructandcopy</name>
+      <value>
+        <FintConstant type="Fint">303</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I43_mtime_c_bindings">time_replacetime</name>
+      <value>
+        <FintConstant type="Fint">305</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I44_mtime_c_bindings">time_timetostring</name>
+      <value>
+        <FintConstant type="Fint">306</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I45_mtime_c_bindings">time_timetoposixstring</name>
+      <value>
+        <FintConstant type="Fint">307</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I46_mtime_c_bindings">datetime_newdatetimefromstring</name>
+      <value>
+        <FintConstant type="Fint">401</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I47_mtime_c_bindings">datetime_newdatetimefromraw_yi8</name>
+      <value>
+        <FintConstant type="Fint">402</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I48_mtime_c_bindings">datetime_newdatetimefromraw</name>
+      <value>
+        <FintConstant type="Fint">403</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I49_mtime_c_bindings">datetime_newdatetimefromconstructandcopy</name>
+      <value>
+        <FintConstant type="Fint">404</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I50_mtime_c_bindings">datetime_datetimetostring</name>
+      <value>
+        <FintConstant type="Fint">406</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I51_mtime_c_bindings">datetime_datetimetoposixstring</name>
+      <value>
+        <FintConstant type="Fint">407</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I52_mtime_c_bindings">datetime_getnoofdaysinmonthdatetime</name>
+      <value>
+        <FintConstant type="Fint">415</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I53_mtime_c_bindings">datetime_getnoofdaysinyeardatetime</name>
+      <value>
+        <FintConstant type="Fint">416</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I54_mtime_c_bindings">datetime_getdayofyearfromdatetime</name>
+      <value>
+        <FintConstant type="Fint">417</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I55_mtime_c_bindings">datetime_getnoofsecondselapsedinmonthdatetime</name>
+      <value>
+        <FintConstant type="Fint">418</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I56_mtime_c_bindings">datetime_getnoofsecondselapsedindaydatetime</name>
+      <value>
+        <FintConstant type="Fint">419</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I57_mtime_c_bindings">datetime_getjuliandayfromdatetime</name>
+      <value>
+        <FintConstant type="Fint">420</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I58_mtime_c_bindings">datetime_getdatetimefromjulianday</name>
+      <value>
+        <FintConstant type="Fint">421</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I59_mtime_c_bindings">timedelta_newtimedeltafromstring</name>
+      <value>
+        <FintConstant type="Fint">501</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I60_mtime_c_bindings">timedelta_newtimedeltafromraw</name>
+      <value>
+        <FintConstant type="Fint">502</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I61_mtime_c_bindings">timedelta_newtimedeltafromraw_yi8</name>
+      <value>
+        <FintConstant type="Fint">503</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I62_mtime_c_bindings">timedelta_newtimedeltafromconstructandcopy</name>
+      <value>
+        <FintConstant type="Fint">504</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I63_mtime_c_bindings">timedelta_gettotalmillisecondstimedelta</name>
+      <value>
+        <FintConstant type="Fint">508</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I64_mtime_c_bindings">timedelta_gettotalsecondstimedelta</name>
+      <value>
+        <FintConstant type="Fint">509</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I65_mtime_c_bindings">timedelta_timedeltatostring</name>
+      <value>
+        <FintConstant type="Fint">510</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I66_mtime_c_bindings">timedelta_getptstring</name>
+      <value>
+        <FintConstant type="Fint">511</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I67_mtime_c_bindings">events_newevent</name>
+      <value>
+        <FintConstant type="Fint">601</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I68_mtime_c_bindings">events_eventtostring</name>
+      <value>
+        <FintConstant type="Fint">603</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I69_mtime_c_bindings">events_gettriggernexteventatdatetime</name>
+      <value>
+        <FintConstant type="Fint">608</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I70_mtime_c_bindings">events_gettriggeredpreviouseventatdatetime</name>
+      <value>
+        <FintConstant type="Fint">609</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I71_mtime_c_bindings">events_geteventname</name>
+      <value>
+        <FintConstant type="Fint">611</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I72_mtime_c_bindings">events_getfirstdatetime</name>
+      <value>
+        <FintConstant type="Fint">612</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I73_mtime_c_bindings">events_geteventinterval</name>
+      <value>
+        <FintConstant type="Fint">613</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I74_mtime_c_bindings">events_getlastdatetime</name>
+      <value>
+        <FintConstant type="Fint">614</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I75_mtime_c_bindings">eventgroups_neweventgroup</name>
+      <value>
+        <FintConstant type="Fint">701</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I76_mtime_c_bindings">eventgroups_geteventgroupname</name>
+      <value>
+        <FintConstant type="Fint">706</FintConstant>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="handle_errno" lineno="748" file="mtime_c_bindings.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="749" file="mtime_c_bindings.f90">
+        <name type="F105_mtime_c_bindings">handle_errno_cond</name>
+        <name type="F106_mtime_c_bindings">handle_errno_base</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="750" file="mtime_c_bindings.f90">
+        <name type="F105_mtime_c_bindings">handle_errno_cond</name>
+        <name type="F106_mtime_c_bindings">handle_errno_base</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

@@ -1,0 +1,300 @@
+<OmniFortranModule version="1.0">
+  <name>mtime_calendar</name>
+  <depends>
+    <name>iso_c_binding</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I55d201410180" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d20140f030" is_parameter="true" ref="I55d201410180"/>
+    <FbasicType type="I55d201410350" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d20140f260" is_parameter="true" ref="I55d201410350"/>
+    <FbasicType type="I55d201410490" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d20140f4f0" is_parameter="true" ref="I55d201410490"/>
+    <FbasicType type="C55d20140f780" is_parameter="true" ref="Fcharacter"/>
+    <FstructType type="S55d20140fa10" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55d201410940">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d201423820" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d201423e50" is_parameter="true" ref="I55d201423820"/>
+    <FbasicType type="I55d201410940" ref="Fint">
+      <kind>
+        <Var type="I55d201423e50" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55d20140ffe0" return_type="FnumericAll"/>
+    <FfunctionType type="F55d201458f60" return_type="L55d201431580">
+      <params>
+        <name type="S55d201430a90" imported_id="S555a51971d90">c_ptr_1</name>
+        <name type="S55d201431010" imported_id="S555a51972510">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L55d201431580" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55d20142cba0" imported_id="S555a51946610" is_internal_private="true">
+      <symbols>
+        <id type="I55d20142d320">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d20142d320" ref="Fint">
+      <kind>
+        <Var type="I55d201423e50" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55d201431ba0" imported_id="S555a51971c50" ref="S55d20142cba0"/>
+    <FbasicType type="S55d201430a90" imported_id="S555a51971d90" ref="S55d201431ba0"/>
+    <FbasicType type="S55d201431d50" imported_id="S555a519723d0" ref="S55d20142cba0"/>
+    <FbasicType type="S55d201431010" imported_id="S555a51972510" is_optional="true" ref="S55d201431d50"/>
+    <FfunctionType type="F55d2014597d0" return_type="L55d20142fa60">
+      <params>
+        <name type="S55d20142f0d0" imported_id="S555a5196eaf0">c_ptr_1</name>
+        <name type="S55d20142f4d0" imported_id="S555a5196f270">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L55d20142fa60" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55d20142bd30" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55d20142c6b0">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d20142c6b0" ref="Fint">
+      <kind>
+        <Var type="I55d201423e50" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55d201430260" imported_id="S555a5196e9b0" ref="S55d20142bd30"/>
+    <FbasicType type="S55d20142f0d0" imported_id="S555a5196eaf0" ref="S55d201430260"/>
+    <FbasicType type="S55d201430410" imported_id="S555a5196f130" ref="S55d20142bd30"/>
+    <FbasicType type="S55d20142f4d0" imported_id="S555a5196f270" is_optional="true" ref="S55d201430410"/>
+    <FbasicType type="I55d201407240" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55d201407a00" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55d2014081c0" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55d201410fc0" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55d201408ed0" is_public="true" is_parameter="true" ref="Fint"/>
+    <FfunctionType type="F55d20140a650" return_type="Fvoid" is_public="true" bind="C" bind_name="initCalendar">
+      <params>
+        <name type="I55d20140b8b0">ct</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55d20140b770" ref="Fint">
+      <kind>
+        <Var type="I55d20140f030" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d20140b8b0" is_value="true" ref="I55d20140b770"/>
+    <FfunctionType type="F55d20140c790" return_type="Fvoid" is_public="true" bind="C" bind_name="freeCalendar">
+      <params>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F55d20140d6b0" return_type="I55d20140d8e0" is_public="true" bind="C" bind_name="getCalendarType">
+      <params>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55d20140e4f0" ref="Fint">
+      <kind>
+        <Var type="I55d20140f030" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d20140d8e0" ref="I55d20140e4f0"/>
+    <FfunctionType type="F55d201469cd0" result_name="c_pointer" return_type="S55d20146a0e0" is_private="true" bind="C" bind_name="calendarToString">
+      <params>
+        <name type="A55d20146be60">calendar</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d20146a8b0" ref="S55d20140fa10"/>
+    <FbasicType type="S55d20146af20" ref="S55d20146a8b0"/>
+    <FbasicType type="S55d20146a0e0" ref="S55d20146af20"/>
+    <FbasicType type="C55d20146bbe0" ref="Fcharacter">
+      <len>
+        <Var type="I55d20140f4f0" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d20146be60" ref="C55d20146bbe0">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="S55d20146b150" ref="S55d20146af20"/>
+    <FfunctionType type="F55d20146d920" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="C55d20146ebc0">string</name>
+        <name type="I55d201470340">errno</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C55d20146ea80" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">32</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55d20146ebc0" intent="out" ref="C55d20146ea80"/>
+    <FbasicType type="I55d201470340" is_optional="true" ref="Fint"/>
+    <FbasicType type="S55d20146f930" ref="S55d20140fa10"/>
+    <FbasicType type="S55d20146fb60" ref="S55d20146f930"/>
+    <FfunctionType type="F55d201471260" return_type="Flogical"/>
+    <FfunctionType type="F55d201473790" return_type="Flogical"/>
+    <FfunctionType type="F55d201475630" return_type="Fint"/>
+    <FfunctionType type="F55d201477f70" return_type="Fint"/>
+    <FbasicType type="C55d201474640" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">6</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55d201476a20" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d2014765e0" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <Var type="Fint" scope="local">i</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C55d201478800" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="A55d2014783c0" ref="Fint">
+      <indexRange>
+        <lowerBound>
+          <Var type="Fint" scope="local">i</Var>
+        </lowerBound>
+        <upperBound>
+          <functionCall type="Fint" is_intrinsic="true">
+            <name>len</name>
+            <arguments>
+              <Var type="C55d20146ebc0" scope="local">string</Var>
+            </arguments>
+          </functionCall>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+  </typeTable>
+  <identifiers>
+    <id type="I55d20140f030" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="I55d20140f260" sclass="flocal" original_name="c_int64_t" declared_in="iso_c_binding">
+      <name>c_int64_t</name>
+    </id>
+    <id type="I55d20140f4f0" sclass="flocal" original_name="c_char" declared_in="iso_c_binding">
+      <name>c_char</name>
+    </id>
+    <id type="C55d20140f780" sclass="flocal" original_name="c_null_char" declared_in="iso_c_binding">
+      <name>c_null_char</name>
+    </id>
+    <id type="S55d20140fa10" imported_id="S555a51945380" sclass="ftype_name" original_name="c_ptr" declared_in="iso_c_binding">
+      <name>c_ptr</name>
+    </id>
+    <id type="F55d20140ffe0" sclass="ffunc" original_name="c_associated" declared_in="iso_c_binding">
+      <name>c_associated</name>
+    </id>
+    <id type="I55d201407240" sclass="flocal" original_name="calendar_not_set" declared_in="mtime_calendar">
+      <name>calendar_not_set</name>
+    </id>
+    <id type="I55d201407a00" sclass="flocal" original_name="proleptic_gregorian" declared_in="mtime_calendar">
+      <name>proleptic_gregorian</name>
+    </id>
+    <id type="I55d2014081c0" sclass="flocal" original_name="year_of_365_days" declared_in="mtime_calendar">
+      <name>year_of_365_days</name>
+    </id>
+    <id type="I55d201410fc0" sclass="flocal" original_name="year_of_360_days" declared_in="mtime_calendar">
+      <name>year_of_360_days</name>
+    </id>
+    <id type="I55d201408ed0" sclass="flocal" original_name="max_calendar_str_len" declared_in="mtime_calendar">
+      <name>max_calendar_str_len</name>
+    </id>
+    <id type="F55d20140a650" sclass="ffunc" original_name="setcalendar" declared_in="mtime_calendar">
+      <name>setcalendar</name>
+    </id>
+    <id type="F55d20140c790" sclass="ffunc" original_name="resetcalendar" declared_in="mtime_calendar">
+      <name>resetcalendar</name>
+    </id>
+    <id type="F55d20140d6b0" sclass="ffunc" original_name="calendartype" declared_in="mtime_calendar">
+      <name>calendartype</name>
+    </id>
+    <id type="F55d20146d920" sclass="ffunc" original_name="calendartostring" declared_in="mtime_calendar">
+      <name>calendartostring</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I55d20140f030">c_int</name>
+    </varDecl>
+    <varDecl>
+      <name type="I55d20140f260">c_int64_t</name>
+    </varDecl>
+    <varDecl>
+      <name type="I55d20140f4f0">c_char</name>
+    </varDecl>
+    <varDecl>
+      <name type="C55d20140f780">c_null_char</name>
+    </varDecl>
+    <varDecl>
+      <name type="I55d201407240">calendar_not_set</name>
+      <value>
+        <FintConstant type="Fint">0</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I55d201407a00">proleptic_gregorian</name>
+      <value>
+        <FintConstant type="Fint">1</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I55d2014081c0">year_of_365_days</name>
+      <value>
+        <FintConstant type="Fint">2</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I55d201410fc0">year_of_360_days</name>
+      <value>
+        <FintConstant type="Fint">3</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="51" file="libmtime.f90">
+      <name type="I55d201408ed0">max_calendar_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

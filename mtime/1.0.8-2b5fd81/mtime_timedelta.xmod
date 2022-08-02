@@ -3537,8 +3537,8 @@
         <name type="I55d2017e16a0">errno</name>
       </params>
     </FfunctionType>
-    <FbasicType type="S55d2017df580" is_pointer="true" ref="S55d2016e2240"/>
-    <FbasicType type="S55d2017df6c0" is_pointer="true" ref="S55d2017df580"/>
+    <FbasicType type="S55d2017df580" is_target="true" ref="S55d2016e2240"/>
+    <FbasicType type="S55d2017df6c0" is_target="true" ref="S55d2017df580"/>
     <FbasicType type="C55d2017dfe20" ref="Fcharacter">
       <len>
         <FintConstant type="Fint">32</FintConstant>

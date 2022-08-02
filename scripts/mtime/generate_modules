@@ -2,8 +2,10 @@
 
 ###
 
-mtime_dir='/path/to/mtime'
-mtime_ver='1.0.8'
+src_root='/path/to/mtime'
+
+name='mtime'
+version='1.0.11-rc2'
 
 ###
 
@@ -12,7 +14,7 @@ set -o pipefail
 
 script_dir=$(cd "$(dirname "$0")"; pwd)
 root_dir=$(cd "${script_dir}/../.."; pwd)
-output_dir="${root_dir}/mtime/${mtime_ver}"
+output_dir="${root_dir}/${name}/${version}"
 
 FPP='gfortran -E -cpp'
 FPP_FLAGS=
@@ -21,13 +23,15 @@ OMNI='F_Front'
 OMNI_FLAGS="-M ${output_dir}"
 
 files='
+mtime_constants.f90
+mtime_error_handling.f90
+mtime_c_bindings.f90
 libmtime.f90
-error_handling.f90
 libmtime_hl.f90
 '
 
 mkdir -p "${output_dir}"
-cd "${mtime_dir}/src"
+cd "${src_root}/src"
 
 for file in ${files}; do
 	${FPP} ${FPP_FLAGS} ${file} | ${OMNI} ${OMNI_FLAGS} >/dev/null

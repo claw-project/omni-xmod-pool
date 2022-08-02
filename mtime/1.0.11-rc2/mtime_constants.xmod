@@ -1,0 +1,115 @@
+<OmniFortranModule version="1.0">
+  <name>mtime_constants</name>
+  <depends>
+  </depends>
+  <typeTable>
+    <FbasicType type="I1_mtime_constants" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I2_mtime_constants" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I3_mtime_constants" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I4_mtime_constants" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I5_mtime_constants" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I6_mtime_constants" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I7_mtime_constants" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I8_mtime_constants" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I9_mtime_constants" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I10_mtime_constants" is_public="true" is_parameter="true" ref="Fint"/>
+  </typeTable>
+  <identifiers>
+    <id type="I1_mtime_constants" sclass="flocal" original_name="max_calendar_str_len" declared_in="mtime_constants">
+      <name>max_calendar_str_len</name>
+    </id>
+    <id type="I2_mtime_constants" sclass="flocal" original_name="max_date_str_len" declared_in="mtime_constants">
+      <name>max_date_str_len</name>
+    </id>
+    <id type="I3_mtime_constants" sclass="flocal" original_name="max_datetime_str_len" declared_in="mtime_constants">
+      <name>max_datetime_str_len</name>
+    </id>
+    <id type="I4_mtime_constants" sclass="flocal" original_name="max_time_str_len" declared_in="mtime_constants">
+      <name>max_time_str_len</name>
+    </id>
+    <id type="I5_mtime_constants" sclass="flocal" original_name="max_julianday_str_len" declared_in="mtime_constants">
+      <name>max_julianday_str_len</name>
+    </id>
+    <id type="I6_mtime_constants" sclass="flocal" original_name="max_timedelta_str_len" declared_in="mtime_constants">
+      <name>max_timedelta_str_len</name>
+    </id>
+    <id type="I7_mtime_constants" sclass="flocal" original_name="max_mtime_error_str_len" declared_in="mtime_constants">
+      <name>max_mtime_error_str_len</name>
+    </id>
+    <id type="I8_mtime_constants" sclass="flocal" original_name="max_eventname_str_len" declared_in="mtime_constants">
+      <name>max_eventname_str_len</name>
+    </id>
+    <id type="I9_mtime_constants" sclass="flocal" original_name="max_event_str_len" declared_in="mtime_constants">
+      <name>max_event_str_len</name>
+    </id>
+    <id type="I10_mtime_constants" sclass="flocal" original_name="max_groupname_str_len" declared_in="mtime_constants">
+      <name>max_groupname_str_len</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl lineno="7" file="mtime_constants.f90">
+      <name type="I1_mtime_constants">max_calendar_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="10" file="mtime_constants.f90">
+      <name type="I2_mtime_constants">max_date_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="13" file="mtime_constants.f90">
+      <name type="I3_mtime_constants">max_datetime_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="16" file="mtime_constants.f90">
+      <name type="I4_mtime_constants">max_time_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="19" file="mtime_constants.f90">
+      <name type="I5_mtime_constants">max_julianday_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="22" file="mtime_constants.f90">
+      <name type="I6_mtime_constants">max_timedelta_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="25" file="mtime_constants.f90">
+      <name type="I7_mtime_constants">max_mtime_error_str_len</name>
+      <value>
+        <FintConstant type="Fint">132</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="28" file="mtime_constants.f90">
+      <name type="I8_mtime_constants">max_eventname_str_len</name>
+      <value>
+        <FintConstant type="Fint">132</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="29" file="mtime_constants.f90">
+      <name type="I9_mtime_constants">max_event_str_len</name>
+      <value>
+        <FintConstant type="Fint">512</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="32" file="mtime_constants.f90">
+      <name type="I10_mtime_constants">max_groupname_str_len</name>
+      <value>
+        <FintConstant type="Fint">132</FintConstant>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

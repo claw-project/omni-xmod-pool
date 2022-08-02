@@ -3113,8 +3113,8 @@
         <name type="I55d201af38c0">errno</name>
       </params>
     </FfunctionType>
-    <FbasicType type="S55d201af2a50" is_target="true" ref="S55d201ae3c20"/>
-    <FbasicType type="S55d201af28f0" is_target="true" ref="S55d201af2a50"/>
+    <FbasicType type="S55d201af2a50" is_pointer="true" ref="S55d201ae3c20"/>
+    <FbasicType type="S55d201af28f0" is_pointer="true" ref="S55d201af2a50"/>
     <FbasicType type="C55d201af3670" ref="Fcharacter">
       <len>
         <FintConstant type="Fint">32</FintConstant>
@@ -3122,8 +3122,8 @@
     </FbasicType>
     <FbasicType type="C55d201af3510" ref="C55d201af3670"/>
     <FbasicType type="I55d201af38c0" is_optional="true" ref="Fint"/>
-    <FbasicType type="S55d2017df580" is_target="true" ref="S55d2016e2240"/>
-    <FbasicType type="S55d2017df6c0" is_target="true" ref="S55d2017df580"/>
+    <FbasicType type="S55d2017df580" is_pointer="true" ref="S55d2016e2240"/>
+    <FbasicType type="S55d2017df6c0" is_pointer="true" ref="S55d2017df580"/>
     <FbasicType type="C55d2017dfe20" ref="Fcharacter">
       <len>
         <FintConstant type="Fint">32</FintConstant>
