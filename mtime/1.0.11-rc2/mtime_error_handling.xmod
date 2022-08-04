@@ -1,0 +1,991 @@
+<OmniFortranModule version="1.0">
+  <name>mtime_error_handling</name>
+  <depends>
+    <name>mtime_constants</name>
+    <name>mtime_print_by_callback</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I1_mtime_error_handling" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I2_mtime_error_handling" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I3_mtime_error_handling" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I4_mtime_error_handling" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I5_mtime_error_handling" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I6_mtime_error_handling" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I7_mtime_error_handling" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I8_mtime_error_handling" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I9_mtime_error_handling" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I10_mtime_error_handling" is_parameter="true" ref="Fint"/>
+    <FfunctionType type="F1_mtime_error_handling" return_type="Fvoid">
+      <params>
+        <name type="F2_mtime_error_handling">message_procedure</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F3_mtime_error_handling" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="F4_mtime_error_handling">message_procedure</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F5_mtime_error_handling" return_type="Fvoid">
+      <params>
+        <name type="F6_mtime_error_handling">finish_procedure</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F7_mtime_error_handling" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="F8_mtime_error_handling">finish_procedure</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F9_mtime_error_handling" return_type="Fvoid"/>
+    <FfunctionType type="F10_mtime_error_handling" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="C1_mtime_error_handling">leading_text</name>
+        <name type="C2_mtime_error_handling">message_text</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C3_mtime_error_handling" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C1_mtime_error_handling" intent="in" ref="C3_mtime_error_handling"/>
+    <FbasicType type="C4_mtime_error_handling" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C2_mtime_error_handling" intent="in" ref="C4_mtime_error_handling"/>
+    <FfunctionType type="F11_mtime_error_handling" return_type="Flogical"/>
+    <FfunctionType type="F12_mtime_error_handling" return_type="C5_mtime_error_handling"/>
+    <FbasicType type="C5_mtime_error_handling" ref="C4_mtime_error_handling"/>
+    <FfunctionType type="F13_mtime_error_handling" return_type="C5_mtime_error_handling"/>
+    <FfunctionType type="F14_mtime_error_handling" return_type="Fvoid"/>
+    <FbasicType type="I11_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I12_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I13_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I14_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I15_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I16_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I17_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I18_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I19_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I20_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I21_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I22_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I23_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I24_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I25_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I26_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I27_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I28_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I29_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I30_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I31_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I32_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I33_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I34_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I35_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I36_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I37_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I38_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I39_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I40_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I41_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I42_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I43_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I44_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I45_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I46_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I47_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I48_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I49_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I50_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I51_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I52_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I53_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I54_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I55_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I56_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I57_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I58_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I59_mtime_error_handling" is_public="true" is_parameter="true" ref="Fint"/>
+    <FfunctionType type="F15_mtime_error_handling" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="I60_mtime_error_handling">errno</name>
+        <name type="C6_mtime_error_handling">error_message</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I60_mtime_error_handling" intent="in" ref="Fint"/>
+    <FbasicType type="C7_mtime_error_handling" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C6_mtime_error_handling" intent="out" ref="C7_mtime_error_handling"/>
+    <FbasicType type="C8_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">8</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C9_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">29</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C10_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">51</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C11_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">46</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C12_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">52</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C13_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">36</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C14_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">36</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C15_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">36</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C16_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">36</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C17_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">36</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C18_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">47</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C19_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">52</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C20_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">36</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C21_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">36</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C22_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">36</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C23_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">36</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C24_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">47</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C25_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">52</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C26_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">44</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C27_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">44</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C28_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">44</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C29_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">44</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C30_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">47</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C31_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">52</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C32_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">83</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C33_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">81</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C34_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">80</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C35_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">105</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C36_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">101</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C37_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">81</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C38_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">81</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C39_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">46</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C40_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">46</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C41_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">46</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C42_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">46</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C43_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">85</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C44_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">82</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C45_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">52</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C46_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">47</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C47_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">38</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C48_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">48</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C49_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">84</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C50_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">97</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C51_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">47</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C52_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">38</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C53_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">32</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C54_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">38</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">48</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C56_mtime_error_handling" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">56</FintConstant>
+      </len>
+    </FbasicType>
+    <FfunctionType type="F16_mtime_error_handling" return_type="Fvoid">
+      <params>
+        <name type="C57_mtime_error_handling">leading_text</name>
+        <name type="C58_mtime_error_handling">message_text</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C59_mtime_error_handling" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C57_mtime_error_handling" intent="in" ref="C59_mtime_error_handling"/>
+    <FbasicType type="C60_mtime_error_handling" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C58_mtime_error_handling" intent="in" ref="C60_mtime_error_handling"/>
+    <FbasicType type="F2_mtime_error_handling" is_procedure="true" ref="F16_mtime_error_handling"/>
+    <FfunctionType type="F17_mtime_error_handling" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="C61_mtime_error_handling">leading_text</name>
+        <name type="C62_mtime_error_handling">message_text</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C63_mtime_error_handling" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C61_mtime_error_handling" intent="in" ref="C63_mtime_error_handling"/>
+    <FbasicType type="C64_mtime_error_handling" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C62_mtime_error_handling" intent="in" ref="C64_mtime_error_handling"/>
+    <FbasicType type="F4_mtime_error_handling" is_procedure="true" ref="F17_mtime_error_handling"/>
+    <FbasicType type="F18_mtime_error_handling" is_private="true" is_pointer="true" is_procedure="true" ref="F17_mtime_error_handling"/>
+    <FfunctionType type="F19_mtime_error_handling" return_type="Fvoid">
+      <params>
+        <name type="C65_mtime_error_handling">leading_text</name>
+        <name type="C66_mtime_error_handling">message_text</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C67_mtime_error_handling" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C65_mtime_error_handling" intent="in" ref="C67_mtime_error_handling"/>
+    <FbasicType type="C68_mtime_error_handling" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C66_mtime_error_handling" intent="in" ref="C68_mtime_error_handling"/>
+    <FbasicType type="F6_mtime_error_handling" is_procedure="true" ref="F19_mtime_error_handling"/>
+    <FfunctionType type="F20_mtime_error_handling" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="C69_mtime_error_handling">leading_text</name>
+        <name type="C70_mtime_error_handling">message_text</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C71_mtime_error_handling" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C69_mtime_error_handling" intent="in" ref="C71_mtime_error_handling"/>
+    <FbasicType type="C72_mtime_error_handling" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C70_mtime_error_handling" intent="in" ref="C72_mtime_error_handling"/>
+    <FbasicType type="F8_mtime_error_handling" is_procedure="true" ref="F20_mtime_error_handling"/>
+    <FbasicType type="F21_mtime_error_handling" is_private="true" is_pointer="true" is_procedure="true" ref="F20_mtime_error_handling"/>
+  </typeTable>
+  <identifiers>
+    <id type="I1_mtime_error_handling" sclass="flocal" original_name="max_calendar_str_len" declared_in="mtime_constants">
+      <name>max_calendar_str_len</name>
+    </id>
+    <id type="I2_mtime_error_handling" sclass="flocal" original_name="max_date_str_len" declared_in="mtime_constants">
+      <name>max_date_str_len</name>
+    </id>
+    <id type="I3_mtime_error_handling" sclass="flocal" original_name="max_datetime_str_len" declared_in="mtime_constants">
+      <name>max_datetime_str_len</name>
+    </id>
+    <id type="I4_mtime_error_handling" sclass="flocal" original_name="max_time_str_len" declared_in="mtime_constants">
+      <name>max_time_str_len</name>
+    </id>
+    <id type="I5_mtime_error_handling" sclass="flocal" original_name="max_julianday_str_len" declared_in="mtime_constants">
+      <name>max_julianday_str_len</name>
+    </id>
+    <id type="I6_mtime_error_handling" sclass="flocal" original_name="max_timedelta_str_len" declared_in="mtime_constants">
+      <name>max_timedelta_str_len</name>
+    </id>
+    <id type="I7_mtime_error_handling" sclass="flocal" original_name="max_mtime_error_str_len" declared_in="mtime_constants">
+      <name>max_mtime_error_str_len</name>
+    </id>
+    <id type="I8_mtime_error_handling" sclass="flocal" original_name="max_eventname_str_len" declared_in="mtime_constants">
+      <name>max_eventname_str_len</name>
+    </id>
+    <id type="I9_mtime_error_handling" sclass="flocal" original_name="max_event_str_len" declared_in="mtime_constants">
+      <name>max_event_str_len</name>
+    </id>
+    <id type="I10_mtime_error_handling" sclass="flocal" original_name="max_groupname_str_len" declared_in="mtime_constants">
+      <name>max_groupname_str_len</name>
+    </id>
+    <id type="F1_mtime_error_handling" sclass="ffunc" original_name="register_print_mtime_procedure" declared_in="mtime_print_by_callback">
+      <name>register_print_mtime_procedure</name>
+    </id>
+    <id type="F5_mtime_error_handling" sclass="ffunc" original_name="register_finish_mtime_procedure" declared_in="mtime_print_by_callback">
+      <name>register_finish_mtime_procedure</name>
+    </id>
+    <id type="F9_mtime_error_handling" sclass="ffunc" original_name="print_mtime" declared_in="mtime_print_by_callback">
+      <name>print_mtime</name>
+    </id>
+    <id type="F14_mtime_error_handling" sclass="ffunc" original_name="finish_mtime" declared_in="mtime_print_by_callback">
+      <name>finish_mtime</name>
+    </id>
+    <id type="I11_mtime_error_handling" sclass="flocal" original_name="no_error" declared_in="mtime_error_handling">
+      <name>no_error</name>
+    </id>
+    <id type="I12_mtime_error_handling" sclass="flocal" original_name="calendar_calendartostring" declared_in="mtime_error_handling">
+      <name>calendar_calendartostring</name>
+    </id>
+    <id type="I13_mtime_error_handling" sclass="flocal" original_name="general_arithmetic_error" declared_in="mtime_error_handling">
+      <name>general_arithmetic_error</name>
+    </id>
+    <id type="I14_mtime_error_handling" sclass="flocal" original_name="julianday_newjulianday" declared_in="mtime_error_handling">
+      <name>julianday_newjulianday</name>
+    </id>
+    <id type="I15_mtime_error_handling" sclass="flocal" original_name="julianday_juliandaytostring" declared_in="mtime_error_handling">
+      <name>julianday_juliandaytostring</name>
+    </id>
+    <id type="I16_mtime_error_handling" sclass="flocal" original_name="date_newdatefromstring" declared_in="mtime_error_handling">
+      <name>date_newdatefromstring</name>
+    </id>
+    <id type="I17_mtime_error_handling" sclass="flocal" original_name="date_newdatefromraw_yi8" declared_in="mtime_error_handling">
+      <name>date_newdatefromraw_yi8</name>
+    </id>
+    <id type="I18_mtime_error_handling" sclass="flocal" original_name="date_newdatefromraw" declared_in="mtime_error_handling">
+      <name>date_newdatefromraw</name>
+    </id>
+    <id type="I19_mtime_error_handling" sclass="flocal" original_name="date_newdatefromconstructandcopy" declared_in="mtime_error_handling">
+      <name>date_newdatefromconstructandcopy</name>
+    </id>
+    <id type="I20_mtime_error_handling" sclass="flocal" original_name="date_replacedate" declared_in="mtime_error_handling">
+      <name>date_replacedate</name>
+    </id>
+    <id type="I21_mtime_error_handling" sclass="flocal" original_name="date_datetostring" declared_in="mtime_error_handling">
+      <name>date_datetostring</name>
+    </id>
+    <id type="I22_mtime_error_handling" sclass="flocal" original_name="date_datetoposixstring" declared_in="mtime_error_handling">
+      <name>date_datetoposixstring</name>
+    </id>
+    <id type="I23_mtime_error_handling" sclass="flocal" original_name="time_newtimefromstring" declared_in="mtime_error_handling">
+      <name>time_newtimefromstring</name>
+    </id>
+    <id type="I24_mtime_error_handling" sclass="flocal" original_name="time_newtimefromraw" declared_in="mtime_error_handling">
+      <name>time_newtimefromraw</name>
+    </id>
+    <id type="I25_mtime_error_handling" sclass="flocal" original_name="time_newtimefromconstructandcopy" declared_in="mtime_error_handling">
+      <name>time_newtimefromconstructandcopy</name>
+    </id>
+    <id type="I26_mtime_error_handling" sclass="flocal" original_name="time_replacetime" declared_in="mtime_error_handling">
+      <name>time_replacetime</name>
+    </id>
+    <id type="I27_mtime_error_handling" sclass="flocal" original_name="time_timetostring" declared_in="mtime_error_handling">
+      <name>time_timetostring</name>
+    </id>
+    <id type="I28_mtime_error_handling" sclass="flocal" original_name="time_timetoposixstring" declared_in="mtime_error_handling">
+      <name>time_timetoposixstring</name>
+    </id>
+    <id type="I29_mtime_error_handling" sclass="flocal" original_name="datetime_newdatetimefromstring" declared_in="mtime_error_handling">
+      <name>datetime_newdatetimefromstring</name>
+    </id>
+    <id type="I30_mtime_error_handling" sclass="flocal" original_name="datetime_newdatetimefromraw_yi8" declared_in="mtime_error_handling">
+      <name>datetime_newdatetimefromraw_yi8</name>
+    </id>
+    <id type="I31_mtime_error_handling" sclass="flocal" original_name="datetime_newdatetimefromraw" declared_in="mtime_error_handling">
+      <name>datetime_newdatetimefromraw</name>
+    </id>
+    <id type="I32_mtime_error_handling" sclass="flocal" original_name="datetime_newdatetimefromconstructandcopy" declared_in="mtime_error_handling">
+      <name>datetime_newdatetimefromconstructandcopy</name>
+    </id>
+    <id type="I33_mtime_error_handling" sclass="flocal" original_name="datetime_datetimetostring" declared_in="mtime_error_handling">
+      <name>datetime_datetimetostring</name>
+    </id>
+    <id type="I34_mtime_error_handling" sclass="flocal" original_name="datetime_datetimetoposixstring" declared_in="mtime_error_handling">
+      <name>datetime_datetimetoposixstring</name>
+    </id>
+    <id type="I35_mtime_error_handling" sclass="flocal" original_name="datetime_getnoofdaysinmonthdatetime" declared_in="mtime_error_handling">
+      <name>datetime_getnoofdaysinmonthdatetime</name>
+    </id>
+    <id type="I36_mtime_error_handling" sclass="flocal" original_name="datetime_getnoofdaysinyeardatetime" declared_in="mtime_error_handling">
+      <name>datetime_getnoofdaysinyeardatetime</name>
+    </id>
+    <id type="I37_mtime_error_handling" sclass="flocal" original_name="datetime_getdayofyearfromdatetime" declared_in="mtime_error_handling">
+      <name>datetime_getdayofyearfromdatetime</name>
+    </id>
+    <id type="I38_mtime_error_handling" sclass="flocal" original_name="datetime_getnoofsecondselapsedinmonthdatetime" declared_in="mtime_error_handling">
+      <name>datetime_getnoofsecondselapsedinmonthdatetime</name>
+    </id>
+    <id type="I39_mtime_error_handling" sclass="flocal" original_name="datetime_getnoofsecondselapsedindaydatetime" declared_in="mtime_error_handling">
+      <name>datetime_getnoofsecondselapsedindaydatetime</name>
+    </id>
+    <id type="I40_mtime_error_handling" sclass="flocal" original_name="datetime_getjuliandayfromdatetime" declared_in="mtime_error_handling">
+      <name>datetime_getjuliandayfromdatetime</name>
+    </id>
+    <id type="I41_mtime_error_handling" sclass="flocal" original_name="datetime_getdatetimefromjulianday" declared_in="mtime_error_handling">
+      <name>datetime_getdatetimefromjulianday</name>
+    </id>
+    <id type="I42_mtime_error_handling" sclass="flocal" original_name="timedelta_newtimedeltafromstring" declared_in="mtime_error_handling">
+      <name>timedelta_newtimedeltafromstring</name>
+    </id>
+    <id type="I43_mtime_error_handling" sclass="flocal" original_name="timedelta_newtimedeltafromraw" declared_in="mtime_error_handling">
+      <name>timedelta_newtimedeltafromraw</name>
+    </id>
+    <id type="I44_mtime_error_handling" sclass="flocal" original_name="timedelta_newtimedeltafromraw_yi8" declared_in="mtime_error_handling">
+      <name>timedelta_newtimedeltafromraw_yi8</name>
+    </id>
+    <id type="I45_mtime_error_handling" sclass="flocal" original_name="timedelta_newtimedeltafromconstructandcopy" declared_in="mtime_error_handling">
+      <name>timedelta_newtimedeltafromconstructandcopy</name>
+    </id>
+    <id type="I46_mtime_error_handling" sclass="flocal" original_name="timedelta_gettotalmillisecondstimedelta" declared_in="mtime_error_handling">
+      <name>timedelta_gettotalmillisecondstimedelta</name>
+    </id>
+    <id type="I47_mtime_error_handling" sclass="flocal" original_name="timedelta_gettotalsecondstimedelta" declared_in="mtime_error_handling">
+      <name>timedelta_gettotalsecondstimedelta</name>
+    </id>
+    <id type="I48_mtime_error_handling" sclass="flocal" original_name="timedelta_timedeltatostring" declared_in="mtime_error_handling">
+      <name>timedelta_timedeltatostring</name>
+    </id>
+    <id type="I49_mtime_error_handling" sclass="flocal" original_name="timedelta_getptstring" declared_in="mtime_error_handling">
+      <name>timedelta_getptstring</name>
+    </id>
+    <id type="I50_mtime_error_handling" sclass="flocal" original_name="events_newevent" declared_in="mtime_error_handling">
+      <name>events_newevent</name>
+    </id>
+    <id type="I51_mtime_error_handling" sclass="flocal" original_name="events_eventtostring" declared_in="mtime_error_handling">
+      <name>events_eventtostring</name>
+    </id>
+    <id type="I52_mtime_error_handling" sclass="flocal" original_name="events_gettriggernexteventatdatetime" declared_in="mtime_error_handling">
+      <name>events_gettriggernexteventatdatetime</name>
+    </id>
+    <id type="I53_mtime_error_handling" sclass="flocal" original_name="events_gettriggeredpreviouseventatdatetime" declared_in="mtime_error_handling">
+      <name>events_gettriggeredpreviouseventatdatetime</name>
+    </id>
+    <id type="I54_mtime_error_handling" sclass="flocal" original_name="events_geteventname" declared_in="mtime_error_handling">
+      <name>events_geteventname</name>
+    </id>
+    <id type="I55_mtime_error_handling" sclass="flocal" original_name="events_getfirstdatetime" declared_in="mtime_error_handling">
+      <name>events_getfirstdatetime</name>
+    </id>
+    <id type="I56_mtime_error_handling" sclass="flocal" original_name="events_geteventinterval" declared_in="mtime_error_handling">
+      <name>events_geteventinterval</name>
+    </id>
+    <id type="I57_mtime_error_handling" sclass="flocal" original_name="events_getlastdatetime" declared_in="mtime_error_handling">
+      <name>events_getlastdatetime</name>
+    </id>
+    <id type="I58_mtime_error_handling" sclass="flocal" original_name="eventgroups_neweventgroup" declared_in="mtime_error_handling">
+      <name>eventgroups_neweventgroup</name>
+    </id>
+    <id type="I59_mtime_error_handling" sclass="flocal" original_name="eventgroups_geteventgroupname" declared_in="mtime_error_handling">
+      <name>eventgroups_geteventgroupname</name>
+    </id>
+    <id type="F15_mtime_error_handling" sclass="ffunc" original_name="mtime_strerror" declared_in="mtime_error_handling">
+      <name>mtime_strerror</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I1_mtime_error_handling">max_calendar_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I2_mtime_error_handling">max_date_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I3_mtime_error_handling">max_datetime_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I4_mtime_error_handling">max_time_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I5_mtime_error_handling">max_julianday_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I6_mtime_error_handling">max_timedelta_str_len</name>
+      <value>
+        <FintConstant type="Fint">32</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I7_mtime_error_handling">max_mtime_error_str_len</name>
+      <value>
+        <FintConstant type="Fint">132</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I8_mtime_error_handling">max_eventname_str_len</name>
+      <value>
+        <FintConstant type="Fint">132</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I9_mtime_error_handling">max_event_str_len</name>
+      <value>
+        <FintConstant type="Fint">512</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl>
+      <name type="I10_mtime_error_handling">max_groupname_str_len</name>
+      <value>
+        <FintConstant type="Fint">132</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I11_mtime_error_handling">no_error</name>
+      <value>
+        <FintConstant type="Fint">0</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I12_mtime_error_handling">calendar_calendartostring</name>
+      <value>
+        <FintConstant type="Fint">1</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I13_mtime_error_handling">general_arithmetic_error</name>
+      <value>
+        <FintConstant type="Fint">2</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I14_mtime_error_handling">julianday_newjulianday</name>
+      <value>
+        <FintConstant type="Fint">101</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I15_mtime_error_handling">julianday_juliandaytostring</name>
+      <value>
+        <FintConstant type="Fint">103</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I16_mtime_error_handling">date_newdatefromstring</name>
+      <value>
+        <FintConstant type="Fint">201</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I17_mtime_error_handling">date_newdatefromraw_yi8</name>
+      <value>
+        <FintConstant type="Fint">202</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I18_mtime_error_handling">date_newdatefromraw</name>
+      <value>
+        <FintConstant type="Fint">203</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I19_mtime_error_handling">date_newdatefromconstructandcopy</name>
+      <value>
+        <FintConstant type="Fint">204</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I20_mtime_error_handling">date_replacedate</name>
+      <value>
+        <FintConstant type="Fint">206</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I21_mtime_error_handling">date_datetostring</name>
+      <value>
+        <FintConstant type="Fint">207</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I22_mtime_error_handling">date_datetoposixstring</name>
+      <value>
+        <FintConstant type="Fint">208</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I23_mtime_error_handling">time_newtimefromstring</name>
+      <value>
+        <FintConstant type="Fint">301</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I24_mtime_error_handling">time_newtimefromraw</name>
+      <value>
+        <FintConstant type="Fint">302</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I25_mtime_error_handling">time_newtimefromconstructandcopy</name>
+      <value>
+        <FintConstant type="Fint">303</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I26_mtime_error_handling">time_replacetime</name>
+      <value>
+        <FintConstant type="Fint">305</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I27_mtime_error_handling">time_timetostring</name>
+      <value>
+        <FintConstant type="Fint">306</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I28_mtime_error_handling">time_timetoposixstring</name>
+      <value>
+        <FintConstant type="Fint">307</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I29_mtime_error_handling">datetime_newdatetimefromstring</name>
+      <value>
+        <FintConstant type="Fint">401</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I30_mtime_error_handling">datetime_newdatetimefromraw_yi8</name>
+      <value>
+        <FintConstant type="Fint">402</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I31_mtime_error_handling">datetime_newdatetimefromraw</name>
+      <value>
+        <FintConstant type="Fint">403</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I32_mtime_error_handling">datetime_newdatetimefromconstructandcopy</name>
+      <value>
+        <FintConstant type="Fint">404</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I33_mtime_error_handling">datetime_datetimetostring</name>
+      <value>
+        <FintConstant type="Fint">406</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I34_mtime_error_handling">datetime_datetimetoposixstring</name>
+      <value>
+        <FintConstant type="Fint">407</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I35_mtime_error_handling">datetime_getnoofdaysinmonthdatetime</name>
+      <value>
+        <FintConstant type="Fint">415</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I36_mtime_error_handling">datetime_getnoofdaysinyeardatetime</name>
+      <value>
+        <FintConstant type="Fint">416</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I37_mtime_error_handling">datetime_getdayofyearfromdatetime</name>
+      <value>
+        <FintConstant type="Fint">417</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I38_mtime_error_handling">datetime_getnoofsecondselapsedinmonthdatetime</name>
+      <value>
+        <FintConstant type="Fint">418</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I39_mtime_error_handling">datetime_getnoofsecondselapsedindaydatetime</name>
+      <value>
+        <FintConstant type="Fint">419</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I40_mtime_error_handling">datetime_getjuliandayfromdatetime</name>
+      <value>
+        <FintConstant type="Fint">420</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I41_mtime_error_handling">datetime_getdatetimefromjulianday</name>
+      <value>
+        <FintConstant type="Fint">421</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I42_mtime_error_handling">timedelta_newtimedeltafromstring</name>
+      <value>
+        <FintConstant type="Fint">501</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I43_mtime_error_handling">timedelta_newtimedeltafromraw</name>
+      <value>
+        <FintConstant type="Fint">502</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I44_mtime_error_handling">timedelta_newtimedeltafromraw_yi8</name>
+      <value>
+        <FintConstant type="Fint">503</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I45_mtime_error_handling">timedelta_newtimedeltafromconstructandcopy</name>
+      <value>
+        <FintConstant type="Fint">504</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I46_mtime_error_handling">timedelta_gettotalmillisecondstimedelta</name>
+      <value>
+        <FintConstant type="Fint">508</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I47_mtime_error_handling">timedelta_gettotalsecondstimedelta</name>
+      <value>
+        <FintConstant type="Fint">509</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I48_mtime_error_handling">timedelta_timedeltatostring</name>
+      <value>
+        <FintConstant type="Fint">510</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I49_mtime_error_handling">timedelta_getptstring</name>
+      <value>
+        <FintConstant type="Fint">511</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I50_mtime_error_handling">events_newevent</name>
+      <value>
+        <FintConstant type="Fint">601</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I51_mtime_error_handling">events_eventtostring</name>
+      <value>
+        <FintConstant type="Fint">603</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I52_mtime_error_handling">events_gettriggernexteventatdatetime</name>
+      <value>
+        <FintConstant type="Fint">608</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I53_mtime_error_handling">events_gettriggeredpreviouseventatdatetime</name>
+      <value>
+        <FintConstant type="Fint">609</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I54_mtime_error_handling">events_geteventname</name>
+      <value>
+        <FintConstant type="Fint">611</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I55_mtime_error_handling">events_getfirstdatetime</name>
+      <value>
+        <FintConstant type="Fint">612</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I56_mtime_error_handling">events_geteventinterval</name>
+      <value>
+        <FintConstant type="Fint">613</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I57_mtime_error_handling">events_getlastdatetime</name>
+      <value>
+        <FintConstant type="Fint">614</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I58_mtime_error_handling">eventgroups_neweventgroup</name>
+      <value>
+        <FintConstant type="Fint">701</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="192" file="mtime_error_handling.f90">
+      <name type="I59_mtime_error_handling">eventgroups_geteventgroupname</name>
+      <value>
+        <FintConstant type="Fint">706</FintConstant>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

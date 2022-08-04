@@ -1,0 +1,738 @@
+<OmniFortranModule version="1.0">
+  <name>xt_core</name>
+  <depends>
+    <name>iso_c_binding</name>
+    <name>iso_c_binding</name>
+    <name>xt_mpi</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I1_xt_core" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I2_xt_core" is_parameter="true" ref="I1_xt_core"/>
+    <FbasicType type="I3_xt_core" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I4_xt_core" is_parameter="true" ref="I3_xt_core"/>
+    <FbasicType type="C1_xt_core" is_parameter="true" ref="Fcharacter"/>
+    <FbasicType type="I5_xt_core" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I6_xt_core" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I7_xt_core" is_parameter="true" ref="I6_xt_core"/>
+    <FbasicType type="I8_xt_core" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I9_xt_core" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I10_xt_core" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I11_xt_core" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I12_xt_core" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I13_xt_core" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I14_xt_core" is_public="true" is_parameter="true" ref="Fint"/>
+    <FfunctionType type="F1_xt_core" return_type="Fvoid" is_public="true" bind="C" bind_name="xt_initialize_f">
+      <params>
+        <name type="I15_xt_core">default_comm</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I16_xt_core" ref="Fint">
+      <kind>
+        <Var type="I5_xt_core" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I15_xt_core" intent="in" ref="I16_xt_core"/>
+    <FfunctionType type="F2_xt_core" return_type="Fvoid" is_public="true" bind="C" bind_name="xt_finalize">
+      <params>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F3_xt_core" return_type="Fvoid" is_public="true">
+      <params>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F4_xt_core" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F5_xt_core" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="I17_xt_core">comm</name>
+        <name type="C2_xt_core">msg</name>
+        <name type="C3_xt_core">source</name>
+        <name type="I18_xt_core">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I17_xt_core" intent="in" ref="Fint"/>
+    <FbasicType type="C4_xt_core" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C2_xt_core" intent="in" ref="C4_xt_core"/>
+    <FbasicType type="C5_xt_core" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C3_xt_core" intent="in" ref="C5_xt_core"/>
+    <FbasicType type="I18_xt_core" intent="in" ref="Fint"/>
+    <FfunctionType type="F6_xt_core" return_type="C6_xt_core"/>
+    <FbasicType type="C6_xt_core" ref="C5_xt_core"/>
+    <FfunctionType type="F7_xt_core" return_type="C6_xt_core"/>
+    <FfunctionType type="F8_xt_core" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="C7_xt_core">msg</name>
+        <name type="C8_xt_core">source</name>
+        <name type="I19_xt_core">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C9_xt_core" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C7_xt_core" intent="in" ref="C9_xt_core"/>
+    <FbasicType type="C10_xt_core" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C8_xt_core" intent="in" ref="C10_xt_core"/>
+    <FbasicType type="I19_xt_core" intent="in" ref="Fint"/>
+    <FfunctionType type="F9_xt_core" return_type="C11_xt_core"/>
+    <FbasicType type="C11_xt_core" ref="C10_xt_core"/>
+    <FfunctionType type="F10_xt_core" return_type="C11_xt_core"/>
+    <FfunctionType type="F11_xt_core" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_abort_f">
+      <params>
+        <name type="I20_xt_core">comm</name>
+        <name type="A1_xt_core">msg</name>
+        <name type="A2_xt_core">source</name>
+        <name type="I21_xt_core">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I22_xt_core" ref="Fint">
+      <kind>
+        <Var type="I5_xt_core" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I20_xt_core" intent="in" is_value="true" ref="I22_xt_core"/>
+    <FbasicType type="C12_xt_core" ref="Fcharacter">
+      <len>
+        <Var type="I4_xt_core" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A1_xt_core" intent="in" ref="C12_xt_core">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="C13_xt_core" ref="Fcharacter">
+      <len>
+        <Var type="I4_xt_core" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="A2_xt_core" intent="in" ref="C13_xt_core">
+      <indexRange is_assumed_size="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I23_xt_core" ref="Fint">
+      <kind>
+        <Var type="I5_xt_core" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I21_xt_core" intent="in" is_value="true" ref="I23_xt_core"/>
+    <FfunctionType type="F12_xt_core" result_name="str" return_type="C14_xt_core" is_elemental="true" is_private="true">
+      <params>
+        <name type="S1_xt_core">stripe</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C15_xt_core" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">9</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="I24_xt_core" ref="Fint">
+      <kind>
+        <Var type="I2_xt_core" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="C16_xt_core" ref="Fcharacter">
+      <len>
+        <plusExpr type="Fint">
+          <plusExpr type="Fint">
+            <functionCall type="Fint" is_intrinsic="true">
+              <name>len</name>
+              <arguments>
+                <FcharacterConstant type="C15_xt_core">xt_stripe</FcharacterConstant>
+              </arguments>
+            </functionCall>
+            <FintConstant type="Fint">6</FintConstant>
+          </plusExpr>
+          <mulExpr type="Fint">
+            <FintConstant type="Fint">3</FintConstant>
+            <functionCall type="Fint" is_intrinsic="true">
+              <name>ceiling</name>
+              <arguments>
+                <plusExpr type="Freal">
+                  <FrealConstant type="Freal">1.0</FrealConstant>
+                  <mulExpr type="Freal">
+                    <functionCall type="Freal" is_intrinsic="true">
+                      <name>real</name>
+                      <arguments>
+                        <functionCall type="Fint" is_intrinsic="true">
+                          <name>digits</name>
+                          <arguments>
+                            <FintConstant type="I24_xt_core" kind="c_int">0</FintConstant>
+                          </arguments>
+                        </functionCall>
+                      </arguments>
+                    </functionCall>
+                    <functionCall type="Freal" is_intrinsic="true">
+                      <name>log10</name>
+                      <arguments>
+                        <functionCall type="Freal" is_intrinsic="true">
+                          <name>real</name>
+                          <arguments>
+                            <functionCall type="Fint" is_intrinsic="true">
+                              <name>radix</name>
+                              <arguments>
+                                <FintConstant type="I24_xt_core" kind="c_int">0</FintConstant>
+                              </arguments>
+                            </functionCall>
+                          </arguments>
+                        </functionCall>
+                      </arguments>
+                    </functionCall>
+                  </mulExpr>
+                </plusExpr>
+              </arguments>
+            </functionCall>
+          </mulExpr>
+        </plusExpr>
+      </len>
+    </FbasicType>
+    <FbasicType type="C14_xt_core" ref="C16_xt_core"/>
+    <FstructType type="S2_xt_core" is_public="true" bind="C">
+      <symbols>
+        <id type="I25_xt_core">
+          <name>start</name>
+        </id>
+        <id type="I26_xt_core">
+          <name>stride</name>
+        </id>
+        <id type="I27_xt_core">
+          <name>nstrides</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I28_xt_core" ref="Fint">
+      <kind>
+        <Var type="I2_xt_core" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I25_xt_core" ref="I28_xt_core"/>
+    <FbasicType type="I29_xt_core" ref="Fint">
+      <kind>
+        <Var type="I2_xt_core" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I26_xt_core" ref="I29_xt_core"/>
+    <FbasicType type="I30_xt_core" ref="Fint">
+      <kind>
+        <Var type="I2_xt_core" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I27_xt_core" ref="I30_xt_core"/>
+    <FbasicType type="S3_xt_core" ref="S2_xt_core"/>
+    <FbasicType type="S1_xt_core" intent="in" ref="S3_xt_core"/>
+    <FfunctionType type="F13_xt_core" return_type="V1_xt_core" is_public="true"/>
+    <FbasicType type="V1_xt_core" ref="FnumericAll"/>
+    <FfunctionType type="F14_xt_core" result_name="p" return_type="Flogical" is_elemental="true" is_private="true">
+      <params>
+        <name type="S4_xt_core">a</name>
+        <name type="S5_xt_core">b</name>
+      </params>
+    </FfunctionType>
+    <FstructType type="S6_xt_core" is_public="true" bind="C">
+      <symbols>
+        <id type="I31_xt_core">
+          <name>start</name>
+        </id>
+        <id type="I32_xt_core">
+          <name>size</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I33_xt_core" ref="Fint">
+      <kind>
+        <Var type="I2_xt_core" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I31_xt_core" ref="I33_xt_core"/>
+    <FbasicType type="I32_xt_core" ref="I33_xt_core"/>
+    <FbasicType type="S7_xt_core" ref="S6_xt_core"/>
+    <FbasicType type="S4_xt_core" intent="in" ref="S7_xt_core"/>
+    <FbasicType type="S5_xt_core" intent="in" ref="S7_xt_core"/>
+    <FfunctionType type="F15_xt_core" return_type="I34_xt_core"/>
+    <FbasicType type="I34_xt_core" ref="I32_xt_core"/>
+    <FfunctionType type="F16_xt_core" return_type="I34_xt_core"/>
+    <FfunctionType type="F17_xt_core" return_type="V2_xt_core" is_public="true"/>
+    <FbasicType type="V2_xt_core" ref="FnumericAll"/>
+    <FfunctionType type="F18_xt_core" result_name="p" return_type="Flogical" is_elemental="true" is_private="true">
+      <params>
+        <name type="S8_xt_core">a</name>
+        <name type="S9_xt_core">b</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S10_xt_core" ref="S6_xt_core"/>
+    <FbasicType type="S8_xt_core" intent="in" ref="S10_xt_core"/>
+    <FbasicType type="S9_xt_core" intent="in" ref="S10_xt_core"/>
+    <FfunctionType type="F19_xt_core" return_type="I35_xt_core"/>
+    <FbasicType type="I35_xt_core" ref="I32_xt_core"/>
+    <FfunctionType type="F20_xt_core" return_type="I35_xt_core"/>
+    <FfunctionType type="F21_xt_core" return_type="V3_xt_core" is_public="true"/>
+    <FbasicType type="V3_xt_core" ref="FnumericAll"/>
+    <FfunctionType type="F22_xt_core" result_name="comm" return_type="I36_xt_core" is_public="true" bind="C" bind_name="xt_get_default_comm_f">
+      <params>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I37_xt_core" ref="Fint">
+      <kind>
+        <Var type="I5_xt_core" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I36_xt_core" ref="I37_xt_core"/>
+    <FbasicType type="I38_xt_core" ref="I37_xt_core"/>
+    <FfunctionType type="F23_xt_core" result_name="is_initialized" return_type="Flogical" is_pure="true" is_public="true">
+      <params>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I39_xt_core" ref="Fint">
+      <kind>
+        <Var type="I2_xt_core" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I40_xt_core" is_public="true" bind="C" bind_name="xt_lib_state" ref="I39_xt_core"/>
+    <FbasicType type="I41_xt_core" is_private="true" is_parameter="true" ref="Fint"/>
+    <FfunctionType type="F24_xt_core" result_name="is_finalized" return_type="Flogical" is_pure="true" is_public="true">
+      <params>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I42_xt_core" is_private="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I43_xt_core" ref="I31_xt_core"/>
+    <FbasicType type="I44_xt_core" ref="I31_xt_core"/>
+    <FbasicType type="I45_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I46_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I47_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I48_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I49_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I50_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I51_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I52_xt_core" ref="I31_xt_core"/>
+    <FbasicType type="I53_xt_core" ref="I31_xt_core"/>
+    <FbasicType type="I54_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I55_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I56_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I57_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I58_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I59_xt_core" ref="I32_xt_core"/>
+    <FbasicType type="I60_xt_core" ref="I32_xt_core"/>
+    <FfunctionType type="F25_xt_core" return_type="Fvoid">
+      <params>
+        <name type="I61_xt_core">comm</name>
+        <name type="C17_xt_core">msg</name>
+        <name type="C18_xt_core">source</name>
+        <name type="I62_xt_core">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I61_xt_core" intent="in" ref="Fint"/>
+    <FbasicType type="C19_xt_core" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C17_xt_core" intent="in" ref="C19_xt_core"/>
+    <FbasicType type="C18_xt_core" intent="in" ref="C19_xt_core"/>
+    <FbasicType type="I62_xt_core" intent="in" ref="Fint"/>
+    <FfunctionType type="F26_xt_core" return_type="Fvoid">
+      <params>
+        <name type="I63_xt_core">comm</name>
+        <name type="C20_xt_core">msg</name>
+        <name type="C21_xt_core">source</name>
+        <name type="I64_xt_core">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I63_xt_core" intent="in" ref="Fint"/>
+    <FbasicType type="C22_xt_core" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C20_xt_core" intent="in" ref="C22_xt_core"/>
+    <FbasicType type="C21_xt_core" intent="in" ref="C22_xt_core"/>
+    <FbasicType type="I64_xt_core" intent="in" ref="Fint"/>
+    <FfunctionType type="F27_xt_core" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="F26_xt_core">f</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F28_xt_core" return_type="F26_xt_core"/>
+    <FfunctionType type="F29_xt_core" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="F25_xt_core">f</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F30_xt_core" return_type="F25_xt_core"/>
+    <FbasicType type="I65_xt_core" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I66_xt_core" is_public="true" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I67_xt_core" is_public="true" is_parameter="true" ref="Fint"/>
+    <FstructType type="S11_xt_core" is_public="true" bind="C">
+      <symbols>
+        <id type="I68_xt_core">
+          <name>start</name>
+        </id>
+        <id type="I69_xt_core">
+          <name>size</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I70_xt_core" ref="Fint">
+      <kind>
+        <Var type="I2_xt_core" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I68_xt_core" ref="I70_xt_core"/>
+    <FbasicType type="I69_xt_core" ref="I70_xt_core"/>
+    <FfunctionType type="F31_xt_core" result_name="p" return_type="Flogical">
+      <params>
+        <name type="S8_xt_core">a</name>
+        <name type="S9_xt_core">b</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F32_xt_core" result_name="p" return_type="Flogical">
+      <params>
+        <name type="S4_xt_core">a</name>
+        <name type="S5_xt_core">b</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F33_xt_core" result_name="str" return_type="C14_xt_core">
+      <params>
+        <name type="S1_xt_core">stripe</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F34_xt_core" return_type="Fvoid">
+      <params>
+        <name type="C7_xt_core">msg</name>
+        <name type="C8_xt_core">source</name>
+        <name type="I19_xt_core">line</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F35_xt_core" return_type="Fvoid">
+      <params>
+        <name type="I17_xt_core">comm</name>
+        <name type="C2_xt_core">msg</name>
+        <name type="C3_xt_core">source</name>
+        <name type="I18_xt_core">line</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F36_xt_core" return_type="FnumericAll" is_external="true"/>
+    <FbasicType type="F37_xt_core" is_public="true" ref="F36_xt_core"/>
+  </typeTable>
+  <identifiers>
+    <id type="I2_xt_core" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="I4_xt_core" sclass="flocal" original_name="c_char" declared_in="iso_c_binding">
+      <name>c_char</name>
+    </id>
+    <id type="C1_xt_core" sclass="flocal" original_name="c_null_char" declared_in="iso_c_binding">
+      <name>c_null_char</name>
+    </id>
+    <id type="Fint" sclass="flocal" original_name="mpi_integer4" declared_in="mpi">
+      <name>mpi_integer4</name>
+    </id>
+    <id type="I5_xt_core" sclass="flocal" original_name="xt_mpi_fint_kind" declared_in="xt_mpi">
+      <name>xt_mpi_fint_kind</name>
+    </id>
+    <id type="I8_xt_core" sclass="flocal" original_name="xt_int_kind" declared_in="xt_core">
+      <name>xt_int_kind</name>
+    </id>
+    <id type="I9_xt_core" sclass="flocal" original_name="pi2" declared_in="xt_core">
+      <name>pi2</name>
+    </id>
+    <id type="I10_xt_core" sclass="flocal" original_name="pi4" declared_in="xt_core">
+      <name>pi4</name>
+    </id>
+    <id type="I11_xt_core" sclass="flocal" original_name="pi8" declared_in="xt_core">
+      <name>pi8</name>
+    </id>
+    <id type="I12_xt_core" sclass="flocal" original_name="i2" declared_in="xt_core">
+      <name>i2</name>
+    </id>
+    <id type="I13_xt_core" sclass="flocal" original_name="i4" declared_in="xt_core">
+      <name>i4</name>
+    </id>
+    <id type="I14_xt_core" sclass="flocal" original_name="i8" declared_in="xt_core">
+      <name>i8</name>
+    </id>
+    <id type="F1_xt_core" sclass="ffunc" original_name="xt_initialize" declared_in="xt_core">
+      <name>xt_initialize</name>
+    </id>
+    <id type="F2_xt_core" sclass="ffunc" original_name="xt_finalize" declared_in="xt_core">
+      <name>xt_finalize</name>
+    </id>
+    <id type="F4_xt_core" sclass="ffunc" original_name="xt_abort" declared_in="xt_core">
+      <name>xt_abort</name>
+    </id>
+    <id type="F22_xt_core" sclass="ffunc" original_name="xt_get_default_comm" declared_in="xt_core">
+      <name>xt_get_default_comm</name>
+    </id>
+    <id type="F13_xt_core" sclass="ffunc" original_name="char" declared_in="xt_core">
+      <name>char</name>
+    </id>
+    <id type="F23_xt_core" sclass="ffunc" original_name="xt_initialized" declared_in="xt_core">
+      <name>xt_initialized</name>
+    </id>
+    <id type="F24_xt_core" sclass="ffunc" original_name="xt_finalized" declared_in="xt_core">
+      <name>xt_finalized</name>
+    </id>
+    <id type="F37_xt_core" sclass="ffunc" original_name="xt_slice_c_loc" declared_in="xt_core">
+      <name>xt_slice_c_loc</name>
+    </id>
+    <id type="F17_xt_core" sclass="ffunc" original_name="==" declared_in="xt_core">
+      <name>==</name>
+    </id>
+    <id type="F21_xt_core" sclass="ffunc" original_name="/=" declared_in="xt_core">
+      <name>/=</name>
+    </id>
+    <id type="I65_xt_core" sclass="flocal" original_name="xt_int_mpidt" declared_in="xt_core">
+      <name>xt_int_mpidt</name>
+    </id>
+    <id type="I66_xt_core" sclass="flocal" original_name="xt_int_dec_len" declared_in="xt_core">
+      <name>xt_int_dec_len</name>
+    </id>
+    <id type="I67_xt_core" sclass="flocal" original_name="xt_stripe2s_len" declared_in="xt_core">
+      <name>xt_stripe2s_len</name>
+    </id>
+    <id type="S2_xt_core" sclass="ftype_name" original_name="xt_stripe" declared_in="xt_core">
+      <name>xt_stripe</name>
+    </id>
+    <id type="S11_xt_core" sclass="ftype_name" original_name="xt_bounds" declared_in="xt_core">
+      <name>xt_bounds</name>
+    </id>
+    <id type="S6_xt_core" sclass="ftype_name" original_name="xt_pos_ext" declared_in="xt_core">
+      <name>xt_pos_ext</name>
+    </id>
+    <id type="F3_xt_core" sclass="ffunc" original_name="xt_restore_default_abort_hndl" declared_in="xt_core">
+      <name>xt_restore_default_abort_hndl</name>
+    </id>
+    <id type="F29_xt_core" sclass="ffunc" original_name="set_abort_handler" declared_in="xt_core">
+      <name>set_abort_handler</name>
+    </id>
+    <id type="I40_xt_core" sclass="flocal" original_name="xt_lib_state" declared_in="xt_core">
+      <name>xt_lib_state</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I2_xt_core">c_int</name>
+    </varDecl>
+    <varDecl>
+      <name type="I4_xt_core">c_char</name>
+    </varDecl>
+    <varDecl>
+      <name type="C1_xt_core">c_null_char</name>
+    </varDecl>
+    <varDecl>
+      <name type="I5_xt_core">xt_mpi_fint_kind</name>
+      <value>
+        <Var type="I7_xt_core" scope="local">c_int</Var>
+      </value>
+    </varDecl>
+    <varDecl lineno="57" file="xt_core_f.f90">
+      <name type="I8_xt_core">xt_int_kind</name>
+      <value>
+        <Var type="I2_xt_core" scope="local">c_int</Var>
+      </value>
+    </varDecl>
+    <varDecl lineno="58" file="xt_core_f.f90">
+      <name type="I9_xt_core">pi2</name>
+      <value>
+        <FintConstant type="Fint">4</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="59" file="xt_core_f.f90">
+      <name type="I10_xt_core">pi4</name>
+      <value>
+        <FintConstant type="Fint">9</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="60" file="xt_core_f.f90">
+      <name type="I11_xt_core">pi8</name>
+      <value>
+        <FintConstant type="Fint">14</FintConstant>
+      </value>
+    </varDecl>
+    <varDecl lineno="61" file="xt_core_f.f90">
+      <name type="I12_xt_core">i2</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>selected_int_kind</name>
+          <arguments>
+            <FintConstant type="Fint">4</FintConstant>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl lineno="62" file="xt_core_f.f90">
+      <name type="I13_xt_core">i4</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>selected_int_kind</name>
+          <arguments>
+            <FintConstant type="Fint">9</FintConstant>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl lineno="63" file="xt_core_f.f90">
+      <name type="I14_xt_core">i8</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>selected_int_kind</name>
+          <arguments>
+            <FintConstant type="Fint">14</FintConstant>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl lineno="70" file="xt_core_f.f90">
+      <name type="I65_xt_core">xt_int_mpidt</name>
+      <value>
+        <Var type="Fint" scope="local">mpi_integer4</Var>
+      </value>
+    </varDecl>
+    <varDecl lineno="74" file="xt_core_f.f90">
+      <name type="I66_xt_core">xt_int_dec_len</name>
+      <value>
+        <functionCall type="Fint" is_intrinsic="true">
+          <name>ceiling</name>
+          <arguments>
+            <plusExpr type="Freal">
+              <FrealConstant type="Freal">1.0</FrealConstant>
+              <mulExpr type="Freal">
+                <functionCall type="Freal" is_intrinsic="true">
+                  <name>real</name>
+                  <arguments>
+                    <functionCall type="Fint" is_intrinsic="true">
+                      <name>digits</name>
+                      <arguments>
+                        <FintConstant type="I24_xt_core" kind="c_int">0</FintConstant>
+                      </arguments>
+                    </functionCall>
+                  </arguments>
+                </functionCall>
+                <functionCall type="Freal" is_intrinsic="true">
+                  <name>log10</name>
+                  <arguments>
+                    <functionCall type="Freal" is_intrinsic="true">
+                      <name>real</name>
+                      <arguments>
+                        <functionCall type="Fint" is_intrinsic="true">
+                          <name>radix</name>
+                          <arguments>
+                            <FintConstant type="I24_xt_core" kind="c_int">0</FintConstant>
+                          </arguments>
+                        </functionCall>
+                      </arguments>
+                    </functionCall>
+                  </arguments>
+                </functionCall>
+              </mulExpr>
+            </plusExpr>
+          </arguments>
+        </functionCall>
+      </value>
+    </varDecl>
+    <varDecl lineno="78" file="xt_core_f.f90">
+      <name type="I67_xt_core">xt_stripe2s_len</name>
+      <value>
+        <plusExpr type="Fint">
+          <plusExpr type="Fint">
+            <plusExpr type="Fint">
+              <functionCall type="Fint" is_intrinsic="true">
+                <name>len</name>
+                <arguments>
+                  <FcharacterConstant type="C15_xt_core">xt_stripe</FcharacterConstant>
+                </arguments>
+              </functionCall>
+              <FintConstant type="Fint">2</FintConstant>
+            </plusExpr>
+            <FintConstant type="Fint">4</FintConstant>
+          </plusExpr>
+          <mulExpr type="Fint">
+            <FintConstant type="Fint">3</FintConstant>
+            <functionCall type="Fint" is_intrinsic="true">
+              <name>ceiling</name>
+              <arguments>
+                <plusExpr type="Freal">
+                  <FrealConstant type="Freal">1.0</FrealConstant>
+                  <mulExpr type="Freal">
+                    <functionCall type="Freal" is_intrinsic="true">
+                      <name>real</name>
+                      <arguments>
+                        <functionCall type="Fint" is_intrinsic="true">
+                          <name>digits</name>
+                          <arguments>
+                            <FintConstant type="I24_xt_core" kind="c_int">0</FintConstant>
+                          </arguments>
+                        </functionCall>
+                      </arguments>
+                    </functionCall>
+                    <functionCall type="Freal" is_intrinsic="true">
+                      <name>log10</name>
+                      <arguments>
+                        <functionCall type="Freal" is_intrinsic="true">
+                          <name>real</name>
+                          <arguments>
+                            <functionCall type="Fint" is_intrinsic="true">
+                              <name>radix</name>
+                              <arguments>
+                                <FintConstant type="I24_xt_core" kind="c_int">0</FintConstant>
+                              </arguments>
+                            </functionCall>
+                          </arguments>
+                        </functionCall>
+                      </arguments>
+                    </functionCall>
+                  </mulExpr>
+                </plusExpr>
+              </arguments>
+            </functionCall>
+          </mulExpr>
+        </plusExpr>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="xt_abort" lineno="121" file="xt_core_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="122" file="xt_core_f.f90">
+        <name type="F34_xt_core">xt_abort3</name>
+        <name type="F35_xt_core">xt_abort4</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="123" file="xt_core_f.f90">
+        <name type="F34_xt_core">xt_abort3</name>
+        <name type="F35_xt_core">xt_abort4</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="char" lineno="137" file="xt_core_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="138" file="xt_core_f.f90">
+        <name type="F33_xt_core">xt_stripe2char</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="==" is_operator="true" lineno="141" file="xt_core_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="142" file="xt_core_f.f90">
+        <name type="F32_xt_core">xt_pos_ext_eq</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="/=" is_operator="true" lineno="145" file="xt_core_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="146" file="xt_core_f.f90">
+        <name type="F31_xt_core">xt_pos_ext_ne</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

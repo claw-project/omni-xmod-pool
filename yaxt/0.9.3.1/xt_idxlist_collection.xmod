@@ -1,0 +1,264 @@
+<OmniFortranModule version="1.0">
+  <name>xt_idxlist_collection</name>
+  <depends>
+    <name>xt_core</name>
+    <name>xt_idxlist_abstract</name>
+    <name>iso_c_binding</name>
+  </depends>
+  <typeTable>
+    <FfunctionType type="F1_xt_idxlist_collection" return_type="Fvoid"/>
+    <FfunctionType type="F2_xt_idxlist_collection" return_type="Fvoid">
+      <params>
+        <name type="C1_xt_idxlist_collection">msg</name>
+        <name type="C2_xt_idxlist_collection">source</name>
+        <name type="I1_xt_idxlist_collection">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C3_xt_idxlist_collection" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C1_xt_idxlist_collection" intent="in" ref="C3_xt_idxlist_collection"/>
+    <FbasicType type="C4_xt_idxlist_collection" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C2_xt_idxlist_collection" intent="in" ref="C4_xt_idxlist_collection"/>
+    <FbasicType type="I1_xt_idxlist_collection" intent="in" ref="Fint"/>
+    <FfunctionType type="F3_xt_idxlist_collection" return_type="Fvoid">
+      <params>
+        <name type="I2_xt_idxlist_collection">comm</name>
+        <name type="C5_xt_idxlist_collection">msg</name>
+        <name type="C6_xt_idxlist_collection">source</name>
+        <name type="I3_xt_idxlist_collection">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I2_xt_idxlist_collection" intent="in" ref="Fint"/>
+    <FbasicType type="C7_xt_idxlist_collection" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C5_xt_idxlist_collection" intent="in" ref="C7_xt_idxlist_collection"/>
+    <FbasicType type="C8_xt_idxlist_collection" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C6_xt_idxlist_collection" intent="in" ref="C8_xt_idxlist_collection"/>
+    <FbasicType type="I3_xt_idxlist_collection" intent="in" ref="Fint"/>
+    <FfunctionType type="F4_xt_idxlist_collection" return_type="I4_xt_idxlist_collection">
+      <params>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I5_xt_idxlist_collection" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I4_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <Var type="I5_xt_idxlist_collection" scope="local">xt_mpi_fint_kind</Var>
+      </kind>
+    </FbasicType>
+    <FstructType type="S1_xt_idxlist_collection" imported_id="S23_xt_idxlist_abstract" is_internal_private="true">
+      <symbols>
+        <id type="S2_xt_idxlist_collection">
+          <name>cptr</name>
+          <value>
+            <Var type="S3_xt_idxlist_collection" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FstructType type="S4_xt_idxlist_collection" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I6_xt_idxlist_collection">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I7_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I8_xt_idxlist_collection" is_parameter="true" ref="I7_xt_idxlist_collection"/>
+    <FbasicType type="I6_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <Var type="I8_xt_idxlist_collection" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S5_xt_idxlist_collection" imported_id="S25_xt_idxlist_abstract" ref="S4_xt_idxlist_collection"/>
+    <FbasicType type="S2_xt_idxlist_collection" imported_id="S24_xt_idxlist_abstract" ref="S5_xt_idxlist_collection"/>
+    <FstructType type="S6_xt_idxlist_collection" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I9_xt_idxlist_collection">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I9_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <Var type="I8_xt_idxlist_collection" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S7_xt_idxlist_collection" imported_id="S3_iso_c_binding" ref="S6_xt_idxlist_collection"/>
+    <FbasicType type="S3_xt_idxlist_collection" imported_id="S4_iso_c_binding" is_parameter="true" ref="S7_xt_idxlist_collection"/>
+    <FfunctionType type="F5_xt_idxlist_collection" return_type="S8_xt_idxlist_collection">
+      <params>
+        <name type="S9_xt_idxlist_collection" imported_id="S96_xt_idxlist_abstract">idxlist</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S10_xt_idxlist_collection" imported_id="S97_xt_idxlist_abstract" ref="S1_xt_idxlist_collection"/>
+    <FbasicType type="S8_xt_idxlist_collection" imported_id="S95_xt_idxlist_abstract" ref="S10_xt_idxlist_collection"/>
+    <FbasicType type="S11_xt_idxlist_collection" imported_id="S98_xt_idxlist_abstract" ref="S4_xt_idxlist_collection"/>
+    <FbasicType type="S9_xt_idxlist_collection" imported_id="S96_xt_idxlist_abstract" intent="in" ref="S11_xt_idxlist_collection"/>
+    <FbasicType type="S12_xt_idxlist_collection" imported_id="S98_xt_idxlist_abstract" ref="S6_xt_idxlist_collection"/>
+    <FbasicType type="S13_xt_idxlist_collection" imported_id="S96_xt_idxlist_abstract" intent="in" ref="S12_xt_idxlist_collection"/>
+    <FbasicType type="I10_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I11_xt_idxlist_collection" is_parameter="true" ref="I10_xt_idxlist_collection"/>
+    <FstructType type="S14_xt_idxlist_collection" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I12_xt_idxlist_collection">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I13_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I14_xt_idxlist_collection" is_parameter="true" ref="I13_xt_idxlist_collection"/>
+    <FbasicType type="I12_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <Var type="I14_xt_idxlist_collection" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F6_xt_idxlist_collection" return_type="V1_xt_idxlist_collection" is_public="true"/>
+    <FbasicType type="V1_xt_idxlist_collection" ref="FnumericAll"/>
+    <FfunctionType type="F7_xt_idxlist_collection" result_name="res" return_type="S15_xt_idxlist_collection" is_private="true">
+      <params>
+        <name type="A1_xt_idxlist_collection">idxlists</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S16_xt_idxlist_collection" ref="S1_xt_idxlist_collection"/>
+    <FbasicType type="S15_xt_idxlist_collection" ref="S16_xt_idxlist_collection"/>
+    <FbasicType type="S17_xt_idxlist_collection" ref="S1_xt_idxlist_collection"/>
+    <FbasicType type="S18_xt_idxlist_collection" intent="in" ref="S17_xt_idxlist_collection"/>
+    <FbasicType type="A1_xt_idxlist_collection" intent="in" ref="S18_xt_idxlist_collection">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I15_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <Var type="I11_xt_idxlist_collection" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I16_xt_idxlist_collection" ref="I15_xt_idxlist_collection"/>
+    <FfunctionType type="F8_xt_idxlist_collection" return_type="Fint"/>
+    <FfunctionType type="F9_xt_idxlist_collection" return_type="Fint"/>
+    <FfunctionType type="F10_xt_idxlist_collection" return_type="I17_xt_idxlist_collection"/>
+    <FbasicType type="I17_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <Var type="I11_xt_idxlist_collection" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F11_xt_idxlist_collection" return_type="I18_xt_idxlist_collection"/>
+    <FbasicType type="I18_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <Var type="I11_xt_idxlist_collection" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F12_xt_idxlist_collection" result_name="res" return_type="S19_xt_idxlist_collection" is_private="true">
+      <params>
+        <name type="A2_xt_idxlist_collection">idxlists</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S20_xt_idxlist_collection" ref="S1_xt_idxlist_collection"/>
+    <FbasicType type="S19_xt_idxlist_collection" ref="S20_xt_idxlist_collection"/>
+    <FbasicType type="S21_xt_idxlist_collection" ref="S1_xt_idxlist_collection"/>
+    <FbasicType type="S22_xt_idxlist_collection" intent="in" ref="S21_xt_idxlist_collection"/>
+    <FbasicType type="A3_xt_idxlist_collection" intent="in" ref="S22_xt_idxlist_collection">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="A2_xt_idxlist_collection" intent="in" ref="S22_xt_idxlist_collection">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I19_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <Var type="I11_xt_idxlist_collection" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I20_xt_idxlist_collection" ref="I19_xt_idxlist_collection"/>
+    <FfunctionType type="F13_xt_idxlist_collection" return_type="Fint"/>
+    <FfunctionType type="F14_xt_idxlist_collection" return_type="Fint"/>
+    <FfunctionType type="F15_xt_idxlist_collection" return_type="I21_xt_idxlist_collection"/>
+    <FbasicType type="I21_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <Var type="I11_xt_idxlist_collection" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F16_xt_idxlist_collection" return_type="I22_xt_idxlist_collection"/>
+    <FbasicType type="I22_xt_idxlist_collection" ref="Fint">
+      <kind>
+        <Var type="I11_xt_idxlist_collection" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F17_xt_idxlist_collection" result_name="res" return_type="S15_xt_idxlist_collection">
+      <params>
+        <name type="A1_xt_idxlist_collection">idxlists</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F18_xt_idxlist_collection" result_name="res" return_type="S19_xt_idxlist_collection">
+      <params>
+        <name type="A2_xt_idxlist_collection">idxlists</name>
+      </params>
+    </FfunctionType>
+  </typeTable>
+  <identifiers>
+    <id type="F1_xt_idxlist_collection" sclass="ffunc" original_name="xt_abort" declared_in="xt_core">
+      <name>xt_abort</name>
+    </id>
+    <id type="F4_xt_idxlist_collection" sclass="ffunc" original_name="xt_get_default_comm" declared_in="xt_core">
+      <name>xt_get_default_comm</name>
+    </id>
+    <id type="S1_xt_idxlist_collection" imported_id="S23_xt_idxlist_abstract" sclass="ftype_name" original_name="xt_idxlist" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist</name>
+    </id>
+    <id type="F5_xt_idxlist_collection" sclass="ffunc" original_name="xt_idxlist_c2f" declared_in="xt_idxlist_abstract">
+      <name>xt_idxlist_c2f</name>
+    </id>
+    <id type="I11_xt_idxlist_collection" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="S14_xt_idxlist_collection" imported_id="S1_iso_c_binding" sclass="ftype_name" original_name="c_ptr" declared_in="iso_c_binding">
+      <name>c_ptr</name>
+    </id>
+    <id type="F6_xt_idxlist_collection" sclass="ffunc" original_name="xt_idxlist_collection_new" declared_in="xt_idxlist_collection">
+      <name>xt_idxlist_collection_new</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I11_xt_idxlist_collection">c_int</name>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="xt_idxlist_collection_new" lineno="66" file="xt_idxlist_collection_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="67" file="xt_idxlist_collection_f.f90">
+        <name type="F17_xt_idxlist_collection">xt_idxlist_collection_new_a1d</name>
+        <name type="F18_xt_idxlist_collection">xt_idxlist_collection_new_a2d</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="68" file="xt_idxlist_collection_f.f90">
+        <name type="F17_xt_idxlist_collection">xt_idxlist_collection_new_a1d</name>
+        <name type="F18_xt_idxlist_collection">xt_idxlist_collection_new_a2d</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

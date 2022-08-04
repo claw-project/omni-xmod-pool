@@ -2,8 +2,10 @@
 
 ###
 
-yaxt_dir='/path/to/yaxt'
-yaxt_ver='0.7.0'
+src_root='/path/to/yaxt'
+
+name='yaxt'
+version='0.9.3.1'
 
 ###
 
@@ -12,10 +14,37 @@ set -o pipefail
 
 script_dir=$(cd "$(dirname "$0")"; pwd)
 root_dir=$(cd "${script_dir}/../.."; pwd)
-output_dir="${root_dir}/yaxt/${yaxt_ver}"
+output_dir="${root_dir}/${name}/${version}"
+
+tmp_dir=$(mktemp -d)
+trap 'rm -rf -- "${tmp_dir}"' EXIT
+
+cat > "${tmp_dir}/fc_feature_defs.inc" << _EOF
+
+#define HAVE_VOLATILE
+#define HAVE_FC_LOGICAL_INTEROP
+#define HAVE_FC_LOGICAL_C_BOOL
+#define HAVE_FC_PTR_BOUND_REMAP
+#define HAVE_FC_C_LOC_OF_SLICE
+#define XT_MPI_AINT_KIND c_long
+#define XT_MPI_FINT_FC_KIND c_int
+#define XT_INT_FC_KIND_IN_ISO_C_BINDING
+#define XT_INT_FC_KIND c_int
+#define XT_INT_FC_MPIDT MPI_INTEGER4
+#define SIZEOF_XT_INT 4
+_EOF
+
+# Manually applied patches:
+patch_1='
+--- a/src/xt_xmap_f.f90
++++ b/src/xt_xmap_f.f90
+@@ -457 +457 @@ CONTAINS
+-    IF (reorder_type < 0_xt_reorder_type_kind .OR. &
++    IF (reorder_type < INT(0, xt_reorder_type_kind) .OR. &
+'
 
 FPP='gfortran -E -cpp'
-FPP_FLAGS='-DHAVE_VOLATILE -DHAVE_FC_LOGICAL_INTEROP -DHAVE_FC_LOGICAL_C_BOOL -DHAVE_FC_PTR_BOUND_REMAP -DXT_MPI_AINT_KIND=c_long -DXT_MPI_FINT_FC_KIND=c_int -DXT_INT_FC_KIND=c_int -DXT_INT_FC_MPIDT=MPI_INTEGER4 -DSIZEOF_XT_INT=4'
+FPP_FLAGS="-I${tmp_dir}"
 
 OMNI='F_Front'
 OMNI_FLAGS="-M ${output_dir} -M ${root_dir}/mpi/3.0"
@@ -23,13 +52,13 @@ OMNI_FLAGS="-M ${output_dir} -M ${root_dir}/mpi/3.0"
 files='
 xt_mpi_f.f90
 xt_core_f.f90
+xt_config_f.f90
 xt_sort_f.f90
 xt_idxlist_f.f90
 xt_idxvec_f.f90
 xt_idxstripes_f.f90
 xt_idxsection_f.f90
 xt_idxlist_collection_f.f90
-xt_idxmod_f.f90
 xt_xmap_f.f90
 xt_xmap_intersection_f.f90
 xt_request_f.f90
@@ -44,7 +73,7 @@ yaxt.f90
 '
 
 mkdir -p "${output_dir}"
-cd "${yaxt_dir}/src"
+cd "${src_root}/src"
 
 for file in ${files}; do
 	${FPP} ${FPP_FLAGS} ${file} | ${OMNI} ${OMNI_FLAGS} >/dev/null

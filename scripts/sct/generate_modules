@@ -1,0 +1,45 @@
+#!/bin/bash
+
+###
+
+src_root='/path/to/sct'
+
+name='sct'
+version='1.0-39390f0'
+
+###
+
+set -eu
+set -o pipefail
+
+script_dir=$(cd "$(dirname "$0")"; pwd)
+root_dir=$(cd "${script_dir}/../.."; pwd)
+output_dir="${root_dir}/${name}/${version}"
+
+FPP='gfortran -E -cpp'
+FPP_FLAGS=
+
+OMNI='F_Front'
+OMNI_FLAGS=
+
+files='
+sct.f90
+'
+
+cd "${src_root}/src"
+
+# Create the version without MPI support:
+mkdir -p "${output_dir}"
+for file in ${files}; do
+	${FPP} ${FPP_FLAGS} ${file} | ${OMNI} -M ${output_dir} ${OMNI_FLAGS} >/dev/null
+done
+
+# Create the version with MPI support:
+output_dir="${output_dir}-mpi"
+FPP_FLAGS="${FPP_FLAGS} -DHAVE_MPI"
+OMNI_FLAGS="${OMNI_FLAGS} -M ${root_dir}/mpi/3.0"
+
+mkdir -p "${output_dir}"
+for file in ${files}; do
+	${FPP} ${FPP_FLAGS} ${file} | ${OMNI} -M ${output_dir} ${OMNI_FLAGS} >/dev/null
+done

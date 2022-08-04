@@ -1,0 +1,259 @@
+<OmniFortranModule version="1.0">
+  <name>mtime_juliandelta</name>
+  <depends>
+    <name>iso_c_binding</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I55d20147db70" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d20147c180" is_parameter="true" ref="I55d20147db70"/>
+    <FbasicType type="I55d20147de10" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d20147c490" is_parameter="true" ref="I55d20147de10"/>
+    <FstructType type="S55d20147c740" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55d20147e040">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d201423820" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d201423e50" is_parameter="true" ref="I55d201423820"/>
+    <FbasicType type="I55d20147e040" ref="Fint">
+      <kind>
+        <Var type="I55d201423e50" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F55d20147ce00" return_type="FnumericAll"/>
+    <FfunctionType type="F55d201458f60" return_type="L55d201431580">
+      <params>
+        <name type="S55d201430a90" imported_id="S555a51971d90">c_ptr_1</name>
+        <name type="S55d201431010" imported_id="S555a51972510">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L55d201431580" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55d20142cba0" imported_id="S555a51946610" is_internal_private="true">
+      <symbols>
+        <id type="I55d20142d320">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d20142d320" ref="Fint">
+      <kind>
+        <Var type="I55d201423e50" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55d201431ba0" imported_id="S555a51971c50" ref="S55d20142cba0"/>
+    <FbasicType type="S55d201430a90" imported_id="S555a51971d90" ref="S55d201431ba0"/>
+    <FbasicType type="S55d201431d50" imported_id="S555a519723d0" ref="S55d20142cba0"/>
+    <FbasicType type="S55d201431010" imported_id="S555a51972510" is_optional="true" ref="S55d201431d50"/>
+    <FfunctionType type="F55d2014597d0" return_type="L55d20142fa60">
+      <params>
+        <name type="S55d20142f0d0" imported_id="S555a5196eaf0">c_ptr_1</name>
+        <name type="S55d20142f4d0" imported_id="S555a5196f270">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L55d20142fa60" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S55d20142bd30" imported_id="S555a51945380" is_internal_private="true">
+      <symbols>
+        <id type="I55d20142c6b0">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I55d20142c6b0" ref="Fint">
+      <kind>
+        <Var type="I55d201423e50" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S55d201430260" imported_id="S555a5196e9b0" ref="S55d20142bd30"/>
+    <FbasicType type="S55d20142f0d0" imported_id="S555a5196eaf0" ref="S55d201430260"/>
+    <FbasicType type="S55d201430410" imported_id="S555a5196f130" ref="S55d20142bd30"/>
+    <FbasicType type="S55d20142f4d0" imported_id="S555a5196f270" is_optional="true" ref="S55d201430410"/>
+    <FfunctionType type="F55d20147d650" return_type="Fvoid"/>
+    <FfunctionType type="F55d201458840" return_type="Fvoid">
+      <params>
+        <name type="I55d201432450">cptr</name>
+        <name type="I55d201432850">fptr</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I55d201432c30" is_pointer="true" ref="Fint"/>
+    <FbasicType type="I55d201432450" intent="in" is_pointer="true" ref="I55d201432c30"/>
+    <FbasicType type="I55d201433230" is_pointer="true" ref="Fint"/>
+    <FbasicType type="I55d201432850" intent="out" is_pointer="true" ref="I55d201433230"/>
+    <FfunctionType type="F55d20147d9b0" return_type="S55d20147e5c0">
+      <params>
+        <name type="Fint">x</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d20147e960" imported_id="S555a5198b690" ref="S55d20147c740"/>
+    <FbasicType type="S55d20147e5c0" imported_id="S555a5198b7d0" ref="S55d20147e960"/>
+    <FstructType type="S55d20147f910" is_public="true" bind="C">
+      <symbols>
+        <id type="C55d201480280">
+          <name>sign</name>
+        </id>
+        <id type="I55d201480e50">
+          <name>day</name>
+        </id>
+        <id type="I55d201481790">
+          <name>ms</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="C55d201480280" ref="Fcharacter">
+      <len>
+        <Var type="I55d20147c490" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="I55d201480c20" ref="Fint">
+      <kind>
+        <Var type="I55d20147c180" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d201480e50" ref="I55d201480c20"/>
+    <FbasicType type="I55d201481560" ref="Fint">
+      <kind>
+        <Var type="I55d20147c180" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d201481790" ref="I55d201481560"/>
+    <FfunctionType type="F55d20148a7d0" result_name="ret_juliandelta" return_type="S55d20148bf20" is_public="true">
+      <params>
+        <name type="C55d20148ca00">sign</name>
+        <name type="I55d20148d390">day</name>
+        <name type="I55d20148dd20">ms</name>
+        <name type="I55d20148ec80">errno</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d20148bcf0" is_pointer="true" ref="S55d20147f910"/>
+    <FbasicType type="S55d20148bf20" is_pointer="true" ref="S55d20148bcf0"/>
+    <FbasicType type="C55d20148c8c0" ref="Fcharacter">
+      <len>
+        <Var type="I55d20147c490" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55d20148ca00" intent="in" ref="C55d20148c8c0"/>
+    <FbasicType type="I55d20148d250" ref="Fint">
+      <kind>
+        <Var type="I55d20147c180" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d20148d390" intent="in" ref="I55d20148d250"/>
+    <FbasicType type="I55d20148dbe0" ref="Fint">
+      <kind>
+        <Var type="I55d20147c180" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d20148dd20" intent="in" ref="I55d20148dbe0"/>
+    <FbasicType type="I55d20148ec80" is_optional="true" ref="Fint"/>
+    <FbasicType type="S55d20148e270" ref="S55d20147c740"/>
+    <FbasicType type="S55d20148e4a0" ref="S55d20148e270"/>
+    <FfunctionType type="F55d201490010" return_type="Flogical"/>
+    <FfunctionType type="F55d2014925d0" return_type="Flogical"/>
+    <FbasicType type="S55d2014840f0" ref="S55d20147c740"/>
+    <FbasicType type="S55d201484760" ref="S55d2014840f0"/>
+    <FbasicType type="S55d201483500" ref="S55d201484760"/>
+    <FfunctionType type="F55d201482d30" result_name="c_pointer" return_type="S55d201483500" is_private="true" bind="C" bind_name="newJulianDelta">
+      <params>
+        <name type="C55d2014851b0">sign</name>
+        <name type="I55d201485bf0">day</name>
+        <name type="I55d2014864f0">ms</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C55d2014851b0" ref="Fcharacter">
+      <len>
+        <Var type="I55d20147c490" scope="local">c_char</Var>
+      </len>
+    </FbasicType>
+    <FbasicType type="I55d201485ab0" ref="Fint">
+      <kind>
+        <Var type="I55d20147c180" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d201485bf0" is_value="true" ref="I55d201485ab0"/>
+    <FbasicType type="I55d2014863b0" ref="Fint">
+      <kind>
+        <Var type="I55d20147c180" scope="local">c_int64_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I55d2014864f0" is_value="true" ref="I55d2014863b0"/>
+    <FfunctionType type="F55d201494840" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S55d201495510">my_juliandelta</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d2014953d0" is_pointer="true" ref="S55d20147f910"/>
+    <FbasicType type="S55d201495510" is_pointer="true" ref="S55d2014953d0"/>
+    <FfunctionType type="F55d201496ad0" return_type="V55d201496990"/>
+    <FbasicType type="V55d201496990" is_target="true" ref="FnumericAll"/>
+    <FfunctionType type="F55d201487a80" return_type="Fvoid" is_private="true" bind="C" bind_name="deallocateJulianDelta">
+      <params>
+        <name type="S55d201488c40">jd</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S55d2014883a0" ref="S55d20147c740"/>
+    <FbasicType type="S55d201488b00" ref="S55d2014883a0"/>
+    <FbasicType type="S55d201488c40" is_value="true" ref="S55d201488b00"/>
+  </typeTable>
+  <identifiers>
+    <id type="I55d20147c180" sclass="flocal" original_name="c_int64_t" declared_in="iso_c_binding">
+      <name>c_int64_t</name>
+    </id>
+    <id type="I55d20147c490" sclass="flocal" original_name="c_char" declared_in="iso_c_binding">
+      <name>c_char</name>
+    </id>
+    <id type="S55d20147c740" imported_id="S555a51945380" sclass="ftype_name" original_name="c_ptr" declared_in="iso_c_binding">
+      <name>c_ptr</name>
+    </id>
+    <id type="F55d20147ce00" sclass="ffunc" original_name="c_associated" declared_in="iso_c_binding">
+      <name>c_associated</name>
+    </id>
+    <id type="F55d20147d650" sclass="ffunc" original_name="c_f_pointer" declared_in="iso_c_binding">
+      <name>c_f_pointer</name>
+    </id>
+    <id type="F55d20147d9b0" sclass="ffunc" original_name="c_loc" declared_in="iso_c_binding">
+      <name>c_loc</name>
+    </id>
+    <id type="S55d20147f910" sclass="ftype_name" original_name="juliandelta" declared_in="mtime_juliandelta">
+      <name>juliandelta</name>
+    </id>
+    <id type="F55d20148a7d0" sclass="ffunc" original_name="newjuliandelta" declared_in="mtime_juliandelta">
+      <name>newjuliandelta</name>
+    </id>
+    <id type="F55d201494840" sclass="ffunc" original_name="deallocatejuliandelta" declared_in="mtime_juliandelta">
+      <name>deallocatejuliandelta</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I55d20147c180">c_int64_t</name>
+    </varDecl>
+    <varDecl>
+      <name type="I55d20147c490">c_char</name>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

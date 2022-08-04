@@ -1,0 +1,591 @@
+<OmniFortranModule version="1.0">
+  <name>xt_sort</name>
+  <depends>
+    <name>iso_c_binding</name>
+    <name>xt_core</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I1_xt_sort" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I2_xt_sort" is_parameter="true" ref="I1_xt_sort"/>
+    <FbasicType type="I3_xt_sort" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I4_xt_sort" is_parameter="true" ref="I3_xt_sort"/>
+    <FbasicType type="I5_xt_sort" is_parameter="true" ref="Fint"/>
+    <FbasicType type="I6_xt_sort" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I7_xt_sort" is_parameter="true" ref="I6_xt_sort"/>
+    <FfunctionType type="F1_xt_sort" return_type="Fvoid"/>
+    <FfunctionType type="F2_xt_sort" return_type="Fvoid">
+      <params>
+        <name type="C1_xt_sort">msg</name>
+        <name type="C2_xt_sort">source</name>
+        <name type="I8_xt_sort">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="C3_xt_sort" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C1_xt_sort" intent="in" ref="C3_xt_sort"/>
+    <FbasicType type="C4_xt_sort" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C2_xt_sort" intent="in" ref="C4_xt_sort"/>
+    <FbasicType type="I8_xt_sort" intent="in" ref="Fint"/>
+    <FfunctionType type="F3_xt_sort" return_type="Fvoid">
+      <params>
+        <name type="I9_xt_sort">comm</name>
+        <name type="C5_xt_sort">msg</name>
+        <name type="C6_xt_sort">source</name>
+        <name type="I10_xt_sort">line</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I9_xt_sort" intent="in" ref="Fint"/>
+    <FbasicType type="C7_xt_sort" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C5_xt_sort" intent="in" ref="C7_xt_sort"/>
+    <FbasicType type="C8_xt_sort" ref="Fcharacter">
+      <len is_assumed_size="true">
+      </len>
+    </FbasicType>
+    <FbasicType type="C6_xt_sort" intent="in" ref="C8_xt_sort"/>
+    <FbasicType type="I10_xt_sort" intent="in" ref="Fint"/>
+    <FfunctionType type="F4_xt_sort" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F5_xt_sort" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_sort_int_f2c">
+      <params>
+        <name type="A1_xt_sort">a</name>
+        <name type="I11_xt_sort">n</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I12_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I13_xt_sort" intent="inout" ref="I12_xt_sort"/>
+    <FbasicType type="I14_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I4_xt_sort" scope="local">c_size_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I11_xt_sort" intent="in" is_value="true" ref="I14_xt_sort"/>
+    <FbasicType type="A1_xt_sort" intent="inout" ref="I13_xt_sort">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I11_xt_sort" scope="local">n</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F6_xt_sort" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="A2_xt_sort">a</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I15_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I16_xt_sort" intent="inout" ref="I15_xt_sort"/>
+    <FbasicType type="A2_xt_sort" intent="inout" ref="I16_xt_sort">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F7_xt_sort" return_type="Fint"/>
+    <FfunctionType type="F8_xt_sort" return_type="I17_xt_sort"/>
+    <FbasicType type="I17_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I4_xt_sort" scope="local">c_size_t</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F9_xt_sort" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_sort_index_f2c">
+      <params>
+        <name type="A3_xt_sort">a</name>
+        <name type="I18_xt_sort">n</name>
+        <name type="A4_xt_sort">positions</name>
+        <name type="I19_xt_sort">reset_positions</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I20_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I5_xt_sort" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I21_xt_sort" intent="inout" ref="I20_xt_sort"/>
+    <FbasicType type="I22_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I18_xt_sort" intent="in" is_value="true" ref="I22_xt_sort"/>
+    <FbasicType type="A3_xt_sort" intent="inout" ref="I21_xt_sort">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I18_xt_sort" scope="local">n</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I23_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I24_xt_sort" intent="inout" ref="I23_xt_sort"/>
+    <FbasicType type="A4_xt_sort" intent="inout" ref="I24_xt_sort">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I18_xt_sort" scope="local">n</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I19_xt_sort" intent="in" is_value="true" ref="I22_xt_sort"/>
+    <FfunctionType type="F10_xt_sort" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="A5_xt_sort">a</name>
+        <name type="A6_xt_sort">positions</name>
+        <name type="L1_xt_sort">reset_positions</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I25_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I5_xt_sort" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I26_xt_sort" intent="inout" ref="I25_xt_sort"/>
+    <FbasicType type="A5_xt_sort" intent="inout" ref="I26_xt_sort">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I27_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I28_xt_sort" intent="inout" ref="I27_xt_sort"/>
+    <FbasicType type="A6_xt_sort" intent="inout" ref="I28_xt_sort">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="L1_xt_sort" intent="in" ref="Flogical"/>
+    <FbasicType type="I29_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I30_xt_sort" ref="I29_xt_sort"/>
+    <FbasicType type="I31_xt_sort" ref="I29_xt_sort"/>
+    <FfunctionType type="F11_xt_sort" return_type="I32_xt_sort"/>
+    <FbasicType type="I32_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F12_xt_sort" return_type="Fint"/>
+    <FfunctionType type="F13_xt_sort" return_type="Fint"/>
+    <FfunctionType type="F14_xt_sort" return_type="I33_xt_sort"/>
+    <FbasicType type="I33_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F15_xt_sort" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F16_xt_sort" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_sort_int_permutation_f2c">
+      <params>
+        <name type="A7_xt_sort">a</name>
+        <name type="I34_xt_sort">n</name>
+        <name type="A8_xt_sort">permutation</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I35_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I36_xt_sort" intent="inout" ref="I35_xt_sort"/>
+    <FbasicType type="I37_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I4_xt_sort" scope="local">c_size_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I34_xt_sort" intent="in" is_value="true" ref="I37_xt_sort"/>
+    <FbasicType type="A7_xt_sort" intent="inout" ref="I36_xt_sort">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I34_xt_sort" scope="local">n</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I38_xt_sort" intent="inout" ref="I35_xt_sort"/>
+    <FbasicType type="A8_xt_sort" intent="inout" ref="I38_xt_sort">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I34_xt_sort" scope="local">n</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F17_xt_sort" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="A9_xt_sort">a</name>
+        <name type="A10_xt_sort">permutation</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I39_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I40_xt_sort" intent="inout" ref="I39_xt_sort"/>
+    <FbasicType type="A9_xt_sort" intent="inout" ref="I40_xt_sort">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I41_xt_sort" intent="inout" ref="I39_xt_sort"/>
+    <FbasicType type="A10_xt_sort" intent="inout" ref="I41_xt_sort">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I42_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I4_xt_sort" scope="local">c_size_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I43_xt_sort" ref="I42_xt_sort"/>
+    <FfunctionType type="F18_xt_sort" return_type="I44_xt_sort"/>
+    <FbasicType type="I44_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I4_xt_sort" scope="local">c_size_t</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F19_xt_sort" return_type="Fint"/>
+    <FfunctionType type="F20_xt_sort" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F21_xt_sort" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_sort_idxpos_f2c">
+      <params>
+        <name type="A11_xt_sort">a</name>
+        <name type="I45_xt_sort">n</name>
+      </params>
+    </FfunctionType>
+    <FstructType type="S1_xt_sort" is_public="true" bind="C">
+      <symbols>
+        <id type="I46_xt_sort">
+          <name>idx</name>
+        </id>
+        <id type="I47_xt_sort">
+          <name>pos</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I48_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I5_xt_sort" scope="local">xt_int_kind</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I46_xt_sort" ref="I48_xt_sort"/>
+    <FbasicType type="I49_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I47_xt_sort" ref="I49_xt_sort"/>
+    <FbasicType type="S2_xt_sort" ref="S1_xt_sort"/>
+    <FbasicType type="S3_xt_sort" ref="S2_xt_sort"/>
+    <FbasicType type="S4_xt_sort" intent="inout" ref="S3_xt_sort"/>
+    <FbasicType type="I50_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I4_xt_sort" scope="local">c_size_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I45_xt_sort" intent="in" is_value="true" ref="I50_xt_sort"/>
+    <FbasicType type="A11_xt_sort" intent="inout" ref="S4_xt_sort">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I45_xt_sort" scope="local">n</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F22_xt_sort" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="A12_xt_sort">a</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S5_xt_sort" ref="S1_xt_sort"/>
+    <FbasicType type="S6_xt_sort" intent="inout" ref="S5_xt_sort"/>
+    <FbasicType type="A12_xt_sort" intent="inout" ref="S6_xt_sort">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FfunctionType type="F23_xt_sort" return_type="Fint"/>
+    <FfunctionType type="F24_xt_sort" return_type="I51_xt_sort"/>
+    <FbasicType type="I51_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I4_xt_sort" scope="local">c_size_t</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F25_xt_sort" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F26_xt_sort" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_assign_id_map_int">
+      <params>
+        <name type="I52_xt_sort">n</name>
+        <name type="A13_xt_sort">a</name>
+        <name type="I53_xt_sort">ofs</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I54_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I4_xt_sort" scope="local">c_size_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I52_xt_sort" intent="in" is_value="true" ref="I54_xt_sort"/>
+    <FbasicType type="I55_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I56_xt_sort" intent="out" ref="I55_xt_sort"/>
+    <FbasicType type="A13_xt_sort" intent="out" ref="I56_xt_sort">
+      <indexRange>
+        <lowerBound>
+          <FintConstant type="Fint">1</FintConstant>
+        </lowerBound>
+        <upperBound>
+          <Var type="I52_xt_sort" scope="local">n</Var>
+        </upperBound>
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I57_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I53_xt_sort" intent="in" is_value="true" ref="I57_xt_sort"/>
+    <FfunctionType type="F27_xt_sort" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="A14_xt_sort">a</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I58_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I59_xt_sort" intent="out" ref="I58_xt_sort"/>
+    <FbasicType type="A14_xt_sort" intent="out" ref="I59_xt_sort">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I60_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I4_xt_sort" scope="local">c_size_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I61_xt_sort" ref="I60_xt_sort"/>
+    <FbasicType type="I62_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I63_xt_sort" ref="I62_xt_sort"/>
+    <FfunctionType type="F28_xt_sort" return_type="I64_xt_sort"/>
+    <FbasicType type="I64_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I4_xt_sort" scope="local">c_size_t</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F29_xt_sort" return_type="Fint"/>
+    <FfunctionType type="F30_xt_sort" return_type="Fvoid" is_private="true">
+      <params>
+        <name type="A15_xt_sort">a</name>
+        <name type="I65_xt_sort">ofs</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="I66_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I67_xt_sort" intent="out" ref="I66_xt_sort"/>
+    <FbasicType type="A15_xt_sort" intent="out" ref="I67_xt_sort">
+      <indexRange is_assumed_shape="true">
+      </indexRange>
+    </FbasicType>
+    <FbasicType type="I68_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I2_xt_sort" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I65_xt_sort" intent="in" ref="I68_xt_sort"/>
+    <FbasicType type="I69_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I4_xt_sort" scope="local">c_size_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I70_xt_sort" ref="I69_xt_sort"/>
+    <FfunctionType type="F31_xt_sort" return_type="I71_xt_sort"/>
+    <FbasicType type="I71_xt_sort" ref="Fint">
+      <kind>
+        <Var type="I4_xt_sort" scope="local">c_size_t</Var>
+      </kind>
+    </FbasicType>
+    <FfunctionType type="F32_xt_sort" return_type="Fint"/>
+    <FfunctionType type="F33_xt_sort" return_type="Fvoid" is_public="true"/>
+    <FfunctionType type="F34_xt_sort" return_type="Fvoid">
+      <params>
+        <name type="A14_xt_sort">a</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F35_xt_sort" return_type="Fvoid">
+      <params>
+        <name type="A15_xt_sort">a</name>
+        <name type="I65_xt_sort">ofs</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F36_xt_sort" return_type="Fvoid">
+      <params>
+        <name type="A12_xt_sort">a</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F37_xt_sort" return_type="Fvoid">
+      <params>
+        <name type="A2_xt_sort">a</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F38_xt_sort" return_type="Fvoid">
+      <params>
+        <name type="A9_xt_sort">a</name>
+        <name type="A10_xt_sort">permutation</name>
+      </params>
+    </FfunctionType>
+    <FfunctionType type="F39_xt_sort" return_type="Fvoid">
+      <params>
+        <name type="A5_xt_sort">a</name>
+        <name type="A6_xt_sort">positions</name>
+        <name type="L1_xt_sort">reset_positions</name>
+      </params>
+    </FfunctionType>
+  </typeTable>
+  <identifiers>
+    <id type="I2_xt_sort" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="I4_xt_sort" sclass="flocal" original_name="c_size_t" declared_in="iso_c_binding">
+      <name>c_size_t</name>
+    </id>
+    <id type="I5_xt_sort" sclass="flocal" original_name="xt_int_kind" declared_in="xt_core">
+      <name>xt_int_kind</name>
+    </id>
+    <id type="F1_xt_sort" sclass="ffunc" original_name="xt_abort" declared_in="xt_core">
+      <name>xt_abort</name>
+    </id>
+    <id type="F4_xt_sort" sclass="ffunc" original_name="xt_sort_int" declared_in="xt_sort">
+      <name>xt_sort_int</name>
+    </id>
+    <id type="F15_xt_sort" sclass="ffunc" original_name="xt_sort_index" declared_in="xt_sort">
+      <name>xt_sort_index</name>
+    </id>
+    <id type="F20_xt_sort" sclass="ffunc" original_name="xt_sort_permutation" declared_in="xt_sort">
+      <name>xt_sort_permutation</name>
+    </id>
+    <id type="S1_xt_sort" sclass="ftype_name" original_name="xt_idxpos" declared_in="xt_sort">
+      <name>xt_idxpos</name>
+    </id>
+    <id type="F25_xt_sort" sclass="ffunc" original_name="xt_sort_idxpos" declared_in="xt_sort">
+      <name>xt_sort_idxpos</name>
+    </id>
+    <id type="F33_xt_sort" sclass="ffunc" original_name="xt_assign_id_map" declared_in="xt_sort">
+      <name>xt_assign_id_map</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I2_xt_sort">c_int</name>
+    </varDecl>
+    <varDecl>
+      <name type="I4_xt_sort">c_size_t</name>
+    </varDecl>
+    <varDecl>
+      <name type="I5_xt_sort">xt_int_kind</name>
+      <value>
+        <Var type="I7_xt_sort" scope="local">c_int</Var>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="xt_sort_int" lineno="55" file="xt_sort_f.f90">
+      <FmoduleProcedureDecl lineno="56" file="xt_sort_f.f90">
+        <name type="F37_xt_sort">xt_sort_int_a</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="61" file="xt_sort_f.f90">
+        <name type="F37_xt_sort">xt_sort_int_a</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_sort_index" lineno="65" file="xt_sort_f.f90">
+      <FmoduleProcedureDecl lineno="66" file="xt_sort_f.f90">
+        <name type="F39_xt_sort">xt_sort_index_a_a_l</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="73" file="xt_sort_f.f90">
+        <name type="F39_xt_sort">xt_sort_index_a_a_l</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_sort_permutation" lineno="77" file="xt_sort_f.f90">
+      <FmoduleProcedureDecl lineno="78" file="xt_sort_f.f90">
+        <name type="F38_xt_sort">xt_sort_int_permutation</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="84" file="xt_sort_f.f90">
+        <name type="F38_xt_sort">xt_sort_int_permutation</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_sort_idxpos" lineno="93" file="xt_sort_f.f90">
+      <FmoduleProcedureDecl lineno="94" file="xt_sort_f.f90">
+        <name type="F36_xt_sort">xt_sort_idxpos_a</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="99" file="xt_sort_f.f90">
+        <name type="F36_xt_sort">xt_sort_idxpos_a</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+    <FinterfaceDecl name="xt_assign_id_map" lineno="103" file="xt_sort_f.f90">
+      <FmoduleProcedureDecl lineno="104" file="xt_sort_f.f90">
+        <name type="F34_xt_sort">xt_assign_id_map_a</name>
+        <name type="F35_xt_sort">xt_assign_id_map_ai</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="111" file="xt_sort_f.f90">
+        <name type="F34_xt_sort">xt_assign_id_map_a</name>
+        <name type="F35_xt_sort">xt_assign_id_map_ai</name>
+      </FmoduleProcedureDecl>
+      <FmoduleProcedureDecl is_module_specified="true" lineno="112" file="xt_sort_f.f90">
+        <name type="F34_xt_sort">xt_assign_id_map_a</name>
+        <name type="F35_xt_sort">xt_assign_id_map_ai</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

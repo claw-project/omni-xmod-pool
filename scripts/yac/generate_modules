@@ -2,10 +2,10 @@
 
 ###
 
-src_root='/path/to/mtime'
+src_root='/path/to/yac'
 
-name='mtime'
-version='1.0.11-rc2'
+name='yac'
+version='2.5.2'
 
 ###
 
@@ -16,18 +16,21 @@ script_dir=$(cd "$(dirname "$0")"; pwd)
 root_dir=$(cd "${script_dir}/../.."; pwd)
 output_dir="${root_dir}/${name}/${version}"
 
+tmp_dir=$(mktemp -d)
+trap 'rm -rf -- "${tmp_dir}"' EXIT
+
+cat > "${tmp_dir}/config.h" << _EOF
+#define YAC_MPI_FINT_FC_KIND c_int
+_EOF
+
 FPP='gfortran -E -cpp'
-FPP_FLAGS=
+FPP_FLAGS="-I${tmp_dir} -DHAVE_CONFIG_H"
 
 OMNI='F_Front'
 OMNI_FLAGS="-M ${output_dir}"
 
 files='
-mtime_constants.f90
-mtime_error_handling.f90
-mtime_c_bindings.f90
-libmtime.f90
-libmtime_hl.f90
+mo_yac_finterface.f90
 '
 
 mkdir -p "${output_dir}"

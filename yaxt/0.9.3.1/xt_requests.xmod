@@ -1,0 +1,241 @@
+<OmniFortranModule version="1.0">
+  <name>xt_requests</name>
+  <depends>
+    <name>iso_c_binding</name>
+  </depends>
+  <typeTable>
+    <FbasicType type="I1_xt_requests" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I2_xt_requests" is_parameter="true" ref="I1_xt_requests"/>
+    <FstructType type="S1_xt_requests" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I3_xt_requests">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I4_xt_requests" ref="Fint">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I5_xt_requests" is_parameter="true" ref="I4_xt_requests"/>
+    <FbasicType type="I3_xt_requests" ref="Fint">
+      <kind>
+        <Var type="I5_xt_requests" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S2_xt_requests" imported_id="S3_iso_c_binding" ref="S1_xt_requests"/>
+    <FbasicType type="S3_xt_requests" imported_id="S4_iso_c_binding" is_parameter="true" ref="S2_xt_requests"/>
+    <FfunctionType type="F1_xt_requests" return_type="FnumericAll"/>
+    <FfunctionType type="F2_xt_requests" return_type="L1_xt_requests">
+      <params>
+        <name type="S4_xt_requests" imported_id="S13_iso_c_binding">c_ptr_1</name>
+        <name type="S5_xt_requests" imported_id="S14_iso_c_binding">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L1_xt_requests" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S6_xt_requests" imported_id="S2_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I6_xt_requests">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I6_xt_requests" ref="Fint">
+      <kind>
+        <Var type="I5_xt_requests" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S7_xt_requests" imported_id="S15_iso_c_binding" ref="S6_xt_requests"/>
+    <FbasicType type="S4_xt_requests" imported_id="S13_iso_c_binding" ref="S7_xt_requests"/>
+    <FbasicType type="S8_xt_requests" imported_id="S16_iso_c_binding" ref="S6_xt_requests"/>
+    <FbasicType type="S5_xt_requests" imported_id="S14_iso_c_binding" is_optional="true" ref="S8_xt_requests"/>
+    <FfunctionType type="F3_xt_requests" return_type="L2_xt_requests">
+      <params>
+        <name type="S9_xt_requests" imported_id="S9_iso_c_binding">c_ptr_1</name>
+        <name type="S10_xt_requests" imported_id="S10_iso_c_binding">c_ptr_2</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="L2_xt_requests" ref="Flogical">
+      <kind>
+        <FintConstant type="Fint">4</FintConstant>
+      </kind>
+    </FbasicType>
+    <FstructType type="S11_xt_requests" imported_id="S1_iso_c_binding" is_internal_private="true">
+      <symbols>
+        <id type="I7_xt_requests">
+          <name>ptr</name>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="I7_xt_requests" ref="Fint">
+      <kind>
+        <Var type="I5_xt_requests" scope="local">c_intptr_t</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="S12_xt_requests" imported_id="S11_iso_c_binding" ref="S11_xt_requests"/>
+    <FbasicType type="S9_xt_requests" imported_id="S9_iso_c_binding" ref="S12_xt_requests"/>
+    <FbasicType type="S13_xt_requests" imported_id="S12_iso_c_binding" ref="S11_xt_requests"/>
+    <FbasicType type="S10_xt_requests" imported_id="S10_iso_c_binding" is_optional="true" ref="S13_xt_requests"/>
+    <FstructType type="S14_xt_requests" is_public="true" is_internal_private="true" bind="C">
+      <symbols>
+        <id type="S15_xt_requests">
+          <name>cptr</name>
+          <value>
+            <Var type="S3_xt_requests" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+          </value>
+        </id>
+      </symbols>
+    </FstructType>
+    <FbasicType type="S16_xt_requests" ref="S1_xt_requests"/>
+    <FbasicType type="S15_xt_requests" ref="S16_xt_requests"/>
+    <FfunctionType type="F4_xt_requests" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S17_xt_requests">request</name>
+        <name type="S18_xt_requests">cptr</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S19_xt_requests" ref="S14_xt_requests"/>
+    <FbasicType type="S17_xt_requests" intent="out" ref="S19_xt_requests"/>
+    <FbasicType type="S20_xt_requests" ref="S1_xt_requests"/>
+    <FbasicType type="S18_xt_requests" intent="in" ref="S20_xt_requests"/>
+    <FbasicType type="S21_xt_requests" ref="S15_xt_requests"/>
+    <FfunctionType type="F5_xt_requests" return_type="Fvoid" is_private="true" bind="C" bind_name="xt_request_test">
+      <params>
+        <name type="S22_xt_requests">request_c</name>
+        <name type="I8_xt_requests">flag_c</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S23_xt_requests" ref="S1_xt_requests"/>
+    <FbasicType type="S24_xt_requests" ref="S23_xt_requests"/>
+    <FbasicType type="S22_xt_requests" intent="inout" ref="S24_xt_requests"/>
+    <FbasicType type="I9_xt_requests" ref="Fint">
+      <kind>
+        <Var type="I2_xt_requests" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I8_xt_requests" intent="out" ref="I9_xt_requests"/>
+    <FfunctionType type="F6_xt_requests" return_type="Fvoid" is_public="true">
+      <params>
+        <name type="S25_xt_requests">request</name>
+        <name type="L3_xt_requests">flag</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S26_xt_requests" ref="S14_xt_requests"/>
+    <FbasicType type="S25_xt_requests" intent="inout" ref="S26_xt_requests"/>
+    <FbasicType type="L3_xt_requests" intent="out" ref="Flogical"/>
+    <FbasicType type="I10_xt_requests" ref="Fint">
+      <kind>
+        <Var type="I2_xt_requests" scope="local">c_int</Var>
+      </kind>
+    </FbasicType>
+    <FbasicType type="I11_xt_requests" ref="I10_xt_requests"/>
+    <FbasicType type="S27_xt_requests" ref="S15_xt_requests"/>
+    <FfunctionType type="F7_xt_requests" result_name="p" return_type="Flogical" is_private="true">
+      <params>
+        <name type="S28_xt_requests">request</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S29_xt_requests" ref="S14_xt_requests"/>
+    <FbasicType type="S28_xt_requests" intent="in" ref="S29_xt_requests"/>
+    <FbasicType type="S30_xt_requests" ref="S15_xt_requests"/>
+    <FfunctionType type="F8_xt_requests" return_type="Fvoid" is_public="true" bind="C" bind_name="xt_request_wait">
+      <params>
+        <name type="S31_xt_requests">request</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S32_xt_requests" ref="S14_xt_requests"/>
+    <FbasicType type="S33_xt_requests" ref="S32_xt_requests"/>
+    <FbasicType type="S31_xt_requests" intent="inout" ref="S33_xt_requests"/>
+    <FfunctionType type="F9_xt_requests" result_name="p" return_type="S34_xt_requests" is_public="true" bind="C" bind_name="xt_request_f2c">
+      <params>
+        <name type="S35_xt_requests">request</name>
+      </params>
+    </FfunctionType>
+    <FbasicType type="S36_xt_requests" ref="S1_xt_requests"/>
+    <FbasicType type="S37_xt_requests" ref="S36_xt_requests"/>
+    <FbasicType type="S34_xt_requests" ref="S37_xt_requests"/>
+    <FbasicType type="S38_xt_requests" ref="S14_xt_requests"/>
+    <FbasicType type="S39_xt_requests" ref="S38_xt_requests"/>
+    <FbasicType type="S35_xt_requests" intent="in" ref="S39_xt_requests"/>
+    <FbasicType type="S40_xt_requests" ref="S37_xt_requests"/>
+    <FfunctionType type="F10_xt_requests" return_type="V1_xt_requests" is_public="true"/>
+    <FbasicType type="V1_xt_requests" ref="FnumericAll"/>
+    <FbasicType type="S41_xt_requests" ref="S14_xt_requests"/>
+    <FbasicType type="S42_xt_requests" is_public="true" is_parameter="true" ref="S41_xt_requests"/>
+    <FbasicType type="S43_xt_requests" ref="S14_xt_requests"/>
+    <FfunctionType type="F11_xt_requests" result_name="p" return_type="Flogical">
+      <params>
+        <name type="S28_xt_requests">request</name>
+      </params>
+    </FfunctionType>
+  </typeTable>
+  <identifiers>
+    <id type="I2_xt_requests" sclass="flocal" original_name="c_int" declared_in="iso_c_binding">
+      <name>c_int</name>
+    </id>
+    <id type="S1_xt_requests" imported_id="S1_iso_c_binding" sclass="ftype_name" original_name="c_ptr" declared_in="iso_c_binding">
+      <name>c_ptr</name>
+    </id>
+    <id type="S3_xt_requests" imported_id="S4_iso_c_binding" sclass="flocal" original_name="c_null_ptr" declared_in="iso_c_binding">
+      <name>c_null_ptr</name>
+    </id>
+    <id type="F1_xt_requests" sclass="ffunc" original_name="c_associated" declared_in="iso_c_binding">
+      <name>c_associated</name>
+    </id>
+    <id type="S14_xt_requests" sclass="ftype_name" original_name="xt_request" declared_in="xt_requests">
+      <name>xt_request</name>
+    </id>
+    <id type="F4_xt_requests" sclass="ffunc" original_name="xt_request_init" declared_in="xt_requests">
+      <name>xt_request_init</name>
+    </id>
+    <id type="F8_xt_requests" sclass="ffunc" original_name="xt_request_wait" declared_in="xt_requests">
+      <name>xt_request_wait</name>
+    </id>
+    <id type="F6_xt_requests" sclass="ffunc" original_name="xt_request_test" declared_in="xt_requests">
+      <name>xt_request_test</name>
+    </id>
+    <id type="F9_xt_requests" sclass="ffunc" original_name="xt_request_f2c" declared_in="xt_requests">
+      <name>xt_request_f2c</name>
+    </id>
+    <id type="F10_xt_requests" sclass="ffunc" original_name="xt_is_null" declared_in="xt_requests">
+      <name>xt_is_null</name>
+    </id>
+    <id type="S42_xt_requests" sclass="flocal" original_name="xt_request_null" declared_in="xt_requests">
+      <name>xt_request_null</name>
+    </id>
+  </identifiers>
+  <declarations>
+    <varDecl>
+      <name type="I2_xt_requests">c_int</name>
+    </varDecl>
+    <varDecl>
+      <name type="S3_xt_requests" imported_id="S4_iso_c_binding">c_null_ptr</name>
+    </varDecl>
+    <varDecl lineno="82" file="xt_request_f.f90">
+      <name type="S42_xt_requests">xt_request_null</name>
+      <value>
+        <FstructConstructor type="S43_xt_requests">
+          <Var type="S3_xt_requests" imported_id="S4_iso_c_binding" scope="local">c_null_ptr</Var>
+        </FstructConstructor>
+      </value>
+    </varDecl>
+  </declarations>
+  <interfaceDecls>
+    <FinterfaceDecl name="xt_is_null" lineno="84" file="xt_request_f.f90">
+      <FmoduleProcedureDecl is_module_specified="true" lineno="85" file="xt_request_f.f90">
+        <name type="F11_xt_requests">xt_request_is_null</name>
+      </FmoduleProcedureDecl>
+    </FinterfaceDecl>
+  </interfaceDecls>
+  <aux_info>
+  </aux_info>
+</OmniFortranModule>

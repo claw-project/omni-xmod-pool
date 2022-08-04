@@ -1455,8 +1455,8 @@
         <name type="I556b582f9070">errno</name>
       </params>
     </FfunctionType>
-    <FbasicType type="S556b582f8200" imported_id="S55d201b768d0" is_pointer="true" ref="S556b582b5c40"/>
-    <FbasicType type="S556b582f80a0" imported_id="S55d201b76770" is_pointer="true" ref="S556b582f8200"/>
+    <FbasicType type="S556b582f8200" imported_id="S55d201b768d0" is_target="true" ref="S556b582b5c40"/>
+    <FbasicType type="S556b582f80a0" imported_id="S55d201b76770" is_target="true" ref="S556b582f8200"/>
     <FbasicType type="C556b582f8e20" ref="Fcharacter">
       <len>
         <FintConstant type="Fint">32</FintConstant>
@@ -1464,8 +1464,8 @@
     </FbasicType>
     <FbasicType type="C556b582f8cc0" ref="C556b582f8e20"/>
     <FbasicType type="I556b582f9070" is_optional="true" ref="Fint"/>
-    <FbasicType type="S556b5810d390" imported_id="S55d201b768d0" is_pointer="true" ref="S556b580db3e0"/>
-    <FbasicType type="S556b5810c830" imported_id="S55d201b76770" is_pointer="true" ref="S556b5810d390"/>
+    <FbasicType type="S556b5810d390" imported_id="S55d201b768d0" is_target="true" ref="S556b580db3e0"/>
+    <FbasicType type="S556b5810c830" imported_id="S55d201b76770" is_target="true" ref="S556b5810d390"/>
     <FbasicType type="C556b5810d540" ref="Fcharacter">
       <len>
         <FintConstant type="Fint">32</FintConstant>
