@@ -1,3 +1,5 @@
+[![Continuous Integration](https://github.com/claw-project/omni-xmod-pool/actions/workflows/ci.yml/badge.svg)](https://github.com/claw-project/omni-xmod-pool/actions/workflows/ci.yml)
+
 # OMNI xmod pool
 
 Sets of generic xmod file for OMNI Compiler
