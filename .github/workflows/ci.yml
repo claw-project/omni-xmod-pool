@@ -1,0 +1,36 @@
+name: Continuous Integration
+on: pull_request
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    steps:
+    #
+    # Checks-out repository under $GITHUB_WORKSPACE
+    #
+    - uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    #
+    # Synchronize the package index
+    #
+    - name: Synchronize the package index
+      run: sudo apt-get update
+    #
+    # Build OMNI
+    #
+    - name: Build OMNI
+      run: |
+        cd omni-compiler
+        ./configure || { cat ./config.log; exit 1; }
+        make
+    #
+    # Check XMOD files
+    #
+    - name: Check XMOD files
+      run: ./scripts/test_all_modules
+    #
+    # Check shell scripts
+    #
+    - name: Check shell scripts
+      run: ./scripts/run_shellcheck
